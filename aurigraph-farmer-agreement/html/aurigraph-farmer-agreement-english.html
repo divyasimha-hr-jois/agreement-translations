@@ -1,68 +1,346 @@
 <!DOCTYPE html>
-<html lang="english">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>aurigraph-farmer-agreement - English</title>
+    <title>Aurigraph Farmer Agreement</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
     <style>
+        /* Custom styles for Inter font and general body */
         body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 20px;
-            background-color: #f5f5f5;
+            font-family: 'Inter', sans-serif;
+            background-color: #f8f8f8;
         }
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            background-color: white;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        /* Style for the pre-filled data to mimic input lines */
+        .prefilled-data {
+            border-bottom: 1px solid #d1d5db; /* Light gray border for the line */
+            padding: 0.25rem 0;
+            display: block; /* Ensures it takes full width */
+            min-height: 1.5rem; /* Ensures a line is visible even if data is empty */
+            color: #1f2937; /* Darker text for readability */
         }
-        h1 {
-            color: #333;
-            border-bottom: 2px solid #007bff;
-            padding-bottom: 10px;
+        .signature-line {
+            border-bottom: 1px solid #d1d5db;
+            min-height: 2rem; /* Enough space for a signature image */
+            display: flex;
+            align-items: flex-end; /* Align content to the bottom of the line */
+            padding-bottom: 0.25rem;
         }
-        h2 {
-            color: #555;
-            margin-top: 30px;
+        .signature-img {
+            max-height: 50px; /* Adjust as needed for signature image size */
+            width: auto;
+            display: block;
         }
-        .version-info {
-            background-color: #f8f9fa;
-            padding: 15px;
-            border-radius: 5px;
-            margin-top: 30px;
-            border-left: 4px solid #007bff;
+        ul.alpha-list {
+            list-style: none; /* Remove default bullets */
+            padding-left: 0; /* Remove default padding */
+            margin-top: 0.25rem;
+            margin-bottom: 0.25rem;
+            margin-left: 1.5rem; /* Indent alphabetic points */
         }
-        .content-placeholder {
-            background-color: #fff3cd;
-            border: 1px solid #ffeaa7;
-            padding: 15px;
-            border-radius: 5px;
-            margin: 20px 0;
+        ul.alpha-list > li {
+            margin-bottom: 0.125rem; /* Small space between alpha points */
+            text-indent: -1.5rem; /* Pull text back for manual bullet */
+            padding-left: 1.5rem; /* Push text back in */
+        }
+        /* Style for alphabetic bullets in specific lists */
+        .list-disc.list-inside.ml-6.mt-2.space-y-1 {
+            list-style: none;
+            counter-reset: alpha-counter;
+        }
+        .list-disc.list-inside.ml-6.mt-2.space-y-1 > li {
+            counter-increment: alpha-counter;
+            position: relative;
+            padding-left: 1.5rem;
+        }
+        .list-disc.list-inside.ml-6.mt-2.space-y-1 > li::before {
+            content: counter(alpha-counter, lower-alpha) ") ";
+            position: absolute;
+            left: 0;
+            font-weight: normal;
+        }
+        /* Hierarchical numbering for ordered lists */
+        ol.list-decimal.list-inside.space-y-2.mb-6.pl-4.text-sm {
+            list-style: none;
+        }
+        ol.list-decimal.list-inside.space-y-2.mb-6.pl-4.text-sm > li {
+            position: relative;
+            padding-left: 1.5rem;
+        }
+        /* Section 1 numbering */
+        ol.list-decimal.list-inside.space-y-2.mb-6.pl-4.text-sm.section-1 {
+            counter-reset: section1-counter;
+        }
+        ol.list-decimal.list-inside.space-y-2.mb-6.pl-4.text-sm.section-1 > li {
+            counter-increment: section1-counter;
+        }
+        ol.list-decimal.list-inside.space-y-2.mb-6.pl-4.text-sm.section-1 > li::before {
+            content: "1." counter(section1-counter) ". ";
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+        /* Section 2 numbering */
+        ol.list-decimal.list-inside.space-y-2.mb-6.pl-4.text-sm.section-2 {
+            counter-reset: section2-counter;
+        }
+        ol.list-decimal.list-inside.space-y-2.mb-6.pl-4.text-sm.section-2 > li {
+            counter-increment: section2-counter;
+        }
+        ol.list-decimal.list-inside.space-y-2.mb-6.pl-4.text-sm.section-2 > li::before {
+            content: "2." counter(section2-counter) ". ";
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+        /* Section 3 numbering */
+        ol.list-decimal.list-inside.space-y-2.mb-6.pl-4.text-sm.section-3 {
+            counter-reset: section3-counter;
+        }
+        ol.list-decimal.list-inside.space-y-2.mb-6.pl-4.text-sm.section-3 > li {
+            counter-increment: section3-counter;
+        }
+        ol.list-decimal.list-inside.space-y-2.mb-6.pl-4.text-sm.section-3 > li::before {
+            content: "3." counter(section3-counter) ". ";
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+        /* Section 4 numbering */
+        ol.list-decimal.list-inside.space-y-2.mb-6.pl-4.text-sm.section-4 {
+            counter-reset: section4-counter;
+        }
+        ol.list-decimal.list-inside.space-y-2.mb-6.pl-4.text-sm.section-4 > li {
+            counter-increment: section4-counter;
+        }
+        ol.list-decimal.list-inside.space-y-2.mb-6.pl-4.text-sm.section-4 > li::before {
+            content: "4." counter(section4-counter) ". ";
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+        /* Section 5 numbering */
+        ol.list-decimal.list-inside.space-y-2.mb-6.pl-4.text-sm.section-5 {
+            counter-reset: section5-counter;
+        }
+        ol.list-decimal.list-inside.space-y-2.mb-6.pl-4.text-sm.section-5 > li {
+            counter-increment: section5-counter;
+        }
+        ol.list-decimal.list-inside.space-y-2.mb-6.pl-4.text-sm.section-5 > li::before {
+            content: "5." counter(section5-counter) ". ";
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+        /* Sub-lists within main list items */
+        ol.list-decimal.list-inside.space-y-2.mb-6.pl-4.text-sm > li > ol {
+            counter-reset: sub-counter;
+            list-style: none;
+            padding-left: 0;
+            margin-top: 0.5rem;
+        }
+        ol.list-decimal.list-inside.space-y-2.mb-6.pl-4.text-sm > li > ol > li {
+            counter-increment: sub-counter;
+            position: relative;
+            padding-left: 1.5rem;
+        }
+        ol.list-decimal.list-inside.space-y-2.mb-6.pl-4.text-sm > li > ol > li::before {
+            content: counter(main-counter) "." counter(sub-counter) " ";
+            position: absolute;
+            left: 0;
+            font-weight: normal;
         }
     </style>
 </head>
-<body>
-    <div class="container">
-        <h1>aurigraph-farmer-agreement - English</h1>
+<body class="p-4 sm:p-6 md:p-8 lg:p-12 bg-gray-50 text-gray-800 max-w-7xl mx-auto">
+    <div class="bg-white p-6 sm:p-8 md:p-10 lg:p-12 ">
+        <!-- Agreement Title -->
+        <h1 class="text-xl sm:text-2xl font-bold text-center mb-4 sm:mb-6 text-gray-900">
+            AGREEMENT BETWEEN AWD IMPLEMENTER FARMER AND AURIGRAPH FOR SHARING CARBON CREDITS
+        </h1>
 
-        <h2>Agreement Details</h2>
-        <p>This document contains the English version of the aurigraph-farmer-agreement agreement.</p>
+        <!-- Introduction Paragraph -->
+        <p class="mb-4 leading-relaxed text-sm">
+            The concerned Agreement is between the Landowner/Farmer who is actively cultivating (from now on, to be referred to as "<strong class="font-semibold">Party A</strong>") and Aurigraph, bearing EIN: 852762242 (from now on, to be referred as "<strong class="font-semibold">Party B/Company/Aurigraph</strong>") for the purpose of sharing carbon credit benefits between both the Parties and both the parties agree to be bound by the terms & conditions of this Agreement.
+        </p>
 
-        <h2>Content</h2>
-        <div class="content-placeholder">
-            <strong>Content will be added here</strong>
+        <!-- Details of Party - A Section -->
+        <h2 class="text-lg sm:text-xl font-semibold mb-3 text-gray-900">Details of Party - A</h2>
+        <div class="mb-6">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-3">
+                <div class="flex flex-col sm:flex-row sm:items-center text-md">
+                    <label class="w-full sm:w-1/2 font-medium text-gray-700">Mr/Mrs/Ms (Name of Paddy Farmer):</label>
+                    <span class="prefilled-data flex-grow">{{farmerName}}</span>
+                </div>
+                <div class="flex flex-col sm:flex-row sm:items-center text-md">
+                    <label class="w-full sm:w-1/2 font-medium text-gray-700">Survey Number:</label>
+                    <span class="prefilled-data flex-grow">{{surveyNumber}}</span>
+                </div>
+                <div class="flex flex-col sm:flex-row sm:items-center text-md">
+                    <label class="w-full sm:w-1/2 font-medium text-gray-700">Patta / Phani Number:</label>
+                    <span class="prefilled-data flex-grow">{{pattaPhaniNumber}}</span>
+                </div>
+                <div class="flex flex-col sm:flex-row sm:items-center text-md">
+                    <label class="w-full sm:w-1/2 font-medium text-gray-700">Khatha Number:</label>
+                    <span class="prefilled-data flex-grow">{{khathaNumber}}</span>
+                </div>
+                <div class="flex flex-col sm:flex-row sm:items-center text-md">
+                    <label class="w-full sm:w-1/2 font-medium text-gray-700">Land Area in Acres:</label>
+                    <span class="prefilled-data flex-grow">{{landArea}}</span>
+                </div>
+                <div class="flex flex-col sm:flex-row sm:items-center text-md">
+                    <label class="w-full sm:w-1/2 font-medium text-gray-700">Mobile No.:</label>
+                    <span class="prefilled-data flex-grow">{{mobileNo}}</span>
+                </div>
+                <div class="flex flex-col sm:flex-row sm:items-center text-md">
+                    <label class="w-full sm:w-1/2 font-medium text-gray-700">ID (Aadhaar Number / Voter ID / if any):</label>
+                    <span class="prefilled-data flex-grow">{{idNumber}}</span>
+                </div>
+                <div class="flex flex-col sm:flex-row sm:items-center text-md">
+                    <label class="w-full sm:w-1/2 font-medium text-gray-700">Village:</label>
+                    <span class="prefilled-data flex-grow">{{village}}</span>
+                </div>
+                <div class="flex flex-col sm:flex-row sm:items-center text-md">
+                    <label class="w-full sm:w-1/2 font-medium text-gray-700">Taluk:</label>
+                    <span class="prefilled-data flex-grow">{{taluk}}</span>
+                </div>
+                <div class="flex flex-col sm:flex-row sm:items-center text-md">
+                    <label class="w-full sm:w-1/2 font-medium text-gray-700">District:</label>
+                    <span class="prefilled-data flex-grow">{{district}}</span>
+                </div>
+                <div class="flex flex-col sm:flex-row sm:items-center text-md">
+                    <label class="w-full sm:w-1/2 font-medium text-gray-700">State:</label>
+                    <span class="prefilled-data flex-grow">{{state}}</span>
+                </div>
+            </div>
         </div>
 
-        <div class="version-info">
-            <h3>Version Information</h3>
-            <p><strong>Version:</strong> 1.0</p>
-            <p><strong>Language:</strong> English</p>
-            <p><strong>Created:</strong> 2025-07-31 12:55:45</p>
-            <p><strong>Type:</strong> HTML Document</p>
+        <!-- Party A Confirmations and Responsibilities -->
+        <h2 class="text-lg sm:text-xl font-semibold mb-3 text-gray-900">1. Party A hereby confirms the below stated averments</h2>
+        <ol class="list-decimal list-inside space-y-2 mb-6 pl-4 text-sm section-1">
+            <li>
+                I am the authorized person for the above landholding number and currently practicing the traditional practice of below practices
+                <ul class="list-disc list-inside ml-6 mt-2 space-y-1">
+                    <li>Continuously flooding</li>
+                    <li>Transplanted rice (TPR)</li>
+                    <li>Double crop paddy</li>
+                    <li>Triple crop paddy</li>
+                    <li>Single crop paddy</li>
+                </ul>
+            </li>
+            <li>
+                I have the willingness to work with Aurigraph in developing the project under the Carbon offset project / programme. I confirm to implement the sustainable rice production practices in my paddy field in the above-mentioned land area above-described landholding for which I am authorized and participate in the project under carbon market standard. I shall adopt the below tick mark practices:
+                <ul class="list-disc list-inside ml-6 mt-2 space-y-1">
+                    <li>Changing the water regime during the cultivation period from continuously to intermittent flooded conditions and/or a shortened period of flooded conditions.</li>
+                    <li>Alternate wetting and drying method (AWD)</li>
+                    <li>Change the rice cultivation practice from transplanted to direct-seeded rice (DSR).</li>
+                </ul>
+            </li>
+            <li>
+                I hereby irrevocably agree to/ follow the technical guidance and maintain the method, practice, and associated equipment in line with any instructions given by the experts of Aurigraph.
+                <ul class="list-disc list-inside ml-6 mt-2 space-y-1">
+                    <li>Adopt the method chosen in clause 1.2 of the contract.</li>
+                    <li>Not sell or create any other interest in the adopted technique or associated equipment/pipe.</li>
+                    <li>Notify Aurigraph if I notice that anything has gone wrong, or could go wrong, in respect of the AWD technique and/or DSR.</li>
+                    <li>Notify if there is any transfer of ownership/agriculture rights of the land to another farmer for cultivation.</li>
+                    <li>Allow Aurigraph and/or their representatives onto my farmland to inspect and provide any information they request.</li>
+                    <li>I agree to follow the instructions made by the Aurigraph representative and maintain the record as sought by Aurigraph in the carbon passbook.</li>
+                    <li>I appoint Aurigraph to manage the carbon project cycle for the cultivation practice adopted by me in the farmland mentioned above and realize the carbon credits as per the applicable standard as defined in clause 1.2.</li>
+                    <li>I agree that Aurigraph shall exclusively engage with me for the next 20 years/unless I have transferred the concerned agricultural land/ I am no longer the cultivator of the land whichever is earlier, where Aurigraph shall manage the carbon project cycle and realize the carbon credits associated with the cultivation practice mentioned in clause 1.2 in the above-mentioned field. I shall be diligent enough and notify any transfer of ownership/agriculture rights of the land to another farmer for cultivation.</li>
+                </ul>
+            </li>
+            <li>
+                I on behalf of my family members, irrevocably transfer all rights to any Carbon Credits that may be generated by the implementation of the technique prescribed under clause 1.2 and implemented in association with Aurigraph to Aurigraph, and to take all reasonable steps to effect such transfer. I irrevocably transfer all the right of ownership of carbon credits to Aurigraph for carbon credits that will be generated from my farmland due to the adoption of practices mentioned under Clause 1.2 in exchange for the assistance, capacity building, hand holding, free supply of the monitoring water pipe, implementation of AWD technique and management of project cycle. Carbon Credits means Certified Emission Reductions (CER) generated under the Clean Development Mechanism or Verified Carbon Units (VCU) under Verified Carbon Standard (VCS) or Voluntary Emission Reduction Units (VERs) under VERRA Standard, A6.4 - ER under the Article 6.4 of the Paris Agreement or other carbon credit standard or benefits which may be associated with the implementation of technique under clause 1.2 at any time in the future.
+            </li>
+        </ol>
+
+        <!-- Duties of Aurigraph -->
+        <h2 class="text-lg sm:text-xl font-semibold mb-3 text-gray-900">2. Duties of Aurigraph / Aurigraph</h2>
+        <ol class="list-decimal list-inside space-y-2 mb-6 pl-4 text-sm section-2">
+            <li>
+                On successful issuance of carbon credits under this agreement, Aurigraph shall try its best to provide a share of the carbon revenue to Party A, based on the carbon credits generated from the adopted cultivation practices and the prevailing carbon credit market price. Party B will make the payment to Party A towards the realization of carbon credits except in circumstances which materially/ adversely/ legally affect the ability of Party B not within its reasonable control to perform its obligations under this Agreement. Any increase or decrease in the carbon price with the reference benchmark will be adjusted in the same proportionate with respect to the carbon revenue that will be given to the farmers.
+            </li>
+        </ol>
+
+        <!-- Dispute Resolution -->
+        <h2 class="text-lg sm:text-xl font-semibold mb-3 text-gray-900">3. Dispute Resolution</h2>
+        <ol class="list-decimal list-inside space-y-2 mb-6 pl-4 text-sm section-3">
+            <li>This agreement shall be governed by and construed under the laws of the Government of India.</li>
+            <li>No dispute shall be placed before any court of law until the said dispute has been amicably addressed under a duly constituted unbiased Mediation process within 10 days of the dispute being brought into notice (in written) to the concerned Party. (The Mediator(s) can be appointed by Party B in consultation with Party A).</li>
+        </ol>
+
+        <!-- Force Majeure -->
+        <h2 class="text-lg sm:text-xl font-semibold mb-3 text-gray-900">4. Force Majeure</h2>
+        <ol class="list-decimal list-inside space-y-2 mb-6 pl-4 text-sm section-4">
+            <li>
+                For the purpose of this Agreement, an "Event of Force Majeure" means any circumstance not within the reasonable control of the Party affected, but only if and to the extent that (i) such circumstance, despite the exercise of reasonable diligence and the observance of Good Utility Practice, cannot be, or be caused to be, prevented, avoided or removed by such Party, and (ii) such circumstance materially and adversely affects the ability of the Party to perform its obligations under this Agreement, and such Party has taken all reasonable precautions, due care and reasonable alternative measures in order to avoid the effect of such event on the Party's ability to perform its obligations under this Agreement and to mitigate the consequences thereof.
+            </li>
+            <li>
+                Any legal prohibition on the Party B's ability to conduct its Business, including the passing of a statute, decree, regulation, or order by a Competent Authority prohibiting the party B from conducting its Business, other than as a result of Party B's failure to comply with the law or any order, Consent, rule, regulation or other legislative or judicial instrument passed by a Competent Authority.
+            </li>
+            <li>
+                The parties shall not be held liable for their inability to perform, owing to clauses 4.1 & 4.2
+            </li>
+        </ol>
+
+        <!-- Confidentiality -->
+        <h2 class="text-lg sm:text-xl font-semibold mb-3 text-gray-900">5. Confidentiality</h2>
+        <ol class="list-decimal list-inside space-y-2 mb-6 pl-4 text-sm section-5">
+            <li>Party A shall not disclose to anyone and shall maintain the utmost level of confidentiality with respect to any dealings with Party B in accordance to the terms of this Agreement.</li>
+            <li>
+                The details of the Party A (i.e., Landholding number, Survey number, Patta / Phani number, Khatha number, Land area in acres, Mobile No., ID (Aadhaar Number / Voter ID / if any), Village, Taluk, District, State) will be used by Party B only for the purpose of the AWD/methane avoidance project and will be kept safely and securely.
+            </li>
+        </ol>
+
+        <!-- Signatures Section -->
+        <div class="mt-8 pt-4 border-t border-gray-200 text-sm">
+            <h2 class="text-lg sm:text-xl font-semibold mb-3 text-gray-900">Signatures</h2>
+            <div class="flex flex-col sm:flex-row justify-between items-start sm:items-end mb-6">
+                <div class="mb-4 sm:mb-0 w-full sm:w-1/2 pr-4">
+                    <p class="font-semibold text-gray-700">Signed on behalf of Aurigraph:</p>
+                    <div class="signature-line">
+                        <img src="{{aurigraphSignatureUrl}}" alt="Aurigraph Signature" class="signature-img" onerror="this.onerror=null;this.src='https://placehold.co/150x50/e0e0e0/000000?text=Signature';">
+                    </div>
+                    <p class="text-xs text-gray-600 mt-1">Signature</p>
+                    <span class="prefilled-data mt-6">{{aurigraphNameDesignation}}</span>
+                    <p class="text-xs text-gray-600 mt-1">Name & Designation</p>
+                    <span class="prefilled-data mt-6">Date: {{aurigraphSignDate}}</span>
+                    <p class="text-xs text-gray-600 mt-1"></p>
+                </div>
+                <div class="w-full sm:w-1/2 pl-4">
+                    <p class="font-semibold text-gray-700">Signed by Landowner/Farmer (Party A):</p>
+                    <div class="signature-line">
+                        <img src="{{farmerSignatureUrl}}" alt="Farmer Signature" class="signature-img" onerror="this.onerror=null;this.src='https://placehold.co/150x50/e0e0e0/000000?text=Signature';">
+                    </div>
+                    <p class="text-xs text-gray-600 mt-1">Signature</p>
+                    <span class="prefilled-data mt-6">{{farmerSignName}}</span>
+                    <p class="text-xs text-gray-600 mt-1">Name</p>
+                    <span class="prefilled-data mt-6">Date: {{farmerSignDate}}</span>
+                    <p class="text-xs text-gray-600 mt-1"></p>
+                </div>
+            </div>
+
+            <div class="flex flex-col sm:flex-row justify-between items-start sm:items-end">
+                <div class="mb-4 sm:mb-0 w-full sm:w-1/2 pr-4">
+                    <p class="font-semibold text-gray-700">Witness 1:</p>
+                    <div class="signature-line">
+                        <img src="{{witness1SignatureUrl}}" alt="Witness 1 Signature" class="signature-img" onerror="this.onerror=null;this.src='https://placehold.co/150x50/e0e0e0/000000?text=Signature';">
+                    </div>
+                    <p class="text-xs text-gray-600 mt-1">Signature</p>
+                    <span class="prefilled-data mt-6">{{witness1NameAddress}}</span>
+                    <p class="text-xs text-gray-600 mt-1">Name & Address</p>
+                </div>
+                <div class="w-full sm:w-1/2 pl-4">
+                    <p class="font-semibold text-gray-700">Witness 2:</p>
+                    <div class="signature-line">
+                        <img src="{{witness2SignatureUrl}}" alt="Witness 2 Signature" class="signature-img" onerror="this.onerror=null;this.src='https://placehold.co/150x50/e0e0e0/000000?text=Signature';">
+                    </div>
+                    <p class="text-xs text-gray-600 mt-1">Signature</p>
+                    <span class="prefilled-data mt-6">{{witness2NameAddress}}</span>
+                    <p class="text-xs text-gray-600 mt-1">Name & Address</p>
+                </div>
+            </div>
         </div>
     </div>
 </body>

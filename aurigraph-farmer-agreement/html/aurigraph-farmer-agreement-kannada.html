@@ -1,68 +1,336 @@
 <!DOCTYPE html>
-<html lang="kannada">
+<html lang="kn">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>aurigraph-farmer-agreement - Kannada</title>
+    <title>ಔರಿಗ್ರಾಫ್ ರೈತ ಒಪ್ಪಂದ</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <style>
+        /* Custom styles for Inter font and general body */
         body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 20px;
-            background-color: #f5f5f5;
+            font-family: 'Inter', sans-serif;
+            background-color: #f8f8f8;
         }
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            background-color: white;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        /* Style for the pre-filled data to mimic input lines */
+        .prefilled-data {
+            border-bottom: 1px solid #d1d5db; /* Light gray border for the line */
+            padding: 0.25rem 0;
+            display: block; /* Ensures it takes full width */
+            min-height: 1.5rem; /* Ensures a line is visible even if data is empty */
+            color: #1f2937; /* Darker text for readability */
         }
-        h1 {
-            color: #333;
-            border-bottom: 2px solid #007bff;
-            padding-bottom: 10px;
+        .signature-line {
+            border-bottom: 1px solid #d1d5db;
+            min-height: 2rem; /* Enough space for a signature image */
+            display: flex;
+            align-items: flex-end; /* Align content to the bottom of the line */
+            padding-bottom: 0.25rem;
         }
-        h2 {
-            color: #555;
-            margin-top: 30px;
+        .signature-img {
+            max-height: 50px; /* Adjust as needed for signature image size */
+            width: auto;
+            display: block;
         }
-        .version-info {
-            background-color: #f8f9fa;
-            padding: 15px;
-            border-radius: 5px;
-            margin-top: 30px;
-            border-left: 4px solid #007bff;
+        ul.alpha-list {
+            list-style: none; /* Remove default bullets */
+            padding-left: 0; /* Remove default padding */
+            margin-top: 0.25rem;
+            margin-bottom: 0.25rem;
+            margin-left: 1.5rem; /* Indent alphabetic points */
         }
-        .content-placeholder {
-            background-color: #fff3cd;
-            border: 1px solid #ffeaa7;
-            padding: 15px;
-            border-radius: 5px;
-            margin: 20px 0;
+        ul.alpha-list > li {
+            margin-bottom: 0.125rem; /* Small space between alpha points */
+            text-indent: -1.5rem; /* Pull text back for manual bullet */
+            padding-left: 1.5rem; /* Push text back in */
+        }
+        /* Style for alphabetic bullets in specific lists */
+        .list-disc.list-inside.ml-6.mt-2.space-y-1 {
+            list-style: none;
+            counter-reset: alpha-counter;
+        }
+        .list-disc.list-inside.ml-6.mt-2.space-y-1 > li {
+            counter-increment: alpha-counter;
+            position: relative;
+            padding-left: 1.5rem;
+        }
+        .list-disc.list-inside.ml-6.mt-2.space-y-1 > li::before {
+            content: counter(alpha-counter, lower-alpha) ") ";
+            position: absolute;
+            left: 0;
+            font-weight: normal;
+        }
+        /* Hierarchical numbering for ordered lists */
+        ol.list-decimal.list-inside.space-y-2.mb-6.pl-4.text-sm {
+            list-style: none;
+        }
+        ol.list-decimal.list-inside.space-y-2.mb-6.pl-4.text-sm > li {
+            position: relative;
+            padding-left: 1.5rem;
+        }
+        /* Section 1 numbering */
+        ol.list-decimal.list-inside.space-y-2.mb-6.pl-4.text-sm.section-1 {
+            counter-reset: section1-counter;
+        }
+        ol.list-decimal.list-inside.space-y-2.mb-6.pl-4.text-sm.section-1 > li {
+            counter-increment: section1-counter;
+        }
+        ol.list-decimal.list-inside.space-y-2.mb-6.pl-4.text-sm.section-1 > li::before {
+            content: "1." counter(section1-counter) ". ";
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+        /* Section 2 numbering */
+        ol.list-decimal.list-inside.space-y-2.mb-6.pl-4.text-sm.section-2 {
+            counter-reset: section2-counter;
+        }
+        ol.list-decimal.list-inside.space-y-2.mb-6.pl-4.text-sm.section-2 > li {
+            counter-increment: section2-counter;
+        }
+        ol.list-decimal.list-inside.space-y-2.mb-6.pl-4.text-sm.section-2 > li::before {
+            content: "2." counter(section2-counter) ". ";
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+        /* Section 3 numbering */
+        ol.list-decimal.list-inside.space-y-2.mb-6.pl-4.text-sm.section-3 {
+            counter-reset: section3-counter;
+        }
+        ol.list-decimal.list-inside.space-y-2.mb-6.pl-4.text-sm.section-3 > li {
+            counter-increment: section3-counter;
+        }
+        ol.list-decimal.list-inside.space-y-2.mb-6.pl-4.text-sm.section-3 > li::before {
+            content: "3." counter(section3-counter) ". ";
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+        /* Section 4 numbering */
+        ol.list-decimal.list-inside.space-y-2.mb-6.pl-4.text-sm.section-4 {
+            counter-reset: section4-counter;
+        }
+        ol.list-decimal.list-inside.space-y-2.mb-6.pl-4.text-sm.section-4 > li {
+            counter-increment: section4-counter;
+        }
+        ol.list-decimal.list-inside.space-y-2.mb-6.pl-4.text-sm.section-4 > li::before {
+            content: "4." counter(section4-counter) ". ";
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+        /* Section 5 numbering */
+        ol.list-decimal.list-inside.space-y-2.mb-6.pl-4.text-sm.section-5 {
+            counter-reset: section5-counter;
+        }
+        ol.list-decimal.list-inside.space-y-2.mb-6.pl-4.text-sm.section-5 > li {
+            counter-increment: section5-counter;
+        }
+        ol.list-decimal.list-inside.space-y-2.mb-6.pl-4.text-sm.section-5 > li::before {
+            content: "5." counter(section5-counter) ". ";
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+        /* Sub-lists within main list items */
+        ol.list-decimal.list-inside.space-y-2.mb-6.pl-4.text-sm > li > ol {
+            counter-reset: sub-counter;
+            list-style: none;
+            padding-left: 0;
+            margin-top: 0.5rem;
+        }
+        ol.list-decimal.list-inside.space-y-2.mb-6.pl-4.text-sm > li > ol > li {
+            counter-increment: sub-counter;
+            position: relative;
+            padding-left: 1.5rem;
+        }
+        ol.list-decimal.list-inside.space-y-2.mb-6.pl-4.text-sm > li > ol > li::before {
+            content: counter(main-counter) "." counter(sub-counter) " ";
+            position: absolute;
+            left: 0;
+            font-weight: normal;
         }
     </style>
 </head>
-<body>
-    <div class="container">
-        <h1>aurigraph-farmer-agreement - Kannada</h1>
+<body class="p-4 sm:p-6 md:p-8 lg:p-12 bg-gray-50 text-gray-800 max-w-7xl mx-auto">
+    <div class="bg-white p-6 sm:p-8 md:p-10 lg:p-12 ">
+        <h1 class="text-xl sm:text-2xl font-bold text-center mb-4 sm:mb-6 text-gray-900">
+            AWD ಅನುಷ್ಠಾನಗೊಳಿಸುವ ರೈತ ಮತ್ತು ಔರಿಗ್ರಾಫ್ ನಡುವಿನ ಕಾರ್ಬನ್ ಕ್ರೆಡಿಟ್‌ಗಳ ಹಂಚಿಕೆಯ ಒಪ್ಪಂದ
+        </h1>
 
-        <h2>Agreement Details</h2>
-        <p>This document contains the Kannada version of the aurigraph-farmer-agreement agreement.</p>
+        <p class="mb-4 leading-relaxed text-sm">
+            ಸಂಬಂಧಪಟ್ಟ ಒಪ್ಪಂದವು ಪ್ರಸ್ತುತ ಬೇಸಾಯ ಮಾಡುತ್ತಿರುವ ಜಮೀನು ಮಾಲೀಕರು/ರೈತರು (ಇನ್ನು ಮುಂದೆ "<strong class="font-semibold">ಪಕ್ಷ 'ಎ'</strong>" ಎಂದು ಉಲ್ಲೇಖಿಸಲಾಗುವುದು) ಮತ್ತು ಔರಿಗ್ರಾಫ್, EIN: 852762242 (ಇನ್ನು ಮುಂದೆ "<strong class="font-semibold">ಪಕ್ಷ 'ಬಿ'/ಕಂಪನಿ/ಔರಿಗ್ರಾಫ್</strong>" ಎಂದು ಉಲ್ಲೇಖಿಸಲಾಗುವುದು) ಇವರ ನಡುವೆ ಕಾರ್ಬನ್ ಕ್ರೆಡಿಟ್ ಪ್ರಯೋಜನಗಳನ್ನು ಹಂಚಿಕೊಳ್ಳುವ ಉದ್ದೇಶಕ್ಕಾಗಿ ಮಾಡಿಕೊಂಡಿರುತ್ತದೆ ಮತ್ತು ಈ ಒಪ್ಪಂದದ ನಿಯಮಗಳು ಮತ್ತು ಷರತ್ತುಗಳಿಗೆ ಬದ್ಧರಾಗಿರಲು ಎರಡೂ ಪಕ್ಷಗಳು ಒಪ್ಪುತ್ತವೆ.
+        </p>
 
-        <h2>Content</h2>
-        <div class="content-placeholder">
-            <strong>Content will be added here</strong>
+        <h2 class="text-lg sm:text-xl font-semibold mb-3 text-gray-900">ಪಕ್ಷ - ಎ ಯ ವಿವರಗಳು</h2>
+        <div class="mb-6">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-3">
+                <div class="flex flex-col sm:flex-row sm:items-center text-md">
+                    <label class="w-full sm:w-1/2 font-medium text-gray-700">ಶ್ರೀ/ಶ್ರೀಮತಿ/ಕುಮಾರಿ (ಭತ್ತದ ರೈತರ ಹೆಸರು):</label>
+                    <span class="prefilled-data flex-grow">{{farmerName}}</span>
+                </div>
+                <div class="flex flex-col sm:flex-row sm:items-center text-md">
+                    <label class="w-full sm:w-1/2 font-medium text-gray-700">ಸಮೀಕ್ಷೆ ಸಂಖ್ಯೆ:</label>
+                    <span class="prefilled-data flex-grow">{{surveyNumber}}</span>
+                </div>
+                <div class="flex flex-col sm:flex-row sm:items-center text-md">
+                    <label class="w-full sm:w-1/2 font-medium text-gray-700">ಪट्टा / ಪಹಣಿ ಸಂಖ್ಯೆ:</label>
+                    <span class="prefilled-data flex-grow">{{pattaPhaniNumber}}</span>
+                </div>
+                <div class="flex flex-col sm:flex-row sm:items-center text-md">
+                    <label class="w-full sm:w-1/2 font-medium text-gray-700">ಖಾತಾ ಸಂಖ್ಯೆ:</label>
+                    <span class="prefilled-data flex-grow">{{khathaNumber}}</span>
+                </div>
+                <div class="flex flex-col sm:flex-row sm:items-center text-md">
+                    <label class="w-full sm:w-1/2 font-medium text-gray-700">ಎಕರೆಗಳಲ್ಲಿ ಭೂಮಿ ವಿಸ್ತೀರ್ಣ:</label>
+                    <span class="prefilled-data flex-grow">{{landArea}}</span>
+                </div>
+                <div class="flex flex-col sm:flex-row sm:items-center text-md">
+                    <label class="w-full sm:w-1/2 font-medium text-gray-700">ಮೊಬೈಲ್ ಸಂಖ್ಯೆ:</label>
+                    <span class="prefilled-data flex-grow">{{mobileNo}}</span>
+                </div>
+                <div class="flex flex-col sm:flex-row sm:items-center text-md">
+                    <label class="w-full sm:w-1/2 font-medium text-gray-700">ಗುರುತಿನ ಚೀಟಿ (ಆಧಾರ್ ಸಂಖ್ಯೆ / ಮತದಾರರ ಗುರುತಿನ ಚೀಟಿ / ಯಾವುದಾದರೂ ಇದ್ದರೆ):</label>
+                    <span class="prefilled-data flex-grow">{{idNumber}}</span>
+                </div>
+                <div class="flex flex-col sm:flex-row sm:items-center text-md">
+                    <label class="w-full sm:w-1/2 font-medium text-gray-700">ಗ್ರಾಮ:</label>
+                    <span class="prefilled-data flex-grow">{{village}}</span>
+                </div>
+                <div class="flex flex-col sm:flex-row sm:items-center text-md">
+                    <label class="w-full sm:w-1/2 font-medium text-gray-700">ತಾಲ್ಲೂಕು:</label>
+                    <span class="prefilled-data flex-grow">{{taluk}}</span>
+                </div>
+                <div class="flex flex-col sm:flex-row sm:items-center text-md">
+                    <label class="w-full sm:w-1/2 font-medium text-gray-700">ಜಿಲ್ಲೆ:</label>
+                    <span class="prefilled-data flex-grow">{{district}}</span>
+                </div>
+                <div class="flex flex-col sm:flex-row sm:items-center text-md">
+                    <label class="w-full sm:w-1/2 font-medium text-gray-700">ರಾಜ್ಯ:</label>
+                    <span class="prefilled-data flex-grow">{{state}}</span>
+                </div>
+            </div>
         </div>
 
-        <div class="version-info">
-            <h3>Version Information</h3>
-            <p><strong>Version:</strong> 1.0</p>
-            <p><strong>Language:</strong> Kannada</p>
-            <p><strong>Created:</strong> 2025-07-31 12:55:45</p>
-            <p><strong>Type:</strong> HTML Document</p>
+        <h2 class="text-lg sm:text-xl font-semibold mb-3 text-gray-900">1. ಪಕ್ಷ 'ಎ' ಈ ಕೆಳಗೆ ತಿಳಿಸಿದ ಹೇಳಿಕೆಗಳನ್ನು hereby ದೃಢಪಡಿಸುತ್ತದೆ</h2>
+        <ol class="list-decimal list-inside space-y-2 mb-6 pl-4 text-sm section-1">
+            <li>
+                ನಾನು ಮೇಲೆ ತಿಳಿಸಿದ ಭೂ ಹಿಡುವಳಿಯ ಅಧಿಕೃತ ವ್ಯಕ್ತಿಯಾಗಿದ್ದೇನೆ ಮತ್ತು ಪ್ರಸ್ತುತ ಈ ಕೆಳಗಿನ ಸಾಂಪ್ರದಾಯಿಕ ಪದ್ಧತಿಗಳನ್ನು ಅನುಸರಿಸುತ್ತಿದ್ದೇನೆ:
+                <ul class="list-disc list-inside ml-6 mt-2 space-y-1">
+                    <li>ನಿರಂತರವಾಗಿ ನೀರು ಹರಿಸುವುದು</li>
+                    <li>ಕಸಿ ಭತ್ತ (TPR)</li>
+                    <li>ಎರಡು ಬೆಳೆ ಭತ್ತ</li>
+                    <li>ಮೂರು ಬೆಳೆ ಭತ್ತ</li>
+                    <li>ಒಂದು ಬೆಳೆ ಭತ್ತ</li>
+                </ul>
+            </li>
+            <li>
+                ಕಾರ್ಬನ್ ಆಫ್‌ಸೆಟ್ ಯೋಜನೆ/ಕಾರ್ಯಕ್ರಮದ ಅಡಿಯಲ್ಲಿ ಯೋಜನೆಯನ್ನು ಅಭಿವೃದ್ಧಿಪಡಿಸುವಲ್ಲಿ ಔರಿಗ್ರಾಫ್‌ನೊಂದಿಗೆ ಕೆಲಸ ಮಾಡಲು ನಾನು ಸಿದ್ಧನಿದ್ದೇನೆ. ನಾನು ಮೇಲೆ ತಿಳಿಸಿದ ಭೂ ವಿಸ್ತೀರ್ಣದಲ್ಲಿ, ಮೇಲೆ ವಿವರಿಸಿದ ನನ್ನ ಭೂ ಹಿಡುವಳಿಯಲ್ಲಿ ಸುಸ್ಥಿರ ಭತ್ತದ ಉತ್ಪಾದನಾ ಪದ್ಧತಿಗಳನ್ನು ಅನುಷ್ಠಾನಗೊಳಿಸಲು ಮತ್ತು ಕಾರ್ಬನ್ ಮಾರುಕಟ್ಟೆ ಮಾನದಂಡದ ಅಡಿಯಲ್ಲಿ ಯೋಜನೆಯಲ್ಲಿ ಭಾಗವಹಿಸಲು ದೃಢೀಕರಿಸುತ್ತೇನೆ. ನಾನು ಈ ಕೆಳಗಿನ ಟಿಕ್ ಗುರುತು ಮಾಡಿದ ಪದ್ಧತಿಗಳನ್ನು ಅಳವಡಿಸಿಕೊಳ್ಳುತ್ತೇನೆ:
+                <ul class="list-disc list-inside ml-6 mt-2 space-y-1">
+                    <li>ಬೇಸಾಯದ ಅವಧಿಯಲ್ಲಿ ನೀರಿನ ಹರಿವನ್ನು ನಿರಂತರವಾಗಿ ಹರಿಯುವ ಸ್ಥಿತಿಯಿಂದ ಮಧ್ಯಂತರವಾಗಿ ನೀರು ಹರಿಸುವ ಸ್ಥಿತಿಗೆ ಮತ್ತು/ಅಥವಾ ನೀರು ಹರಿಯುವ ಅವಧಿಯನ್ನು ಕಡಿಮೆ ಮಾಡುವುದು.</li>
+                    <li>ಪರ್ಯಾಯ ಒದ್ದೆ ಮತ್ತು ಒಣಗಿಸುವ ವಿಧಾನ (AWD)</li>
+                    <li>ಭತ್ತದ ಬೇಸಾಯದ ಪದ್ಧತಿಯನ್ನು ಕಸಿ ಭತ್ತದಿಂದ ನೇರ ಬಿತ್ತನೆ ಭತ್ತಕ್ಕೆ (DSR) ಬದಲಾಯಿಸುವುದು.</li>
+                </ul>
+            </li>
+            <li>
+                ಔರಿಗ್ರಾಫ್‌ನ ತಜ್ಞರು ನೀಡುವ ಯಾವುದೇ ಸೂಚನೆಗಳಿಗೆ ಅನುಗುಣವಾಗಿ ತಾಂತ್ರಿಕ ಮಾರ್ಗದರ್ಶನವನ್ನು ಅನುಸರಿಸಲು ಮತ್ತು ವಿಧಾನ, ಪದ್ಧತಿ ಮತ್ತು ಸಂಬಂಧಿತ ಉಪಕರಣಗಳನ್ನು ನಿರ್ವಹಿಸಲು ನಾನು ಈ ಮೂಲಕ ಬದಲಾಯಿಸಲಾಗದಂತೆ ಒಪ್ಪುತ್ತೇನೆ.
+                <ul class="list-disc list-inside ml-6 mt-2 space-y-1">
+                    <li>ಒಪ್ಪಂದದ ಷರತ್ತು 1.2 ರಲ್ಲಿ ಆಯ್ಕೆ ಮಾಡಿದ ವಿಧಾನವನ್ನು ಅಳವಡಿಸಿಕೊಳ್ಳುವುದು.</li>
+                    <li>ಅಳವಡಿಸಿಕೊಂಡ ತಂತ್ರ ಅಥವಾ ಸಂಬಂಧಿತ ಉಪಕರಣ/ಪೈಪ್‌ನಲ್ಲಿ ಯಾವುದೇ ಇತರ ಹಿತಾಸಕ್ತಿಗಳನ್ನು ಮಾರಾಟ ಮಾಡದಿರುವುದು ಅಥವಾ ರಚಿಸದಿರುವುದು.</li>
+                    <li>AWD ತಂತ್ರ ಮತ್ತು/ಅಥವಾ DSR ಗೆ ಸಂಬಂಧಿಸಿದಂತೆ ಏನಾದರೂ ತಪ್ಪಾಗಿದೆ ಅಥವಾ ತಪ್ಪಾಗಬಹುದು ಎಂದು ನಾನು ಗಮನಿಸಿದರೆ ಔರಿಗ್ರಾಫ್‌ಗೆ ತಿಳಿಸುವುದು.</li>
+                    <li>ಭೂಮಿಯ ಮಾಲೀಕತ್ವ/ಕೃಷಿ ಹಕ್ಕುಗಳನ್ನು ಬೇರೆ ರೈತನಿಗೆ ವರ್ಗಾಯಿಸಿದರೆ ತಿಳಿಸುವುದು.</li>
+                    <li>ಔರಿಗ್ರಾಫ್ ಮತ್ತು/ಅಥವಾ ಅವರ ಪ್ರತಿನಿಧಿಗಳಿಗೆ ನನ್ನ ಜಮೀನಿಗೆ ಪ್ರವೇಶಿಸಲು ಮತ್ತು ಅವರು ಕೇಳುವ ಯಾವುದೇ ಮಾಹಿತಿಯನ್ನು ಒದಗಿಸಲು ಅವಕಾಶ ನೀಡುವುದು.</li>
+                    <li>ಔರಿಗ್ರಾಫ್ ಪ್ರತಿನಿಧಿಯು ನೀಡಿದ ಸೂಚನೆಗಳನ್ನು ಅನುಸರಿಸಲು ಮತ್ತು ಕಾರ್ಬನ್ ಪಾಸ್‌ಬುಕ್‌ನಲ್ಲಿ ಔರಿಗ್ರಾಫ್ ಕೇಳಿದಂತೆ ದಾಖಲೆಯನ್ನು ನಿರ್ವಹಿಸಲು ನಾನು ಒಪ್ಪುತ್ತೇನೆ.</li>
+                    <li>ಮೇಲೆ ತಿಳಿಸಿದ ನನ್ನ ಜಮೀನಿನಲ್ಲಿ ನಾನು ಅಳವಡಿಸಿಕೊಂಡ ಬೇಸಾಯದ ಪದ್ಧತಿಗಾಗಿ ಕಾರ್ಬನ್ ಯೋಜನೆ ಚಕ್ರವನ್ನು ನಿರ್ವಹಿಸಲು ಮತ್ತು ಷರತ್ತು 1.2 ರಲ್ಲಿ ವ್ಯಾಖ್ಯಾನಿಸಿದಂತೆ ಅನ್ವಯವಾಗುವ ಮಾನದಂಡದ ಪ್ರಕಾರ ಕಾರ್ಬನ್ ಕ್ರೆಡಿಟ್‌ಗಳನ್ನು ಪಡೆಯಲು ನಾನು ಔರಿಗ್ರಾಫ್ ಅನ್ನು ನೇಮಿಸುತ್ತೇನೆ.</li>
+                    <li>ನಾನು ಮುಂದಿನ 20 ವರ್ಷಗಳವರೆಗೆ/ನಾನು ಸಂಬಂಧಪಟ್ಟ ಕೃಷಿ ಭೂಮಿಯನ್ನು ವರ್ಗಾಯಿಸುವವರೆಗೆ/ನಾನು ಇನ್ನು ಮುಂದೆ ಭೂಮಿಯ ಬೇಸಾಯಗಾರನಾಗಿಲ್ಲದವರೆಗೆ (ಇವುಗಳಲ್ಲಿ ಯಾವುದು ಮೊದಲು ಬರುತ್ತದೋ ಅಲ್ಲಿಯವರೆಗೆ) ಔರಿಗ್ರಾಫ್ ನನ್ನೊಂದಿಗೆ ಮಾತ್ರ ವ್ಯವಹರಿಸಲು ಒಪ್ಪುತ್ತೇನೆ, ಅಲ್ಲಿ ಔರಿಗ್ರಾಫ್ ಕಾರ್ಬನ್ ಯೋಜನೆ ಚಕ್ರವನ್ನು ನಿರ್ವಹಿಸುತ್ತದೆ ಮತ್ತು ಮೇಲೆ ತಿಳಿಸಿದ ಕ್ಷೇತ್ರದಲ್ಲಿ ಷರತ್ತು 1.2 ರಲ್ಲಿ ತಿಳಿಸಲಾದ ಬೇಸಾಯದ ಪದ್ಧತಿಗೆ ಸಂಬಂಧಿಸಿದ ಕಾರ್ಬನ್ ಕ್ರೆಡಿಟ್‌ಗಳನ್ನು ಪಡೆಯುತ್ತದೆ. ಭೂಮಿಯ ಮಾಲೀಕತ್ವ/ಕೃಷಿ ಹಕ್ಕುಗಳನ್ನು ಬೇರೆ ರೈತನಿಗೆ ವರ್ಗಾಯಿಸುವ ಬಗ್ಗೆ ನಾನು ಸೂಕ್ತವಾಗಿ ತಿಳಿಸುತ್ತೇನೆ.</li>
+                </ul>
+            </li>
+            <li>
+                ನನ್ನ ಕುಟುಂಬದ ಸದಸ್ಯರ ಪರವಾಗಿ, ಷರತ್ತು 1.2 ರ ಅಡಿಯಲ್ಲಿ ಸೂಚಿಸಲಾದ ತಂತ್ರವನ್ನು ಅನುಷ್ಠಾನಗೊಳಿಸುವ ಮೂಲಕ ಮತ್ತು ಔರಿಗ್ರಾಫ್‌ನ ಸಹಯೋಗದೊಂದಿಗೆ ಉತ್ಪತ್ತಿಯಾಗಬಹುದಾದ ಯಾವುದೇ ಕಾರ್ಬನ್ ಕ್ರೆಡಿಟ್‌ಗಳ ಎಲ್ಲಾ ಹಕ್ಕುಗಳನ್ನು ನಾನು ಔರಿಗ್ರಾಫ್‌ಗೆ ಬದಲಾಯಿಸಲಾಗದಂತೆ ವರ್ಗಾಯಿಸುತ್ತೇನೆ ಮತ್ತು ಅಂತಹ ವರ್ಗಾವಣೆಯನ್ನು ಕಾರ್ಯಗತಗೊಳಿಸಲು ಎಲ್ಲಾ ಸಮಂಜಸವಾದ ಕ್ರಮಗಳನ್ನು ತೆಗೆದುಕೊಳ್ಳುತ್ತೇನೆ. ಸಹಾಯಕತೆ, ಸಾಮರ್ಥ್ಯ ನಿರ್ಮಾಣ, ಕೈಜೋಡಿಸುವಿಕೆ, ಮೇಲ್ವಿಚಾರಣಾ ನೀರಿನ ಪೈಪ್‌ನ ಉಚಿತ ಪೂರೈಕೆ, AWD ತಂತ್ರದ ಅನುಷ್ಠಾನ ಮತ್ತು ಯೋಜನಾ ಚಕ್ರದ ನಿರ್ವಹಣೆಗೆ ಬದಲಾಗಿ ಷರತ್ತು 1.2 ರ ಅಡಿಯಲ್ಲಿ ತಿಳಿಸಲಾದ ಪದ್ಧತಿಗಳನ್ನು ಅಳವಡಿಸಿಕೊಳ್ಳುವುದರಿಂದ ನನ್ನ ಜಮೀನಿನಿಂದ ಉತ್ಪತ್ತಿಯಾಗುವ ಕಾರ್ಬನ್ ಕ್ರೆಡಿಟ್‌ಗಳ ಮಾಲೀಕತ್ವದ ಎಲ್ಲಾ ಹಕ್ಕುಗಳನ್ನು ನಾನು ಔರಿಗ್ರಾಫ್‌ಗೆ ಬದಲಾಯಿಸಲಾಗದಂತೆ ವರ್ಗಾಯಿಸುತ್ತೇನೆ. ಕಾರ್ಬನ್ ಕ್ರೆಡಿಟ್‌ಗಳು ಎಂದರೆ ಕ್ಲೀನ್ ಡೆವಲಪ್‌ಮೆಂಟ್ ಮೆಕ್ಯಾನಿಸಂ ಅಡಿಯಲ್ಲಿ ಉತ್ಪತ್ತಿಯಾಗುವ ಪ್ರಮಾಣೀಕೃತ ಇಂಗಾಲ ಹೊರಸೂಸುವಿಕೆ ಕಡಿತಗಳು (CER) ಅಥವಾ ವೆರಿಫೈಡ್ ಕಾರ್ಬನ್ ಸ್ಟ್ಯಾಂಡರ್ಡ್ (VCS) ಅಡಿಯಲ್ಲಿ ಪರಿಶೀಲಿಸಿದ ಕಾರ್ಬನ್ ಘಟಕಗಳು (VCU) ಅಥವಾ VERRA ಸ್ಟ್ಯಾಂಡರ್ಡ್ ಅಡಿಯಲ್ಲಿ ಸ್ವಯಂಪ್ರೇರಿತ ಹೊರಸೂಸುವಿಕೆ ಕಡಿತ ಘಟಕಗಳು (VERs), ಪ್ಯಾರಿಸ್ ಒಪ್ಪಂದದ ಷರತ್ತು 6.4 ರ ಅಡಿಯಲ್ಲಿ A6.4 - ER ಅಥವಾ ಭವಿಷ್ಯದಲ್ಲಿ ಯಾವುದೇ ಸಮಯದಲ್ಲಿ ಷರತ್ತು 1.2 ರ ಅಡಿಯಲ್ಲಿ ತಂತ್ರದ ಅನುಷ್ಠಾನಕ್ಕೆ ಸಂಬಂಧಿಸಿದ ಇತರ ಕಾರ್ಬನ್ ಕ್ರೆಡಿಟ್ ಮಾನದಂಡ ಅಥವಾ ಪ್ರಯೋಜನಗಳು.
+            </li>
+        </ol>
+
+        <h2 class="text-lg sm:text-xl font-semibold mb-3 text-gray-900">2. ಔರಿಗ್ರಾಫ್‌ನ ಕರ್ತವ್ಯಗಳು / ಔರಿಗ್ರಾಫ್</h2>
+        <ol class="list-decimal list-inside space-y-2 mb-6 pl-4 text-sm section-2">
+            <li>
+                ಈ ಒಪ್ಪಂದದ ಅಡಿಯಲ್ಲಿ ಕಾರ್ಬನ್ ಕ್ರೆಡಿಟ್‌ಗಳನ್ನು ಯಶಸ್ವಿಯಾಗಿ ನೀಡಿದ ನಂತರ, ಔರಿಗ್ರಾಫ್ ಅಳವಡಿಸಿಕೊಂಡ ಬೇಸಾಯ ಪದ್ಧತಿಗಳಿಂದ ಉತ್ಪತ್ತಿಯಾದ ಕಾರ್ಬನ್ ಕ್ರೆಡಿಟ್‌ಗಳು ಮತ್ತು ಪ್ರಸ್ತುತ ಕಾರ್ಬನ್ ಕ್ರೆಡಿಟ್ ಮಾರುಕಟ್ಟೆ ಬೆಲೆಯ ಆಧಾರದ ಮೇಲೆ ಪಕ್ಷ 'ಎ' ಗೆ ಕಾರ್ಬನ್ ಆದಾಯದ ಪಾಲನ್ನು ಒದಗಿಸಲು ತನ್ನ ಕೈಲಾದಷ್ಟು ಪ್ರಯತ್ನಿಸುತ್ತದೆ. ಪಕ್ಷ 'ಬಿ' ಯು ಪಕ್ಷ 'ಎ' ಗೆ ಕಾರ್ಬನ್ ಕ್ರೆಡಿಟ್‌ಗಳ ನಗದು ರೂಪದಲ್ಲಿ ಪಾವತಿ ಮಾಡುತ್ತದೆ, ಆದರೆ ಪಕ್ಷ 'ಬಿ' ಯ ನಿಯಂತ್ರಣದಲ್ಲಿಲ್ಲದ ಮತ್ತು ಅದರ ಬಾಧ್ಯತೆಗಳನ್ನು ನಿರ್ವಹಿಸಲು ಭೌತಿಕವಾಗಿ/ಪ್ರತಿಕೂಲವಾಗಿ/ಕಾನೂನುಬದ್ಧವಾಗಿ ಪರಿಣಾಮ ಬೀರುವ ಸಂದರ್ಭಗಳನ್ನು ಹೊರತುಪಡಿಸಿ. ಉಲ್ಲೇಖ ಮಾನದಂಡಕ್ಕೆ ಹೋಲಿಸಿದರೆ ಕಾರ್ಬನ್ ಬೆಲೆಯಲ್ಲಿನ ಯಾವುದೇ ಹೆಚ್ಚಳ ಅಥವಾ ಇಳಿಕೆಯು ರೈತರಿಗೆ ನೀಡಲಾಗುವ ಕಾರ್ಬನ್ ಆದಾಯಕ್ಕೆ ಅದೇ ಪ್ರಮಾಣದಲ್ಲಿ ಸರಿಹೊಂದಿಸಲಾಗುತ್ತದೆ.
+            </li>
+        </ol>
+
+        <h2 class="text-lg sm:text-xl font-semibold mb-3 text-gray-900">3. ವಿವಾದ ಪರಿಹಾರ</h2>
+        <ol class="list-decimal list-inside space-y-2 mb-6 pl-4 text-sm section-3">
+            <li>ಈ ಒಪ್ಪಂದವು ಭಾರತ ಸರ್ಕಾರದ ಕಾನೂನುಗಳ ಅಡಿಯಲ್ಲಿ ನಿಯಂತ್ರಿಸಲ್ಪಡುತ್ತದೆ ಮತ್ತು ನಿರ್ಮಿಸಲ್ಪಡುತ್ತದೆ.</li>
+            <li>ಸಂಬಂಧಪಟ್ಟ ಪಕ್ಷಕ್ಕೆ (ಲಿಖಿತವಾಗಿ) ವಿವಾದವನ್ನು ಗಮನಕ್ಕೆ ತಂದ 10 ದಿನಗಳ ಒಳಗೆ ಸಮರ್ಪಕವಾಗಿ ರಚಿಸಲಾದ ನಿಷ್ಪಕ್ಷಪಾತ ಮಧ್ಯಸ್ಥಿಕೆ ಪ್ರಕ್ರಿಯೆಯ ಅಡಿಯಲ್ಲಿ ವಿವಾದವನ್ನು ಸೌಹಾರ್ದಯುತವಾಗಿ ಪರಿಹರಿಸುವವರೆಗೆ ಯಾವುದೇ ನ್ಯಾಯಾಲಯದಲ್ಲಿ ಯಾವುದೇ ವಿವಾದವನ್ನು ಇಡಬಾರದು. (ಮಧ್ಯಸ್ಥಿಕೆದಾರರನ್ನು ಪಕ್ಷ 'ಎ' ನೊಂದಿಗೆ ಸಮಾಲೋಚಿಸಿ ಪಕ್ಷ 'ಬಿ' ನೇಮಿಸಬಹುದು).</li>
+        </ol>
+
+        <h2 class="text-lg sm:text-xl font-semibold mb-3 text-gray-900">4. ಅನಿರೀಕ್ಷಿತ ಘಟನೆ (Force Majeure)</h2>
+        <ol class="list-decimal list-inside space-y-2 mb-6 pl-4 text-sm section-4">
+            <li>
+                ಈ ಒಪ್ಪಂದದ ಉದ್ದೇಶಕ್ಕಾಗಿ, "ಅನಿರೀಕ್ಷಿತ ಘಟನೆ" ಎಂದರೆ, ಬಾಧಿತ ಪಕ್ಷದ ಸಮಂಜಸವಾದ ನಿಯಂತ್ರಣದಲ್ಲಿ ಇಲ್ಲದ ಯಾವುದೇ ಪರಿಸ್ಥಿತಿ, ಆದರೆ (i) ಅಂತಹ ಪರಿಸ್ಥಿತಿಯನ್ನು ಸಮಂಜಸವಾದ ಶ್ರದ್ಧೆ ಮತ್ತು ಉತ್ತಮ ಯುಟಿಲಿಟಿ ಅಭ್ಯಾಸದ ಅನುಸರಣೆಯ ಹೊರತಾಗಿಯೂ, ಅಂತಹ ಪಕ್ಷದಿಂದ ತಡೆಯಲು, ತಪ್ಪಿಸಲು ಅಥವಾ ತೆಗೆದುಹಾಕಲು ಸಾಧ್ಯವಾಗುವುದಿಲ್ಲ, ಮತ್ತು (ii) ಅಂತಹ ಪರಿಸ್ಥಿತಿಯು ಈ ಒಪ್ಪಂದದ ಅಡಿಯಲ್ಲಿ ತನ್ನ ಬಾಧ್ಯತೆಗಳನ್ನು ನಿರ್ವಹಿಸುವ ಪಕ್ಷದ ಸಾಮರ್ಥ್ಯದ ಮೇಲೆ ಭೌತಿಕವಾಗಿ ಮತ್ತು ಪ್ರತಿಕೂಲವಾಗಿ ಪರಿಣಾಮ ಬೀರುತ್ತದೆ, ಮತ್ತು ಅಂತಹ ಪಕ್ಷವು ತನ್ನ ಬಾಧ್ಯತೆಗಳನ್ನು ನಿರ್ವಹಿಸುವ ಸಾಮರ್ಥ್ಯದ ಮೇಲೆ ಅಂತಹ ಘಟನೆಯ ಪರಿಣಾಮವನ್ನು ತಪ್ಪಿಸಲು ಮತ್ತು ಅದರ ಪರಿಣಾಮಗಳನ್ನು ತಗ್ಗಿಸಲು ಎಲ್ಲಾ ಸಮಂಜಸವಾದ ಮುನ್ನೆಚ್ಚರಿಕೆಗಳನ್ನು, ಸೂಕ್ತ ಕಾಳಜಿಯನ್ನು ಮತ್ತು ಸಮಂಜಸವಾದ ಪರ್ಯಾಯ ಕ್ರಮಗಳನ್ನು ತೆಗೆದುಕೊಂಡಿದೆ.
+            </li>
+            <li>
+                ಪಕ್ಷ 'ಬಿ' ತನ್ನ ವ್ಯವಹಾರವನ್ನು ನಡೆಸುವ ಸಾಮರ್ಥ್ಯದ ಮೇಲೆ ಯಾವುದೇ ಕಾನೂನು ನಿಷೇಧ, ಶಾಸನ, ಆದೇಶ, ನಿಯಂತ್ರಣ ಅಥವಾ ಸಮರ್ಥ ಪ್ರಾಧಿಕಾರದಿಂದ ಪಕ್ಷ 'ಬಿ' ತನ್ನ ವ್ಯವಹಾರವನ್ನು ನಡೆಸುವುದನ್ನು ನಿಷೇಧಿಸುವ ಆದೇಶದ ಅಂಗೀಕಾರವನ್ನು ಒಳಗೊಂಡಂತೆ, ಪಕ್ಷ 'ಬಿ' ಕಾನೂನು ಅಥವಾ ಯಾವುದೇ ಆದೇಶ, ಒಪ್ಪಿಗೆ, ನಿಯಮ, ನಿಯಂತ್ರಣ ಅಥವಾ ಸಮರ್ಥ ಪ್ರಾಧಿಕಾರದಿಂದ ಅಂಗೀಕರಿಸಲ್ಪಟ್ಟ ಇತರ ಶಾಸಕಾಂಗ ಅಥವಾ ನ್ಯಾಯಾಂಗ ಸಾಧನವನ್ನು ಅನುಸರಿಸಲು ವಿಫಲವಾದ ಕಾರಣದಿಂದ ಹೊರತುಪಡಿಸಿ.
+            </li>
+            <li>
+                ಷರತ್ತುಗಳು 4.1 ಮತ್ತು 4.2 ರ ಕಾರಣದಿಂದ ತಮ್ಮ ಕಾರ್ಯಕ್ಷಮತೆಗೆ ಅಸಮರ್ಥತೆಗೆ ಪಕ್ಷಗಳು ಜವಾಬ್ದಾರರಾಗಿರುವುದಿಲ್ಲ.
+            </li>
+        </ol>
+
+        <h2 class="text-lg sm:text-xl font-semibold mb-3 text-gray-900">5. ಗೌಪ್ಯತೆ</h2>
+        <ol class="list-decimal list-inside space-y-2 mb-6 pl-4 text-sm section-5">
+            <li>ಪಕ್ಷ 'ಎ' ಯಾರಿಗೂ ಬಹಿರಂಗಪಡಿಸಬಾರದು ಮತ್ತು ಈ ಒಪ್ಪಂದದ ನಿಯಮಗಳಿಗೆ ಅನುಗುಣವಾಗಿ ಪಕ್ಷ 'ಬಿ' ಯೊಂದಿಗಿನ ಯಾವುದೇ ವ್ಯವಹಾರಗಳಿಗೆ ಸಂಬಂಧಿಸಿದಂತೆ ಅತ್ಯಂತ ಹೆಚ್ಚಿನ ಮಟ್ಟದ ಗೌಪ್ಯತೆಯನ್ನು ಕಾಪಾಡಿಕೊಳ್ಳಬೇಕು.</li>
+            <li>
+                ಪಕ್ಷ 'ಎ' ಯ ವಿವರಗಳನ್ನು (ಅಂದರೆ, ಭೂ ಹಿಡುವಳಿ ಸಂಖ್ಯೆ, ಸಮೀಕ್ಷೆ ಸಂಖ್ಯೆ, ಪಟ್ಟಾ / ಪಹಣಿ ಸಂಖ್ಯೆ, ಖಾತಾ ಸಂಖ್ಯೆ, ಎಕರೆಗಳಲ್ಲಿ ಭೂ ಪ್ರದೇಶ, ಮೊಬೈಲ್ ಸಂಖ್ಯೆ, ಗುರುತಿನ ಚೀಟಿ (ಆಧಾರ್ ಸಂಖ್ಯೆ / ಮತದಾರರ ಗುರುತಿನ ಚೀಟಿ / ಯಾವುದಾದರೂ ಇದ್ದರೆ), ಗ್ರಾಮ, ತಾಲ್ಲೂಕು, ಜಿಲ್ಲೆ, ರಾಜ್ಯ) ಪಕ್ಷ 'ಬಿ' ಯು AWD/ಮೀಥೇನ್ ತಪ್ಪಿಸುವ ಯೋಜನೆಗಾಗಿ ಮಾತ್ರ ಬಳಸುತ್ತದೆ ಮತ್ತು ಅವುಗಳನ್ನು ಸುರಕ್ಷಿತವಾಗಿ ಮತ್ತು ಭದ್ರವಾಗಿ ಇರಿಸಲಾಗುತ್ತದೆ.
+            </li>
+        </ol>
+
+        <div class="mt-8 pt-4 border-t border-gray-200 text-sm">
+            <h2 class="text-lg sm:text-xl font-semibold mb-3 text-gray-900">ಸಹಿಗಳು</h2>
+            <div class="flex flex-col sm:flex-row justify-between items-start sm:items-end mb-6">
+                <div class="mb-4 sm:mb-0 w-full sm:w-1/2 pr-4">
+                    <p class="font-semibold text-gray-700">ಔರಿಗ್ರಾಫ್ ಪರವಾಗಿ ಸಹಿ:</p>
+                    <div class="signature-line">
+                        <img src="{{aurigraphSignatureUrl}}" alt="Aurigraph Signature" class="signature-img" onerror="this.onerror=null;this.src='https://placehold.co/150x50/e0e0e0/000000?text=ಸಹಿ';">
+                    </div>
+                    <p class="text-xs text-gray-600 mt-1">ಸಹಿ</p>
+                    <span class="prefilled-data mt-6">{{aurigraphNameDesignation}}</span>
+                    <p class="text-xs text-gray-600 mt-1">ಹೆಸರು ಮತ್ತು ಹುದ್ದೆ</p>
+                    <span class="prefilled-data mt-6">ದಿನಾಂಕ: {{aurigraphSignDate}}</span>
+                    <p class="text-xs text-gray-600 mt-1"></p>
+                </div>
+                <div class="w-full sm:w-1/2 pl-4">
+                    <p class="font-semibold text-gray-700">ಜಮೀನು ಮಾಲೀಕರು/ರೈತರಿಂದ ಸಹಿ (ಪಕ್ಷ 'ಎ'):</p>
+                    <div class="signature-line">
+                        <img src="{{farmerSignatureUrl}}" alt="Farmer Signature" class="signature-img" onerror="this.onerror=null;this.src='https://placehold.co/150x50/e0e0e0/000000?text=ಸಹಿ';">
+                    </div>
+                    <p class="text-xs text-gray-600 mt-1">ಸಹಿ</p>
+                    <span class="prefilled-data mt-6">{{farmerSignName}}</span>
+                    <p class="text-xs text-gray-600 mt-1">ಹೆಸರು</p>
+                    <span class="prefilled-data mt-6">ದಿನಾಂಕ: {{farmerSignDate}}</span>
+                    <p class="text-xs text-gray-600 mt-1"></p>
+                </div>
+            </div>
+
+            <div class="flex flex-col sm:flex-row justify-between items-start sm:items-end">
+                <div class="mb-4 sm:mb-0 w-full sm:w-1/2 pr-4">
+                    <p class="font-semibold text-gray-700">ಸಾಕ್ಷಿ 1:</p>
+                    <div class="signature-line">
+                        <img src="{{witness1SignatureUrl}}" alt="Witness 1 Signature" class="signature-img" onerror="this.onerror=null;this.src='https://placehold.co/150x50/e0e0e0/000000?text=ಸಹಿ';">
+                    </div>
+                    <p class="text-xs text-gray-600 mt-1">ಸಹಿ</p>
+                    <span class="prefilled-data mt-6">{{witness1NameAddress}}</span>
+                    <p class="text-xs text-gray-600 mt-1">ಹೆಸರು ಮತ್ತು ವಿಳಾಸ</p>
+                </div>
+                <div class="w-full sm:w-1/2 pl-4">
+                    <p class="font-semibold text-gray-700">ಸಾಕ್ಷಿ 2:</p>
+                    <div class="signature-line">
+                        <img src="{{witness2SignatureUrl}}" alt="Witness 2 Signature" class="signature-img" onerror="this.onerror=null;this.src='https://placehold.co/150x50/e0e0e0/000000?text=ಸಹಿ';">
+                    </div>
+                    <p class="text-xs text-gray-600 mt-1">ಸಹಿ</p>
+                    <span class="prefilled-data mt-6">{{witness2NameAddress}}</span>
+                    <p class="text-xs text-gray-600 mt-1">ಹೆಸರು ಮತ್ತು ವಿಳಾಸ</p>
+                </div>
+            </div>
         </div>
     </div>
 </body>
