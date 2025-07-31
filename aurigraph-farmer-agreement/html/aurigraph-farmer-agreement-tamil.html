@@ -1,68 +1,346 @@
 <!DOCTYPE html>
-<html lang="tamil">
+<html lang="ta">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>aurigraph-farmer-agreement - Tamil</title>
+    <title>ஆரிகிராஃப் விவசாய ஒப்பந்தம்</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
     <style>
+        /* Custom styles for Inter font and general body */
         body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 20px;
-            background-color: #f5f5f5;
+            font-family: 'Inter', sans-serif;
+            background-color: #f8f8f8;
         }
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            background-color: white;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        /* Style for the pre-filled data to mimic input lines */
+        .prefilled-data {
+            border-bottom: 1px solid #d1d5db; /* Light gray border for the line */
+            padding: 0.25rem 0;
+            display: block; /* Ensures it takes full width */
+            min-height: 1.5rem; /* Ensures a line is visible even if data is empty */
+            color: #1f2937; /* Darker text for readability */
         }
-        h1 {
-            color: #333;
-            border-bottom: 2px solid #007bff;
-            padding-bottom: 10px;
+        .signature-line {
+            border-bottom: 1px solid #d1d5db;
+            min-height: 2rem; /* Enough space for a signature image */
+            display: flex;
+            align-items: flex-end; /* Align content to the bottom of the line */
+            padding-bottom: 0.25rem;
         }
-        h2 {
-            color: #555;
-            margin-top: 30px;
+        .signature-img {
+            max-height: 50px; /* Adjust as needed for signature image size */
+            width: auto;
+            display: block;
         }
-        .version-info {
-            background-color: #f8f9fa;
-            padding: 15px;
-            border-radius: 5px;
-            margin-top: 30px;
-            border-left: 4px solid #007bff;
+        ul.alpha-list {
+            list-style: none; /* Remove default bullets */
+            padding-left: 0; /* Remove default padding */
+            margin-top: 0.25rem;
+            margin-bottom: 0.25rem;
+            margin-left: 1.5rem; /* Indent alphabetic points */
         }
-        .content-placeholder {
-            background-color: #fff3cd;
-            border: 1px solid #ffeaa7;
-            padding: 15px;
-            border-radius: 5px;
-            margin: 20px 0;
+        ul.alpha-list > li {
+            margin-bottom: 0.125rem; /* Small space between alpha points */
+            text-indent: -1.5rem; /* Pull text back for manual bullet */
+            padding-left: 1.5rem; /* Push text back in */
+        }
+        /* Style for alphabetic bullets in specific lists */
+        .list-disc.list-inside.ml-6.mt-2.space-y-1 {
+            list-style: none;
+            counter-reset: alpha-counter;
+        }
+        .list-disc.list-inside.ml-6.mt-2.space-y-1 > li {
+            counter-increment: alpha-counter;
+            position: relative;
+            padding-left: 1.5rem;
+        }
+        .list-disc.list-inside.ml-6.mt-2.space-y-1 > li::before {
+            content: counter(alpha-counter, lower-alpha) ") ";
+            position: absolute;
+            left: 0;
+            font-weight: normal;
+        }
+        /* Hierarchical numbering for ordered lists */
+        ol.list-decimal.list-inside.space-y-2.mb-6.pl-4.text-sm {
+            list-style: none;
+        }
+        ol.list-decimal.list-inside.space-y-2.mb-6.pl-4.text-sm > li {
+            position: relative;
+            padding-left: 1.5rem;
+        }
+        /* Section 1 numbering */
+        ol.list-decimal.list-inside.space-y-2.mb-6.pl-4.text-sm.section-1 {
+            counter-reset: section1-counter;
+        }
+        ol.list-decimal.list-inside.space-y-2.mb-6.pl-4.text-sm.section-1 > li {
+            counter-increment: section1-counter;
+        }
+        ol.list-decimal.list-inside.space-y-2.mb-6.pl-4.text-sm.section-1 > li::before {
+            content: "1." counter(section1-counter) ". ";
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+        /* Section 2 numbering */
+        ol.list-decimal.list-inside.space-y-2.mb-6.pl-4.text-sm.section-2 {
+            counter-reset: section2-counter;
+        }
+        ol.list-decimal.list-inside.space-y-2.mb-6.pl-4.text-sm.section-2 > li {
+            counter-increment: section2-counter;
+        }
+        ol.list-decimal.list-inside.space-y-2.mb-6.pl-4.text-sm.section-2 > li::before {
+            content: "2." counter(section2-counter) ". ";
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+        /* Section 3 numbering */
+        ol.list-decimal.list-inside.space-y-2.mb-6.pl-4.text-sm.section-3 {
+            counter-reset: section3-counter;
+        }
+        ol.list-decimal.list-inside.space-y-2.mb-6.pl-4.text-sm.section-3 > li {
+            counter-increment: section3-counter;
+        }
+        ol.list-decimal.list-inside.space-y-2.mb-6.pl-4.text-sm.section-3 > li::before {
+            content: "3." counter(section3-counter) ". ";
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+        /* Section 4 numbering */
+        ol.list-decimal.list-inside.space-y-2.mb-6.pl-4.text-sm.section-4 {
+            counter-reset: section4-counter;
+        }
+        ol.list-decimal.list-inside.space-y-2.mb-6.pl-4.text-sm.section-4 > li {
+            counter-increment: section4-counter;
+        }
+        ol.list-decimal.list-inside.space-y-2.mb-6.pl-4.text-sm.section-4 > li::before {
+            content: "4." counter(section4-counter) ". ";
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+        /* Section 5 numbering */
+        ol.list-decimal.list-inside.space-y-2.mb-6.pl-4.text-sm.section-5 {
+            counter-reset: section5-counter;
+        }
+        ol.list-decimal.list-inside.space-y-2.mb-6.pl-4.text-sm.section-5 > li {
+            counter-increment: section5-counter;
+        }
+        ol.list-decimal.list-inside.space-y-2.mb-6.pl-4.text-sm.section-5 > li::before {
+            content: "5." counter(section5-counter) ". ";
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+        /* Sub-lists within main list items */
+        ol.list-decimal.list-inside.space-y-2.mb-6.pl-4.text-sm > li > ol {
+            counter-reset: sub-counter;
+            list-style: none;
+            padding-left: 0;
+            margin-top: 0.5rem;
+        }
+        ol.list-decimal.list-inside.space-y-2.mb-6.pl-4.text-sm > li > ol > li {
+            counter-increment: sub-counter;
+            position: relative;
+            padding-left: 1.5rem;
+        }
+        ol.list-decimal.list-inside.space-y-2.mb-6.pl-4.text-sm > li > ol > li::before {
+            content: counter(main-counter) "." counter(sub-counter) " ";
+            position: absolute;
+            left: 0;
+            font-weight: normal;
         }
     </style>
 </head>
-<body>
-    <div class="container">
-        <h1>aurigraph-farmer-agreement - Tamil</h1>
+<body class="p-4 sm:p-6 md:p-8 lg:p-12 bg-gray-50 text-gray-800 max-w-7xl mx-auto">
+    <div class="bg-white p-6 sm:p-8 md:p-10 lg:p-12 ">
+        <!-- Agreement Title -->
+        <h1 class="text-xl sm:text-2xl font-bold text-center mb-4 sm:mb-6 text-gray-900">
+            AWD செயல்படுத்துபவர் விவசாயிக்கும் ஆரிகிராஃப்க்கும் இடையே கார்பன் கிரெடிட்களைப் பகிர்வதற்கான ஒப்பந்தம்
+        </h1>
 
-        <h2>Agreement Details</h2>
-        <p>This document contains the Tamil version of the aurigraph-farmer-agreement agreement.</p>
+        <!-- Introduction Paragraph -->
+        <p class="mb-4 leading-relaxed text-sm">
+            இந்த ஒப்பந்தம் நில உரிமையாளர்/விவசாயி (இனி "<strong class="font-semibold">கட்சி A</strong>" என அழைக்கப்படுவார்) மற்றும் EIN: 852762242 கொண்ட ஆரிகிராஃப் (இனி "<strong class="font-semibold">கட்சி B/நிறுவனம்/ஆரிகிராஃப்</strong>" என அழைக்கப்படும்) ஆகியோருக்கிடையே கார்பன் கிரெடிட் பலன்களை இரு தரப்பினருக்கும் இடையில் பகிர்ந்து கொள்ளும் நோக்கத்திற்காக உருவாக்கப்பட்டது, மேலும் இரு தரப்பினரும் இந்த ஒப்பந்தத்தின் விதிமுறைகள் மற்றும் நிபந்தனைகளுக்கு கட்டுப்பட ஒப்புக்கொள்கிறார்கள்.
+        </p>
 
-        <h2>Content</h2>
-        <div class="content-placeholder">
-            <strong>Content will be added here</strong>
+        <!-- Details of Party - A Section -->
+        <h2 class="text-lg sm:text-xl font-semibold mb-3 text-gray-900">கட்சி A இன் விவரங்கள்</h2>
+        <div class="mb-6">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-3">
+                <div class="flex flex-col sm:flex-row sm:items-center text-md">
+                    <label class="w-full sm:w-1/2 font-medium text-gray-700">திரு/திருமதி/செல்வி (நெல் விவசாயியின் பெயர்):</label>
+                    <span class="prefilled-data flex-grow">{{farmerName}}</span>
+                </div>
+                <div class="flex flex-col sm:flex-row sm:items-center text-md">
+                    <label class="w-full sm:w-1/2 font-medium text-gray-700">சர்வே எண்:</label>
+                    <span class="prefilled-data flex-grow">{{surveyNumber}}</span>
+                </div>
+                <div class="flex flex-col sm:flex-row sm:items-center text-md">
+                    <label class="w-full sm:w-1/2 font-medium text-gray-700">பட்டா / பஹானி எண்:</label>
+                    <span class="prefilled-data flex-grow">{{pattaPhaniNumber}}</span>
+                </div>
+                <div class="flex flex-col sm:flex-row sm:items-center text-md">
+                    <label class="w-full sm:w-1/2 font-medium text-gray-700">காதா எண்:</label>
+                    <span class="prefilled-data flex-grow">{{khathaNumber}}</span>
+                </div>
+                <div class="flex flex-col sm:flex-row sm:items-center text-md">
+                    <label class="w-full sm:w-1/2 font-medium text-gray-700">நிலப்பரப்பு ஏக்கரில்:</label>
+                    <span class="prefilled-data flex-grow">{{landArea}}</span>
+                </div>
+                <div class="flex flex-col sm:flex-row sm:items-center text-md">
+                    <label class="w-full sm:w-1/2 font-medium text-gray-700">கைபேசி எண்.:</label>
+                    <span class="prefilled-data flex-grow">{{mobileNo}}</span>
+                </div>
+                <div class="flex flex-col sm:flex-row sm:items-center text-md">
+                    <label class="w-full sm:w-1/2 font-medium text-gray-700">அடையாள அட்டை (ஆதார் எண் / வாக்காளர் அட்டை / ஏதேனும்):</label>
+                    <span class="prefilled-data flex-grow">{{idNumber}}</span>
+                </div>
+                <div class="flex flex-col sm:flex-row sm:items-center text-md">
+                    <label class="w-full sm:w-1/2 font-medium text-gray-700">கிராமம்:</label>
+                    <span class="prefilled-data flex-grow">{{village}}</span>
+                </div>
+                <div class="flex flex-col sm:flex-row sm:items-center text-md">
+                    <label class="w-full sm:w-1/2 font-medium text-gray-700">தாலுகா:</label>
+                    <span class="prefilled-data flex-grow">{{taluk}}</span>
+                </div>
+                <div class="flex flex-col sm:flex-row sm:items-center text-md">
+                    <label class="w-full sm:w-1/2 font-medium text-gray-700">மாவட்டம்:</label>
+                    <span class="prefilled-data flex-grow">{{district}}</span>
+                </div>
+                <div class="flex flex-col sm:flex-row sm:items-center text-md">
+                    <label class="w-full sm:w-1/2 font-medium text-gray-700">மாநிலம்:</label>
+                    <span class="prefilled-data flex-grow">{{state}}</span>
+                </div>
+            </div>
         </div>
 
-        <div class="version-info">
-            <h3>Version Information</h3>
-            <p><strong>Version:</strong> 1.0</p>
-            <p><strong>Language:</strong> Tamil</p>
-            <p><strong>Created:</strong> 2025-07-31 12:55:45</p>
-            <p><strong>Type:</strong> HTML Document</p>
+        <!-- Party A Confirmations and Responsibilities -->
+        <h2 class="text-lg sm:text-xl font-semibold mb-3 text-gray-900">1. கட்சி A கீழ்க்கண்ட உறுதிமொழிகளை இதன் மூலம் உறுதிப்படுத்துகிறது</h2>
+        <ol class="list-decimal list-inside space-y-2 mb-6 pl-4 text-sm section-1">
+            <li>
+                நான் மேலே குறிப்பிட்ட நிலத்தை வைத்திருக்கும் அங்கீகரிக்கப்பட்ட நபர் மற்றும் தற்போது கீழ்க்கண்ட பாரம்பரிய நடைமுறைகளைப் பின்பற்றுகிறேன்:
+                <ul class="list-disc list-inside ml-6 mt-2 space-y-1">
+                    <li>தொடர்ச்சியான வெள்ளப்பெருக்கு</li>
+                    <li>நடவு செய்யப்பட்ட நெல் (TPR)</li>
+                    <li>இரண்டு போக நெல்</li>
+                    <li>மூன்று போக நெல்</li>
+                    <li>ஒரு போக நெல்</li>
+                </ul>
+            </li>
+            <li>
+                கார்பன் ஆஃப்செட் திட்டம் / நிகழ்ச்சித்திட்டத்தின் கீழ் திட்டத்தை உருவாக்குவதில் ஆரிகிராஃப்புடன் இணைந்து பணியாற்ற எனக்கு விருப்பம் உள்ளது. மேலே குறிப்பிட்ட நிலப்பரப்பில் உள்ள எனது நெல் வயலில் நிலையான நெல் உற்பத்தி நடைமுறைகளை செயல்படுத்தவும், கார்பன் சந்தை தரத்தின் கீழ் திட்டத்தில் பங்கேற்கவும் நான் உறுதிப்படுத்துகிறேன். நான் கீழ்க்கண்ட டிக் மார்க் செய்யப்பட்ட நடைமுறைகளை பின்பற்றுவேன்:
+                <ul class="list-disc list-inside ml-6 mt-2 space-y-1">
+                    <li>சாகுபடி காலத்தில் நீர் நிர்வாகத்தை தொடர்ச்சியான வெள்ளப்பெருக்கு நிலையில் இருந்து இடைப்பட்ட ஈரப்பதம் மற்றும்/அல்லது வெள்ளப்பெருக்கு காலத்தை குறைத்தல்.</li>
+                    <li>மாற்று ஈரப்பதம் மற்றும் உலர்த்தும் முறை (AWD)</li>
+                    <li>நெல் சாகுபடி முறையை நடவு செய்யப்பட்ட நெல்லிலிருந்து நேரடி விதைப்பு நெல்லாக (DSR) மாற்றுதல்.</li>
+                </ul>
+            </li>
+            <li>
+                ஆரிகிராஃப் நிபுணர்களால் வழங்கப்படும் எந்தவொரு அறிவுறுத்தலுக்கும் இணங்க தொழில்நுட்ப வழிகாட்டுதலையும், முறை, நடைமுறை மற்றும் அதனுடன் தொடர்புடைய உபகரணங்களையும் பராமரிக்க நான் இதன் மூலம் மீளமுடியாதபடி ஒப்புக்கொள்கிறேன்/பின்பற்றுவேன்.
+                <ul class="list-disc list-inside ml-6 mt-2 space-y-1">
+                    <li>ஒப்பந்தத்தின் 1.2 பிரிவில் தேர்ந்தெடுக்கப்பட்ட முறையை ஏற்றுக்கொள்ளவும்.</li>
+                    <li>ஏற்றுக்கொள்ளப்பட்ட தொழில்நுட்பம் அல்லது அதனுடன் தொடர்புடைய உபகரணங்கள்/குழாயில் வேறு எந்த உரிமையையும் விற்கவோ அல்லது உருவாக்கவோ கூடாது.</li>
+                    <li>AWD தொழில்நுட்பம் மற்றும்/அல்லது DSR தொடர்பாக ஏதேனும் தவறு நடந்துள்ளது அல்லது நடக்கலாம் என்று நான் கவனித்தால் ஆரிகிராஃப்க்கு தெரிவிக்கவும்.</li>
+                    <li>நிலத்தின் உரிமை/வேளாண்மை உரிமைகள் வேறு விவசாயிக்கு சாகுபடிக்கு மாற்றப்பட்டால் தெரிவிக்கவும்.</li>
+                    <li>ஆரிகிராஃப் மற்றும்/அல்லது அவர்களின் பிரதிநிதிகள் எனது விவசாய நிலத்திற்குள் ஆய்வு செய்ய மற்றும் அவர்கள் கோரும் எந்த தகவலையும் வழங்க அனுமதிக்கவும்.</li>
+                    <li>ஆரிகிராஃப் பிரதிநிதி அளித்த அறிவுறுத்தல்களைப் பின்பற்றவும் மற்றும் கார்பன் பாஸ்புக்கில் ஆரிகிராஃப் கோரியபடி பதிவை பராமரிக்கவும் நான் ஒப்புக்கொள்கிறேன்.</li>
+                    <li>மேலே குறிப்பிட்ட எனது நிலத்தில் நான் பின்பற்றும் சாகுபடி முறைக்கு கார்பன் திட்ட சுழற்சியை நிர்வகிக்கவும் மற்றும் 1.2 பிரிவில் வரையறுக்கப்பட்ட பொருந்தக்கூடிய தரத்தின்படி கார்பன் கிரெடிட்களைப் பெறவும் நான் ஆரிகிராஃபை நியமிக்கிறேன்.</li>
+                    <li>அடுத்த 20 ஆண்டுகளுக்கு/நான் சம்பந்தப்பட்ட விவசாய நிலத்தை மாற்றாத வரை/நான் நிலத்தின் சாகுபடியாளர் இல்லாத வரை, எது முன்னதாக வருகிறதோ அதுவரை, ஆரிகிராஃப் கார்பன் திட்ட சுழற்சியை நிர்வகிக்கவும் மற்றும் மேலே குறிப்பிட்ட நிலத்தில் 1.2 பிரிவில் குறிப்பிடப்பட்டுள்ள சாகுபடி முறை தொடர்பான கார்பன் கிரெடிட்களைப் பெறவும் நான் ஆரிகிராஃப்புடன் பிரத்தியேகமாக ஈடுபடுவேன். நிலத்தின் உரிமை/வேளாண்மை உரிமைகள் வேறு விவசாயிக்கு சாகுபடிக்கு மாற்றப்பட்டால் நான் போதுமான கவனத்துடன் தெரிவிப்பேன்.</li>
+                </ul>
+            </li>
+            <li>
+                எனது குடும்ப உறுப்பினர்கள் சார்பாக, 1.2 பிரிவின் கீழ் பரிந்துரைக்கப்பட்ட தொழில்நுட்பத்தை செயல்படுத்துவதன் மூலம் மற்றும் ஆரிகிராஃப்புடன் இணைந்து செயல்படுத்துவதன் மூலம் உருவாக்கப்படும் எந்தவொரு கார்பன் கிரெடிட்களின் அனைத்து உரிமைகளையும் ஆரிகிராஃப்க்கு மீளமுடியாதபடி மாற்றுகிறேன், மேலும் அத்தகைய மாற்றத்தை செயல்படுத்த அனைத்து நியாயமான நடவடிக்கைகளையும் எடுப்பேன். உதவி, திறன் மேம்பாடு, கைகொடுத்தல், கண்காணிப்பு நீர் குழாயை இலவசமாக வழங்குதல், AWD தொழில்நுட்பத்தை செயல்படுத்துதல் மற்றும் திட்ட சுழற்சியை நிர்வகித்தல் ஆகியவற்றிற்கு ஈடாக 1.2 பிரிவின் கீழ் குறிப்பிடப்பட்டுள்ள நடைமுறைகளை ஏற்றுக்கொள்வதால் எனது விவசாய நிலத்திலிருந்து உருவாக்கப்படும் கார்பன் கிரெடிட்களின் அனைத்து உரிமைகளையும் ஆரிகிராஃப்க்கு மீளமுடியாதபடி மாற்றுகிறேன். கார்பன் கிரெடிட்கள் என்பது தூய்மையான மேம்பாட்டு பொறிமுறையின் கீழ் உருவாக்கப்படும் சான்றளிக்கப்பட்ட உமிழ்வு குறைப்புகள் (CER) அல்லது சரிபார்க்கப்பட்ட கார்பன் தரத்தின் (VCS) கீழ் சரிபார்க்கப்பட்ட கார்பன் அலகுகள் (VCU) அல்லது VERRA தரத்தின் கீழ் தன்னார்வ உமிழ்வு குறைப்பு அலகுகள் (VERs), பாரிஸ் ஒப்பந்தத்தின் பிரிவு 6.4 இன் கீழ் A6.4 - ER அல்லது எதிர்காலத்தில் எந்த நேரத்திலும் 1.2 பிரிவின் கீழ் தொழில்நுட்பத்தை செயல்படுத்துவதோடு தொடர்புடைய பிற கார்பன் கிரெடிட் தரம் அல்லது பலன்கள்.
+            </li>
+        </ol>
+
+        <!-- Duties of Aurigraph -->
+        <h2 class="text-lg sm:text-xl font-semibold mb-3 text-gray-900">2. ஆரிகிராஃப் / ஆரிகிராஃபின் கடமைகள்</h2>
+        <ol class="list-decimal list-inside space-y-2 mb-6 pl-4 text-sm section-2">
+            <li>
+                இந்த ஒப்பந்தத்தின் கீழ் கார்பன் கிரெடிட்கள் வெற்றிகரமாக வழங்கப்பட்ட பிறகு, ஆரிகிராஃப் கட்சி A க்கு கார்பன் வருவாயில் ஒரு பங்கை வழங்க தன்னால் முடிந்தவரை முயற்சிக்கும், இது ஏற்றுக்கொள்ளப்பட்ட சாகுபடி நடைமுறைகளிலிருந்து உருவாக்கப்பட்ட கார்பன் கிரெடிட்கள் மற்றும் நிலவும் கார்பன் கிரெடிட் சந்தை விலையை அடிப்படையாகக் கொண்டது. கட்சி B தனது கடமைகளைச் செய்ய நியாயமான கட்டுப்பாட்டில் இல்லாத சூழ்நிலைகளில் தவிர, கார்பன் கிரெடிட்களைப் பெறுவதற்காக கட்சி A க்கு பணம் செலுத்தும், இது கட்சி B இன் திறனை கணிசமாக/பிரतिकூலமாக/சட்டபூர்வமாக பாதிக்கும். கார்பன் விலையில் ஏற்படும் எந்த அதிகரிப்பு அல்லது குறைவு, குறிப்பு அளவுகோலுடன் தொடர்புடையது, விவசாயிகளுக்கு வழங்கப்படும் கார்பன் வருவாய்க்கு அதே விகிதத்தில் சரிசெய்யப்படும்.
+            </li>
+        </ol>
+
+        <!-- Dispute Resolution -->
+        <h2 class="text-lg sm:text-xl font-semibold mb-3 text-gray-900">3. தகராறு தீர்வு</h2>
+        <ol class="list-decimal list-inside space-y-2 mb-6 pl-4 text-sm section-3">
+            <li>இந்த ஒப்பந்தம் இந்திய அரசாங்கத்தின் சட்டங்களின்படி நிர்வகிக்கப்பட்டு விளக்கப்படும்.</li>
+            <li>சம்பந்தப்பட்ட கட்சிக்கு தகராறு (எழுத்துப்பூர்வமாக) அறிவிக்கப்பட்ட 10 நாட்களுக்குள் முறையாக அமைக்கப்பட்ட பாரபட்சமற்ற மத்தியஸ்த செயல்முறை மூலம் தகராறு இணக்கமாக தீர்க்கப்படும் வரை எந்த தகராறும் எந்த நீதிமன்றத்திலும் வைக்கப்படக்கூடாது. (மத்தியஸ்தர்(கள்) கட்சி A உடன் கலந்தாலோசித்து கட்சி B ஆல் நியமிக்கப்படலாம்).</li>
+        </ol>
+
+        <!-- Force Majeure -->
+        <h2 class="text-lg sm:text-xl font-semibold mb-3 text-gray-900">4. போர்ஸ் மஜூர் (Force Majeure)</h2>
+        <ol class="list-decimal list-inside space-y-2 mb-6 pl-4 text-sm section-4">
+            <li>
+                இந்த ஒப்பந்தத்தின் நோக்கத்திற்காக, "போர்ஸ் மஜூர் நிகழ்வு" என்பது பாதிக்கப்பட்ட கட்சியின் நியாயமான கட்டுப்பாட்டில் இல்லாத எந்தவொரு சூழ்நிலையையும் குறிக்கிறது, ஆனால் (i) அத்தகைய சூழ்நிலை, நியாயமான விடாமுயற்சி மற்றும் நல்ல பயன்பாட்டு நடைமுறையைப் பின்பற்றிய போதிலும், அத்தகைய கட்சியால் தடுக்கவோ, தவிர்க்கவோ அல்லது அகற்றவோ முடியாது, மற்றும் (ii) அத்தகைய சூழ்நிலை இந்த ஒப்பந்தத்தின் கீழ் தனது கடமைகளைச் செய்ய கட்சியின் திறனை கணிசமாக மற்றும் பாதகமாக பாதிக்கிறது, மேலும் அத்தகைய நிகழ்வின் விளைவை கட்சியின் கடமைகளைச் செய்யும் திறனைத் தவிர்க்கவும் அதன் விளைவுகளைத் தணிக்கவும் அத்தகைய கட்சி அனைத்து நியாயமான முன்னெச்சரிக்கை நடவடிக்கைகளையும், உரிய கவனத்தையும் மற்றும் நியாயமான மாற்று நடவடிக்கைகளையும் எடுத்துள்ளது.
+            </li>
+            <li>
+                கட்சி B தனது வணிகத்தை நடத்துவதற்கான திறனில் எந்தவொரு சட்டரீதியான தடையும், இதில் ஒரு சட்டம், ஆணை, ஒழுங்குமுறை அல்லது ஒரு தகுதியான அதிகாரத்தால் உத்தரவு பிறப்பிப்பது, கட்சி B தனது வணிகத்தை நடத்துவதைத் தடைசெய்வது, கட்சி B சட்டம் அல்லது எந்தவொரு உத்தரவு, ஒப்புதல், விதி, ஒழுங்குமுறை அல்லது தகுதியான அதிகாரத்தால் பிறப்பிக்கப்பட்ட பிற சட்ட அல்லது நீதித்துறை கருவிக்கு இணங்கத் தவறியதன் விளைவாக தவிர.
+            </li>
+            <li>
+                4.1 & 4.2 பிரிவுகளின் காரணமாக தங்களது இயலாமைக்கு கட்சிகள் பொறுப்பேற்க மாட்டார்கள்.
+            </li>
+        </ol>
+
+        <!-- Confidentiality -->
+        <h2 class="text-lg sm:text-xl font-semibold mb-3 text-gray-900">5. இரகசியம்</h2>
+        <ol class="list-decimal list-inside space-y-2 mb-6 pl-4 text-sm section-5">
+            <li>கட்சி A இந்த ஒப்பந்தத்தின் விதிமுறைகளின்படி கட்சி B உடன் எந்தவொரு தொடர்புகளையும் யாருக்கும் வெளியிடக்கூடாது மற்றும் மிக உயர்ந்த அளவிலான இரகசியத்தன்மையைப் பராமரிக்க வேண்டும்.</li>
+            <li>
+                கட்சி A இன் விவரங்கள் (அதாவது, நிலம் வைத்திருக்கும் எண், சர்வே எண், பட்டா / பஹானி எண், காதா எண், நிலப்பரப்பு ஏக்கரில், கைபேசி எண்., அடையாள அட்டை (ஆதார் எண் / வாக்காளர் அட்டை / ஏதேனும்), கிராமம், தாலுகா, மாவட்டம், மாநிலம்) கட்சி B ஆல் AWD/மீத்தேன் தவிர்ப்பு திட்ட நோக்கத்திற்காக மட்டுமே பயன்படுத்தப்படும் மற்றும் பாதுகாப்பாகவும் பத்திரமாகவும் வைக்கப்படும்.
+            </li>
+        </ol>
+
+        <!-- Signatures Section -->
+        <div class="mt-8 pt-4 border-t border-gray-200 text-sm">
+            <h2 class="text-lg sm:text-xl font-semibold mb-3 text-gray-900">கையெழுத்துகள்</h2>
+            <div class="flex flex-col sm:flex-row justify-between items-start sm:items-end mb-6">
+                <div class="mb-4 sm:mb-0 w-full sm:w-1/2 pr-4">
+                    <p class="font-semibold text-gray-700">ஆரிகிராஃப் சார்பாக கையெழுத்திடப்பட்டது:</p>
+                    <div class="signature-line">
+                        <img src="{{aurigraphSignatureUrl}}" alt="Aurigraph Signature" class="signature-img" onerror="this.onerror=null;this.src='https://placehold.co/150x50/e0e0e0/000000?text=Signature';">
+                    </div>
+                    <p class="text-xs text-gray-600 mt-1">கையெழுத்து</p>
+                    <span class="prefilled-data mt-6">{{aurigraphNameDesignation}}</span>
+                    <p class="text-xs text-gray-600 mt-1">பெயர் & பதவி</p>
+                    <span class="prefilled-data mt-6">தேதி: {{aurigraphSignDate}}</span>
+                    <p class="text-xs text-gray-600 mt-1"></p>
+                </div>
+                <div class="w-full sm:w-1/2 pl-4">
+                    <p class="font-semibold text-gray-700">நில உரிமையாளர்/விவசாயி (கட்சி A) மூலம் கையெழுத்திடப்பட்டது:</p>
+                    <div class="signature-line">
+                        <img src="{{farmerSignatureUrl}}" alt="Farmer Signature" class="signature-img" onerror="this.onerror=null;this.src='https://placehold.co/150x50/e0e0e0/000000?text=Signature';">
+                    </div>
+                    <p class="text-xs text-gray-600 mt-1">கையெழுத்து</p>
+                    <span class="prefilled-data mt-6">{{farmerSignName}}</span>
+                    <p class="text-xs text-gray-600 mt-1">பெயர்</p>
+                    <span class="prefilled-data mt-6">தேதி: {{farmerSignDate}}</span>
+                    <p class="text-xs text-gray-600 mt-1"></p>
+                </div>
+            </div>
+
+            <div class="flex flex-col sm:flex-row justify-between items-start sm:items-end">
+                <div class="mb-4 sm:mb-0 w-full sm:w-1/2 pr-4">
+                    <p class="font-semibold text-gray-700">சாட்சி 1:</p>
+                    <div class="signature-line">
+                        <img src="{{witness1SignatureUrl}}" alt="Witness 1 Signature" class="signature-img" onerror="this.onerror=null;this.src='https://placehold.co/150x50/e0e0e0/000000?text=Signature';">
+                    </div>
+                    <p class="text-xs text-gray-600 mt-1">கையெழுத்து</p>
+                    <span class="prefilled-data mt-6">{{witness1NameAddress}}</span>
+                    <p class="text-xs text-gray-600 mt-1">பெயர் & முகவரி</p>
+                </div>
+                <div class="w-full sm:w-1/2 pl-4">
+                    <p class="font-semibold text-gray-700">சாட்சி 2:</p>
+                    <div class="signature-line">
+                        <img src="{{witness2SignatureUrl}}" alt="Witness 2 Signature" class="signature-img" onerror="this.onerror=null;this.src='https://placehold.co/150x50/e0e0e0/000000?text=Signature';">
+                    </div>
+                    <p class="text-xs text-gray-600 mt-1">கையெழுத்து</p>
+                    <span class="prefilled-data mt-6">{{witness2NameAddress}}</span>
+                    <p class="text-xs text-gray-600 mt-1">பெயர் & முகவரி</p>
+                </div>
+            </div>
         </div>
     </div>
 </body>

@@ -1,68 +1,346 @@
 <!DOCTYPE html>
-<html lang="malayalam">
+<html lang="ml">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>aurigraph-farmer-agreement - Malayalam</title>
+    <title>ഓറിഗ്രാഫ് കർഷക ഉടമ്പടി</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
     <style>
+        /* Custom styles for Inter font and general body */
         body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 20px;
-            background-color: #f5f5f5;
+            font-family: 'Inter', sans-serif;
+            background-color: #f8f8f8;
         }
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            background-color: white;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        /* Style for the pre-filled data to mimic input lines */
+        .prefilled-data {
+            border-bottom: 1px solid #d1d5db; /* Light gray border for the line */
+            padding: 0.25rem 0;
+            display: block; /* Ensures it takes full width */
+            min-height: 1.5rem; /* Ensures a line is visible even if data is empty */
+            color: #1f2937; /* Darker text for readability */
         }
-        h1 {
-            color: #333;
-            border-bottom: 2px solid #007bff;
-            padding-bottom: 10px;
+        .signature-line {
+            border-bottom: 1px solid #d1d5db;
+            min-height: 2rem; /* Enough space for a signature image */
+            display: flex;
+            align-items: flex-end; /* Align content to the bottom of the line */
+            padding-bottom: 0.25rem;
         }
-        h2 {
-            color: #555;
-            margin-top: 30px;
+        .signature-img {
+            max-height: 50px; /* Adjust as needed for signature image size */
+            width: auto;
+            display: block;
         }
-        .version-info {
-            background-color: #f8f9fa;
-            padding: 15px;
-            border-radius: 5px;
-            margin-top: 30px;
-            border-left: 4px solid #007bff;
+        ul.alpha-list {
+            list-style: none; /* Remove default bullets */
+            padding-left: 0; /* Remove default padding */
+            margin-top: 0.25rem;
+            margin-bottom: 0.25rem;
+            margin-left: 1.5rem; /* Indent alphabetic points */
         }
-        .content-placeholder {
-            background-color: #fff3cd;
-            border: 1px solid #ffeaa7;
-            padding: 15px;
-            border-radius: 5px;
-            margin: 20px 0;
+        ul.alpha-list > li {
+            margin-bottom: 0.125rem; /* Small space between alpha points */
+            text-indent: -1.5rem; /* Pull text back for manual bullet */
+            padding-left: 1.5rem; /* Push text back in */
+        }
+        /* Style for alphabetic bullets in specific lists */
+        .list-disc.list-inside.ml-6.mt-2.space-y-1 {
+            list-style: none;
+            counter-reset: alpha-counter;
+        }
+        .list-disc.list-inside.ml-6.mt-2.space-y-1 > li {
+            counter-increment: alpha-counter;
+            position: relative;
+            padding-left: 1.5rem;
+        }
+        .list-disc.list-inside.ml-6.mt-2.space-y-1 > li::before {
+            content: counter(alpha-counter, lower-alpha) ") ";
+            position: absolute;
+            left: 0;
+            font-weight: normal;
+        }
+        /* Hierarchical numbering for ordered lists */
+        ol.list-decimal.list-inside.space-y-2.mb-6.pl-4.text-sm {
+            list-style: none;
+        }
+        ol.list-decimal.list-inside.space-y-2.mb-6.pl-4.text-sm > li {
+            position: relative;
+            padding-left: 1.5rem;
+        }
+        /* Section 1 numbering */
+        ol.list-decimal.list-inside.space-y-2.mb-6.pl-4.text-sm.section-1 {
+            counter-reset: section1-counter;
+        }
+        ol.list-decimal.list-inside.space-y-2.mb-6.pl-4.text-sm.section-1 > li {
+            counter-increment: section1-counter;
+        }
+        ol.list-decimal.list-inside.space-y-2.mb-6.pl-4.text-sm.section-1 > li::before {
+            content: "1." counter(section1-counter) ". ";
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+        /* Section 2 numbering */
+        ol.list-decimal.list-inside.space-y-2.mb-6.pl-4.text-sm.section-2 {
+            counter-reset: section2-counter;
+        }
+        ol.list-decimal.list-inside.space-y-2.mb-6.pl-4.text-sm.section-2 > li {
+            counter-increment: section2-counter;
+        }
+        ol.list-decimal.list-inside.space-y-2.mb-6.pl-4.text-sm.section-2 > li::before {
+            content: "2." counter(section2-counter) ". ";
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+        /* Section 3 numbering */
+        ol.list-decimal.list-inside.space-y-2.mb-6.pl-4.text-sm.section-3 {
+            counter-reset: section3-counter;
+        }
+        ol.list-decimal.list-inside.space-y-2.mb-6.pl-4.text-sm.section-3 > li {
+            counter-increment: section3-counter;
+        }
+        ol.list-decimal.list-inside.space-y-2.mb-6.pl-4.text-sm.section-3 > li::before {
+            content: "3." counter(section3-counter) ". ";
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+        /* Section 4 numbering */
+        ol.list-decimal.list-inside.space-y-2.mb-6.pl-4.text-sm.section-4 {
+            counter-reset: section4-counter;
+        }
+        ol.list-decimal.list-inside.space-y-2.mb-6.pl-4.text-sm.section-4 > li {
+            counter-increment: section4-counter;
+        }
+        ol.list-decimal.list-inside.space-y-2.mb-6.pl-4.text-sm.section-4 > li::before {
+            content: "4." counter(section4-counter) ". ";
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+        /* Section 5 numbering */
+        ol.list-decimal.list-inside.space-y-2.mb-6.pl-4.text-sm.section-5 {
+            counter-reset: section5-counter;
+        }
+        ol.list-decimal.list-inside.space-y-2.mb-6.pl-4.text-sm.section-5 > li {
+            counter-increment: section5-counter;
+        }
+        ol.list-decimal.list-inside.space-y-2.mb-6.pl-4.text-sm.section-5 > li::before {
+            content: "5." counter(section5-counter) ". ";
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+        /* Sub-lists within main list items */
+        ol.list-decimal.list-inside.space-y-2.mb-6.pl-4.text-sm > li > ol {
+            counter-reset: sub-counter;
+            list-style: none;
+            padding-left: 0;
+            margin-top: 0.5rem;
+        }
+        ol.list-decimal.list-inside.space-y-2.mb-6.pl-4.text-sm > li > ol > li {
+            counter-increment: sub-counter;
+            position: relative;
+            padding-left: 1.5rem;
+        }
+        ol.list-decimal.list-inside.space-y-2.mb-6.pl-4.text-sm > li > ol > li::before {
+            content: counter(main-counter) "." counter(sub-counter) " ";
+            position: absolute;
+            left: 0;
+            font-weight: normal;
         }
     </style>
 </head>
-<body>
-    <div class="container">
-        <h1>aurigraph-farmer-agreement - Malayalam</h1>
+<body class="p-4 sm:p-6 md:p-8 lg:p-12 bg-gray-50 text-gray-800 max-w-7xl mx-auto">
+    <div class="bg-white p-6 sm:p-8 md:p-10 lg:p-12 ">
+        <!-- Agreement Title -->
+        <h1 class="text-xl sm:text-2xl font-bold text-center mb-4 sm:mb-6 text-gray-900">
+            AWD നടപ്പിലാക്കുന്ന കർഷകനും ഓറിഗ്രാഫും തമ്മിൽ കാർബൺ ക്രെഡിറ്റുകൾ പങ്കിടുന്നതിനുള്ള ഉടമ്പടി
+        </h1>
 
-        <h2>Agreement Details</h2>
-        <p>This document contains the Malayalam version of the aurigraph-farmer-agreement agreement.</p>
+        <!-- Introduction Paragraph -->
+        <p class="mb-4 leading-relaxed text-sm">
+            ഈ ഉടമ്പടി ഭൂവുടമ/കർഷകൻ (ഇനി "<strong class="font-semibold">കക്ഷി A</strong>" എന്ന് പരാമർശിക്കപ്പെടുന്നു) ഉം EIN: 852762242 ഉള്ള ഓറിഗ്രാഫ് (ഇനി "<strong class="font-semibold">കക്ഷി B/കമ്പനി/ഓറിഗ്രാഫ്</strong>" എന്ന് പരാമർശിക്കപ്പെടുന്നു) തമ്മിൽ കാർബൺ ക്രെഡിറ്റ് ആനുകൂല്യങ്ങൾ ഇരു കക്ഷികൾക്കും ഇടയിൽ പങ്കിടുന്നതിനുള്ളതാണ്, കൂടാതെ ഇരു കക്ഷികളും ഈ ഉടമ്പടിയുടെ നിബന്ധനകൾക്കും വ്യവസ്ഥകൾക്കും വിധേയരാകാൻ സമ്മതിക്കുന്നു.
+        </p>
 
-        <h2>Content</h2>
-        <div class="content-placeholder">
-            <strong>Content will be added here</strong>
+        <!-- Details of Party - A Section -->
+        <h2 class="text-lg sm:text-xl font-semibold mb-3 text-gray-900">കക്ഷി A യുടെ വിവരങ്ങൾ</h2>
+        <div class="mb-6">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-3">
+                <div class="flex flex-col sm:flex-row sm:items-center text-md">
+                    <label class="w-full sm:w-1/2 font-medium text-gray-700">ശ്രീ/ശ്രീമതി/കുമാരി (നെൽകർഷകന്റെ പേര്):</label>
+                    <span class="prefilled-data flex-grow">{{farmerName}}</span>
+                </div>
+                <div class="flex flex-col sm:flex-row sm:items-center text-md">
+                    <label class="w-full sm:w-1/2 font-medium text-gray-700">സർവേ നമ്പർ:</label>
+                    <span class="prefilled-data flex-grow">{{surveyNumber}}</span>
+                </div>
+                <div class="flex flex-col sm:flex-row sm:items-center text-md">
+                    <label class="w-full sm:w-1/2 font-medium text-gray-700">പട്ടാ / ഫാനി നമ്പർ:</label>
+                    <span class="prefilled-data flex-grow">{{pattaPhaniNumber}}</span>
+                </div>
+                <div class="flex flex-col sm:flex-row sm:items-center text-md">
+                    <label class="w-full sm:w-1/2 font-medium text-gray-700">ഖാത്താ നമ്പർ:</label>
+                    <span class="prefilled-data flex-grow">{{khathaNumber}}</span>
+                </div>
+                <div class="flex flex-col sm:flex-row sm:items-center text-md">
+                    <label class="w-full sm:w-1/2 font-medium text-gray-700">ഭൂമിയുടെ വിസ്തീർണ്ണം ഏക്കറിൽ:</label>
+                    <span class="prefilled-data flex-grow">{{landArea}}</span>
+                </div>
+                <div class="flex flex-col sm:flex-row sm:items-center text-md">
+                    <label class="w-full sm:w-1/2 font-medium text-gray-700">മൊബൈൽ നമ്പർ.:</label>
+                    <span class="prefilled-data flex-grow">{{mobileNo}}</span>
+                </div>
+                <div class="flex flex-col sm:flex-row sm:items-center text-md">
+                    <label class="w-full sm:w-1/2 font-medium text-gray-700">തിരിച്ചറിയൽ രേഖ (ആധാർ നമ്പർ / വോട്ടർ ഐഡി / മറ്റേതെങ്കിലും):</label>
+                    <span class="prefilled-data flex-grow">{{idNumber}}</span>
+                </div>
+                <div class="flex flex-col sm:flex-row sm:items-center text-md">
+                    <label class="w-full sm:w-1/2 font-medium text-gray-700">ഗ്രാമം:</label>
+                    <span class="prefilled-data flex-grow">{{village}}</span>
+                </div>
+                <div class="flex flex-col sm:flex-row sm:items-center text-md">
+                    <label class="w-full sm:w-1/2 font-medium text-gray-700">താലൂക്ക്:</label>
+                    <span class="prefilled-data flex-grow">{{taluk}}</span>
+                </div>
+                <div class="flex flex-col sm:flex-row sm:items-center text-md">
+                    <label class="w-full sm:w-1/2 font-medium text-gray-700">ജില്ല:</label>
+                    <span class="prefilled-data flex-grow">{{district}}</span>
+                </div>
+                <div class="flex flex-col sm:flex-row sm:items-center text-md">
+                    <label class="w-full sm:w-1/2 font-medium text-gray-700">സംസ്ഥാനം:</label>
+                    <span class="prefilled-data flex-grow">{{state}}</span>
+                </div>
+            </div>
         </div>
 
-        <div class="version-info">
-            <h3>Version Information</h3>
-            <p><strong>Version:</strong> 1.0</p>
-            <p><strong>Language:</strong> Malayalam</p>
-            <p><strong>Created:</strong> 2025-07-31 12:55:45</p>
-            <p><strong>Type:</strong> HTML Document</p>
+        <!-- Party A Confirmations and Responsibilities -->
+        <h2 class="text-lg sm:text-xl font-semibold mb-3 text-gray-900">1. കക്ഷി A താഴെ പറയുന്ന പ്രസ്താവനകൾ ഇതിനാൽ സ്ഥിരീകരിക്കുന്നു</h2>
+        <ol class="list-decimal list-inside space-y-2 mb-6 pl-4 text-sm section-1">
+            <li>
+                ഞാൻ മുകളിൽ പറഞ്ഞ ഭൂമിയുടെ അംഗീകൃത വ്യക്തിയാണ്, നിലവിൽ താഴെ പറയുന്ന പരമ്പരാഗത രീതികൾ പരിശീലിക്കുന്നു:
+                <ul class="list-disc list-inside ml-6 mt-2 space-y-1">
+                    <li>തുടർച്ചയായ വെള്ളപ്പൊക്കം</li>
+                    <li>നടീൽ നെല്ല് (TPR)</li>
+                    <li>ഇരട്ട വിള നെല്ല്</li>
+                    <li>മൂന്ന് വിള നെല്ല്</li>
+                    <li>ഒറ്റ വിള നെല്ല്</li>
+                </ul>
+            </li>
+            <li>
+                കാർബൺ ഓഫ്‌സെറ്റ് പദ്ധതി / പ്രോഗ്രാമിന് കീഴിൽ പ്രോജക്റ്റ് വികസിപ്പിക്കുന്നതിൽ ഓറിഗ്രാഫുമായി സഹകരിക്കാൻ എനിക്ക് താൽപ്പര്യമുണ്ട്. മുകളിൽ പറഞ്ഞ ഭൂമിയിൽ എന്റെ നെൽവയലിൽ സുസ്ഥിരമായ നെല്ല് ഉൽപ്പാദന രീതികൾ നടപ്പിലാക്കാനും കാർബൺ മാർക്കറ്റ് സ്റ്റാൻഡേർഡിന് കീഴിൽ പ്രോജക്റ്റിൽ പങ്കെടുക്കാനും ഞാൻ സ്ഥിരീകരിക്കുന്നു. ഞാൻ താഴെ പറയുന്ന ടിക്ക് മാർക്ക് ചെയ്ത രീതികൾ സ്വീകരിക്കും:
+                <ul class="list-disc list-inside ml-6 mt-2 space-y-1">
+                    <li>കൃഷി കാലയളവിൽ ജലസേചന രീതി തുടർച്ചയായ വെള്ളപ്പൊക്കത്തിൽ നിന്ന് ഇടവിട്ടുള്ള നനഞ്ഞ അവസ്ഥകളിലേക്കും കൂടാതെ/അല്ലെങ്കിൽ വെള്ളപ്പൊക്കത്തിന്റെ കാലയളവ് കുറയ്ക്കുന്നതിലേക്കും മാറ്റുന്നു.</li>
+                    <li>മാറ്റി നനയ്ക്കുകയും ഉണക്കുകയും ചെയ്യുന്ന രീതി (AWD)</li>
+                    <li>നെൽകൃഷി രീതി നടീൽ നെല്ലിൽ നിന്ന് നേരിട്ടുള്ള വിത നെല്ലിലേക്ക് (DSR) മാറ്റുന്നു.</li>
+                </ul>
+            </li>
+            <li>
+                ഓറിഗ്രാഫ് വിദഗ്ദ്ധർ നൽകുന്ന നിർദ്ദേശങ്ങൾക്കനുസരിച്ച് സാങ്കേതിക മാർഗ്ഗനിർദ്ദേശങ്ങളും രീതിയും, പ്രയോഗവും, അനുബന്ധ ഉപകരണങ്ങളും പരിപാലിക്കാൻ ഞാൻ ഇതിനാൽ മാറ്റാനാവാത്തവിധം സമ്മതിക്കുന്നു/പിന്തുടരുന്നു.
+                <ul class="list-disc list-inside ml-6 mt-2 space-y-1">
+                    <li>കരാറിലെ 1.2 വകുപ്പിൽ തിരഞ്ഞെടുത്ത രീതി സ്വീകരിക്കുക.</li>
+                    <li>സ്വീകരിച്ച സാങ്കേതികവിദ്യയിലോ അനുബന്ധ ഉപകരണങ്ങളിലോ/പൈപ്പിലോ മറ്റ് താൽപ്പര്യങ്ങൾ വിൽക്കുകയോ സൃഷ്ടിക്കുകയോ ചെയ്യരുത്.</li>
+                    <li>AWD സാങ്കേതികവിദ്യയിലും കൂടാതെ/അല്ലെങ്കിൽ DSR ലും എന്തെങ്കിലും തെറ്റ് സംഭവിച്ചതായി അല്ലെങ്കിൽ സംഭവിക്കാൻ സാധ്യതയുണ്ടെന്ന് ശ്രദ്ധയിൽപ്പെട്ടാൽ ഓറിഗ്രാഫിനെ അറിയിക്കുക.</li>
+                    <li>ഭൂമിയുടെ ഉടമസ്ഥാവകാശം/കൃഷി അവകാശങ്ങൾ മറ്റൊരു കർഷകന് കൈമാറ്റം ചെയ്യപ്പെട്ടാൽ അറിയിക്കുക.</li>
+                    <li>ഓറിഗ്രാഫിനെയും കൂടാതെ/അല്ലെങ്കിൽ അവരുടെ പ്രതിനിധികളെയും എന്റെ കൃഷിയിടത്തിൽ പരിശോധന നടത്താനും അവർ ആവശ്യപ്പെടുന്ന വിവരങ്ങൾ നൽകാനും അനുവദിക്കുക.</li>
+                    <li>ഓറിഗ്രാഫ് പ്രതിനിധിയുടെ നിർദ്ദേശങ്ങൾ പാലിക്കാനും ഓറിഗ്രാഫ് ആവശ്യപ്പെടുന്ന രേഖകൾ കാർബൺ പാസ്ബുക്കിൽ സൂക്ഷിക്കാനും ഞാൻ സമ്മതിക്കുന്നു.</li>
+                    <li>മുകളിൽ പറഞ്ഞ എന്റെ ഭൂമിയിൽ ഞാൻ സ്വീകരിച്ച കൃഷി രീതിക്ക് കാർബൺ പദ്ധതിയുടെ ചക്രം കൈകാര്യം ചെയ്യാനും 1.2 വകുപ്പിൽ നിർവചിച്ചിട്ടുള്ള ബാധകമായ മാനദണ്ഡമനുസരിച്ച് കാർബൺ ക്രെഡിറ്റുകൾ നേടാനും ഞാൻ ഓറിഗ്രാഫിനെ ചുമതലപ്പെടുത്തുന്നു.</li>
+                    <li>അടുത്ത 20 വർഷത്തേക്ക്/ഞാൻ ബന്ധപ്പെട്ട കൃഷിഭൂമി കൈമാറ്റം ചെയ്യാത്ത പക്ഷം/ഞാൻ ഭൂമിയുടെ കൃഷിക്കാരനല്ലാത്ത പക്ഷം, ഇതിൽ ഏതാണോ ആദ്യം സംഭവിക്കുന്നത് അതുവരെ, ഓറിഗ്രാഫ് കാർബൺ പദ്ധതിയുടെ ചക്രം കൈകാര്യം ചെയ്യാനും മുകളിൽ പറഞ്ഞ ഭൂമിയിൽ 1.2 വകുപ്പിൽ പറഞ്ഞിട്ടുള്ള കൃഷി രീതിയുമായി ബന്ധപ്പെട്ട കാർബൺ ക്രെഡിറ്റുകൾ നേടാനും ഞാൻ ഓറിഗ്രാഫുമായി മാത്രം സഹകരിക്കും. ഭൂമിയുടെ ഉടമസ്ഥാവകാശം/കൃഷി അവകാശങ്ങൾ മറ്റൊരു കർഷകന് കൈമാറ്റം ചെയ്യപ്പെട്ടാൽ ഞാൻ ശ്രദ്ധയോടെ അറിയിക്കും.</li>
+                </ul>
+            </li>
+            <li>
+                എന്റെ കുടുംബാംഗങ്ങളുടെ പേരിൽ, 1.2 വകുപ്പ് പ്രകാരം നിർദ്ദേശിക്കപ്പെട്ട സാങ്കേതികവിദ്യ നടപ്പിലാക്കുന്നതിലൂടെയും ഓറിഗ്രാഫുമായി സഹകരിച്ച് നടപ്പിലാക്കുന്നതിലൂടെയും ഉണ്ടാകുന്ന ഏതൊരു കാർബൺ ക്രെഡിറ്റുകളുടെയും എല്ലാ അവകാശങ്ങളും ഓറിഗ്രാഫിന് മാറ്റാനാവാത്തവിധം കൈമാറുന്നു, കൂടാതെ അത്തരം കൈമാറ്റം ഫലപ്രദമാക്കാൻ എല്ലാ ന്യായമായ നടപടികളും സ്വീകരിക്കും. സഹായം, ശേഷി വർദ്ധനവ്, കൈത്താങ്ങ്, നിരീക്ഷണ ജല പൈപ്പ് സൗജന്യമായി വിതരണം ചെയ്യൽ, AWD സാങ്കേതികവിദ്യ നടപ്പിലാക്കൽ, പദ്ധതി ചക്രം കൈകാര്യം ചെയ്യൽ എന്നിവയ്ക്ക് പകരമായി 1.2 വകുപ്പ് പ്രകാരം പറഞ്ഞിട്ടുള്ള രീതികൾ സ്വീകരിക്കുന്നത് കാരണം എന്റെ കൃഷിയിടത്തിൽ നിന്ന് ഉണ്ടാകുന്ന കാർബൺ ക്രെഡിറ്റുകളുടെ ഉടമസ്ഥാവകാശത്തിന്റെ എല്ലാ അവകാശങ്ങളും ഓറിഗ്രാഫിന് മാറ്റാനാവാത്തവിധം കൈമാറുന്നു. കാർബൺ ക്രെഡിറ്റുകൾ എന്നാൽ ക്ലീൻ ഡെവലപ്‌മെന്റ് മെക്കാനിസത്തിന് കീഴിൽ ഉണ്ടാകുന്ന സർട്ടിഫൈഡ് എമിഷൻ റിഡക്ഷൻസ് (CER) അല്ലെങ്കിൽ വെരിഫൈഡ് കാർബൺ സ്റ്റാൻഡേർഡിന് (VCS) കീഴിൽ വെരിഫൈഡ് കാർബൺ യൂണിറ്റുകൾ (VCU) അല്ലെങ്കിൽ VERRA സ്റ്റാൻഡേർഡിന് കീഴിൽ വോളണ്ടറി എമിഷൻ റിഡക്ഷൻ യൂണിറ്റുകൾ (VERs), പാരീസ് ഉടമ്പടിയുടെ ആർട്ടിക്കിൾ 6.4 ന് കീഴിലുള്ള A6.4 - ER അല്ലെങ്കിൽ ഭാവിയിൽ എപ്പോൾ വേണമെങ്കിലും 1.2 വകുപ്പിന് കീഴിലുള്ള സാങ്കേതികവിദ്യ നടപ്പിലാക്കുന്നതുമായി ബന്ധപ്പെട്ട മറ്റ് കാർബൺ ക്രെഡിറ്റ് സ്റ്റാൻഡേർഡ് അല്ലെങ്കിൽ ആനുകൂല്യങ്ങൾ.
+            </li>
+        </ol>
+
+        <!-- Duties of Aurigraph -->
+        <h2 class="text-lg sm:text-xl font-semibold mb-3 text-gray-900">2. ഓറിഗ്രാഫ് / ഓറിഗ്രാഫിന്റെ കടമകൾ</h2>
+        <ol class="list-decimal list-inside space-y-2 mb-6 pl-4 text-sm section-2">
+            <li>
+                ഈ ഉടമ്പടി പ്രകാരം കാർബൺ ക്രെഡിറ്റുകൾ വിജയകരമായി അനുവദിച്ച ശേഷം, ഓറിഗ്രാഫ് കക്ഷി A-ക്ക് കാർബൺ വരുമാനത്തിന്റെ ഒരു വിഹിതം നൽകാൻ പരമാവധി ശ്രമിക്കും. ഇത് സ്വീകരിച്ച കൃഷിരീതികളിൽ നിന്ന് ഉത്പാദിപ്പിക്കപ്പെടുന്ന കാർബൺ ക്രെഡിറ്റുകളെയും നിലവിലുള്ള കാർബൺ ക്രെഡിറ്റ് വിപണി വിലയെയും അടിസ്ഥാനമാക്കിയായിരിക്കും. കക്ഷി B-യുടെ ബാധ്യതകൾ നിറവേറ്റാനുള്ള കഴിവിനെ കാര്യമായി/പ്രതികൂലമായി/നിയമപരമായി ബാധിക്കുന്ന, അതിന്റെ ന്യായമായ നിയന്ത്രണത്തിലല്ലാത്ത സാഹചര്യങ്ങളിലൊഴികെ, കാർബൺ ക്രെഡിറ്റുകൾ ലഭ്യമാക്കുന്നതിനായി കക്ഷി A-ക്ക് പണം നൽകും. കാർബൺ വിലയിലെ ഏതെങ്കിലും വർദ്ധനവോ കുറവോ, റഫറൻസ് ബെഞ്ച്മാർക്കിനെ അപേക്ഷിച്ച്, കർഷകർക്ക് നൽകുന്ന കാർബൺ വരുമാനത്തിൽ അതേ അനുപാതത്തിൽ ക്രമീകരിക്കും.
+            </li>
+        </ol>
+
+        <!-- Dispute Resolution -->
+        <h2 class="text-lg sm:text-xl font-semibold mb-3 text-gray-900">3. തർക്ക പരിഹാരം</h2>
+        <ol class="list-decimal list-inside space-y-2 mb-6 pl-4 text-sm section-3">
+            <li>ഈ ഉടമ്പടി ഇന്ത്യൻ ഗവൺമെന്റിന്റെ നിയമങ്ങൾക്കനുസരിച്ച് നിയന്ത്രിക്കപ്പെടുകയും വ്യാഖ്യാനിക്കപ്പെടുകയും ചെയ്യും.</li>
+            <li>ബന്ധപ്പെട്ട കക്ഷിക്ക് തർക്കം (എഴുത്ത് രൂപത്തിൽ) അറിയിച്ച് 10 ദിവസത്തിനുള്ളിൽ, ശരിയായി രൂപീകരിച്ച നിഷ്പക്ഷ മധ്യസ്ഥതയിലൂടെ തർക്കം സൗഹൃദപരമായി പരിഹരിക്കപ്പെടുന്നതുവരെ ഒരു തർക്കവും ഒരു കോടതിയിലും ഉന്നയിക്കരുത്. (മധ്യസ്ഥനെ(രെ) കക്ഷി A യുമായി കൂടിയാലോചിച്ച് കക്ഷി B ക്ക് നിയമിക്കാവുന്നതാണ്).</li>
+        </ol>
+
+        <!-- Force Majeure -->
+        <h2 class="text-lg sm:text-xl font-semibold mb-3 text-gray-900">4. അപ്രതീക്ഷിത സംഭവങ്ങൾ (Force Majeure)</h2>
+        <ol class="list-decimal list-inside space-y-2 mb-6 pl-4 text-sm section-4">
+            <li>
+                ഈ ഉടമ്പടിയുടെ ഉദ്ദേശ്യത്തിനായി, "അപ്രതീക്ഷിത സംഭവം" എന്നാൽ ബാധിക്കപ്പെട്ട കക്ഷിയുടെ ന്യായമായ നിയന്ത്രണത്തിലല്ലാത്ത ഏതൊരു സാഹചര്യവും, എന്നാൽ (i) അത്തരം സാഹചര്യം, ന്യായമായ ശ്രദ്ധയും നല്ല യൂട്ടിലിറ്റി പ്രാക്ടീസും പാലിച്ചിട്ടും, അത്തരം കക്ഷിക്ക് തടയാനോ, ഒഴിവാക്കാനോ അല്ലെങ്കിൽ നീക്കം ചെയ്യാനോ കഴിയുന്നില്ലെങ്കിൽ, കൂടാതെ (ii) അത്തരം സാഹചര്യം ഈ ഉടമ്പടി പ്രകാരം തന്റെ കടമകൾ നിർവഹിക്കാനുള്ള കക്ഷിയുടെ കഴിവിനെ കാര്യമായി പ്രതികൂലമായി ബാധിക്കുന്നുവെങ്കിൽ, കൂടാതെ അത്തരം കക്ഷി അത്തരം സംഭവത്തിന്റെ ഫലം തന്റെ കടമകൾ നിർവഹിക്കാനുള്ള കഴിവിനെ ബാധിക്കുന്നത് ഒഴിവാക്കാനും അതിന്റെ അനന്തരഫലങ്ങൾ ലഘൂകരിക്കാനും എല്ലാ ന്യായമായ മുൻകരുതലുകളും, ശ്രദ്ധയും, ന്യായമായ ബദൽ നടപടികളും സ്വീകരിച്ചിട്ടുണ്ടെങ്കിൽ മാത്രം.
+            </li>
+            <li>
+                കക്ഷി B-യുടെ ബിസിനസ്സ് നടത്തുന്നതിനുള്ള കഴിവിൽ നിയമപരമായ ഏതെങ്കിലും നിരോധനം, അതിൽ ഒരു നിയമം, ഉത്തരവ്, നിയന്ത്രണം, അല്ലെങ്കിൽ ഒരു യോഗ്യതയുള്ള അധികാരിയുടെ ഉത്തരവ് എന്നിവ ഉൾപ്പെടുന്നു, ഇത് കക്ഷി B-യെ ബിസിനസ്സ് നടത്തുന്നതിൽ നിന്ന് തടയുന്നു, കക്ഷി B നിയമം അല്ലെങ്കിൽ ഏതെങ്കിലും ഉത്തരവ്, സമ്മതം, നിയമം, നിയന്ത്രണം, അല്ലെങ്കിൽ യോഗ്യതയുള്ള അധികാരി പുറപ്പെടുവിച്ച മറ്റ് നിയമപരമോ നീതിന്യായപരമോ ആയ ഉപകരണങ്ങൾ എന്നിവ പാലിക്കുന്നതിൽ പരാജയപ്പെട്ടതൊഴികെ.
+            </li>
+            <li>
+                4.1 & 4.2 വകുപ്പുകൾ കാരണം അവരുടെ കഴിവില്ലായ്മയ്ക്ക് കക്ഷികൾ ഉത്തരവാദികളായിരിക്കില്ല.
+            </li>
+        </ol>
+
+        <!-- Confidentiality -->
+        <h2 class="text-lg sm:text-xl font-semibold mb-3 text-gray-900">5. രഹസ്യസ്വഭാവം</h2>
+        <ol class="list-decimal list-inside space-y-2 mb-6 pl-4 text-sm section-5">
+            <li>കക്ഷി A, ഈ ഉടമ്പടിയുടെ നിബന്ധനകൾക്കനുസരിച്ച് കക്ഷി B യുമായിട്ടുള്ള ഏതൊരു ഇടപാടുകളും ആരുമായും വെളിപ്പെടുത്തരുത്, കൂടാതെ പരമമായ രഹസ്യസ്വഭാവം നിലനിർത്തണം.</li>
+            <li>
+                കക്ഷി A-യുടെ വിവരങ്ങൾ (അതായത്, ഭൂമിയുടെ ഉടമസ്ഥാവകാശ നമ്പർ, സർവേ നമ്പർ, പട്ടാ / ഫാനി നമ്പർ, ഖാത്താ നമ്പർ, ഏക്കറിലുള്ള ഭൂമിയുടെ വിസ്തീർണ്ണം, മൊബൈൽ നമ്പർ, തിരിച്ചറിയൽ രേഖ (ആധാർ നമ്പർ / വോട്ടർ ഐഡി / മറ്റേതെങ്കിലും), ഗ്രാമം, താലൂക്ക്, ജില്ല, സംസ്ഥാനം) കക്ഷി B AWD/മീഥേൻ ഒഴിവാക്കൽ പദ്ധതിയുടെ ആവശ്യങ്ങൾക്കായി മാത്രം ഉപയോഗിക്കുകയും സുരക്ഷിതമായി സൂക്ഷിക്കുകയും ചെയ്യും.
+            </li>
+        </ol>
+
+        <!-- Signatures Section -->
+        <div class="mt-8 pt-4 border-t border-gray-200 text-sm">
+            <h2 class="text-lg sm:text-xl font-semibold mb-3 text-gray-900">ഒപ്പുകൾ</h2>
+            <div class="flex flex-col sm:flex-row justify-between items-start sm:items-end mb-6">
+                <div class="mb-4 sm:mb-0 w-full sm:w-1/2 pr-4">
+                    <p class="font-semibold text-gray-700">ഓറിഗ്രാഫിനുവേണ്ടി ഒപ്പിട്ടത്:</p>
+                    <div class="signature-line">
+                        <img src="{{aurigraphSignatureUrl}}" alt="Aurigraph Signature" class="signature-img" onerror="this.onerror=null;this.src='https://placehold.co/150x50/e0e0e0/000000?text=Signature';">
+                    </div>
+                    <p class="text-xs text-gray-600 mt-1">ഒപ്പ്</p>
+                    <span class="prefilled-data mt-6">{{aurigraphNameDesignation}}</span>
+                    <p class="text-xs text-gray-600 mt-1">പേരും പദവിയും</p>
+                    <span class="prefilled-data mt-6">തീയതി: {{aurigraphSignDate}}</span>
+                    <p class="text-xs text-gray-600 mt-1"></p>
+                </div>
+                <div class="w-full sm:w-1/2 pl-4">
+                    <p class="font-semibold text-gray-700">ഭൂവുടമ/കർഷകൻ (കക്ഷി A) ഒപ്പിട്ടത്:</p>
+                    <div class="signature-line">
+                        <img src="{{farmerSignatureUrl}}" alt="Farmer Signature" class="signature-img" onerror="this.onerror=null;this.src='https://placehold.co/150x50/e0e0e0/000000?text=Signature';">
+                    </div>
+                    <p class="text-xs text-gray-600 mt-1">ഒപ്പ്</p>
+                    <span class="prefilled-data mt-6">{{farmerSignName}}</span>
+                    <p class="text-xs text-gray-600 mt-1">പേര്</p>
+                    <span class="prefilled-data mt-6">തീയതി: {{farmerSignDate}}</span>
+                    <p class="text-xs text-gray-600 mt-1"></p>
+                </div>
+            </div>
+
+            <div class="flex flex-col sm:flex-row justify-between items-start sm:items-end">
+                <div class="mb-4 sm:mb-0 w-full sm:w-1/2 pr-4">
+                    <p class="font-semibold text-gray-700">സാക്ഷി 1:</p>
+                    <div class="signature-line">
+                        <img src="{{witness1SignatureUrl}}" alt="Witness 1 Signature" class="signature-img" onerror="this.onerror=null;this.src='https://placehold.co/150x50/e0e0e0/000000?text=Signature';">
+                    </div>
+                    <p class="text-xs text-gray-600 mt-1">ഒപ്പ്</p>
+                    <span class="prefilled-data mt-6">{{witness1NameAddress}}</span>
+                    <p class="text-xs text-gray-600 mt-1">പേരും വിലാസവും</p>
+                </div>
+                <div class="w-full sm:w-1/2 pl-4">
+                    <p class="font-semibold text-gray-700">സാക്ഷി 2:</p>
+                    <div class="signature-line">
+                        <img src="{{witness2SignatureUrl}}" alt="Witness 2 Signature" class="signature-img" onerror="this.onerror=null;this.src='https://placehold.co/150x50/e0e0e0/000000?text=Signature';">
+                    </div>
+                    <p class="text-xs text-gray-600 mt-1">ഒപ്പ്</p>
+                    <span class="prefilled-data mt-6">{{witness2NameAddress}}</span>
+                    <p class="text-xs text-gray-600 mt-1">പേരും വിലാസവും</p>
+                </div>
+            </div>
         </div>
     </div>
 </body>
