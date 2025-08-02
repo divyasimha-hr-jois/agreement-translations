@@ -48,12 +48,190 @@
         ul, ol {
             padding-left: 20px;
         }
+
+        /* Party A details section styles */
+        .section-title {
+            font-size: 1.125rem;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+            color: #111827;
+        }
+
+        @media (min-width: 640px) {
+            .section-title {
+                font-size: 1.25rem;
+            }
+        }
+
+        .section-container {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-grid {
+            display: grid;
+            gap: 0.75rem 2rem;
+        }
+
+        @media (min-width: 640px) {
+            .form-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        .form-field {
+            display: flex;
+            flex-direction: column;
+            font-size: 1rem;
+        }
+
+        @media (min-width: 640px) {
+            .form-field {
+                flex-direction: row;
+                align-items: center;
+            }
+        }
+
+        .form-label {
+            width: 100%;
+            font-weight: 500;
+            color: #374151;
+        }
+
+        @media (min-width: 640px) {
+            .form-label {
+                width: 50%;
+            }
+        }
+
+        .prefilled-data {
+            flex-grow: 1;
+        }
+
+        /* Signature section styles */
+        .signature-section {
+            margin-top: 2rem;
+            padding-top: 1rem;
+            border-top: 1px solid #e5e7eb;
+            font-size: 0.875rem;
+        }
+
+        .signature-row {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 1.5rem;
+        }
+
+        @media (min-width: 640px) {
+            .signature-row {
+                flex-direction: row;
+                align-items: flex-end;
+            }
+        }
+
+        .signature-column {
+            margin-bottom: 1rem;
+            width: 100%;
+            padding-right: 1rem;
+        }
+
+        @media (min-width: 640px) {
+            .signature-column {
+                margin-bottom: 0;
+                width: 50%;
+            }
+        }
+
+        .signature-column-right {
+            padding-right: 0;
+            padding-left: 1rem;
+        }
+
+        .signature-label {
+            font-weight: 600;
+            color: #374151;
+        }
+
+        .signature-caption {
+            font-size: 0.75rem;
+            color: #6b7280;
+            margin-top: 0.25rem;
+        }
+
+        .signature-data {
+            margin-top: 1.5rem;
+        }
+
+        .signature-line {
+            border-bottom: 1px solid #000;
+            margin: 1rem 0;
+            min-height: 50px;
+            display: flex;
+            align-items: center;
+        }
+
+        .signature-img {
+            max-width: 150px;
+            max-height: 50px;
+            object-fit: contain;
+        }
     </style>
 </head>
 <body>
 
     <h1>Aurigraph AUREX Terms and Conditions</h1>
     <p><strong>Effective Date: May 1, 2025</strong></p>
+
+    <h2 class="section-title">Details of Party - A</h2>
+    <div class="section-container">
+        <div class="form-grid">
+            <div class="form-field">
+                <label class="form-label">Mr/Mrs/Ms (Name of Paddy Farmer):</label>
+                <span class="prefilled-data">{{farmerName}}</span>
+            </div>
+            <div class="form-field">
+                <label class="form-label">Survey Number:</label>
+                <span class="prefilled-data">{{surveyNumber}}</span>
+            </div>
+            <div class="form-field">
+                <label class="form-label">Patta / Phani Number:</label>
+                <span class="prefilled-data">{{pattaPhaniNumber}}</span>
+            </div>
+            <div class="form-field">
+                <label class="form-label">Khatha Number:</label>
+                <span class="prefilled-data">{{khathaNumber}}</span>
+            </div>
+            <div class="form-field">
+                <label class="form-label">Land Area in Acres:</label>
+                <span class="prefilled-data">{{landArea}}</span>
+            </div>
+            <div class="form-field">
+                <label class="form-label">Mobile No.:</label>
+                <span class="prefilled-data">{{mobileNo}}</span>
+            </div>
+            <div class="form-field">
+                <label class="form-label">ID (Aadhaar Number / Voter ID / if any):</label>
+                <span class="prefilled-data">{{idNumber}}</span>
+            </div>
+            <div class="form-field">
+                <label class="form-label">Village:</label>
+                <span class="prefilled-data">{{village}}</span>
+            </div>
+            <div class="form-field">
+                <label class="form-label">Taluk:</label>
+                <span class="prefilled-data">{{taluk}}</span>
+            </div>
+            <div class="form-field">
+                <label class="form-label">District:</label>
+                <span class="prefilled-data">{{district}}</span>
+            </div>
+            <div class="form-field">
+                <label class="form-label">State:</label>
+                <span class="prefilled-data">{{state}}</span>
+            </div>
+        </div>
+    </div>
 
     <div class="preamble">
         <h2>Preamble</h2>
@@ -485,6 +663,55 @@
             Phone: +91 9945103337
         </address>
         <p>Contact details for the Data Protection Officer are also available in the Aurigraph Privacy Policy.</p>
+    </div>
+
+    <div class="signature-section">
+        <h2 class="section-title">Signatures</h2>
+        <div class="signature-row">
+            <div class="signature-column">
+                <p class="signature-label">Signed on behalf of Aurigraph:</p>
+                <div class="signature-line">
+                    <img src="{{aurigraphSignatureUrl}}" alt="Aurigraph Signature" class="signature-img" onerror="this.onerror=null;this.src='https://placehold.co/150x50/e0e0e0/000000?text=Signature';">
+                </div>
+                <p class="signature-caption">Signature</p>
+                <span class="prefilled-data signature-data">{{aurigraphNameDesignation}}</span>
+                <p class="signature-caption">Name & Designation</p>
+                <span class="prefilled-data signature-data">Date: {{aurigraphSignDate}}</span>
+                <p class="signature-caption"></p>
+            </div>
+            <div class="signature-column signature-column-right">
+                <p class="signature-label">Signed by Landowner/Farmer (Party A):</p>
+                <div class="signature-line">
+                    <img src="{{farmerSignatureUrl}}" alt="Farmer Signature" class="signature-img" onerror="this.onerror=null;this.src='https://placehold.co/150x50/e0e0e0/000000?text=Signature';">
+                </div>
+                <p class="signature-caption">Signature</p>
+                <span class="prefilled-data signature-data">{{farmerSignName}}</span>
+                <p class="signature-caption">Name</p>
+                <span class="prefilled-data signature-data">Date: {{farmerSignDate}}</span>
+                <p class="signature-caption"></p>
+            </div>
+        </div>
+
+        <div class="signature-row">
+            <div class="signature-column">
+                <p class="signature-label">Witness 1:</p>
+                <div class="signature-line">
+                    <img src="{{witness1SignatureUrl}}" alt="Witness 1 Signature" class="signature-img" onerror="this.onerror=null;this.src='https://placehold.co/150x50/e0e0e0/000000?text=Signature';">
+                </div>
+                <p class="signature-caption">Signature</p>
+                <span class="prefilled-data signature-data">{{witness1NameAddress}}</span>
+                <p class="signature-caption">Name & Address</p>
+            </div>
+            <div class="signature-column signature-column-right">
+                <p class="signature-label">Witness 2:</p>
+                <div class="signature-line">
+                    <img src="{{witness2SignatureUrl}}" alt="Witness 2 Signature" class="signature-img" onerror="this.onerror=null;this.src='https://placehold.co/150x50/e0e0e0/000000?text=Signature';">
+                </div>
+                <p class="signature-caption">Signature</p>
+                <span class="prefilled-data signature-data">{{witness2NameAddress}}</span>
+                <p class="signature-caption">Name & Address</p>
+            </div>
+        </div>
     </div>
 
 </body>

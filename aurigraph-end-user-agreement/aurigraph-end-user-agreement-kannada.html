@@ -38,6 +38,241 @@
         strong {
             color: #111;
         }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1.5em;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+            vertical-align: top;
+        }
+        th {
+            background-color: #f7f7f7;
+            font-weight: bold;
+        }
+        .last-updated {
+            text-align: center;
+            color: #555;
+            margin-bottom: 2em;
+        }
+
+        /* Party A details section styles */
+        .mb-6 {
+            margin-bottom: 1.5rem;
+        }
+
+        .grid {
+            display: grid;
+        }
+
+        .grid-cols-1 {
+            grid-template-columns: repeat(1, minmax(0, 1fr));
+        }
+
+        .sm\:grid-cols-2 {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .gap-x-8 {
+            column-gap: 2rem;
+        }
+
+        .gap-y-3 {
+            row-gap: 0.75rem;
+        }
+
+        .flex {
+            display: flex;
+        }
+
+        .flex-col {
+            flex-direction: column;
+        }
+
+        .sm\:flex-row {
+            flex-direction: row;
+        }
+
+        .sm\:items-center {
+            align-items: center;
+        }
+
+        .text-md {
+            font-size: 1rem;
+        }
+
+        .w-full {
+            width: 100%;
+        }
+
+        .sm\:w-1\/2 {
+            width: 50%;
+        }
+
+        .font-medium {
+            font-weight: 500;
+        }
+
+        .text-gray-700 {
+            color: #374151;
+        }
+
+        .prefilled-data {
+            border-bottom: 1px solid #d1d5db;
+            padding: 0.25rem 0;
+            display: block;
+            min-height: 1.5rem;
+            color: #1f2937;
+        }
+
+        .flex-grow {
+            flex-grow: 1;
+        }
+
+        /* Signature section styles */
+        .mt-8 {
+            margin-top: 2rem;
+        }
+
+        .pt-4 {
+            padding-top: 1rem;
+        }
+
+        .border-t {
+            border-top-width: 1px;
+        }
+
+        .border-gray-200 {
+            border-color: #e5e7eb;
+        }
+
+        .text-sm {
+            font-size: 0.875rem;
+        }
+
+        .flex-col {
+            flex-direction: column;
+        }
+
+        .sm\:flex-row {
+            flex-direction: row;
+        }
+
+        .justify-between {
+            justify-content: space-between;
+        }
+
+        .items-start {
+            align-items: flex-start;
+        }
+
+        .sm\:items-end {
+            align-items: flex-end;
+        }
+
+        .mb-4 {
+            margin-bottom: 1rem;
+        }
+
+        .sm\:mb-0 {
+            margin-bottom: 0;
+        }
+
+        .w-full {
+            width: 100%;
+        }
+
+        .sm\:w-1\/2 {
+            width: 50%;
+        }
+
+        .pr-4 {
+            padding-right: 1rem;
+        }
+
+        .pl-4 {
+            padding-left: 1rem;
+        }
+
+        .font-semibold {
+            font-weight: 600;
+        }
+
+        .signature-line {
+            border-bottom: 1px solid #d1d5db;
+            min-height: 2rem;
+            display: flex;
+            align-items: flex-end;
+            padding-bottom: 0.25rem;
+        }
+
+        .signature-img {
+            max-height: 50px;
+            width: auto;
+            display: block;
+        }
+
+        .text-xs {
+            font-size: 0.75rem;
+        }
+
+        .text-gray-600 {
+            color: #4b5563;
+        }
+
+        .mt-1 {
+            margin-top: 0.25rem;
+        }
+
+        .mt-6 {
+            margin-top: 1.5rem;
+        }
+
+        .text-lg {
+            font-size: 1.125rem;
+        }
+
+        .sm\:text-xl {
+            font-size: 1.25rem;
+        }
+
+        .text-gray-900 {
+            color: #111827;
+        }
+
+        .mb-3 {
+            margin-bottom: 0.75rem;
+        }
+
+        /* Responsive design */
+        @media (min-width: 640px) {
+            .sm\:grid-cols-2 {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+
+            .sm\:flex-row {
+                flex-direction: row;
+            }
+
+            .sm\:items-center {
+                align-items: center;
+            }
+
+            .sm\:w-1\/2 {
+                width: 50%;
+            }
+
+            .sm\:mb-0 {
+                margin-bottom: 0;
+            }
+
+            .sm\:items-end {
+                align-items: flex-end;
+            }
+        }
     </style>
 </head>
 <body>
@@ -47,6 +282,55 @@
     <p>ಈ ಅಂತಿಮ ಬಳಕೆದಾರ ಪರವಾನಗಿ ಒಪ್ಪಂದ ("ಒಪ್ಪಂದ")ವು, ಅಂತಿಮ ಬಳಕೆದಾರರಾದ ನೀವು ("ನೀವು" ಅಥವಾ "ಪರವಾನಗಿದಾರರು") ಮತ್ತು ಆರಿಗ್ರಾಫ್ ("ಪರವಾನಗಿದಾರ" ಅಥವಾ "ಆರಿಗ್ರಾಫ್") ನಡುವಿನ ಆರಿಗ್ರಾಫ್ ಆರ್ರೆಕ್ಸ್ ಸಾಫ್ಟ್‌ವೇರ್ ಅಪ್ಲಿಕೇಶನ್ ಮತ್ತು ಸಂಬಂಧಿತ ಸೇವೆಗಳ ("ಸಾಫ್ಟ್‌ವೇರ್") ನಿಮ್ಮ ಬಳಕೆಗೆ ಸಂಬಂಧಿಸಿದ ಕಾನೂನುಬದ್ಧ ಒಪ್ಪಂದವಾಗಿದೆ.</p>
 
     <p class="important-notice">ಪ್ರಮುಖ ಸೂಚನೆ: ಈ ಒಪ್ಪಂದವನ್ನು ಎಚ್ಚರಿಕೆಯಿಂದ ಓದಿ. ಸಾಫ್ಟ್‌ವೇರ್ ಅನ್ನು ಪ್ರವೇಶಿಸುವ ಅಥವಾ ಬಳಸುವ ಮೂಲಕ, ನೀವು ಈ ಒಪ್ಪಂದದ ನಿಯಮಗಳಿಗೆ ಬದ್ಧರಾಗಿರಲು ಒಪ್ಪುತ್ತೀರಿ. ನೀವು ಈ ಒಪ್ಪಂದದ ನಿಯಮಗಳನ್ನು ಒಪ್ಪದಿದ್ದರೆ, ಸಾಫ್ಟ್‌ವೇರ್ ಅನ್ನು ಪ್ರವೇಶಿಸಬೇಡಿ ಅಥವಾ ಬಳಸಬೇಡಿ.</p>
+    <h2>ಪಕ್ಷ - ಎ ಯ ವಿವರಗಳು</h2>
+    <div class="mb-6">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-3">
+            <div class="flex flex-col sm:flex-row sm:items-center text-md">
+                <label class="w-full sm:w-1/2 font-medium text-gray-700">ಶ್ರೀ/ಶ್ರೀಮತಿ/ಕುಮಾರಿ (ಭತ್ತದ ರೈತರ ಹೆಸರು):</label>
+                <span class="prefilled-data flex-grow">{{farmerName}}</span>
+            </div>
+            <div class="flex flex-col sm:flex-row sm:items-center text-md">
+                <label class="w-full sm:w-1/2 font-medium text-gray-700">ಸಮೀಕ್ಷೆ ಸಂಖ್ಯೆ:</label>
+                <span class="prefilled-data flex-grow">{{surveyNumber}}</span>
+            </div>
+            <div class="flex flex-col sm:flex-row sm:items-center text-md">
+                <label class="w-full sm:w-1/2 font-medium text-gray-700">ಪಟ್ಟಾ / ಪಹಣಿ ಸಂಖ್ಯೆ:</label>
+                <span class="prefilled-data flex-grow">{{pattaPhaniNumber}}</span>
+            </div>
+            <div class="flex flex-col sm:flex-row sm:items-center text-md">
+                <label class="w-full sm:w-1/2 font-medium text-gray-700">ಖಾತಾ ಸಂಖ್ಯೆ:</label>
+                <span class="prefilled-data flex-grow">{{khathaNumber}}</span>
+            </div>
+            <div class="flex flex-col sm:flex-row sm:items-center text-md">
+                <label class="w-full sm:w-1/2 font-medium text-gray-700">ಎಕರೆಗಳಲ್ಲಿ ಭೂಮಿ ವಿಸ್ತೀರ್ಣ:</label>
+                <span class="prefilled-data flex-grow">{{landArea}}</span>
+            </div>
+            <div class="flex flex-col sm:flex-row sm:items-center text-md">
+                <label class="w-full sm:w-1/2 font-medium text-gray-700">ಮೊಬೈಲ್ ಸಂಖ್ಯೆ:</label>
+                <span class="prefilled-data flex-grow">{{mobileNo}}</span>
+            </div>
+            <div class="flex flex-col sm:flex-row sm:items-center text-md">
+                <label class="w-full sm:w-1/2 font-medium text-gray-700">ಗುರುತಿನ ಚೀಟಿ (ಆಧಾರ್ ಸಂಖ್ಯೆ / ಮತದಾರರ ಗುರುತಿನ ಚೀಟಿ / ಯಾವುದಾದರೂ ಇದ್ದರೆ):</label>
+                <span class="prefilled-data flex-grow">{{idNumber}}</span>
+            </div>
+            <div class="flex flex-col sm:flex-row sm:items-center text-md">
+                <label class="w-full sm:w-1/2 font-medium text-gray-700">ಗ್ರಾಮ:</label>
+                <span class="prefilled-data flex-grow">{{village}}</span>
+            </div>
+            <div class="flex flex-col sm:flex-row sm:items-center text-md">
+                <label class="w-full sm:w-1/2 font-medium text-gray-700">ತಾಲ್ಲೂಕು:</label>
+                <span class="prefilled-data flex-grow">{{taluk}}</span>
+            </div>
+            <div class="flex flex-col sm:flex-row sm:items-center text-md">
+                <label class="w-full sm:w-1/2 font-medium text-gray-700">ಜಿಲ್ಲೆ:</label>
+                <span class="prefilled-data flex-grow">{{district}}</span>
+            </div>
+            <div class="flex flex-col sm:flex-row sm:items-center text-md">
+                <label class="w-full sm:w-1/2 font-medium text-gray-700">ರಾಜ್ಯ:</label>
+                <span class="prefilled-data flex-grow">{{state}}</span>
+            </div>
+        </div>
+    </div>
 
     <h2>1. ವ್ಯಾಖ್ಯಾನಗಳು</h2>
     <ul>
@@ -134,6 +418,55 @@
     <p><strong>12.4</strong> ಈ ಒಪ್ಪಂದದ ಯಾವುದೇ ಹಕ್ಕು ಅಥವಾ ನಿಬಂಧನೆಯನ್ನು ಜಾರಿಗೊಳಿಸಲು ಆರಿಗ್ರಾಫ್‌ನ ವೈಫಲ್ಯವನ್ನು ಅಂತಹ ಹಕ್ಕು ಅಥವಾ ನಿಬಂಧನೆಯ ಮನ್ನಾ ಎಂದು ಪರಿಗಣಿಸಲಾಗುವುದಿಲ್ಲ.</p>
     <p><strong>12.5</strong> ಆರಿಗ್ರಾಫ್ ನಿಮಗೆ ಇಮೇಲ್ ಮೂಲಕ ಅಥವಾ ಸಾಫ್ಟ್‌ವೇರ್ ಮೂಲಕ ಸೇರಿದಂತೆ ವಿದ್ಯುನ್ಮಾನವಾಗಿ ಸೂಚನೆಗಳನ್ನು ನೀಡಬಹುದು. ಅಂತಹ ಸೂಚನೆಗಳನ್ನು ಸ್ವೀಕರಿಸಲು ನೀವು ಸಮ್ಮತಿಸುತ್ತೀರಿ.</p>
     <p><strong>12.6</strong> ಈ ಒಪ್ಪಂದವನ್ನು ಆರಿಗ್ರಾಫ್‌ನಿಂದ ಮಾರ್ಪಡಿಸಬಹುದು. ಈ ಒಪ್ಪಂದದಲ್ಲಿನ ಯಾವುದೇ ವಸ್ತುನಿಷ್ಠ ಬದಲಾವಣೆಗಳ ಸೂಚನೆಯನ್ನು ಆರಿಗ್ರಾಫ್ ನೀಡುತ್ತದೆ ಮತ್ತು ಅಂತಹ ಸೂಚನೆಯ ನಂತರ ನಿಮ್ಮ ಸಾಫ್ಟ್‌ವೇರ್‌ನ ಮುಂದುವರಿದ ಬಳಕೆಯು ಮಾರ್ಪಡಿಸಿದ ಒಪ್ಪಂದಕ್ಕೆ ನಿಮ್ಮ ಅಂಗೀಕಾರವನ್ನು ರೂಪಿಸುತ್ತದೆ.</p>
+
+    <div class="mt-8 pt-4 border-t border-gray-200 text-sm">
+        <h2 class="text-lg sm:text-xl font-semibold mb-3 text-gray-900">ಸಹಿಗಳು</h2>
+        <div class="flex flex-col sm:flex-row justify-between items-start sm:items-end mb-6">
+            <div class="mb-4 sm:mb-0 w-full sm:w-1/2 pr-4">
+                <p class="font-semibold text-gray-700">ಔರಿಗ್ರಾಫ್ ಪರವಾಗಿ ಸಹಿ:</p>
+                <div class="signature-line">
+                    <img src="{{aurigraphSignatureUrl}}" alt="Aurigraph Signature" class="signature-img" onerror="this.onerror=null;this.src='https://placehold.co/150x50/e0e0e0/000000?text=ಸಹಿ';">
+                </div>
+                <p class="text-xs text-gray-600 mt-1">ಸಹಿ</p>
+                <span class="prefilled-data mt-6">{{aurigraphNameDesignation}}</span>
+                <p class="text-xs text-gray-600 mt-1">ಹೆಸರು ಮತ್ತು ಹುದ್ದೆ</p>
+                <span class="prefilled-data mt-6">ದಿನಾಂಕ: {{aurigraphSignDate}}</span>
+                <p class="text-xs text-gray-600 mt-1"></p>
+            </div>
+            <div class="w-full sm:w-1/2 pl-4">
+                <p class="font-semibold text-gray-700">ಜಮೀನು ಮಾಲೀಕರು/ರೈತರಿಂದ ಸಹಿ (ಪಕ್ಷ 'ಎ'):</p>
+                <div class="signature-line">
+                    <img src="{{farmerSignatureUrl}}" alt="Farmer Signature" class="signature-img" onerror="this.onerror=null;this.src='https://placehold.co/150x50/e0e0e0/000000?text=ಸಹಿ';">
+                </div>
+                <p class="text-xs text-gray-600 mt-1">ಸಹಿ</p>
+                <span class="prefilled-data mt-6">{{farmerSignName}}</span>
+                <p class="text-xs text-gray-600 mt-1">ಹೆಸರು</p>
+                <span class="prefilled-data mt-6">ದಿನಾಂಕ: {{farmerSignDate}}</span>
+                <p class="text-xs text-gray-600 mt-1"></p>
+            </div>
+        </div>
+
+        <div class="flex flex-col sm:flex-row justify-between items-start sm:items-end">
+            <div class="mb-4 sm:mb-0 w-full sm:w-1/2 pr-4">
+                <p class="font-semibold text-gray-700">ಸಾಕ್ಷಿ 1:</p>
+                <div class="signature-line">
+                    <img src="{{witness1SignatureUrl}}" alt="Witness 1 Signature" class="signature-img" onerror="this.onerror=null;this.src='https://placehold.co/150x50/e0e0e0/000000?text=ಸಹಿ';">
+                </div>
+                <p class="text-xs text-gray-600 mt-1">ಸಹಿ</p>
+                <span class="prefilled-data mt-6">{{witness1NameAddress}}</span>
+                <p class="text-xs text-gray-600 mt-1">ಹೆಸರು ಮತ್ತು ವಿಳಾಸ</p>
+            </div>
+            <div class="w-full sm:w-1/2 pl-4">
+                <p class="font-semibold text-gray-700">ಸಾಕ್ಷಿ 2:</p>
+                <div class="signature-line">
+                    <img src="{{witness2SignatureUrl}}" alt="Witness 2 Signature" class="signature-img" onerror="this.onerror=null;this.src='https://placehold.co/150x50/e0e0e0/000000?text=ಸಹಿ';">
+                </div>
+                <p class="text-xs text-gray-600 mt-1">ಸಹಿ</p>
+                <span class="prefilled-data mt-6">{{witness2NameAddress}}</span>
+                <p class="text-xs text-gray-600 mt-1">ಹೆಸರು ಮತ್ತು ವಿಳಾಸ</p>
+            </div>
+        </div>
+    </div>
 
 </body>
 </html>

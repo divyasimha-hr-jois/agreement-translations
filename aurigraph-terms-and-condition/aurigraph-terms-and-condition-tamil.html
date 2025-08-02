@@ -48,6 +48,51 @@
         ul, ol {
             padding-left: 20px;
         }
+             /* Party A and Signature Section Styles */
+.mb-6 { margin-bottom: 1.5rem; }
+.grid { display: grid; }
+.grid-cols-1 { grid-template-columns: repeat(1, minmax(0, 1fr)); }
+.gap-x-8 { column-gap: 2rem; }
+.gap-y-3 { row-gap: 0.75rem; }
+.flex { display: flex; }
+.flex-col { flex-direction: column; }
+.text-md { font-size: 1rem; }
+.w-full { width: 100%; }
+.font-medium { font-weight: 500; }
+.text-gray-700 { color: #374151; }
+.prefilled-data { border-bottom: 1px solid #d1d5db; padding: 0.25rem 0; display: block; min-height: 1.5rem; color: #1f2937; }
+.flex-grow { flex-grow: 1; }
+.mt-8 { margin-top: 2rem; }
+.pt-4 { padding-top: 1rem; }
+.border-t { border-top-width: 1px; }
+.border-gray-200 { border-color: #e5e7eb; }
+.text-sm { font-size: 0.875rem; }
+.justify-between { justify-content: space-between; }
+.items-start { align-items: flex-start; }
+.mb-4 { margin-bottom: 1rem; }
+.pr-4 { padding-right: 1rem; }
+.pl-4 { padding-left: 1rem; }
+.font-semibold { font-weight: 600; }
+.signature-line { border-bottom: 1px solid #d1d5db; min-height: 2rem; display: flex; align-items: flex-end; padding-bottom: 0.25rem; }
+.signature-img { max-height: 50px; width: auto; display: block; }
+.text-xs { font-size: 0.75rem; }
+.text-gray-600 { color: #4b5563; }
+.mt-1 { margin-top: 0.25rem; }
+.mt-6 { margin-top: 1.5rem; }
+.text-lg { font-size: 1.125rem; }
+.text-gray-900 { color: #111827; }
+.mb-3 { margin-bottom: 0.75rem; }
+
+/* Responsive Styles */
+@media (min-width: 640px) {
+    .sm\:grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .sm\:flex-row { flex-direction: row; }
+    .sm\:items-center { align-items: center; }
+    .sm\:w-1\/2 { width: 50%; }
+    .sm\:mb-0 { margin-bottom: 0; }
+    .sm\:items-end { align-items: flex-end; }
+    .sm\:text-xl { font-size: 1.25rem; }
+}
     </style>
 </head>
 <body>
@@ -61,6 +106,56 @@
         <p>இந்த விதிமுறைகள் விவசாயிகள், களப் பிரதிநிதிகள், மேற்பார்வையாளர்கள் மற்றும் உள்ளூர் கூட்டாளர்கள் ("பயனர்," "நீங்கள்," அல்லது "உங்கள்" என ஒவ்வொருவரும்) உட்பட, தளத்தை அணுகும் அல்லது பயன்படுத்தும் அனைத்து தனிநபர்கள் மற்றும் நிறுவனங்களுக்கும் பொருந்தும்.</p>
         <p><strong>ஒரு கணக்கைப் பதிவு செய்வதன் மூலமாக, மொபைல் செயலியைப் பதிவிறக்குவதன் மூலமாக, தளத்தை அணுகுவதன் மூலமாக அல்லது எந்த விதத்திலாவது பயன்படுத்துவதன் மூலமாக, நீங்கள் இந்த விதிமுறைகள் மற்றும் நிபந்தனைகளையும், இதன் ஒரு பகுதியாக இணைக்கப்பட்டுள்ள ஆரிகிராஃப் தனியுரிமைக் கொள்கையையும் <a href="#">[தனியுரிமைக் கொள்கைக்கான இணைப்பைச் செருகவும்]</a> படித்து, புரிந்துகொண்டு, சட்டப்பூர்வமாக கட்டுப்படுவதை ஒப்புக்கொள்கிறீர்கள். இந்த விதிமுறைகளை நீங்கள் ஏற்கவில்லை என்றால், நீங்கள் தளத்தை அணுகவோ அல்லது பயன்படுத்தவோ கூடாது. உங்கள் ஒப்புதல் "நான் ஒப்புக்கொள்கிறேன்" பொத்தான் அல்லது தேர்வுப்பெட்டியை க்ளிக் செய்வது போன்ற செயல்கள் மூலமாகவோ அல்லது இந்த விதிமுறைகள் குறித்த அறிவிப்புக்குப் பிறகும் நீங்கள் தொடர்ந்து சேவைகளைப் பயன்படுத்துவதன் மூலமாகவோ உறுதிப்படுத்தப்படுகிறது.</strong></p>
     </div>
+
+    <h2 class="text-lg sm:text-xl font-semibold mb-3 text-gray-900">పార్టీ A వివరాలు</h2>
+<div class="mb-6">
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-3">
+        <div class="flex flex-col sm:flex-row sm:items-center text-md">
+            <label class="w-full sm:w-1/2 font-medium text-gray-700">శ్రీ/శ్రీమతి/కుమారి (వరి రైతు పేరు):</label>
+            <span class="prefilled-data flex-grow">{{farmerName}}</span>
+        </div>
+        <div class="flex flex-col sm:flex-row sm:items-center text-md">
+            <label class="w-full sm:w-1/2 font-medium text-gray-700">సర్వే నంబర్:</label>
+            <span class="prefilled-data flex-grow">{{surveyNumber}}</span>
+        </div>
+        <div class="flex flex-col sm:flex-row sm:items-center text-md">
+            <label class="w-full sm:w-1/2 font-medium text-gray-700">పట్టా / ఫణి నంబర్:</label>
+            <span class="prefilled-data flex-grow">{{pattaPhaniNumber}}</span>
+        </div>
+        <div class="flex flex-col sm:flex-row sm:items-center text-md">
+            <label class="w-full sm:w-1/2 font-medium text-gray-700">ఖాతా నంబర్:</label>
+            <span class="prefilled-data flex-grow">{{khathaNumber}}</span>
+        </div>
+        <div class="flex flex-col sm:flex-row sm:items-center text-md">
+            <label class="w-full sm:w-1/2 font-medium text-gray-700">భూమి విస్తీర్ణం ఎకరాల్లో:</label>
+            <span class="prefilled-data flex-grow">{{landArea}}</span>
+        </div>
+        <div class="flex flex-col sm:flex-row sm:items-center text-md">
+            <label class="w-full sm:w-1/2 font-medium text-gray-700">మొబైల్ నం.:</label>
+            <span class="prefilled-data flex-grow">{{mobileNo}}</span>
+        </div>
+        <div class="flex flex-col sm:flex-row sm:items-center text-md">
+            <label class="w-full sm:w-1/2 font-medium text-gray-700">గుర్తింపు (ఆధార్ నంబర్ / ఓటర్ ID / ఏదైనా):</label>
+            <span class="prefilled-data flex-grow">{{idNumber}}</span>
+        </div>
+        <div class="flex flex-col sm:flex-row sm:items-center text-md">
+            <label class="w-full sm:w-1/2 font-medium text-gray-700">గ్రామం:</label>
+            <span class="prefilled-data flex-grow">{{village}}</span>
+        </div>
+        <div class="flex flex-col sm:flex-row sm:items-center text-md">
+            <label class="w-full sm:w-1/2 font-medium text-gray-700">తాలూకా:</label>
+            <span class="prefilled-data flex-grow">{{taluk}}</span>
+        </div>
+        <div class="flex flex-col sm:flex-row sm:items-center text-md">
+            <label class="w-full sm:w-1/2 font-medium text-gray-700">జిల్లా:</label>
+            <span class="prefilled-data flex-grow">{{district}}</span>
+        </div>
+        <div class="flex flex-col sm:flex-row sm:items-center text-md">
+            <label class="w-full sm:w-1/2 font-medium text-gray-700">రాష్ట్రం:</label>
+            <span class="prefilled-data flex-grow">{{state}}</span>
+        </div>
+    </div>
+</div>
 
     <h2>1. அறிமுகம் மற்றும் விதிமுறைகளை ஏற்றுக்கொள்ளுதல்</h2>
     <h3>1.1 நோக்கம்</h3>

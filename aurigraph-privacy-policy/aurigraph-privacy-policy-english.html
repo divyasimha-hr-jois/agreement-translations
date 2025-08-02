@@ -62,23 +62,201 @@
             color: #555;
             margin-bottom: 2em;
         }
+
+        /* Party A details section styles */
+        .section-title {
+            font-size: 1.125rem;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+            color: #111827;
+        }
+
+        @media (min-width: 640px) {
+            .section-title {
+                font-size: 1.25rem;
+            }
+        }
+
+        .section-container {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-grid {
+            display: grid;
+            gap: 0.75rem 2rem;
+        }
+
+        @media (min-width: 640px) {
+            .form-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        .form-field {
+            display: flex;
+            flex-direction: column;
+            font-size: 1rem;
+        }
+
+        @media (min-width: 640px) {
+            .form-field {
+                flex-direction: row;
+                align-items: center;
+            }
+        }
+
+        .form-label {
+            width: 100%;
+            font-weight: 500;
+            color: #374151;
+        }
+
+        @media (min-width: 640px) {
+            .form-label {
+                width: 50%;
+            }
+        }
+
+        .prefilled-data {
+            flex-grow: 1;
+        }
+
+        /* Signature section styles */
+        .signature-section {
+            margin-top: 2rem;
+            padding-top: 1rem;
+            border-top: 1px solid #e5e7eb;
+            font-size: 0.875rem;
+        }
+
+        .signature-row {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 1.5rem;
+        }
+
+        @media (min-width: 640px) {
+            .signature-row {
+                flex-direction: row;
+                align-items: flex-end;
+            }
+        }
+
+        .signature-column {
+            margin-bottom: 1rem;
+            width: 100%;
+            padding-right: 1rem;
+        }
+
+        @media (min-width: 640px) {
+            .signature-column {
+                margin-bottom: 0;
+                width: 50%;
+            }
+        }
+
+        .signature-column-right {
+            padding-right: 0;
+            padding-left: 1rem;
+        }
+
+        .signature-label {
+            font-weight: 600;
+            color: #374151;
+        }
+
+        .signature-caption {
+            font-size: 0.75rem;
+            color: #6b7280;
+            margin-top: 0.25rem;
+        }
+
+        .signature-data {
+            margin-top: 1.5rem;
+        }
+
+        .signature-line {
+            border-bottom: 1px solid #000;
+            margin: 1rem 0;
+            min-height: 50px;
+            display: flex;
+            align-items: center;
+        }
+
+        .signature-img {
+            max-width: 150px;
+            max-height: 50px;
+            object-fit: contain;
+        }
     </style>
 </head>
 <body>
 
     <h1>Privacy Policy for Aurigraph Aurex</h1>
-    <p class="last-updated">Last Updated: [Date]</p>
+    <p class="last-updated">Last Updated: {{date}}</p>
+
+    <h2 class="section-title">Details of Party - A</h2>
+    <div class="section-container">
+        <div class="form-grid">
+            <div class="form-field">
+                <label class="form-label">Mr/Mrs/Ms (Name of Paddy Farmer):</label>
+                <span class="prefilled-data">{{farmerName}}</span>
+            </div>
+            <div class="form-field">
+                <label class="form-label">Survey Number:</label>
+                <span class="prefilled-data">{{surveyNumber}}</span>
+            </div>
+            <div class="form-field">
+                <label class="form-label">Patta / Phani Number:</label>
+                <span class="prefilled-data">{{pattaPhaniNumber}}</span>
+            </div>
+            <div class="form-field">
+                <label class="form-label">Khatha Number:</label>
+                <span class="prefilled-data">{{khathaNumber}}</span>
+            </div>
+            <div class="form-field">
+                <label class="form-label">Land Area in Acres:</label>
+                <span class="prefilled-data">{{landArea}}</span>
+            </div>
+            <div class="form-field">
+                <label class="form-label">Mobile No.:</label>
+                <span class="prefilled-data">{{mobileNo}}</span>
+            </div>
+            <div class="form-field">
+                <label class="form-label">ID (Aadhaar Number / Voter ID / if any):</label>
+                <span class="prefilled-data">{{idNumber}}</span>
+            </div>
+            <div class="form-field">
+                <label class="form-label">Village:</label>
+                <span class="prefilled-data">{{village}}</span>
+            </div>
+            <div class="form-field">
+                <label class="form-label">Taluk:</label>
+                <span class="prefilled-data">{{taluk}}</span>
+            </div>
+            <div class="form-field">
+                <label class="form-label">District:</label>
+                <span class="prefilled-data">{{district}}</span>
+            </div>
+            <div class="form-field">
+                <label class="form-label">State:</label>
+                <span class="prefilled-data">{{state}}</span>
+            </div>
+        </div>
+    </div>
 
     <h2>1. Introduction</h2>
-    
+
     <h3>Purpose and Scope</h3>
     <p>This Privacy Policy describes how Aurigraph Aurex ("Aurigraph Aurex," "we," "us," "our") collects, uses, shares, protects, and retains personal data when you ("you," "your") interact with our software platform, website(s), mobile application(s), environmental sensors, drone-based services, and other related products and offerings (collectively, the "Services").</p>
     <p>We are committed to protecting your privacy and ensuring compliance with applicable data protection laws. This policy places particular emphasis on adherence to India's Digital Personal Data Protection Act, 2023 (DPDPA).<sup>1</sup> This policy applies to the processing of digital personal data within the territory of India, regardless of whether the data was collected online or collected offline and subsequently digitized. It also applies to the processing of digital personal data outside India if such processing is inconnection with offering goods or services to individuals within India.<sup>2</sup> This policy does not apply to personal data processed by an individual for any personal or domestic purpose, nor does it apply to personal data made publicly available by the Data Principal or under a legal obligation to be made public, as per the DPDPA.<sup>5</sup></p>
     <p>Your access to and use of the Services signifies your acceptance of the terms outlined in this Privacy Policy.<sup>8</sup> Please read this policy carefully.</p>
-    
+
     <h3>Who We Are</h3>
     <p>Aurigraph Aurex operates at the intersection of agriculture technology (AgriTech) and environmental data science. Our mission is to leverage advanced technologies, including sensor networks, drone imagery, and data analytics, to provide solutions for sustainable agriculture, environmental monitoring, and potentially Measurement, Reporting, and Verification (MRV) for carbon sequestration initiatives.<sup>11</sup> The diverse nature of our Services, encompassing platform access, mobile applications, hardware like sensors, and drone operations, means data collection occurs across multiple touchpoints, all governed by this policy.<sup>27</sup></p>
-    
+
     <h3>Compliance with DPDPA 2023</h3>
     <p>Given the likelihood of operations within India or processing data related to individuals in India, this policy is structured to align closely with the requirements of the DPDPA 2023.<sup>1</sup> This includes specific attention to definitions, consent mechanisms, notice requirements, Data Principal rights, legitimate uses for processing, data security standards, data retention and erasure protocols, handling of children's data, cross-border data transfer regulations, and the roles of the Data Protection Board and Consent Managers. The DPDPA's extraterritorial scope necessitates this focus if our Services are offered to individuals in India, regardless of our physical location.<sup>2</sup></p>
 
@@ -134,7 +312,7 @@
 
     <h2>5. Legal Basis for Processing</h2>
     <p>Our processing of your personal data is based on the lawful grounds provided under the DPDPA.<sup>4</sup> The DPDPA primarily allows processing based on: (a) the Data Principal's explicit Consent, or (b) certain specified Legitimate Uses. Notably, unlike regulations such as the GDPR, the DPDPA does not recognize 'performance of a contract' or 'legitimate interests' (of the Data Fiduciary) as broad, standalone legal bases for processing.<sup>4</sup> This requires us to meticulously map each processing activity to either explicit consent or a specific legitimate use defined in the Act.</p>
-    
+
     <h3>Consent:</h3>
     <p>Where we rely on consent, we ensure it meets the DPDPA's stringent standards. Consent must be:</p>
     <ul>
@@ -146,7 +324,7 @@
         <li><strong>Limited:</strong> Consent is sought only for the personal data necessary for the specified purpose.<sup>6</sup></li>
     </ul>
     <p>You have the right to withdraw your consent at any time. The process for withdrawal will be as easy as the process for giving consent. Upon withdrawal, we will cease processing your personal data for the purpose(s) consent was withdrawn, unless another legal basis applies (e.g., legal obligation) or retention is required by law. Withdrawal may impact your ability to use certain features or Services.<sup>30</sup> We may integrate with or provide options to use registered Consent Managers to help you manage your consent preferences.<sup>6</sup></p>
-    
+
     <h3>Legitimate Uses (Processing without Explicit Consent):</h3>
     <p>In specific circumstances defined under DPDPA Section 7, we may process your personal data without your explicit consent. These "legitimate uses" relevant to our operations may include <sup>4</sup>:</p>
     <ul>
@@ -156,7 +334,7 @@
         <li><strong>Medical Emergencies/Disasters:</strong> Processing necessary to respond to medical emergencies, epidemics, or ensure safety during disasters (less likely applicable to our core services, but included in the Act).<sup>4</sup></li>
     </ul>
     <p>Where processing is based on these legitimate uses, prior notice and consent are generally not required under the DPDPA.<sup>78</sup></p>
-    
+
     <h2>6. How We Share Your Information</h2>
     <p>We do not sell your personal data. We share your personal data only in the circumstances described below, with appropriate safeguards, and, where required, with your explicit consent.<sup>98</sup></p>
     <p>We may share your personal data with the following categories of recipients <sup>98</sup>:</p>
@@ -173,7 +351,7 @@
     <h2>7. Data Security</h2>
     <p>We are committed to protecting the security of your personal data. We implement and maintain "reasonable security safeguards," as mandated by DPDPA Section 8(5) <sup>30</sup>, to prevent personal data breaches, including unauthorized access, use, disclosure, alteration, or destruction.</p>
     <p>These safeguards include appropriate technical and organizational measures, taking into account the nature, scope, context, and purposes of processing, as well as the risks to your rights and freedoms. Our measures align with examples provided in the draft DPDPA Rules <sup>5</sup> and industry best practices <sup>36</sup>:</p>
-    
+
     <h4>Technical Measures:</h4>
     <ul>
         <li><strong>Encryption:</strong> Encrypting personal data both at rest (when stored) and in transit (when transmitted over networks).<sup>41</sup></li>
@@ -217,7 +395,7 @@
     <h2>9. Your Rights (Data Principal Rights under DPDPA)</h2>
     <p>Under the DPDPA, you, as a Data Principal, have specific rights concerning your personal data. We are committed to facilitating the exercise of these rights.</p>
     <p>Please see the table below for a summary of your rights and how to exercise them:</p>
-    
+
     <table>
         <thead>
             <tr>
@@ -252,7 +430,7 @@
 
     <h3>Exercising Your Rights:</h3>
     <p>To exercise any of these rights, please contact us using the information provided in Section 14 (Grievance Redressal and Contact Information). We may need to verify your identity before processing your request to ensure the security of your personal data.<sup>104</sup> We will respond to your request within a reasonable timeframe, or as prescribed by law.<sup>2</sup></p>
-    
+
     <h3>Data Principal Duties:</h3>
     <p>Please note that the DPDPA also outlines certain duties for Data Principals. You must not register false or frivolous grievances or complaints, provide false particulars, suppress material information, or impersonate another person when providing information or exercising your rights.<sup>35</sup> Violation of these duties may be punishable under the Act.<sup>3</sup></p>
 
@@ -317,6 +495,55 @@
     <h2>15. Consent Manager Information</h2>
     <p>The DPDPA introduces the concept of Consent Managers – registered entities that provide a platform for Data Principals to give, manage, review, and withdraw their consent for data processing across different Data Fiduciaries.<sup>6</sup></p>
     <p>As this framework develops, we will evaluate integrations with registered Consent Managers. Should we integrate with such platforms, or should you choose to manage your consent for our Services through a registered Consent Manager, we will cooperate with the Consent Manager as required by the DPDPA to facilitate your choices. We will provide updates on any integrations or options related to Consent Managers as they become available. Explaining this mechanism now helps set user expectations for this key DPDPA feature.</p>
+
+    <div class="signature-section">
+        <h2 class="section-title">Signatures</h2>
+        <div class="signature-row">
+            <div class="signature-column">
+                <p class="signature-label">Signed on behalf of Aurigraph:</p>
+                <div class="signature-line">
+                    <img src="{{aurigraphSignatureUrl}}" alt="Aurigraph Signature" class="signature-img" onerror="this.onerror=null;this.src='https://placehold.co/150x50/e0e0e0/000000?text=Signature';">
+                </div>
+                <p class="signature-caption">Signature</p>
+                <span class="prefilled-data signature-data">{{aurigraphNameDesignation}}</span>
+                <p class="signature-caption">Name & Designation</p>
+                <span class="prefilled-data signature-data">Date: {{aurigraphSignDate}}</span>
+                <p class="signature-caption"></p>
+            </div>
+            <div class="signature-column signature-column-right">
+                <p class="signature-label">Signed by Landowner/Farmer (Party A):</p>
+                <div class="signature-line">
+                    <img src="{{farmerSignatureUrl}}" alt="Farmer Signature" class="signature-img" onerror="this.onerror=null;this.src='https://placehold.co/150x50/e0e0e0/000000?text=Signature';">
+                </div>
+                <p class="signature-caption">Signature</p>
+                <span class="prefilled-data signature-data">{{farmerSignName}}</span>
+                <p class="signature-caption">Name</p>
+                <span class="prefilled-data signature-data">Date: {{farmerSignDate}}</span>
+                <p class="signature-caption"></p>
+            </div>
+        </div>
+
+        <div class="signature-row">
+            <div class="signature-column">
+                <p class="signature-label">Witness 1:</p>
+                <div class="signature-line">
+                    <img src="{{witness1SignatureUrl}}" alt="Witness 1 Signature" class="signature-img" onerror="this.onerror=null;this.src='https://placehold.co/150x50/e0e0e0/000000?text=Signature';">
+                </div>
+                <p class="signature-caption">Signature</p>
+                <span class="prefilled-data signature-data">{{witness1NameAddress}}</span>
+                <p class="signature-caption">Name & Address</p>
+            </div>
+            <div class="signature-column signature-column-right">
+                <p class="signature-label">Witness 2:</p>
+                <div class="signature-line">
+                    <img src="{{witness2SignatureUrl}}" alt="Witness 2 Signature" class="signature-img" onerror="this.onerror=null;this.src='https://placehold.co/150x50/e0e0e0/000000?text=Signature';">
+                </div>
+                <p class="signature-caption">Signature</p>
+                <span class="prefilled-data signature-data">{{witness2NameAddress}}</span>
+                <p class="signature-caption">Name & Address</p>
+            </div>
+        </div>
+    </div>
 
 </body>
 </html>

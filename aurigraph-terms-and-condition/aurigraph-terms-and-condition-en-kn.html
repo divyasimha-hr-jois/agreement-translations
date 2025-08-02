@@ -1,0 +1,1706 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aurigraph AUREX Terms and Conditions (Bilingual)</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            line-height: 1.6;
+            margin: 2em;
+        }
+        h1, h2, h3, h4 {
+            color: #333;
+            line-height: 1.4;
+        }
+        h1 {
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+            text-align: center;
+        }
+        h2 {
+            border-bottom: 1px solid #eee;
+            padding-bottom: 8px;
+            margin-top: 2em;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1.5em;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+            vertical-align: top;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .preamble, .contact-info {
+            background-color: #f9f9f9;
+            border-left: 4px solid #ccc;
+            padding: 1em;
+            margin-bottom: 1.5em;
+        }
+        strong {
+            color: #111;
+        }
+        ul, ol {
+            padding-left: 20px;
+        }
+        p, li {
+            text-align: justify;
+        }
+
+        /* Party A details section styles */
+        .section-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+            color: #111827;
+        }
+        .section-container {
+            margin-bottom: 1.5rem;
+        }
+        .form-grid {
+            display: grid;
+            gap: 0.75rem 2rem;
+        }
+        @media (min-width: 640px) {
+            .form-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        .form-field {
+            display: flex;
+            flex-direction: column;
+            font-size: 1rem;
+        }
+        .form-label {
+            font-weight: 500;
+            color: #374151;
+            margin-bottom: 0.25rem;
+        }
+        .prefilled-data {
+            flex-grow: 1;
+            padding-bottom: 0.25rem;
+            border-bottom: 1px solid #ccc;
+            min-height: 1.5rem;
+        }
+
+        /* Signature section styles */
+        .signature-section {
+            margin-top: 2rem;
+            padding-top: 1rem;
+            border-top: 1px solid #e5e7eb;
+            font-size: 0.875rem;
+        }
+        .signature-row {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 1.5rem;
+        }
+        @media (min-width: 640px) {
+            .signature-row {
+                flex-direction: row;
+                align-items: flex-end;
+            }
+        }
+        .signature-column {
+            margin-bottom: 1.5rem;
+            width: 100%;
+        }
+        @media (min-width: 640px) {
+            .signature-column {
+                margin-bottom: 0;
+                width: 48%;
+            }
+        }
+        .signature-label {
+            font-weight: 600;
+            color: #374151;
+        }
+        .signature-caption {
+            font-size: 0.75rem;
+            color: #6b7280;
+            margin-top: 0.25rem;
+        }
+        .signature-data {
+            margin-top: 1.5rem;
+            display: block;
+        }
+        .signature-line {
+            border-bottom: 1px solid #000;
+            margin: 1rem 0;
+            min-height: 50px;
+            display: flex;
+            align-items: center;
+        }
+        .signature-img {
+            max-width: 150px;
+            max-height: 50px;
+            object-fit: contain;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>
+        Aurigraph AUREX Terms and Conditions
+        <br>
+        ಆರಿಗ್ರಾಫ್ ಆರ‍ೆಕ್ಸ್ ನಿಯಮಗಳು ಮತ್ತು ನಿಬಂಧನೆಗಳು
+    </h1>
+    <p style="text-align: center;">
+        <strong>
+            Effective Date: May 1, 2025
+            <br>
+            ಜಾರಿಯಾಗುವ ದಿನಾಂಕ: ಮೇ 1, 2025
+        </strong>
+    </p>
+
+    <h2 class="section-title">
+        Details of Party - A
+        <br>
+        ಪಕ್ಷ - ಎ ಯ ವಿವರಗಳು
+    </h2>
+    <div class="section-container">
+        <div class="form-grid">
+            <div class="form-field">
+                <label class="form-label">Mr/Mrs/Ms (Name of Paddy Farmer):<br>ಶ್ರೀ/ಶ್ರೀಮತಿ/ಕುಮಾರಿ (ಭತ್ತದ ರೈತರ ಹೆಸರು):</label>
+                <span class="prefilled-data">{{farmerName}}</span>
+            </div>
+            <div class="form-field">
+                <label class="form-label">Survey Number:<br>ಸಮೀಕ್ಷೆ ಸಂಖ್ಯೆ:</label>
+                <span class="prefilled-data">{{surveyNumber}}</span>
+            </div>
+            <div class="form-field">
+                <label class="form-label">Patta / Phani Number:<br>ಪಟ್ಟಾ / ಪಹಣಿ ಸಂಖ್ಯೆ:</label>
+                <span class="prefilled-data">{{pattaPhaniNumber}}</span>
+            </div>
+            <div class="form-field">
+                <label class="form-label">Khatha Number:<br>ಖಾತಾ ಸಂಖ್ಯೆ:</label>
+                <span class="prefilled-data">{{khathaNumber}}</span>
+            </div>
+            <div class="form-field">
+                <label class="form-label">Land Area in Acres:<br>ಎಕರೆಗಳಲ್ಲಿ ಭೂಮಿ ವಿಸ್ತೀರ್ಣ:</label>
+                <span class="prefilled-data">{{landArea}}</span>
+            </div>
+            <div class="form-field">
+                <label class="form-label">Mobile No.:<br>ಮೊಬೈಲ್ ಸಂಖ್ಯೆ:</label>
+                <span class="prefilled-data">{{mobileNo}}</span>
+            </div>
+            <div class="form-field">
+                <label class="form-label">ID (Aadhaar Number / Voter ID / if any):<br>ಗುರುತಿನ ಚೀಟಿ (ಆಧಾರ್ ಸಂಖ್ಯೆ / ಮತದಾರರ ಗುರುತಿನ ಚೀಟಿ / ಯಾವುದಾದರೂ ಇದ್ದರೆ):</label>
+                <span class="prefilled-data">{{idNumber}}</span>
+            </div>
+            <div class="form-field">
+                <label class="form-label">Village:<br>ಗ್ರಾಮ:</label>
+                <span class="prefilled-data">{{village}}</span>
+            </div>
+            <div class="form-field">
+                <label class="form-label">Taluk:<br>ತಾಲ್ಲೂಕು:</label>
+                <span class="prefilled-data">{{taluk}}</span>
+            </div>
+            <div class="form-field">
+                <label class="form-label">District:<br>ಜಿಲ್ಲೆ:</label>
+                <span class="prefilled-data">{{district}}</span>
+            </div>
+            <div class="form-field">
+                <label class="form-label">State:<br>ರಾಜ್ಯ:</label>
+                <span class="prefilled-data">{{state}}</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="preamble">
+        <h2>
+            Preamble
+            <br>
+            ಪೀಠಿಕೆ
+        </h2>
+        <p>
+            These Terms and Conditions ("Terms," "Agreement") govern the access to and use of the AUREX Platform and associated Mobile Application (collectively, the "Platform" or "Services") provided by Aurigraph Solutions Pvt. Ltd. (referred to herein as "Aurigraph," "Company," "We," "Us," or "Our"). The Platform is designed to offer services related to agricultural data management, including but not limited to drone-based sensing, Alternate Wetting and Drying (AWD) management support, and carbon accounting data collection and reporting functionalities.
+            <br><br>
+            ಈ ನಿಯಮಗಳು ಮತ್ತು ನಿಬಂಧನೆಗಳು ("ನಿಯಮಗಳು," "ಒಪ್ಪಂದ") ಆರಿಗ್ರಾಫ್ ಸೊಲ್ಯೂಷನ್ಸ್ ಪ್ರೈವೇಟ್ ಲಿಮಿಟೆಡ್ (ಇಲ್ಲಿ "ಆರಿಗ್ರಾಫ್," "ಕಂಪನಿ," "ನಾವು," ಅಥವಾ "ನಮ್ಮ" ಎಂದು ಉಲ್ಲೇಖಿಸಲಾಗಿದೆ) ಒದಗಿಸುವ AUREX ಪ್ಲಾಟ್‌ಫಾರ್ಮ್ ಮತ್ತು ಅದಕ್ಕೆ ಸಂಬಂಧಿಸಿದ ಮೊಬೈಲ್ ಅಪ್ಲಿಕೇಶನ್ (ಒಟ್ಟಾರೆಯಾಗಿ, "ಪ್ಲಾಟ್‌ಫಾರ್ಮ್" ಅಥವಾ "ಸೇವೆಗಳು") ಪ್ರವೇಶ ಮತ್ತು ಬಳಕೆಯನ್ನು ನಿಯಂತ್ರಿಸುತ್ತವೆ. ಈ ಪ್ಲಾಟ್‌ಫಾರ್ಮ್ ಅನ್ನು ಕೃಷಿ ಡೇಟಾ ನಿರ್ವಹಣೆಗೆ ಸಂಬಂಧಿಸಿದ ಸೇವೆಗಳನ್ನು ನೀಡಲು ವಿನ್ಯಾಸಗೊಳಿಸಲಾಗಿದೆ, ಇದರಲ್ಲಿ ಡ್ರೋನ್-ಆಧಾರಿತ ಸಂವೇದನೆ, ಪರ್ಯಾಯ ತೇವ ಮತ್ತು ಒಣಗಿಸುವಿಕೆ (AWD) ನಿರ್ವಹಣಾ ಬೆಂಬಲ, ಮತ್ತು ಕಾರ್ಬನ್ ಅಕೌಂಟಿಂಗ್ ಡೇಟಾ ಸಂಗ್ರಹಣೆ ಮತ್ತು ವರದಿ ಮಾಡುವ ಕಾರ್ಯಗಳು ಸೇರಿವೆ, ಆದರೆ ಇವುಗಳಿಗೆ ಸೀಮಿತವಾಗಿಲ್ಲ.
+        </p>
+        <p>
+            These Terms apply to all individuals and entities who access or use the Platform, including Farmers, Field Agents, Supervisors, and Local Partners (each a "User," "You," or "Your").
+            <br><br>
+            ಈ ನಿಯಮಗಳು ರೈತರು, ಫೀಲ್ಡ್ ಏಜೆಂಟ್‌ಗಳು, ಮೇಲ್ವಿಚಾರಕರು ಮತ್ತು ಸ್ಥಳೀಯ ಪಾಲುದಾರರು (ಪ್ರತಿಯೊಬ್ಬರೂ "ಬಳಕೆದಾರ," "ನೀವು," ಅಥವಾ "ನಿಮ್ಮ" ಎಂದು) ಸೇರಿದಂತೆ ಪ್ಲಾಟ್‌ಫಾರ್ಮ್ ಅನ್ನು ಪ್ರವೇಶಿಸುವ ಅಥವಾ ಬಳಸುವ ಎಲ್ಲ ವ್ಯಕ್ತಿಗಳು ಮತ್ತು ಘಟಕಗಳಿಗೆ ಅನ್ವಯಿಸುತ್ತವೆ.
+        </p>
+        <p>
+            <strong>
+                BY REGISTERING FOR AN ACCOUNT, DOWNLOADING THE MOBILE APPLICATION, ACCESSING, OR USING THE PLATFORM IN ANY MANNER, YOU ACKNOWLEDGE THAT YOU HAVE READ, UNDERSTOOD, AND AGREE TO BE LEGALLY BOUND BY THESE TERMS AND CONDITIONS AND THE AURIGRAPH PRIVACY POLICY <a href="#">[Insert Link to Privacy Policy]</a>, WHICH IS INCORPORATED HEREIN BY REFERENCE. IF YOU DO NOT AGREE TO THESE TERMS, YOU MAY NOT ACCESS OR USE THE PLATFORM. YOUR AGREEMENT IS CONFIRMED THROUGH ACTIONS SUCH AS CLICKING AN "I AGREE" BUTTON OR CHECKBOX, OR THROUGH YOUR CONTINUED USE OF THE SERVICES FOLLOWING NOTIFICATION OF THESE TERMS.
+                <br><br>
+                ಖಾತೆಗಾಗಿ ನೋಂದಾಯಿಸಿಕೊಳ್ಳುವುದು, ಮೊಬೈಲ್ ಅಪ್ಲಿಕೇಶನ್ ಡೌನ್‌ಲೋಡ್ ಮಾಡುವುದು, ಪ್ಲಾಟ್‌ಫಾರ್ಮ್ ಅನ್ನು ಯಾವುದೇ ರೀತಿಯಲ್ಲಿ ಪ್ರವೇಶಿಸುವುದು ಅಥವಾ ಬಳಸುವುದು, ಈ ನಿಯಮಗಳು ಮತ್ತು ನಿಬಂಧನೆಗಳನ್ನು ಮತ್ತು ಆರಿಗ್ರಾಫ್ ಗೌಪ್ಯತಾ ನೀತಿಯನ್ನು <a href="#">[ಗೌಪ್ಯತಾ ನೀತಿಗೆ ಲಿಂಕ್ ಸೇರಿಸಿ]</a> ಓದಿ, ಅರ್ಥಮಾಡಿಕೊಂಡು, ಕಾನೂನುಬದ್ಧವಾಗಿ ಬದ್ಧರಾಗಿರಲು ಒಪ್ಪಿದ್ದೀರಿ ಎಂದು ನೀವು ಅಂಗೀಕರಿಸುತ್ತೀರಿ. ಈ ನಿಯಮಗಳಿಗೆ ನೀವು ಒಪ್ಪದಿದ್ದರೆ, ನೀವು ಪ್ಲಾಟ್‌ಫಾರ್ಮ್ ಅನ್ನು ಪ್ರವೇಶಿಸಲು ಅಥವಾ ಬಳಸಲು ಸಾಧ್ಯವಿಲ್ಲ. "ನಾನು ಒಪ್ಪುತ್ತೇನೆ" ಬಟನ್ ಅಥವಾ ಚೆಕ್‌ಬಾಕ್ಸ್ ಕ್ಲಿಕ್ ಮಾಡುವಂತಹ ಕ್ರಿಯೆಗಳ ಮೂಲಕ ಅಥವಾ ಈ ನಿಯಮಗಳ ಅಧಿಸೂಚನೆಯ ನಂತರ ಸೇವೆಗಳ ನಿಮ್ಮ ನಿರಂತರ ಬಳಕೆಯ ಮೂಲಕ ನಿಮ್ಮ ಒಪ್ಪಂದವನ್ನು ದೃಢೀಕರಿಸಲಾಗುತ್ತದೆ.
+            </strong>
+        </p>
+    </div>
+
+    <h2>
+        1. Introduction and Acceptance of Terms
+        <br>
+        1. ಪರಿಚಯ ಮತ್ತು ನಿಯಮಗಳ ಸ್ವೀಕಾರ
+    </h2>
+    <h3>
+        1.1 Scope
+        <br>
+        1.1 ವ್ಯಾಪ್ತಿ
+    </h3>
+    <p>
+        These Terms govern Your access to and use of the AUREX Platform, encompassing the website, the AUREX mobile application, any associated Application Programming Interfaces (APIs), data, algorithms, models, content, reports, notifications, support services, and any other functionalities or services provided by Aurigraph in connection with the AUREX Platform.
+        <br><br>
+        ಈ ನಿಯಮಗಳು ವೆಬ್‌ಸೈಟ್, AUREX ಮೊಬೈಲ್ ಅಪ್ಲಿಕೇಶನ್, ಯಾವುದೇ ಸಂಬಂಧಿತ ಅಪ್ಲಿಕೇಶನ್ ಪ್ರೋಗ್ರಾಮಿಂಗ್ ಇಂಟರ್ಫೇಸ್‌ಗಳು (APIಗಳು), ಡೇಟಾ, ಅಲ್ಗಾರಿದಮ್‌ಗಳು, ಮಾದರಿಗಳು, ವಿಷಯ, ವರದಿಗಳು, ಅಧಿಸೂಚನೆಗಳು, ಬೆಂಬಲ ಸೇವೆಗಳು, ಮತ್ತು ಆರಿಗ್ರಾಫ್ AUREX ಪ್ಲಾಟ್‌ಫಾರ್ಮ್‌ಗೆ ಸಂಬಂಧಿಸಿದಂತೆ ಒದಗಿಸುವ ಯಾವುದೇ ಇತರ ಕಾರ್ಯಚಟುವಟಿಕೆಗಳು ಅಥವಾ ಸೇವೆಗಳನ್ನು ಒಳಗೊಂಡಂತೆ ನಿಮ್ಮ AUREX ಪ್ಲಾಟ್‌ಫಾರ್ಮ್‌ ಪ್ರವೇಶ ಮತ್ತು ಬಳಕೆಯನ್ನು ನಿಯಂತ್ರಿಸುತ್ತವೆ.
+    </p>
+
+    <h3>
+        1.2 Definitions
+        <br>
+        1.2 ವ್ಯಾಖ್ಯಾನಗಳು
+    </h3>
+    <p>
+        For the purposes of this Agreement, the following terms shall have the meanings ascribed below:
+        <br><br>
+        ಈ ಒಪ್ಪಂದದ ಉದ್ದೇಶಗಳಿಗಾಗಿ, ಈ ಕೆಳಗಿನ ಪದಗಳು ಕೆಳಗೆ ನೀಡಲಾದ ಅರ್ಥಗಳನ್ನು ಹೊಂದಿರಬೇಕು:
+    </p>
+    <ul>
+        <li>
+            <strong>"AUREX Platform" or "Platform":</strong> Refers to the SaaS platform, mobile application, APIs, and related services provided by Aurigraph.
+            <br>
+            <strong>"AUREX ಪ್ಲಾಟ್‌ಫಾರ್ಮ್" ಅಥವಾ "ಪ್ಲಾಟ್‌ಫಾರ್ಮ್":</strong> ಆರಿಗ್ರಾಫ್ ಒದಗಿಸಿದ SaaS ಪ್ಲಾಟ್‌ಫಾರ್ಮ್, ಮೊಬೈಲ್ ಅಪ್ಲಿಕೇಶನ್, API ಗಳು ಮತ್ತು ಸಂಬಂಧಿತ ಸೇವೆಗಳನ್ನು ಸೂಚಿಸುತ್ತದೆ.
+        </li>
+        <li>
+            <strong>"Mobile Application":</strong> Refers to the specific software application provided by Aurigraph for use on mobile devices to access certain Platform features.
+            <br>
+            <strong>"ಮೊಬೈಲ್ ಅಪ್ಲಿಕೇಶನ್":</strong> ಕೆಲವು ಪ್ಲಾಟ್‌ಫಾರ್ಮ್ ವೈಶಿಷ್ಟ್ಯಗಳನ್ನು ಪ್ರವೇಶಿಸಲು ಮೊಬೈಲ್ ಸಾಧನಗಳಲ್ಲಿ ಬಳಸಲು ಆರಿಗ್ರಾಫ್ ಒದಗಿಸಿದ ನಿರ್ದಿಷ್ಟ ಸಾಫ್ಟ್‌ವೇರ್ ಅಪ್ಲಿಕೇಶನ್ ಅನ್ನು ಸೂಚಿಸುತ್ತದೆ.
+        </li>
+        <li>
+            <strong>"User":</strong> Any individual or entity accessing or using the Platform, including Farmers, Field Agents, Supervisors, and Local Partners.
+            <br>
+            <strong>"ಬಳಕೆದಾರ":</strong> ರೈತರು, ಫೀಲ್ಡ್ ಏಜೆಂಟ್‌ಗಳು, ಮೇಲ್ವಿಚಾರಕರು ಮತ್ತು ಸ್ಥಳೀಯ ಪಾಲುದಾರರು ಸೇರಿದಂತೆ ಪ್ಲಾಟ್‌ಫಾರ್ಮ್ ಅನ್ನು ಪ್ರವೇಶಿಸುವ ಅಥವಾ ಬಳಸುವ ಯಾವುದೇ ವ್ಯಕ್ತಿ ಅಥವಾ ಘಟಕ.
+        </li>
+        <li>
+            <strong>"Farmer":</strong> A User, typically an individual grower or farm entity, who registers to manage their farm data, view reports, and potentially participate in programs like carbon farming or AWD management facilitated by the Platform.
+            <br>
+            <strong>"ರೈತ":</strong> ಒಬ್ಬ ಬಳಕೆದಾರ, ಸಾಮಾನ್ಯವಾಗಿ ಒಬ್ಬ ವೈಯಕ್ತಿಕ ಬೆಳೆಗಾರ ಅಥವಾ ಕೃಷಿ ಘಟಕ, ಅವರು ತಮ್ಮ ಕೃಷಿ ಡೇಟಾವನ್ನು ನಿರ್ವಹಿಸಲು, ವರದಿಗಳನ್ನು ವೀಕ್ಷಿಸಲು ಮತ್ತು ಪ್ಲಾಟ್‌ಫಾರ್ಮ್ ಮೂಲಕ ಸುಗಮಗೊಳಿಸಲಾದ ಇಂಗಾಲ ಕೃಷಿ ಅಥವಾ AWD ನಿರ್ವಹಣೆಯಂತಹ ಕಾರ್ಯಕ್ರಮಗಳಲ್ಲಿ ಸಂಭಾವ್ಯವಾಗಿ ಭಾಗವಹಿಸಲು ನೋಂದಾಯಿಸಿಕೊಳ್ಳುತ್ತಾರೆ.
+        </li>
+        <li>
+            <strong>"Field Agent":</strong> A User authorized to collect field data (including via drone or sensors) using the Platform, typically via the Mobile Application, under the direction of a Supervisor or Aurigraph.
+            <br>
+            <strong>"ಫೀಲ್ಡ್ ಏಜೆಂಟ್":</strong> ಮೇಲ್ವಿಚಾರಕ ಅಥವಾ ಆರಿಗ್ರಾಫ್ ನಿರ್ದೇಶನದ ಅಡಿಯಲ್ಲಿ, ಸಾಮಾನ್ಯವಾಗಿ ಮೊಬೈಲ್ ಅಪ್ಲಿಕೇಶನ್ ಮೂಲಕ ಪ್ಲಾಟ್‌ಫಾರ್ಮ್ ಬಳಸಿ (ಡ್ರೋನ್ ಅಥವಾ ಸಂವೇದಕಗಳ ಮೂಲಕ ಸೇರಿದಂತೆ) ಕ್ಷೇತ್ರ ಡೇಟಾವನ್ನು ಸಂಗ್ರಹಿಸಲು ಅಧಿಕಾರ ಪಡೆದ ಬಳಕೆದಾರ.
+        </li>
+        <li>
+            <strong>"Supervisor":</strong> A User authorized to oversee Field Agents, validate collected data, generate reports, and manage specific operational aspects of the Platform within a designated scope.
+            <br>
+            <strong>"ಮೇಲ್ವಿಚಾರಕ":</strong> ಫೀಲ್ಡ್ ಏಜೆಂಟ್‌ಗಳನ್ನು ಮೇಲ್ವಿಚಾರಣೆ ಮಾಡಲು, ಸಂಗ್ರಹಿಸಿದ ಡೇಟಾವನ್ನು ಮೌಲ್ಯೀಕರಿಸಲು, ವರದಿಗಳನ್ನು ರಚಿಸಲು ಮತ್ತು ಗೊತ್ತುಪಡಿಸಿದ ವ್ಯಾಪ್ತಿಯಲ್ಲಿ ಪ್ಲಾಟ್‌ಫಾರ್ಮ್‌ನ ನಿರ್ದಿಷ್ಟ ಕಾರ್ಯಾಚರಣೆಯ ಅಂಶಗಳನ್ನು ನಿರ್ವಹಿಸಲು ಅಧಿಕಾರ ಪಡೆದ ಬಳಕೆದಾರ.
+        </li>
+        <li>
+            <strong>"Local Partner":</strong> An entity or individual authorized by Aurigraph to perform specific functions such as user onboarding, local support, or regional coordination related to the Platform. Their relationship with Aurigraph may be governed by a separate agreement.
+            <br>
+            <strong>"ಸ್ಥಳೀಯ ಪಾಲುದಾರ":</strong> ಬಳಕೆದಾರರ ಸೇರ್ಪಡೆ, ಸ್ಥಳೀಯ ಬೆಂಬಲ, ಅಥವಾ ಪ್ಲಾಟ್‌ಫಾರ್ಮ್‌ಗೆ ಸಂಬಂಧಿಸಿದ ಪ್ರಾದೇಶಿಕ ಸಮನ್ವಯದಂತಹ ನಿರ್ದಿಷ್ಟ ಕಾರ್ಯಗಳನ್ನು ನಿರ್ವಹಿಸಲು ಆರಿಗ್ರಾಫ್‌ನಿಂದ ಅಧಿಕಾರ ಪಡೆದ ಘಟಕ ಅಥವಾ ವ್ಯಕ್ತಿ. ಆರಿಗ್ರಾಫ್‌ನೊಂದಿಗಿನ ಅವರ ಸಂಬಂಧವು ಪ್ರತ್ಯೇಕ ಒಪ್ಪಂದದಿಂದ ನಿಯಂತ್ರಿಸಲ್ಪಡಬಹುದು.
+        </li>
+        <li>
+            <strong>"User Content":</strong> Any data, information, text, images, farm boundaries, practice details, or other materials uploaded, submitted, or otherwise provided by a User to the Platform. This is distinct from Platform Data.
+            <br>
+            <strong>"ಬಳಕೆದಾರರ ವಿಷಯ":</strong> ಬಳಕೆದಾರರಿಂದ ಪ್ಲಾಟ್‌ಫಾರ್ಮ್‌ಗೆ ಅಪ್‌ಲೋಡ್ ಮಾಡಿದ, ಸಲ್ಲಿಸಿದ ಅಥವಾ ಒದಗಿಸಲಾದ ಯಾವುದೇ ಡೇಟಾ, ಮಾಹಿತಿ, ಪಠ್ಯ, ಚಿತ್ರಗಳು, ಕೃಷಿ ಗಡಿಗಳು, ಅಭ್ಯಾಸದ ವಿವರಗಳು ಅಥವಾ ಇತರ ವಸ್ತುಗಳು. ಇದು ಪ್ಲಾಟ್‌ಫಾರ್ಮ್ ಡೇಟಾದಿಂದ ಭಿನ್ನವಾಗಿದೆ.
+        </li>
+        <li>
+            <strong>"Platform Data":</strong> Any data, insights, reports, analyses, models, algorithms, or aggregated/anonymized datasets generated by Aurigraph through the operation of the Platform, including processed sensor data, carbon estimations, and AWD predictions.
+            <br>
+            <strong>"ಪ್ಲಾಟ್‌ಫಾರ್ಮ್ ಡೇಟಾ":</strong> ಸಂಸ್ಕರಿಸಿದ ಸಂವೇದಕ ಡೇಟಾ, ಇಂಗಾಲದ ಅಂದಾಜುಗಳು ಮತ್ತು AWD ಮುನ್ಸೂಚನೆಗಳನ್ನು ಒಳಗೊಂಡಂತೆ ಪ್ಲಾಟ್‌ಫಾರ್ಮ್‌ನ ಕಾರ್ಯಾಚರಣೆಯ ಮೂಲಕ ಆರಿಗ್ರಾಫ್‌ನಿಂದ ರಚಿಸಲಾದ ಯಾವುದೇ ಡೇಟಾ, ಒಳನೋಟಗಳು, ವರದಿಗಳು, ವಿಶ್ಲೇಷಣೆಗಳು, ಮಾದರಿಗಳು, ಅಲ್ಗಾರಿದಮ್‌ಗಳು ಅಥವಾ ಒಟ್ಟುಗೂಡಿಸಿದ/ಅನಾಮಧೇಯ ಡೇಟಾಸೆಟ್‌ಗಳು.
+        </li>
+        <li>
+            <strong>"Personal Data":</strong> Any data about an individual who is identifiable by or in relation to such data, as defined under the DPDPA.
+            <br>
+            <strong>"ವೈಯಕ್ತಿಕ ಡೇಟಾ":</strong> DPDPA ಅಡಿಯಲ್ಲಿ ವ್ಯಾಖ್ಯಾನಿಸಿದಂತೆ, ಅಂತಹ ಡೇಟಾದಿಂದ ಅಥವಾ ಅದಕ್ಕೆ ಸಂಬಂಧಿಸಿದಂತೆ ಗುರುತಿಸಬಹುದಾದ ವ್ಯಕ್ತಿಯ ಬಗ್ಗೆ ಯಾವುದೇ ಡೇಟಾ.
+        </li>
+        <li>
+            <strong>"Intellectual Property Rights":</strong> Includes patents, copyrights, trademarks, service marks, trade names, domain names, trade secrets, know-how, database rights, design rights, and any other intellectual or industrial property rights, whether registered or unregistered, and all applications thereof.
+            <br>
+            <strong>"ಬೌದ್ಧಿಕ ಆಸ್ತಿ ಹಕ್ಕುಗಳು":</strong> ಪೇಟೆಂಟ್‌ಗಳು, ಹಕ್ಕುಸ್ವಾಮ್ಯಗಳು, ಟ್ರೇಡ್‌ಮಾರ್ಕ್‌ಗಳು, ಸೇವಾ ಗುರುತುಗಳು, ವ್ಯಾಪಾರದ ಹೆಸರುಗಳು, ಡೊಮೇನ್ ಹೆಸರುಗಳು, ವ್ಯಾಪಾರ ರಹಸ್ಯಗಳು, ಜ್ಞಾನ, ಡೇಟಾಬೇಸ್ ಹಕ್ಕುಗಳು, ವಿನ್ಯಾಸ ಹಕ್ಕುಗಳು, ಮತ್ತು ಯಾವುದೇ ಇತರ ಬೌದ್ಧಿಕ ಅಥವಾ ಕೈಗಾರಿಕಾ ಆಸ್ತಿ ಹಕ್ಕುಗಳು, ನೋಂದಾಯಿತ ಅಥವಾ ನೋಂದಾಯಿಸದ, ಮತ್ತು ಅವುಗಳ ಎಲ್ಲಾ ಅನ್ವಯಗಳನ್ನು ಒಳಗೊಂಡಿದೆ.
+        </li>
+        <li>
+            <strong>"DPDPA":</strong> The India Digital Personal Data Protection Act, 2023, and any subsequent amendments or implementing rules.
+            <br>
+            <strong>"DPDPA":</strong> ಭಾರತೀಯ ಡಿಜಿಟಲ್ ವೈಯಕ್ತಿಕ ಡೇಟಾ ಸಂರಕ್ಷಣಾ ಕಾಯ್ದೆ, 2023, ಮತ್ತು ಯಾವುದೇ ನಂತರದ ತಿದ್ದುಪಡಿಗಳು ಅಥವಾ ಅನುಷ್ಠಾನ ನಿಯಮಗಳು.
+        </li>
+        <li>
+            <strong>"AWD":</strong> Alternate Wetting and Drying, a water management technique for rice cultivation.
+            <br>
+            <strong>"AWD":</strong> ಪರ್ಯಾಯ ತೇವ ಮತ್ತು ಒಣಗಿಸುವಿಕೆ, ಭತ್ತದ ಕೃಷಿಗಾಗಿ ನೀರಿನ ನಿರ್ವಹಣಾ ತಂತ್ರ.
+        </li>
+        <li>
+            <strong>"Carbon Accounting Data":</strong> Data related to farm management practices, inputs, soil characteristics, biomass, and greenhouse gas emissions or removals used for calculating carbon footprints or sequestration potential.
+            <br>
+            <strong>"ಕಾರ್ಬನ್ ಅಕೌಂಟಿಂಗ್ ಡೇಟಾ":</strong> ಇಂಗಾಲದ ಹೆಜ್ಜೆಗುರುತುಗಳನ್ನು ಅಥವಾ ಪ್ರತ್ಯೇಕತೆಯ ಸಾಮರ್ಥ್ಯವನ್ನು ಲೆಕ್ಕಾಚಾರ ಮಾಡಲು ಬಳಸಲಾಗುವ ಕೃಷಿ ನಿರ್ವಹಣಾ ಅಭ್ಯಾಸಗಳು, ಒಳಹರಿವುಗಳು, ಮಣ್ಣಿನ ಗುಣಲಕ್ಷಣಗಳು, ಜೀವರಾಶಿ ಮತ್ತು ಹಸಿರುಮನೆ ಅನಿಲ ಹೊರಸೂಸುವಿಕೆ ಅಥವಾ ತೆಗೆದುಹಾಕುವಿಕೆಗೆ ಸಂಬಂಧಿಸಿದ ಡೇಟಾ.
+        </li>
+        <li>
+            <strong>"MRV":</strong> Monitoring, Reporting, and Verification, processes used typically in the context of carbon markets or sustainability programs.
+            <br>
+            <strong>"MRV":</strong> ಮಾನಿಟರಿಂಗ್, ರಿಪೋರ್ಟಿಂಗ್ ಮತ್ತು ವೆರಿಫಿಕೇಶನ್, ಸಾಮಾನ್ಯವಾಗಿ ಇಂಗಾಲದ ಮಾರುಕಟ್ಟೆಗಳು ಅಥವಾ ಸುಸ್ಥಿರತೆ ಕಾರ್ಯಕ್ರಮಗಳ ಸಂದರ್ಭದಲ್ಲಿ ಬಳಸಲಾಗುವ ಪ್ರಕ್ರಿಯೆಗಳು.
+        </li>
+    </ul>
+
+    <h3>
+        1.3 Agreement to Terms
+        <br>
+        1.3 ನಿಯಮಗಳಿಗೆ ಒಪ್ಪಿಗೆ
+    </h3>
+    <p>
+        Your access to and use of the Platform is expressly conditioned upon Your acceptance of and compliance with these Terms. By completing the registration process, downloading the Mobile Application, or using any part of the Services, You signify Your binding agreement to these Terms and the incorporated Aurigraph Privacy Policy. If You are using the Platform on behalf of an organization or entity, You represent and warrant that You have the authority to bind that entity to these Terms, and in such case, "You" and "Your" will refer to that entity.
+        <br><br>
+        ಪ್ಲಾಟ್‌ಫಾರ್ಮ್‌ಗೆ ನಿಮ್ಮ ಪ್ರವೇಶ ಮತ್ತು ಬಳಕೆಯು ಈ ನಿಯಮಗಳ ನಿಮ್ಮ ಸ್ವೀಕಾರ ಮತ್ತು ಅನುಸರಣೆಯ ಮೇಲೆ ಸ್ಪಷ್ಟವಾಗಿ ಅವಲಂಬಿತವಾಗಿದೆ. ನೋಂದಣಿ ಪ್ರಕ್ರಿಯೆಯನ್ನು ಪೂರ್ಣಗೊಳಿಸುವ ಮೂಲಕ, ಮೊಬೈಲ್ ಅಪ್ಲಿಕೇಶನ್ ಡೌನ್‌ಲೋಡ್ ಮಾಡುವ ಮೂಲಕ, ಅಥವಾ ಸೇವೆಗಳ ಯಾವುದೇ ಭಾಗವನ್ನು ಬಳಸುವ ಮೂಲಕ, ನೀವು ಈ ನಿಯಮಗಳಿಗೆ ಮತ್ತು ಸಂಯೋಜಿತ ಆರಿಗ್ರಾಫ್ ಗೌಪ್ಯತಾ ನೀತಿಗೆ ಬದ್ಧರಾಗಿರಲು ನಿಮ್ಮ ಒಪ್ಪಿಗೆಯನ್ನು ಸೂಚಿಸುತ್ತೀರಿ. ನೀವು ಸಂಸ್ಥೆ ಅಥವಾ ಘಟಕದ ಪರವಾಗಿ ಪ್ಲಾಟ್‌ಫಾರ್ಮ್ ಅನ್ನು ಬಳಸುತ್ತಿದ್ದರೆ, ಆ ಘಟಕವನ್ನು ಈ ನಿಯಮಗಳಿಗೆ ಬದ್ಧಗೊಳಿಸಲು ನಿಮಗೆ ಅಧಿಕಾರವಿದೆ ಎಂದು ನೀವು ಪ್ರತಿನಿಧಿಸುತ್ತೀರಿ ಮತ್ತು ಖಾತರಿಪಡಿಸುತ್ತೀರಿ, ಮತ್ತು ಅಂತಹ ಸಂದರ್ಭದಲ್ಲಿ, "ನೀವು" ಮತ್ತು "ನಿಮ್ಮ" ಆ ಘಟಕವನ್ನು ಉಲ್ಲೇಖಿಸುತ್ತದೆ.
+    </p>
+
+    <h3>
+        1.4 Eligibility
+        <br>
+        1.4 ಅರ್ಹತೆ
+    </h3>
+    <p>
+        You must be at least 18 years of age or the age of legal majority in Your jurisdiction to enter into this Agreement and use the Platform. If You are under the age of 18, You may only use the Platform with the consent and supervision of a parent or legal guardian who agrees to be bound by these Terms, particularly concerning the processing of children's data under the DPDPA. You represent that You have the legal capacity and authority to agree to these Terms and, if applicable, to bind the entity You represent. Use of the Platform may be subject to certain geographical restrictions or compliance requirements.
+        <br><br>
+        ಈ ಒಪ್ಪಂದಕ್ಕೆ ಪ್ರವೇಶಿಸಲು ಮತ್ತು ಪ್ಲಾಟ್‌ಫಾರ್ಮ್ ಅನ್ನು ಬಳಸಲು ನೀವು ಕನಿಷ್ಟ 18 ವರ್ಷ ವಯಸ್ಸಿನವರಾಗಿರಬೇಕು ಅಥವಾ ನಿಮ್ಮ ಅಧಿಕಾರ ವ್ಯಾಪ್ತಿಯಲ್ಲಿ ಕಾನೂನುಬದ್ಧ ವಯಸ್ಸನ್ನು ತಲುಪಿರಬೇಕು. ನೀವು 18 ವರ್ಷಕ್ಕಿಂತ ಕಡಿಮೆ ವಯಸ್ಸಿನವರಾಗಿದ್ದರೆ, DPDPA ಅಡಿಯಲ್ಲಿ ಮಕ್ಕಳ ಡೇಟಾದ ಪ್ರಕ್ರಿಯೆಗೆ ಸಂಬಂಧಿಸಿದಂತೆ ಈ ನಿಯಮಗಳಿಗೆ ಬದ್ಧರಾಗಿರಲು ಒಪ್ಪುವ ಪೋಷಕರು ಅಥವಾ ಕಾನೂನು ಪಾಲಕರ ಒಪ್ಪಿಗೆ ಮತ್ತು ಮೇಲ್ವಿಚಾರಣೆಯೊಂದಿಗೆ ಮಾತ್ರ ನೀವು ಪ್ಲಾಟ್‌ಫಾರ್ಮ್ ಅನ್ನು ಬಳಸಬಹುದು. ಈ ನಿಯಮಗಳಿಗೆ ಒಪ್ಪಲು ಮತ್ತು ಅನ್ವಯಿಸಿದರೆ, ನೀವು ಪ್ರತಿನಿಧಿಸುವ ಘಟಕವನ್ನು ಬದ್ಧಗೊಳಿಸಲು ನಿಮಗೆ ಕಾನೂನು ಸಾಮರ್ಥ್ಯ ಮತ್ತು ಅಧಿಕಾರವಿದೆ ಎಂದು ನೀವು ಪ್ರತಿನಿಧಿಸುತ್ತೀರಿ. ಪ್ಲಾಟ್‌ಫಾರ್ಮ್‌ನ ಬಳಕೆಯು ಕೆಲವು ಭೌಗೋಳಿಕ ನಿರ್ಬಂಧಗಳು ಅಥವಾ ಅನುಸರಣೆ ಅಗತ್ಯತೆಗಳಿಗೆ ಒಳಪಟ್ಟಿರಬಹುದು.
+    </p>
+
+    <h3>
+        1.5 Modifications to Terms
+        <br>
+        1.5 ನಿಯಮಗಳಿಗೆ ಮಾರ್ಪಾಡುಗಳು
+    </h3>
+    <p>
+        Aurigraph reserves the right, at its sole discretion, to modify or replace these Terms at any time. If a revision is material, We will provide reasonable notice prior to any new terms taking effect, which may be provided via email associated with Your account, through an in-Platform notification, or by posting the updated Terms on our website. What constitutes a material change will be determined at Our sole discretion. It is Your responsibility to review these Terms periodically for changes. Your continued access or use of the Platform after any such modifications become effective constitutes Your binding acceptance of the revised Terms. However, should modifications materially alter the way Your Personal Data is processed under the DPDPA, Aurigraph may be required to obtain Your renewed specific and informed consent before such changes apply to Your data, ensuring ongoing compliance with consent requirements. Reliance solely on continued use as acceptance for significant data processing changes may not suffice under DPDPA's emphasis on explicit, informed consent prior to processing.
+        <br><br>
+        ಆರಿಗ್ರಾಫ್ ತನ್ನ ಸ್ವಂತ ವಿವೇಚನೆಯಿಂದ, ಯಾವುದೇ ಸಮಯದಲ್ಲಿ ಈ ನಿಯಮಗಳನ್ನು ಮಾರ್ಪಡಿಸುವ ಅಥವಾ ಬದಲಾಯಿಸುವ ಹಕ್ಕನ್ನು ಕಾಯ್ದಿರಿಸಿಕೊಂಡಿದೆ. ಪರಿಷ್ಕರಣೆಯು ಮಹತ್ವದ್ದಾಗಿದ್ದರೆ, ಯಾವುದೇ ಹೊಸ ನಿಯಮಗಳು ಜಾರಿಗೆ ಬರುವ ಮೊದಲು ನಾವು ಸಮಂಜಸವಾದ ಸೂಚನೆಯನ್ನು ಒದಗಿಸುತ್ತೇವೆ, ಅದನ್ನು ನಿಮ್ಮ ಖಾತೆಗೆ ಸಂಬಂಧಿಸಿದ ಇಮೇಲ್ ಮೂಲಕ, ಪ್ಲಾಟ್‌ಫಾರ್ಮ್‌ನಲ್ಲಿನ ಅಧಿಸೂಚನೆಯ ಮೂಲಕ, ಅಥವಾ ನಮ್ಮ ವೆಬ್‌ಸೈಟ್‌ನಲ್ಲಿ ನವೀಕರಿಸಿದ ನಿಯಮಗಳನ್ನು ಪೋಸ್ಟ್ ಮಾಡುವ ಮೂಲಕ ಒದಗಿಸಬಹುದು. ಯಾವುದು ಮಹತ್ವದ ಬದಲಾವಣೆ ಎಂದು ನಮ್ಮ ಸ್ವಂತ ವಿವೇಚನೆಯಿಂದ ನಿರ್ಧರಿಸಲಾಗುತ್ತದೆ. ಬದಲಾವಣೆಗಳಿಗಾಗಿ ಈ ನಿಯಮಗಳನ್ನು ನಿಯತಕಾಲಿಕವಾಗಿ ಪರಿಶೀಲಿಸುವುದು ನಿಮ್ಮ ಜವಾಬ್ದಾರಿಯಾಗಿದೆ. ಅಂತಹ ಯಾವುದೇ ಮಾರ್ಪಾಡುಗಳು ಜಾರಿಗೆ ಬಂದ ನಂತರ ಪ್ಲಾಟ್‌ಫಾರ್ಮ್‌ಗೆ ನಿಮ್ಮ ನಿರಂತರ ಪ್ರವೇಶ ಅಥವಾ ಬಳಕೆಯು ಪರಿಷ್ಕೃತ ನಿಯಮಗಳಿಗೆ ನಿಮ್ಮ ಬದ್ಧ ಸ್ವೀಕಾರವನ್ನು ರೂಪಿಸುತ್ತದೆ. ಆದಾಗ್ಯೂ, ಮಾರ್ಪಾಡುಗಳು DPDPA ಅಡಿಯಲ್ಲಿ ನಿಮ್ಮ ವೈಯಕ್ತಿಕ ಡೇಟಾವನ್ನು ಪ್ರಕ್ರಿಯೆಗೊಳಿಸುವ ವಿಧಾನವನ್ನು ಗಣನೀಯವಾಗಿ ಬದಲಾಯಿಸಿದರೆ, ಅಂತಹ ಬದಲಾವಣೆಗಳು ನಿಮ್ಮ ಡೇಟಾಗೆ ಅನ್ವಯಿಸುವ ಮೊದಲು ನಿಮ್ಮ ನವೀಕರಿಸಿದ ನಿರ್ದಿಷ್ಟ ಮತ್ತು ತಿಳುವಳಿಕೆಯುಳ್ಳ ಒಪ್ಪಿಗೆಯನ್ನು ಪಡೆಯಲು ಆರಿಗ್ರಾಫ್‌ಗೆ ಅಗತ್ಯವಿರಬಹುದು, ಒಪ್ಪಿಗೆಯ ಅವಶ್ಯಕತೆಗಳೊಂದಿಗೆ ನಡೆಯುತ್ತಿರುವ ಅನುಸರಣೆಯನ್ನು ಖಚಿತಪಡಿಸುತ್ತದೆ. ಪ್ರಕ್ರಿಯೆಗೆ ಮೊದಲು ಸ್ಪಷ್ಟ, ತಿಳುವಳಿಕೆಯುಳ್ಳ ಒಪ್ಪಿಗೆಯ ಮೇಲೆ DPDPA ಯ ಒತ್ತು ನೀಡುವುದರಿಂದ, ಮಹತ್ವದ ಡೇಟಾ ಸಂಸ್ಕರಣಾ ಬದಲಾವಣೆಗಳಿಗೆ ಸ್ವೀಕಾರಕ್ಕಾಗಿ ನಿರಂತರ ಬಳಕೆಯ ಮೇಲೆ ಮಾತ್ರ ಅವಲಂಬನೆ ಸಾಕಾಗುವುದಿಲ್ಲ.
+    </p>
+
+    <h2>
+        2. User Accounts and Registration
+        <br>
+        2. ಬಳಕೆದಾರರ ಖಾತೆಗಳು ಮತ್ತು ನೋಂದಣಿ
+    </h2>
+    <h3>
+        2.1 Account Creation
+        <br>
+        2.1 ಖಾತೆ ರಚನೆ
+    </h3>
+    <p>
+        Access to and use of certain features of the AUREX Platform requires You to register and create a user account ("Account"). The registration process may differ depending on the designated User Role (Farmer, Field Agent, Supervisor, Local Partner) and may require specific information relevant to that role. You agree to provide the information requested during the registration process accurately and completely.
+        <br><br>
+        AUREX ಪ್ಲಾಟ್‌ಫಾರ್ಮ್‌ನ ಕೆಲವು ವೈಶಿಷ್ಟ್ಯಗಳಿಗೆ ಪ್ರವೇಶ ಮತ್ತು ಬಳಕೆಗೆ ನೀವು ನೋಂದಾಯಿಸಿಕೊಳ್ಳಬೇಕು ಮತ್ತು ಬಳಕೆದಾರ ಖಾತೆಯನ್ನು ("ಖಾತೆ") ರಚಿಸಬೇಕು. ನೋಂದಣಿ ಪ್ರಕ್ರಿಯೆಯು ಗೊತ್ತುಪಡಿಸಿದ ಬಳಕೆದಾರರ ಪಾತ್ರವನ್ನು (ರೈತ, ಫೀಲ್ಡ್ ಏಜೆಂಟ್, ಮೇಲ್ವಿಚಾರಕ, ಸ್ಥಳೀಯ ಪಾಲುದಾರ) ಅವಲಂಬಿಸಿ ಭಿನ್ನವಾಗಿರಬಹುದು ಮತ್ತು ಆ ಪಾತ್ರಕ್ಕೆ ಸಂಬಂಧಿಸಿದ ನಿರ್ದಿಷ್ಟ ಮಾಹಿತಿಯ ಅಗತ್ಯವಿರಬಹುದು. ನೋಂದಣಿ ಪ್ರಕ್ರಿಯೆಯಲ್ಲಿ ವಿನಂತಿಸಿದ ಮಾಹಿತಿಯನ್ನು ನಿಖರವಾಗಿ ಮತ್ತು ಸಂಪೂರ್ಣವಾಗಿ ಒದಗಿಸಲು ನೀವು ಒಪ್ಪುತ್ತೀರಿ.
+    </p>
+    <h3>
+        2.2 Accurate Information
+        <br>
+        2.2 ನಿಖರವಾದ ಮಾಹಿತಿ
+    </h3>
+    <p>
+        You represent and warrant that all information You provide during the registration process and maintain in Your Account profile is true, accurate, current, and complete. You agree to promptly update Your Account information as necessary to maintain its accuracy. Providing false, inaccurate, outdated, or incomplete information may result in the suspension or termination of Your Account and access to the Platform, and may also constitute a violation of duties under applicable law, such as the DPDPA's requirement for data principals not to furnish false particulars.
+        <br><br>
+        ನೋಂದಣಿ ಪ್ರಕ್ರಿಯೆಯಲ್ಲಿ ನೀವು ಒದಗಿಸುವ ಮತ್ತು ನಿಮ್ಮ ಖಾತೆ ಪ್ರೊಫೈಲ್‌ನಲ್ಲಿ ನಿರ್ವಹಿಸುವ ಎಲ್ಲಾ ಮಾಹಿತಿಯು ಸತ್ಯ, ನಿಖರ, ಪ್ರಸ್ತುತ ಮತ್ತು ಸಂಪೂರ್ಣವಾಗಿದೆ ಎಂದು ನೀವು ಪ್ರತಿನಿಧಿಸುತ್ತೀರಿ ಮತ್ತು ಖಾತರಿಪಡಿಸುತ್ತೀರಿ. ಅದರ ನಿಖರತೆಯನ್ನು ಕಾಪಾಡಿಕೊಳ್ಳಲು ಅಗತ್ಯವಿರುವಂತೆ ನಿಮ್ಮ ಖಾತೆ ಮಾಹಿತಿಯನ್ನು ತ್ವರಿತವಾಗಿ ನವೀಕರಿಸಲು ನೀವು ಒಪ್ಪುತ್ತೀರಿ. ತಪ್ಪು, ನಿಖರವಲ್ಲದ, ಹಳೆಯ ಅಥವಾ ಅಪೂರ್ಣ ಮಾಹಿತಿಯನ್ನು ಒದಗಿಸುವುದರಿಂದ ನಿಮ್ಮ ಖಾತೆಯ ಅಮಾನತು ಅಥವಾ ಮುಕ್ತಾಯಕ್ಕೆ ಮತ್ತು ಪ್ಲಾಟ್‌ಫಾರ್ಮ್‌ಗೆ ಪ್ರವೇಶಕ್ಕೆ ಕಾರಣವಾಗಬಹುದು, ಮತ್ತು ಡೇಟಾ ಪ್ರಿನ್ಸಿಪಾಲ್‌ಗಳು ತಪ್ಪು ವಿವರಗಳನ್ನು ಒದಗಿಸಬಾರದು ಎಂಬ DPDPA ಯ ಅವಶ್ಯಕತೆಯಂತಹ ಅನ್ವಯವಾಗುವ ಕಾನೂನಿನ ಅಡಿಯಲ್ಲಿ ಕರ್ತವ್ಯಗಳ ಉಲ್ಲಂಘನೆಯಾಗಬಹುದು.
+    </p>
+    <h3>
+        2.3 Account Security
+        <br>
+        2.3 ಖಾತೆ ಭದ್ರತೆ
+    </h3>
+    <p>
+        You are solely responsible for safeguarding the confidentiality of Your Account credentials, including Your username and password. You must not share Your credentials with any third party. You are fully responsible and liable for any and all activities that occur under Your Account, whether or not You have authorized such activities. You agree to notify Aurigraph immediately in writing of any suspected or actual unauthorized use of Your Account or password, or any other breach of security. Aurigraph cannot and will not be liable for any loss or damage arising from Your failure to comply with these security obligations.
+        <br><br>
+        ನಿಮ್ಮ ಬಳಕೆದಾರಹೆಸರು ಮತ್ತು ಪಾಸ್‌ವರ್ಡ್ ಸೇರಿದಂತೆ ನಿಮ್ಮ ಖಾತೆ ರುಜುವಾತುಗಳ ಗೌಪ್ಯತೆಯನ್ನು ಕಾಪಾಡುವುದು ನಿಮ್ಮ ಸಂಪೂರ್ಣ ಜವಾಬ್ದಾರಿಯಾಗಿದೆ. ನಿಮ್ಮ ರುಜುವಾತುಗಳನ್ನು ಯಾವುದೇ ಮೂರನೇ ವ್ಯಕ್ತಿಯೊಂದಿಗೆ ಹಂಚಿಕೊಳ್ಳಬಾರದು. ನಿಮ್ಮ ಖಾತೆಯ ಅಡಿಯಲ್ಲಿ ನಡೆಯುವ ಯಾವುದೇ ಮತ್ತು ಎಲ್ಲಾ ಚಟುವಟಿಕೆಗಳಿಗೆ ನೀವು ಸಂಪೂರ್ಣವಾಗಿ ಜವಾಬ್ದಾರರು ಮತ್ತು ಹೊಣೆಗಾರರಾಗಿರುತ್ತೀರಿ, ನೀವು ಅಂತಹ ಚಟುವಟಿಕೆಗಳಿಗೆ ಅಧಿಕಾರ ನೀಡಿದ್ದೀರೋ ಇಲ್ಲವೋ. ನಿಮ್ಮ ಖಾತೆ ಅಥವಾ ಪಾಸ್‌ವರ್ಡ್‌ನ ಯಾವುದೇ ಶಂಕಿತ ಅಥವಾ ನಿಜವಾದ ಅನಧಿಕೃತ ಬಳಕೆ, ಅಥವಾ ಭದ್ರತೆಯ ಯಾವುದೇ ಇತರ ಉಲ್ಲಂಘನೆಯನ್ನು ತಕ್ಷಣವೇ ಆರಿಗ್ರಾಫ್‌ಗೆ ಲಿಖಿತವಾಗಿ ತಿಳಿಸಲು ನೀವು ಒಪ್ಪುತ್ತೀರಿ. ಈ ಭದ್ರತಾ ಬಾಧ್ಯತೆಗಳನ್ನು ಅನುಸರಿಸಲು ನಿಮ್ಮ ವೈಫಲ್ಯದಿಂದ ಉಂಟಾಗುವ ಯಾವುದೇ ನಷ್ಟ ಅಥವಾ ಹಾನಿಗೆ ಆರಿಗ್ರಾಫ್ ಜವಾಬ್ದಾರನಾಗಿರುವುದಿಲ್ಲ.
+    </p>
+    <h3>
+        2.4 Account Types and Permissions
+        <br>
+        2.4 ಖಾತೆ ಪ್ರಕಾರಗಳು ಮತ್ತು ಅನುಮತಿಗಳು
+    </h3>
+    <p>
+        The Platform utilizes different Account types corresponding to User Roles (Farmer, Field Agent, Supervisor, Local Partner). Each Account type is associated with specific access rights, permissions, functionalities, and data visibility within the Platform. These role-based distinctions are necessary for the operational structure of the Services and are further detailed in Section 4 of these Terms.
+        <br><br>
+        ಪ್ಲಾಟ್‌ಫಾರ್ಮ್ ಬಳಕೆದಾರರ ಪಾತ್ರಗಳಿಗೆ (ರೈತ, ಫೀಲ್ಡ್ ಏಜೆಂಟ್, ಮೇಲ್ವಿಚಾರಕ, ಸ್ಥಳೀಯ ಪಾಲುದಾರ) ಅನುಗುಣವಾದ ವಿಭಿನ್ನ ಖಾತೆ ಪ್ರಕಾರಗಳನ್ನು ಬಳಸುತ್ತದೆ. ಪ್ರತಿಯೊಂದು ಖಾತೆ ಪ್ರಕಾರವು ಪ್ಲಾಟ್‌ಫಾರ್ಮ್‌ನಲ್ಲಿ ನಿರ್ದಿಷ್ಟ ಪ್ರವೇಶ ಹಕ್ಕುಗಳು, ಅನುಮತಿಗಳು, ಕಾರ್ಯಚಟುವಟಿಕೆಗಳು ಮತ್ತು ಡೇಟಾ ಗೋಚರತೆಯೊಂದಿಗೆ ಸಂಬಂಧಿಸಿದೆ. ಈ ಪಾತ್ರ-ಆಧಾರಿತ ವ್ಯತ್ಯಾಸಗಳು ಸೇವೆಗಳ ಕಾರ್ಯಾಚರಣೆಯ ರಚನೆಗೆ ಅವಶ್ಯಕವಾಗಿದೆ ಮತ್ತು ಈ ನಿಯಮಗಳ ವಿಭಾಗ 4 ರಲ್ಲಿ ಮತ್ತಷ್ಟು ವಿವರಿಸಲಾಗಿದೆ.
+    </p>
+
+    <h2>
+        3. License Grant and Use Restrictions
+        <br>
+        3. ಪರವಾನಗಿ ಅನುದಾನ ಮತ್ತು ಬಳಕೆಯ ನಿರ್ಬಂಧಗಳು
+    </h2>
+    <h3>
+        3.1 License Grant
+        <br>
+        3.1 ಪರವಾನಗಿ ಅನುದಾನ
+    </h3>
+    <p>
+        Subject to Your compliance with these Terms, Aurigraph grants You a limited, personal, non-exclusive, non-transferable, non-sublicensable, revocable license to access and use the AUREX Platform and, if applicable, download and install the Mobile Application on devices You own or control, solely for Your internal business operations or personal farm management purposes (as applicable to Your User Role). This license is for the purpose of enabling You to use and enjoy the benefit of the Services as provided by Aurigraph, in the manner permitted by these Terms. This grant constitutes a license to use the software and services, not a transfer of title or ownership.
+        <br><br>
+        ಈ ನಿಯಮಗಳೊಂದಿಗೆ ನಿಮ್ಮ ಅನುಸರಣೆಗೆ ಒಳಪಟ್ಟು, ನಿಮ್ಮ ಆಂತರಿಕ ವ್ಯವಹಾರ ಕಾರ್ಯಾಚರಣೆಗಳಿಗಾಗಿ ಅಥವಾ ವೈಯಕ್ತಿಕ ಕೃಷಿ ನಿರ್ವಹಣಾ ಉದ್ದೇಶಗಳಿಗಾಗಿ (ನಿಮ್ಮ ಬಳಕೆದಾರರ ಪಾತ್ರಕ್ಕೆ ಅನ್ವಯವಾಗುವಂತೆ) AUREX ಪ್ಲಾಟ್‌ಫಾರ್ಮ್ ಅನ್ನು ಪ್ರವೇಶಿಸಲು ಮತ್ತು ಬಳಸಲು ಮತ್ತು ಅನ್ವಯಿಸಿದರೆ, ನೀವು ಹೊಂದಿರುವ ಅಥವಾ ನಿಯಂತ್ರಿಸುವ ಸಾಧನಗಳಲ್ಲಿ ಮೊಬೈಲ್ ಅಪ್ಲಿಕೇಶನ್ ಅನ್ನು ಡೌನ್‌ಲೋಡ್ ಮಾಡಲು ಮತ್ತು ಸ್ಥಾಪಿಸಲು ಆರಿಗ್ರಾಫ್ ನಿಮಗೆ ಸೀಮಿತ, ವೈಯಕ್ತಿಕ, ವಿಶೇಷವಲ್ಲದ, ವರ್ಗಾಯಿಸಲಾಗದ, ಉಪ-ಪರವಾನಗಿ ನೀಡಲಾಗದ, ಹಿಂತೆಗೆದುಕೊಳ್ಳಬಹುದಾದ ಪರವಾನಗಿಯನ್ನು ನೀಡುತ್ತದೆ. ಈ ಪರವಾನಗಿಯು ಈ ನಿಯಮಗಳಿಂದ ಅನುಮತಿಸಲಾದ ರೀತಿಯಲ್ಲಿ, ಆರಿಗ್ರಾಫ್ ಒದಗಿಸಿದ ಸೇವೆಗಳ ಪ್ರಯೋಜನವನ್ನು ನೀವು ಬಳಸಲು ಮತ್ತು ಆನಂದಿಸಲು ಸಕ್ರಿಯಗೊಳಿಸುವ ಉದ್ದೇಶಕ್ಕಾಗಿ. ಈ ಅನುದಾನವು ಸಾಫ್ಟ್‌ವೇರ್ ಮತ್ತು ಸೇವೆಗಳನ್ನು ಬಳಸಲು ಪರವಾನಗಿಯನ್ನು ರೂಪಿಸುತ್ತದೆ, ಶೀರ್ಷಿಕೆ ಅಥವಾ ಮಾಲೀಕತ್ವದ ವರ್ಗಾವಣೆಯಲ್ಲ.
+    </p>
+
+    <h3>
+        3.2 General Prohibitions
+        <br>
+        3.2 ಸಾಮಾನ್ಯ ನಿಷೇಧಗಳು
+    </h3>
+    <p>
+        In connection with Your use of the Platform, You agree that You will not, and will not permit any third party to, engage in any of the following prohibited activities:
+        <br><br>
+        ಪ್ಲಾಟ್‌ಫಾರ್ಮ್‌ನ ನಿಮ್ಮ ಬಳಕೆಗೆ ಸಂಬಂಧಿಸಿದಂತೆ, ನೀವು ಈ ಕೆಳಗಿನ ಯಾವುದೇ ನಿಷೇಧಿತ ಚಟುವಟಿಕೆಗಳಲ್ಲಿ ತೊಡಗುವುದಿಲ್ಲ ಮತ್ತು ಯಾವುದೇ ಮೂರನೇ ವ್ಯಕ್ತಿಗೆ ಅನುಮತಿಸುವುದಿಲ್ಲ ಎಂದು ನೀವು ಒಪ್ಪುತ್ತೀರಿ:
+    </p>
+    <ul>
+        <li>
+            Use the Platform for any purpose that is unlawful, fraudulent, harmful, or violates any applicable local, state, national, or international law or regulation, including but not limited to the DPDPA.
+            <br><br>
+            ಯಾವುದೇ ಕಾನೂನುಬಾಹಿರ, ಮೋಸದ, ಹಾನಿಕಾರಕ ಅಥವಾ DPDPA ಸೇರಿದಂತೆ ಯಾವುದೇ ಅನ್ವಯವಾಗುವ ಸ್ಥಳೀಯ, ರಾಜ್ಯ, ರಾಷ್ಟ್ರೀಯ ಅಥವಾ ಅಂತರರಾಷ್ಟ್ರೀಯ ಕಾನೂನು ಅಥವಾ ನಿಯಂತ್ರಣವನ್ನು ಉಲ್ಲಂಘಿಸುವ ಯಾವುದೇ ಉದ್ದೇಶಕ್ಕಾಗಿ ಪ್ಲಾಟ್‌ಫಾರ್ಮ್ ಅನ್ನು ಬಳಸುವುದು.
+        </li>
+        <li>
+            Copy, modify, adapt, translate, reverse engineer, decompile, disassemble, or otherwise attempt to derive or discover the source code, object code, underlying structure, ideas, or algorithms of the Platform or any part thereof, except to the extent expressly permitted by applicable law.
+            <br><br>
+            ಪ್ಲಾಟ್‌ಫಾರ್ಮ್ ಅಥವಾ ಅದರ ಯಾವುದೇ ಭಾಗದ ಮೂಲ ಕೋಡ್, ಆಬ್ಜೆಕ್ಟ್ ಕೋಡ್, ಆಧಾರವಾಗಿರುವ ರಚನೆ, ಕಲ್ಪನೆಗಳು, ಅಥವಾ ಅಲ್ಗಾರಿದಮ್‌ಗಳನ್ನು ನಕಲಿಸುವುದು, ಮಾರ್ಪಡಿಸುವುದು, ಅಳವಡಿಸಿಕೊಳ್ಳುವುದು, ಭಾಷಾಂತರಿಸುವುದು, ರಿವರ್ಸ್ ಇಂಜಿನಿಯರಿಂಗ್ ಮಾಡುವುದು, ಡಿಕಂಪೈಲ್ ಮಾಡುವುದು, ಡಿಸ್ಅಸೆಂಬಲ್ ಮಾಡುವುದು, ಅಥವಾ ಅನ್ವಯವಾಗುವ ಕಾನೂನಿನಿಂದ ಸ್ಪಷ್ಟವಾಗಿ ಅನುಮತಿಸಲಾದ ಮಟ್ಟಿಗೆ ಹೊರತುಪಡಿಸಿ, ಬೇರೆ ರೀತಿಯಲ್ಲಿ ಪಡೆಯಲು ಅಥವಾ ಕಂಡುಹಿಡಿಯಲು ಪ್ರಯತ್ನಿಸುವುದು.
+        </li>
+        <li>
+            Create derivative works based upon the Platform or any Platform Data.
+            <br><br>
+            ಪ್ಲಾಟ್‌ಫಾರ್ಮ್ ಅಥವಾ ಯಾವುದೇ ಪ್ಲಾಟ್‌ಫಾರ್ಮ್ ಡೇಟಾವನ್ನು ಆಧರಿಸಿ ವ್ಯುತ್ಪನ್ನ ಕೃತಿಗಳನ್ನು ರಚಿಸುವುದು.
+        </li>
+        <li>
+            License, sublicense, sell, resell, rent, lease, transfer, assign, distribute, display, disclose, or otherwise commercially exploit or make the Platform available to any third party, other than as expressly permitted by these Terms or Your User Role.
+            <br><br>
+            ಈ ನಿಯಮಗಳು ಅಥವಾ ನಿಮ್ಮ ಬಳಕೆದಾರರ ಪಾತ್ರದಿಂದ ಸ್ಪಷ್ಟವಾಗಿ ಅನುಮತಿಸಲಾದಂತೆ ಹೊರತುಪಡಿಸಿ, ಯಾವುದೇ ಮೂರನೇ ವ್ಯಕ್ತಿಗೆ ಪ್ಲಾಟ್‌ಫಾರ್ಮ್ ಅನ್ನು ಪರವಾನಗಿ, ಉಪ-ಪರವಾನಗಿ, ಮಾರಾಟ, ಮರುಮಾರಾಟ, ಬಾಡಿಗೆ, ಗುತ್ತಿಗೆ, ವರ್ಗಾವಣೆ, ನಿಯೋಜನೆ, ವಿತರಣೆ, ಪ್ರದರ್ಶನ, ಬಹಿರಂಗಪಡಿಸುವುದು ಅಥವಾ ವಾಣಿಜ್ಯಿಕವಾಗಿ ಶೋಷಣೆ ಮಾಡುವುದು ಅಥವಾ ಲಭ್ಯವಾಗುವಂತೆ ಮಾಡುವುದು.
+        </li>
+        <li>
+            Remove, alter, or obscure any copyright, trademark, or other proprietary rights notices contained on or within the Platform.
+            <br><br>
+            ಪ್ಲಾಟ್‌ಫಾರ್ಮ್‌ನಲ್ಲಿ ಅಥವಾ ಅದರೊಳಗೆ ಇರುವ ಯಾವುದೇ ಹಕ್ಕುಸ್ವಾಮ್ಯ, ಟ್ರೇಡ್‌ಮಾರ್ಕ್, ಅಥವಾ ಇತರ ಸ್ವಾಮ್ಯದ ಹಕ್ಕುಗಳ ಸೂಚನೆಗಳನ್ನು ತೆಗೆದುಹಾಕುವುದು, ಬದಲಾಯಿಸುವುದು ಅಥವಾ ಮರೆಮಾಚುವುದು.
+        </li>
+        <li>
+            Use any robot, spider, scraper, data mining tool, data gathering or extraction tool, or other automated means to access, acquire, copy or monitor the Platform or any portion thereof, without Aurigraph's express prior written consent.
+            <br><br>
+            ಆರಿಗ್ರಾಫ್‌ನ ಸ್ಪಷ್ಟ ಪೂರ್ವ ಲಿಖಿತ ಒಪ್ಪಿಗೆಯಿಲ್ಲದೆ, ಪ್ಲಾಟ್‌ಫಾರ್ಮ್ ಅಥವಾ ಅದರ ಯಾವುದೇ ಭಾಗವನ್ನು ಪ್ರವೇಶಿಸಲು, ಪಡೆಯಲು, ನಕಲಿಸಲು ಅಥವಾ ಮೇಲ್ವಿಚಾರಣೆ ಮಾಡಲು ಯಾವುದೇ ರೋಬೋಟ್, ಸ್ಪೈಡರ್, ಸ್ಕ್ರೇಪರ್, ಡೇಟಾ ಮೈನಿಂಗ್ ಟೂಲ್, ಡೇಟಾ ಸಂಗ್ರಹಣೆ ಅಥವಾ ಹೊರತೆಗೆಯುವ ಸಾಧನ, ಅಥವಾ ಇತರ ಸ್ವಯಂಚಾಲಿತ ಸಾಧನಗಳನ್ನು ಬಳಸುವುದು.
+        </li>
+        <li>
+            Introduce any viruses, Trojan horses, worms, logic bombs, or other material that is malicious or technologically harmful into the Platform or its systems.
+            <br><br>
+            ಪ್ಲಾಟ್‌ಫಾರ್ಮ್ ಅಥವಾ ಅದರ ಸಿಸ್ಟಮ್‌ಗಳಿಗೆ ಯಾವುದೇ ವೈರಸ್‌ಗಳು, ಟ್ರೋಜನ್ ಹಾರ್ಸ್‌ಗಳು, ವರ್ಮ್‌ಗಳು, ಲಾಜಿಕ್ ಬಾಂಬ್‌ಗಳು ಅಥವಾ ದುರುದ್ದೇಶಪೂರಿತ ಅಥವಾ ತಾಂತ್ರಿಕವಾಗಿ ಹಾನಿಕಾರಕವಾದ ಇತರ ವಸ್ತುಗಳನ್ನು ಪರಿಚಯಿಸುವುದು.
+        </li>
+        <li>
+            Interfere with, disrupt, damage, or gain unauthorized access to any part of the Platform, the server on which the Platform is stored, or any server, computer, or database connected to the Platform.
+            <br><br>
+            ಪ್ಲಾಟ್‌ಫಾರ್ಮ್‌ನ ಯಾವುದೇ ಭಾಗ, ಪ್ಲಾಟ್‌ಫಾರ್ಮ್ ಸಂಗ್ರಹವಾಗಿರುವ ಸರ್ವರ್, ಅಥವಾ ಪ್ಲಾಟ್‌ಫಾರ್ಮ್‌ಗೆ ಸಂಪರ್ಕಗೊಂಡಿರುವ ಯಾವುದೇ ಸರ್ವರ್, ಕಂಪ್ಯೂಟರ್ ಅಥವಾ ಡೇಟಾಬೇಸ್‌ಗೆ ಹಸ್ತಕ್ಷೇಪ ಮಾಡುವುದು, ಅಡ್ಡಿಪಡಿಸುವುದು, ಹಾನಿ ಮಾಡುವುದು ಅಥವಾ ಅನಧಿಕೃತ ಪ್ರವೇಶವನ್ನು ಪಡೆಯುವುದು.
+        </li>
+        <li>
+            Impersonate or attempt to impersonate Aurigraph, an Aurigraph employee, another User, or any other person or entity, or misrepresent Your affiliation with any person or entity.
+            <br><br>
+            ಆರಿಗ್ರಾಫ್, ಆರಿಗ್ರಾಫ್ ಉದ್ಯೋಗಿ, ಇನ್ನೊಬ್ಬ ಬಳಕೆದಾರ, ಅಥವಾ ಯಾವುದೇ ಇತರ ವ್ಯಕ್ತಿ ಅಥವಾ ಘಟಕವನ್ನು ಸೋಗು ಹಾಕುವುದು ಅಥವಾ ಸೋಗು ಹಾಕಲು ಪ್ರಯತ್ನಿಸುವುದು, ಅಥವಾ ಯಾವುದೇ ವ್ಯಕ್ತಿ ಅಥವಾ ಘಟಕದೊಂದಿಗೆ ನಿಮ್ಮ ಸಂಬಂಧವನ್ನು ತಪ್ಪಾಗಿ ಪ್ರತಿನಿಧಿಸುವುದು.
+        </li>
+        <li>
+            Engage in any conduct that restricts or inhibits anyone's use or enjoyment of the Platform, or which, as determined by Aurigraph, may harm Aurigraph or Users of the Platform or expose them to liability.
+            <br><br>
+            ಆರಿಗ್ರಾಫ್ ನಿರ್ಧರಿಸಿದಂತೆ, ಆರಿಗ್ರಾಫ್ ಅಥವಾ ಪ್ಲಾಟ್‌ಫಾರ್ಮ್‌ನ ಬಳಕೆದಾರರಿಗೆ ಹಾನಿ ಮಾಡಬಹುದಾದ ಅಥವಾ ಅವರನ್ನು ಹೊಣೆಗಾರಿಕೆಗೆ ಒಳಪಡಿಸಬಹುದಾದ ಯಾವುದೇ ನಡವಳಿಕೆಯಲ್ಲಿ ತೊಡಗುವುದು.
+        </li>
+        <li>
+            Use the Platform to store or transmit infringing, libelous, or otherwise unlawful or tortious material, or to store or transmit material in violation of third-party privacy or intellectual property rights.
+            <br><br>
+            ಉಲ್ಲಂಘಿಸುವ, ಮಾನಹಾನಿಕರ, ಅಥವಾ ಕಾನೂನುಬಾಹಿರ ಅಥವಾ ಹಿಂಸಾತ್ಮಕ ವಸ್ತುಗಳನ್ನು ಸಂಗ್ರಹಿಸಲು ಅಥವಾ ರವಾನಿಸಲು, ಅಥವಾ ಮೂರನೇ ವ್ಯಕ್ತಿಯ ಗೌಪ್ಯತೆ ಅಥವಾ ಬೌದ್ಧಿಕ ಆಸ್ತಿ ಹಕ್ಕುಗಳನ್ನು ಉಲ್ಲಂಘಿಸಿ ವಸ್ತುಗಳನ್ನು ಸಂಗ್ರಹಿಸಲು ಅಥವಾ ರವಾನಿಸಲು ಪ್ಲಾಟ್‌ಫಾರ್ಮ್ ಅನ್ನು ಬಳಸುವುದು.
+        </li>
+        <li>
+            Attempt to circumvent any security measures or access controls implemented by Aurigraph.
+            <br><br>
+            ಆರಿಗ್ರಾಫ್‌ನಿಂದ ಜಾರಿಗೆ ತರಲಾದ ಯಾವುದೇ ಭದ್ರತಾ ಕ್ರಮಗಳು ಅಥವಾ ಪ್ರವೇಶ ನಿಯಂತ್ರಣಗಳನ್ನು ತಪ್ಪಿಸಲು ಪ್ರಯತ್ನಿಸುವುದು.
+        </li>
+    </ul>
+    <p>
+        Specific prohibitions tailored to User Roles may apply, as detailed in Section 4. Violation of these prohibitions may result in immediate suspension or termination of Your Account and access to the Platform.
+        <br><br>
+        ವಿಭಾಗ 4 ರಲ್ಲಿ ವಿವರಿಸಿದಂತೆ, ಬಳಕೆದಾರರ ಪಾತ್ರಗಳಿಗೆ ಅನುಗುಣವಾಗಿ ನಿರ್ದಿಷ್ಟ ನಿಷೇಧಗಳು ಅನ್ವಯವಾಗಬಹುದು. ಈ ನಿಷೇಧಗಳ ಉಲ್ಲಂಘನೆಯು ನಿಮ್ಮ ಖಾತೆಯ ಮತ್ತು ಪ್ಲಾಟ್‌ಫಾರ್ಮ್‌ಗೆ ಪ್ರವೇಶದ ತಕ್ಷಣದ ಅಮಾನತು ಅಥವಾ ಮುಕ್ತಾಯಕ್ಕೆ ಕಾರಣವಾಗಬಹುದು.
+    </p>
+
+    <h2>
+        4. Role-Specific Rights, Responsibilities, and Permitted Uses
+        <br>
+        4. ಪಾತ್ರ-ನಿರ್ದಿಷ್ಟ ಹಕ್ಕುಗಳು, ಜವಾಬ್ದಾರಿಗಳು ಮತ್ತು ಅನುಮತಿಸಲಾದ ಬಳಕೆಗಳು
+    </h2>
+    <p>
+        This section details the specific rights, responsibilities, permitted uses, and restrictions associated with each primary User Role within the AUREX Platform. These roles are designed to facilitate the core functions of the Platform, such as AWD monitoring and carbon accounting MRV, which often involve a collaborative workflow between different user types. The accuracy and utility of the Platform's outputs depend on the diligent performance of responsibilities by each User in the chain (e.g., Agent data collection impacts Farmer reports). Therefore, adherence to these role-specific terms is critical for the effective functioning of the Services and for maintaining data integrity.
+        <br><br>
+        ಈ ವಿಭಾಗವು AUREX ಪ್ಲಾಟ್‌ಫಾರ್ಮ್‌ನೊಳಗಿನ ಪ್ರತಿಯೊಂದು ಪ್ರಾಥಮಿಕ ಬಳಕೆದಾರರ ಪಾತ್ರಕ್ಕೆ ಸಂಬಂಧಿಸಿದ ನಿರ್ದಿಷ್ಟ ಹಕ್ಕುಗಳು, ಜವಾಬ್ದಾರಿಗಳು, ಅನುಮತಿಸಲಾದ ಬಳಕೆಗಳು ಮತ್ತು ನಿರ್ಬಂಧಗಳನ್ನು ವಿವರಿಸುತ್ತದೆ. ಈ ಪಾತ್ರಗಳನ್ನು ಪ್ಲಾಟ್‌ಫಾರ್ಮ್‌ನ ಪ್ರಮುಖ ಕಾರ್ಯಗಳನ್ನು ಸುಲಭಗೊಳಿಸಲು ವಿನ್ಯಾಸಗೊಳಿಸಲಾಗಿದೆ, ಉದಾಹರಣೆಗೆ AWD ಮೇಲ್ವಿಚಾರಣೆ ಮತ್ತು ಕಾರ್ಬನ್ ಅಕೌಂಟಿಂಗ್ MRV, ಇದು ಸಾಮಾನ್ಯವಾಗಿ ವಿಭಿನ್ನ ಬಳಕೆದಾರ ಪ್ರಕಾರಗಳ ನಡುವೆ ಸಹಯೋಗದ ಕೆಲಸದ ಹರಿವನ್ನು ಒಳಗೊಂಡಿರುತ್ತದೆ. ಪ್ಲಾಟ್‌ಫಾರ್ಮ್‌ನ ಔಟ್‌ಪುಟ್‌ಗಳ ನಿಖರತೆ ಮತ್ತು ಉಪಯುಕ್ತತೆಯು ಸರಪಳಿಯಲ್ಲಿರುವ ಪ್ರತಿಯೊಬ್ಬ ಬಳಕೆದಾರರಿಂದ ಜವಾಬ್ದಾರಿಗಳ ಶ್ರದ್ಧಾಪೂರ್ವಕ ಕಾರ್ಯಕ್ಷಮತೆಯ ಮೇಲೆ ಅವಲಂಬಿತವಾಗಿರುತ್ತದೆ (ಉದಾ. ಏಜೆಂಟ್ ಡೇಟಾ ಸಂಗ್ರಹಣೆಯು ರೈತ ವರದಿಗಳ ಮೇಲೆ ಪರಿಣಾಮ ಬೀರುತ್ತದೆ). ಆದ್ದರಿಂದ, ಸೇವೆಗಳ ಪರಿಣಾಮಕಾರಿ ಕಾರ್ಯನಿರ್ವಹಣೆಗೆ ಮತ್ತು ಡೇಟಾ ಸಮಗ್ರತೆಯನ್ನು ಕಾಪಾಡಿಕೊಳ್ಳಲು ಈ ಪಾತ್ರ-ನಿರ್ದಿಷ್ಟ ನಿಯಮಗಳಿಗೆ ಬದ್ಧವಾಗಿರುವುದು ನಿರ್ಣಾಯಕವಾಗಿದೆ.
+    </p>
+
+    <h3>
+        4.1 Farmers
+        <br>
+        4.1 ರೈತರು
+    </h3>
+    <h4>
+        Rights:
+        <br>
+        ಹಕ್ಕುಗಳು:
+    </h4>
+    <ul>
+        <li>
+            Access and view data pertaining to their registered farm(s) via the Platform dashboard, including field boundaries, cropping history, soil information (if available), AWD status indicators, water level data, carbon accounting metrics (e.g., estimated soil organic carbon levels, methane emission estimates), biomass estimates, and other reports or insights generated by the AUREX Platform based on collected data.
+            <br><br>
+            ಪ್ಲಾಟ್‌ಫಾರ್ಮ್ ಡ್ಯಾಶ್‌ಬೋರ್ಡ್ ಮೂಲಕ ತಮ್ಮ ನೋಂದಾಯಿತ ಕೃಷಿ(ಗಳ)ಗೆ ಸಂಬಂಧಿಸಿದ ಡೇಟಾವನ್ನು ಪ್ರವೇಶಿಸುವುದು ಮತ್ತು ವೀಕ್ಷಿಸುವುದು, ಇದರಲ್ಲಿ ಕ್ಷೇತ್ರ ಗಡಿಗಳು, ಬೆಳೆ ಇತಿಹಾಸ, ಮಣ್ಣಿನ ಮಾಹಿತಿ (ಲಭ್ಯವಿದ್ದರೆ), AWD ಸ್ಥಿತಿ ಸೂಚಕಗಳು, ನೀರಿನ ಮಟ್ಟದ ಡೇಟಾ, ಕಾರ್ಬನ್ ಅಕೌಂಟಿಂಗ್ ಮೆಟ್ರಿಕ್‌ಗಳು (ಉದಾ. ಅಂದಾಜು ಮಣ್ಣಿನ ಸಾವಯವ ಇಂಗಾಲದ ಮಟ್ಟಗಳು, ಮೀಥೇನ್ ಹೊರಸೂಸುವಿಕೆ ಅಂದಾಜುಗಳು), ಜೀವರಾಶಿ ಅಂದಾಜುಗಳು, ಮತ್ತು ಸಂಗ್ರಹಿಸಿದ ಡೇಟಾವನ್ನು ಆಧರಿಸಿ AUREX ಪ್ಲಾಟ್‌ಫಾರ್ಮ್‌ನಿಂದ ರಚಿಸಲಾದ ಇತರ ವರದಿಗಳು ಅಥವಾ ಒಳನೋಟಗಳು ಸೇರಿವೆ.
+        </li>
+        <li>
+            Input, update, and manage their farm profile information, including field boundaries and historical management practices, as required by the Platform.
+            <br><br>
+            ಪ್ಲಾಟ್‌ಫಾರ್ಮ್‌ಗೆ ಅಗತ್ಯವಿರುವಂತೆ, ತಮ್ಮ ಕೃಷಿ ಪ್ರೊಫೈಲ್ ಮಾಹಿತಿಯನ್ನು, ಕ್ಷೇತ್ರ ಗಡಿಗಳು ಮತ್ತು ಐತಿಹಾಸಿಕ ನಿರ್ವಹಣಾ ಅಭ್ಯಾಸಗಳನ್ನು ಒಳಗೊಂಡಂತೆ, ನಮೂದಿಸುವುದು, ನವೀಕರಿಸುವುದು ಮತ್ತು ನಿರ್ವಹಿಸುವುದು.
+        </li>
+        <li>
+            Provide, manage, review, and withdraw consent for the processing of their Personal Data and farm data in accordance with the DPDPA and the Aurigraph Privacy Policy.
+            <br><br>
+            DPDPA ಮತ್ತು ಆರಿಗ್ರಾಫ್ ಗೌಪ್ಯತಾ ನೀತಿಗೆ ಅನುಗುಣವಾಗಿ ತಮ್ಮ ವೈಯಕ್ತಿಕ ಡೇಟಾ ಮತ್ತು ಕೃಷಿ ಡೇಟಾದ ಪ್ರಕ್ರಿಯೆಗೆ ಒಪ್ಪಿಗೆಯನ್ನು ಒದಗಿಸುವುದು, ನಿರ್ವಹಿಸುವುದು, ಪರಿಶೀಲಿಸುವುದು ಮತ್ತು ಹಿಂತೆಗೆದುಕೊಳ್ಳುವುದು.
+        </li>
+        <li>
+            Participate in specific programs offered through the Platform (e.g., carbon farming programs, sustainable sourcing initiatives) subject to program-specific terms and eligibility criteria.
+            <br><br>
+            ಪ್ಲಾಟ್‌ಫಾರ್ಮ್ ಮೂಲಕ ನೀಡಲಾಗುವ ನಿರ್ದಿಷ್ಟ ಕಾರ್ಯಕ್ರಮಗಳಲ್ಲಿ (ಉದಾ. ಇಂಗಾಲ ಕೃಷಿ ಕಾರ್ಯಕ್ರಮಗಳು, ಸುಸ್ಥಿರ ಮೂಲ ಉಪಕ್ರಮಗಳು) ಭಾಗವಹಿಸುವುದು, ಕಾರ್ಯಕ್ರಮ-ನಿರ್ದಿಷ್ಟ ನಿಯಮಗಳು ಮತ್ತು ಅರ್ಹತಾ ಮಾನದಂಡಗಳಿಗೆ ಒಳಪಟ್ಟು.
+        </li>
+        <li>
+            Communicate with assigned Field Agents, Supervisors, or Local Partners through designated channels within the Platform, if available.
+            <br><br>
+            ಲಭ್ಯವಿದ್ದರೆ, ಪ್ಲಾಟ್‌ಫಾರ್ಮ್‌ನಲ್ಲಿ ಗೊತ್ತುಪಡಿಸಿದ ಚಾನಲ್‌ಗಳ ಮೂಲಕ ನಿಯೋಜಿತ ಫೀಲ್ಡ್ ಏಜೆಂಟ್‌ಗಳು, ಮೇಲ್ವಿಚಾರಕರು ಅಥವಾ ಸ್ಥಳೀಯ ಪಾಲುದಾರರೊಂದಿಗೆ ಸಂವಹನ ನಡೆಸುವುದು.
+        </li>
+    </ul>
+    <h4>
+        Responsibilities:
+        <br>
+        ಜವಾಬ್ದಾರಿಗಳು:
+    </h4>
+    <ul>
+        <li>
+            Provide accurate, complete, and timely information regarding their farm operations, including precise field boundaries, historical and current cropping patterns, tillage practices, irrigation methods, fertilizer/input application records, and other management data required for the Platform's functionalities (e.g., baseline setting for carbon accounting).
+            <br><br>
+            ತಮ್ಮ ಕೃಷಿ ಕಾರ್ಯಾಚರಣೆಗಳ ಬಗ್ಗೆ ನಿಖರ, ಸಂಪೂರ್ಣ ಮತ್ತು ಸಮಯೋಚಿತ ಮಾಹಿತಿಯನ್ನು ಒದಗಿಸುವುದು, ಇದರಲ್ಲಿ ನಿಖರವಾದ ಕ್ಷೇತ್ರ ಗಡಿಗಳು, ಐತಿಹಾಸಿಕ ಮತ್ತು ಪ್ರಸ್ತುತ ಬೆಳೆ ಮಾದರಿಗಳು, ಉಳುಮೆ ಪದ್ಧತಿಗಳು, ನೀರಾವರಿ ವಿಧಾನಗಳು, ಗೊಬ್ಬರ/ಇನ್‌ಪುಟ್ ಅಪ್ಲಿಕೇಶನ್ ದಾಖಲೆಗಳು ಮತ್ತು ಪ್ಲಾಟ್‌ಫಾರ್ಮ್‌ನ ಕಾರ್ಯಚಟುವಟಿಕೆಗಳಿಗೆ (ಉದಾ. ಕಾರ್ಬನ್ ಅಕೌಂಟಿಂಗ್‌ಗೆ ಮೂಲಭೂತ ಸೆಟ್ಟಿಂಗ್) ಅಗತ್ಯವಿರುವ ಇತರ ನಿರ್ವಹಣಾ ಡೇಟಾ ಸೇರಿದೆ.
+        </li>
+        <li>
+            Maintain the accuracy and completeness of their Account information.
+            <br><br>
+            ತಮ್ಮ ಖಾತೆ ಮಾಹಿತಿಯ ನಿಖರತೆ ಮತ್ತು ಸಂಪೂರ್ಣತೆಯನ್ನು ಕಾಪಾಡಿಕೊಳ್ಳುವುದು.
+        </li>
+        <li>
+            Carefully review and provide informed consent for the collection, processing, and use of their Personal Data and farm data as detailed in the notice provided at the time of consent collection and in the Privacy Policy, understanding the purposes for which data is used (e.g., AWD monitoring, carbon MRV, platform improvement).
+            <br><br>
+            ಒಪ್ಪಿಗೆ ಸಂಗ್ರಹಣೆಯ ಸಮಯದಲ್ಲಿ ಮತ್ತು ಗೌಪ್ಯತಾ ನೀತಿಯಲ್ಲಿ ಒದಗಿಸಲಾದ ಸೂಚನೆಯಲ್ಲಿ ವಿವರಿಸಿದಂತೆ ತಮ್ಮ ವೈಯಕ್ತಿಕ ಡೇಟಾ ಮತ್ತು ಕೃಷಿ ಡೇಟಾದ ಸಂಗ್ರಹಣೆ, ಪ್ರಕ್ರಿಯೆ ಮತ್ತು ಬಳಕೆಗಾಗಿ ಎಚ್ಚರಿಕೆಯಿಂದ ಪರಿಶೀಲಿಸುವುದು ಮತ್ತು ತಿಳುವಳಿಕೆಯುಳ್ಳ ಒಪ್ಪಿಗೆಯನ್ನು ಒದಗಿಸುವುದು, ಡೇಟಾವನ್ನು ಯಾವ ಉದ್ದೇಶಗಳಿಗಾಗಿ ಬಳಸಲಾಗುತ್ತದೆ ಎಂಬುದನ್ನು ಅರ್ಥಮಾಡಿಕೊಳ್ಳುವುದು (ಉದಾ. AWD ಮೇಲ್ವಿಚಾರಣೆ, ಇಂಗಾಲದ MRV, ಪ್ಲಾಟ್‌ಫಾರ್ಮ್ ಸುಧಾರಣೆ).
+        </li>
+        <li>
+            Comply with all requirements and protocols of any specific program (e.g., carbon credit generation program) they choose to participate in via the Platform, including adherence to specified agricultural practices.
+            <br><br>
+            ಪ್ಲಾಟ್‌ಫಾರ್ಮ್ ಮೂಲಕ ಅವರು ಭಾಗವಹಿಸಲು ಆಯ್ಕೆ ಮಾಡಿದ ಯಾವುದೇ ನಿರ್ದಿಷ್ಟ ಕಾರ್ಯಕ್ರಮದ (ಉದಾ. ಇಂಗಾಲದ ಕ್ರೆಡಿಟ್ ಉತ್ಪಾದನಾ ಕಾರ್ಯಕ್ರಮ) ಎಲ್ಲಾ ಅವಶ್ಯಕತೆಗಳು ಮತ್ತು ಪ್ರೋಟೋಕಾಲ್‌ಗಳನ್ನು ಅನುಸರಿಸುವುದು, ನಿರ್ದಿಷ್ಟಪಡಿಸಿದ ಕೃಷಿ ಪದ್ಧತಿಗಳಿಗೆ ಬದ್ಧತೆಯನ್ನು ಒಳಗೊಂಡಂತೆ.
+        </li>
+        <li>
+            Adhere to the general use restrictions outlined in Section 3.2.
+            <br><br>
+            ವಿಭಾಗ 3.2 ರಲ್ಲಿ ವಿವರಿಸಿರುವ ಸಾಮಾನ್ಯ ಬಳಕೆಯ ನಿರ್ಬಂಧಗಳಿಗೆ ಬದ್ಧರಾಗಿರುವುದು.
+        </li>
+        <li>
+            Cooperate reasonably with Field Agents and Supervisors for data collection and verification activities.
+            <br><br>
+            ಡೇಟಾ ಸಂಗ್ರಹಣೆ ಮತ್ತು ಪರಿಶೀಲನಾ ಚಟುವಟಿಕೆಗಳಿಗಾಗಿ ಫೀಲ್ಡ್ ಏಜೆಂಟ್‌ಗಳು ಮತ್ತು ಮೇಲ್ವಿಚಾರಕರೊಂದಿಗೆ ಸಮಂಜಸವಾಗಿ ಸಹಕರಿಸುವುದು.
+        </li>
+    </ul>
+    <h4>
+        Permitted Uses:
+        <br>
+        ಅನುಮತಿಸಲಾದ ಬಳಕೆಗಳು:
+    </h4>
+    <ul>
+        <li>
+            Utilize the data, reports, and insights provided by the Platform for making informed decisions regarding their own farm management, resource allocation, and adoption of practices like AWD or regenerative agriculture.
+            <br><br>
+            ತಮ್ಮ ಸ್ವಂತ ಕೃಷಿ ನಿರ್ವಹಣೆ, ಸಂಪನ್ಮೂಲ ಹಂಚಿಕೆ ಮತ್ತು AWD ಅಥವಾ ಪುನರುತ್ಪಾದಕ ಕೃಷಿಯಂತಹ ಪದ್ಧತಿಗಳನ್ನು ಅಳವಡಿಸಿಕೊಳ್ಳುವ ಬಗ್ಗೆ ತಿಳುವಳಿಕೆಯುಳ್ಳ ನಿರ್ಧಾರಗಳನ್ನು ತೆಗೆದುಕೊಳ್ಳಲು ಪ್ಲಾಟ್‌ಫಾರ್ಮ್ ಒದಗಿಸಿದ ಡೇಟಾ, ವರದಿಗಳು ಮತ್ತು ಒಳನೋಟಗಳನ್ನು ಬಳಸುವುದು.
+        </li>
+        <li>
+            Use the Platform to manage their participation in authorized programs and track progress.
+            <br><br>
+            ಅಧಿಕೃತ ಕಾರ್ಯಕ್ರಮಗಳಲ್ಲಿ ತಮ್ಮ ಭಾಗವಹಿಸುವಿಕೆಯನ್ನು ನಿರ್ವಹಿಸಲು ಮತ್ತು ಪ್ರಗತಿಯನ್ನು ಪತ್ತೆಹಚ್ಚಲು ಪ್ಲಾಟ್‌ಫಾರ್ಮ್ ಅನ್ನು ಬಳಸುವುದು.
+        </li>
+        <li>
+            Manage their consent preferences through the Platform interface or designated contact channels.
+            <br><br>
+            ಪ್ಲಾಟ್‌ಫಾರ್ಮ್ ಇಂಟರ್ಫೇಸ್ ಅಥವಾ ಗೊತ್ತುಪಡಿಸಿದ ಸಂಪರ್ಕ ಚಾನಲ್‌ಗಳ ಮೂಲಕ ತಮ್ಮ ಒಪ್ಪಿಗೆ ಆದ್ಯತೆಗಳನ್ನು ನಿರ್ವಹಿಸುವುದು.
+        </li>
+    </ul>
+    <h4>
+        Restrictions:
+        <br>
+        ನಿರ್ಬಂಧಗಳು:
+    </h4>
+    <ul>
+        <li>
+            Prohibited from intentionally providing false, misleading, or inaccurate farm data or management practice information to manipulate Platform outputs (e.g., carbon estimates, AWD compliance).
+            <br><br>
+            ಪ್ಲಾಟ್‌ಫಾರ್ಮ್ ಔಟ್‌ಪುಟ್‌ಗಳನ್ನು (ಉದಾ. ಇಂಗಾಲದ ಅಂದಾಜುಗಳು, AWD ಅನುಸರಣೆ) ಕುಶಲತೆಯಿಂದ ನಿರ್ವಹಿಸಲು ಉದ್ದೇಶಪೂರ್ವಕವಾಗಿ ತಪ್ಪು, ದಾರಿತಪ್ಪಿಸುವ ಅಥವಾ ನಿಖರವಲ್ಲದ ಕೃಷಿ ಡೇಟಾ ಅಥವಾ ನಿರ್ವಹಣಾ ಅಭ್ಯಾಸದ ಮಾಹಿತಿಯನ್ನು ಒದಗಿಸುವುದನ್ನು ನಿಷೇಧಿಸಲಾಗಿದೆ.
+        </li>
+        <li>
+            Prohibited from sharing detailed, non-public reports or raw data generated by the Platform about their farm with unauthorized third parties, except as required for participation in approved programs (e.g., sharing verified carbon reports with credit buyers or program administrators) or as permitted by Aurigraph.
+            <br><br>
+            ಅನುಮೋದಿತ ಕಾರ್ಯಕ್ರಮಗಳಲ್ಲಿ ಭಾಗವಹಿಸಲು ಅಗತ್ಯವಿರುವಂತೆ (ಉದಾ. ಕ್ರೆಡಿಟ್ ಖರೀದಿದಾರರು ಅಥವಾ ಕಾರ್ಯಕ್ರಮ ನಿರ್ವಾಹಕರೊಂದಿಗೆ ಪರಿಶೀಲಿಸಿದ ಇಂಗಾಲದ ವರದಿಗಳನ್ನು ಹಂಚಿಕೊಳ್ಳುವುದು) ಅಥವಾ ಆರಿಗ್ರಾಫ್‌ನಿಂದ ಅನುಮತಿಸಲ್ಪಟ್ಟಂತೆ ಹೊರತುಪಡಿಸಿ, ತಮ್ಮ ಕೃಷಿ ಬಗ್ಗೆ ಪ್ಲಾಟ್‌ಫಾರ್ಮ್‌ನಿಂದ ರಚಿಸಲಾದ ವಿವರವಾದ, ಸಾರ್ವಜನಿಕವಲ್ಲದ ವರದಿಗಳು ಅಥವಾ ಕಚ್ಚಾ ಡೇಟಾವನ್ನು ಅನಧಿಕೃತ ಮೂರನೇ ವ್ಯಕ್ತಿಗಳೊಂದಿಗೆ ಹಂಚಿಕೊಳ್ಳುವುದನ್ನು ನಿಷೇಧಿಸಲಾಗಿದೆ.
+        </li>
+        <li>
+            Prohibited from attempting to access data related to other farms or users unless explicitly authorized.
+            <br><br>
+            ಸ್ಪಷ್ಟವಾಗಿ ಅಧಿಕಾರ ನೀಡದ ಹೊರತು ಇತರ ಕೃಷಿ ಅಥವಾ ಬಳಕೆದಾರರಿಗೆ ಸಂಬಂಧಿಸಿದ ಡೇಟಾವನ್ನು ಪ್ರವೇಶಿಸಲು ಪ್ರಯತ್ನಿಸುವುದನ್ನು ನಿಷೇಧಿಸಲಾಗಿದೆ.
+        </li>
+    </ul>
+
+    <h3>
+        4.2 Field Agents
+        <br>
+        4.2 ಫೀಲ್ಡ್ ಏಜೆಂಟ್‌ಗಳು
+    </h3>
+    <h4>
+        Rights:
+        <br>
+        ಹಕ್ಕುಗಳು:
+    </h4>
+    <ul>
+        <li>
+            Access the Platform, primarily through the Mobile Application, to receive assigned tasks, view necessary Farmer and field information (e.g., location, crop type, specific data collection protocols) for assigned tasks.
+            <br><br>
+            ನಿಯೋಜಿತ ಕಾರ್ಯಗಳನ್ನು ಸ್ವೀಕರಿಸಲು, ನಿಯೋಜಿತ ಕಾರ್ಯಗಳಿಗಾಗಿ ಅಗತ್ಯ ರೈತ ಮತ್ತು ಕ್ಷೇತ್ರ ಮಾಹಿತಿಯನ್ನು (ಉದಾ. ಸ್ಥಳ, ಬೆಳೆ ಪ್ರಕಾರ, ನಿರ್ದಿಷ್ಟ ಡೇಟಾ ಸಂಗ್ರಹಣಾ ಪ್ರೋಟೋಕಾಲ್‌ಗಳು) ವೀಕ್ಷಿಸಲು ಪ್ರಾಥಮಿಕವಾಗಿ ಮೊಬೈಲ್ ಅಪ್ಲಿಕೇಶನ್ ಮೂಲಕ ಪ್ಲಾಟ್‌ಫಾರ್ಮ್ ಅನ್ನು ಪ್ರವೇಶಿಸುವುದು.
+        </li>
+        <li>
+            Utilize Platform tools for navigation, data entry (manual observations, survey responses), and uploading collected data, including sensor readings, photographs, and data from approved drone flights (e.g., multispectral imagery, LiDAR point clouds).
+            <br><br>
+            ನ್ಯಾವಿಗೇಷನ್, ಡೇಟಾ ನಮೂದು (ಹಸ್ತಚಾಲಿತ ವೀಕ್ಷಣೆಗಳು, ಸಮೀಕ್ಷೆ ಪ್ರತಿಕ್ರಿಯೆಗಳು) ಮತ್ತು ಸಂವೇದಕ ವಾಚನಗೋಷ್ಠಿಗಳು, ಛಾಯಾಚಿತ್ರಗಳು, ಮತ್ತು ಅನುಮೋದಿತ ಡ್ರೋನ್ ಫ್ಲೈಟ್‌ಗಳಿಂದ (ಉದಾ. ಮಲ್ಟಿಸ್ಪೆಕ್ಟ್ರಲ್ ಇಮೇಜರಿ, LiDAR ಪಾಯಿಂಟ್ ಕ್ಲೌಡ್‌ಗಳು) ಡೇಟಾವನ್ನು ಒಳಗೊಂಡಂತೆ ಸಂಗ್ರಹಿಸಿದ ಡೇಟಾವನ್ನು ಅಪ್‌ಲೋಡ್ ಮಾಡಲು ಪ್ಲಾಟ್‌ಫಾರ್ಮ್ ಪರಿಕರಗಳನ್ನು ಬಳಸುವುದು.
+        </li>
+        <li>
+            Communicate with their designated Supervisor(s) through the Platform regarding tasks, issues, or clarifications.
+            <br><br>
+            ಕಾರ್ಯಗಳು, ಸಮಸ್ಯೆಗಳು ಅಥವಾ ಸ್ಪಷ್ಟೀಕರಣಗಳಿಗೆ ಸಂಬಂಧಿಸಿದಂತೆ ಪ್ಲಾಟ್‌ಫಾರ್ಮ್ ಮೂಲಕ ತಮ್ಮ ಗೊತ್ತುಪಡಿಸಿದ ಮೇಲ್ವಿಚಾರಕ(ರ)ೊಂದಿಗೆ ಸಂವಹನ ನಡೆಸುವುದು.
+        </li>
+    </ul>
+    <h4>
+        Responsibilities:
+        <br>
+        ಜವಾಬ್ದಾರಿಗಳು:
+    </h4>
+    <ul>
+        <li>
+            Conduct assigned field visits and data collection activities accurately, diligently, and in strict accordance with Aurigraph's specified protocols, methodologies (e.g., for soil sampling, AWD water tube monitoring, biomass measurement proxies), and quality standards. This includes ensuring proper calibration and operation of sensors and drone equipment.
+            <br><br>
+            ನಿಯೋಜಿತ ಕ್ಷೇತ್ರ ಭೇಟಿಗಳು ಮತ್ತು ಡೇಟಾ ಸಂಗ್ರಹಣಾ ಚಟುವಟಿಕೆಗಳನ್ನು ನಿಖರವಾಗಿ, ಶ್ರದ್ಧೆಯಿಂದ ಮತ್ತು ಆರಿಗ್ರಾಫ್‌ನ ನಿರ್ದಿಷ್ಟಪಡಿಸಿದ ಪ್ರೋಟೋಕಾಲ್‌ಗಳು, ವಿಧಾನಗಳು (ಉದಾ. ಮಣ್ಣಿನ ಮಾದರಿ, AWD ನೀರಿನ ಟ್ಯೂಬ್ ಮೇಲ್ವಿಚಾರಣೆ, ಜೀವರಾಶಿ ಮಾಪನ ಪ್ರಾಕ್ಸಿಗಳು) ಮತ್ತು ಗುಣಮಟ್ಟದ ಮಾನದDಂಶಗಳಿಗೆ ಕಟ್ಟುನಿಟ್ಟಾಗಿ ಅನುಗುಣವಾಗಿ ನಡೆಸುವುದು. ಇದು ಸಂವೇದಕಗಳು ಮತ್ತು ಡ್ರೋನ್ ಉಪಕರಣಗಳ ಸರಿಯಾದ ಮಾಪನಾಂಕ ನಿರ್ಣಯ ಮತ್ತು ಕಾರ್ಯಾಚರಣೆಯನ್ನು ಖಚಿತಪಡಿಸುವುದನ್ನು ಒಳಗೊಂಡಿದೆ.
+        </li>
+        <li>
+            Operate drones safely and in full compliance with all applicable national and local aviation regulations, Aurigraph's operational guidelines, and respecting property boundaries and privacy.
+            <br><br>
+            ಎಲ್ಲಾ ಅನ್ವಯವಾಗುವ ರಾಷ್ಟ್ರೀಯ ಮತ್ತು ಸ್ಥಳೀಯ ವಾಯುಯಾನ ನಿಯಮಗಳು, ಆರಿಗ್ರಾಫ್‌ನ ಕಾರ್ಯಾಚರಣಾ ಮಾರ್ಗಸೂಚಿಗಳಿಗೆ ಸಂಪೂರ್ಣ ಅನುಸಾರವಾಗಿ ಮತ್ತು ಆಸ್ತಿ ಗಡಿಗಳು ಮತ್ತು ಗೌಪ್ಯತೆಯನ್ನು ಗೌರವಿಸಿ ಡ್ರೋನ್‌ಗಳನ್ನು ಸುರಕ್ಷಿತವಾಗಿ ನಿರ್ವಹಿಸುವುದು.
+        </li>
+        <li>
+            Ensure the timely, secure, and complete upload of all collected data to the AUREX Platform.
+            <br><br>
+            ಸಂಗ್ರಹಿಸಿದ ಎಲ್ಲಾ ಡೇಟಾವನ್ನು AUREX ಪ್ಲಾಟ್‌ಫಾರ್ಮ್‌ಗೆ ಸಮಯೋಚಿತ, ಸುರಕ್ಷಿತ ಮತ್ತು ಸಂಪೂರ್ಣವಾಗಿ ಅಪ್‌ಲೋಡ್ ಮಾಡುವುದನ್ನು ಖಚಿತಪಡಿಸುವುದು.
+        </li>
+        <li>
+            Maintain the security and integrity of data collection devices (e.g., smartphones, tablets, drone controllers) and prevent unauthorized access to collected data.
+            <br><br>
+            ಡೇಟಾ ಸಂಗ್ರಹಣಾ ಸಾಧನಗಳ (ಉದಾ. ಸ್ಮಾರ್ಟ್‌ಫೋನ್‌ಗಳು, ಟ್ಯಾಬ್ಲೆಟ್‌ಗಳು, ಡ್ರೋನ್ ನಿಯಂತ್ರಕಗಳು) ಭದ್ರತೆ ಮತ್ತು ಸಮಗ್ರತೆಯನ್ನು ಕಾಪಾಡಿಕೊಳ್ಳುವುದು ಮತ್ತು ಸಂಗ್ರಹಿಸಿದ ಡೇಟಾಗೆ ಅನಧಿಕೃತ ಪ್ರವೇಶವನ್ನು ತಡೆಯುವುದು.
+        </li>
+        <li>
+            Respect the privacy and property rights of Farmers during field visits, obtaining necessary permissions for access if required beyond standard program agreements.
+            <br><br>
+            ಕ್ಷೇತ್ರ ಭೇಟಿಗಳ ಸಮಯದಲ್ಲಿ ರೈತರ ಗೌಪ್ಯತೆ ಮತ್ತು ಆಸ್ತಿ ಹಕ್ಕುಗಳನ್ನು ಗೌರವಿಸುವುದು, ಪ್ರಮಾಣಿತ ಕಾರ್ಯಕ್ರಮ ಒಪ್ಪಂದಗಳನ್ನು ಮೀರಿ ಅಗತ್ಯವಿದ್ದರೆ ಪ್ರವೇಶಕ್ಕೆ ಅಗತ್ಯವಾದ ಅನುಮತಿಗಳನ್ನು ಪಡೆಯುವುದು.
+        </li>
+        <li>
+            Handle any Personal Data collected incidentally during field activities (e.g., images containing individuals) in accordance with DPDPA principles and Aurigraph's Privacy Policy.
+            <br><br>
+            ಕ್ಷೇತ್ರ ಚಟುವಟಿಕೆಗಳ ಸಮಯದಲ್ಲಿ ಪ್ರಾಸಂಗಿಕವಾಗಿ ಸಂಗ್ರಹಿಸಲಾದ ಯಾವುದೇ ವೈಯಕ್ತಿಕ ಡೇಟಾವನ್ನು (ಉದಾ. ವ್ಯಕ್ತಿಗಳನ್ನು ಒಳಗೊಂಡಿರುವ ಚಿತ್ರಗಳು) DPDPA ತತ್ವಗಳು ಮತ್ತು ಆರಿಗ್ರಾಫ್‌ನ ಗೌಪ್ಯತಾ ನೀತಿಗೆ ಅನುಗುಣವಾಗಿ ನಿರ್ವಹಿಸುವುದು.
+        </li>
+        <li>
+            Report any operational issues, data discrepancies, equipment malfunctions, safety incidents, or potential protocol violations promptly to their Supervisor.
+            <br><br>
+            ಯಾವುದೇ ಕಾರ್ಯಾಚರಣೆಯ ಸಮಸ್ಯೆಗಳು, ಡೇಟಾ ವ್ಯತ್ಯಾಸಗಳು, ಸಲಕರಣೆಗಳ ಅಸಮರ್ಪಕ ಕಾರ್ಯಗಳು, ಸುರಕ್ಷತಾ ಘಟನೆಗಳು, ಅಥವಾ ಸಂಭಾವ್ಯ ಪ್ರೋಟೋಕಾಲ್ ಉಲ್ಲಂಘನೆಗಳನ್ನು ತಕ್ಷಣವೇ ತಮ್ಮ ಮೇಲ್ವಿಚಾರಕರಿಗೆ ವರದಿ ಮಾಡುವುದು.
+        </li>
+        <li>
+            Adhere to the general use restrictions outlined in Section 3.2.
+            <br><br>
+            ವಿಭಾಗ 3.2 ರಲ್ಲಿ ವಿವರಿಸಿರುವ ಸಾಮಾನ್ಯ ಬಳಕೆಯ ನಿರ್ಬಂಧಗಳಿಗೆ ಬದ್ಧರಾಗಿರುವುದು.
+        </li>
+    </ul>
+    <h4>
+        Permitted Uses:
+        <br>
+        ಅನುಮತಿಸಲಾದ ಬಳಕೆಗಳು:
+    </h4>
+    <ul>
+        <li>
+            Use the Platform and any provided equipment (drones, sensors) exclusively for the purpose of completing assigned data collection tasks for the Aurigraph AUREX program.
+            <br><br>
+            ಆರಿಗ್ರಾಫ್ AUREX ಕಾರ್ಯಕ್ರಮಕ್ಕಾಗಿ ನಿಯೋಜಿತ ಡೇಟಾ ಸಂಗ್ರಹಣಾ ಕಾರ್ಯಗಳನ್ನು ಪೂರ್ಣಗೊಳಿಸುವ ಉದ್ದೇಶಕ್ಕಾಗಿ ಮಾತ್ರ ಪ್ಲಾಟ್‌ಫಾರ್ಮ್ ಮತ್ತು ಯಾವುದೇ ಒದಗಿಸಿದ ಉಪಕರಣಗಳನ್ನು (ಡ್ರೋನ್‌ಗಳು, ಸಂವೇದಕಗಳು) ಬಳಸುವುದು.
+        </li>
+        <li>
+            Access Farmer and field data only to the extent necessary to perform assigned tasks.
+            <br><br>
+            ನಿಯೋಜಿತ ಕಾರ್ಯಗಳನ್ನು ನಿರ್ವಹಿಸಲು ಅಗತ್ಯವಿರುವ ಮಟ್ಟಿಗೆ ಮಾತ್ರ ರೈತ ಮತ್ತು ಕ್ಷೇತ್ರ ಡೇಟಾವನ್ನು ಪ್ರವೇಶಿಸುವುದು.
+        </li>
+    </ul>
+    <h4>
+        Restrictions:
+        <br>
+        ನಿರ್ಬಂಧಗಳು:
+    </h4>
+    <ul>
+        <li>
+            Strictly prohibited from using any data collected (including imagery, LiDAR scans, sensor readings, location data, Farmer information) for any purpose unrelated to their assigned AUREX tasks.
+            <br><br>
+            ತಮ್ಮ ನಿಯೋಜಿತ AUREX ಕಾರ್ಯಗಳಿಗೆ ಸಂಬಂಧಿಸದ ಯಾವುದೇ ಉದ್ದೇಶಕ್ಕಾಗಿ ಸಂಗ್ರಹಿಸಲಾದ ಯಾವುದೇ ಡೇಟಾವನ್ನು (ಚಿತ್ರಗಳು, LiDAR ಸ್ಕ್ಯಾನ್‌ಗಳು, ಸಂವೇದಕ ವಾಚನಗೋಷ್ಠಿಗಳು, ಸ್ಥಳ ಡೇಟಾ, ರೈತ ಮಾಹಿತಿ ಸೇರಿದಂತೆ) ಬಳಸುವುದನ್ನು ಕಟ್ಟುನಿಟ್ಟಾಗಿ ನಿಷೇಧಿಸಲಾಗಿದೆ.
+        </li>
+        <li>
+            Prohibited from copying, sharing, distributing, or selling collected data to any unauthorized third party.
+            <br><br>
+            ಸಂಗ್ರಹಿಸಿದ ಡೇಟಾವನ್ನು ಯಾವುದೇ ಅನಧಿಕೃತ ಮೂರನೇ ವ್ಯಕ್ತಿಗೆ ನಕಲಿಸುವುದು, ಹಂಚಿಕೊಳ್ಳುವುದು, ವಿತರಿಸುವುದು ಅಥವಾ ಮಾರಾಟ ಮಾಡುವುದನ್ನು ನಿಷೇಧಿಸಲಾಗಿದೆ.
+        </li>
+        <li>
+            Prohibited from modifying or tampering with collected data before or during upload, except for standard processing steps defined by Aurigraph protocols.
+            <br><br>
+            ಆರಿಗ್ರಾಫ್ ಪ್ರೋಟೋಕಾಲ್‌ಗಳಿಂದ ವ್ಯಾಖ್ಯಾನಿಸಲಾದ ಪ್ರಮಾಣಿತ ಸಂಸ್ಕರಣಾ ಹಂತಗಳನ್ನು ಹೊರತುಪಡಿಸಿ, ಅಪ್‌ಲೋಡ್ ಮಾಡುವ ಮೊದಲು ಅಥವಾ ಸಮಯದಲ್ಲಿ ಸಂಗ್ರಹಿಸಿದ ಡೇಟಾವನ್ನು ಮಾರ್ಪಡಿಸುವುದು ಅಥವಾ ಹಾಳುಮಾಡುವುದನ್ನು ನಿಷೇಧಿಸಲಾಗಿದೆ.
+        </li>
+        <li>
+            Prohibited from operating drones or other equipment in a manner that violates regulations, safety protocols, or invades privacy.
+            <br><br>
+            ನಿಯಮಗಳು, ಸುರಕ್ಷತಾ ಪ್ರೋಟೋಕಾಲ್‌ಗಳನ್ನು ಉಲ್ಲಂಘಿಸುವ ಅಥವಾ ಗೌಪ್ಯತೆಯನ್ನು ಉಲ್ಲಂಘಿಸುವ ರೀತಿಯಲ್ಲಿ ಡ್ರೋನ್‌ಗಳು ಅಥವಾ ಇತರ ಉಪಕರಣಗಳನ್ನು ನಿರ್ವಹಿಸುವುದನ್ನು ನಿಷೇಧಿಸಲಾಗಿದೆ.
+        </li>
+    </ul>
+
+    <h3>
+        4.3 Supervisors
+        <br>
+        4.3 ಮೇಲ್ವಿಚಾರಕರು
+    </h3>
+    <h4>
+        Rights:
+        <br>
+        ಹಕ್ಕುಗಳು:
+    </h4>
+    <ul>
+        <li>
+            Access the Platform dashboard with privileges to oversee the activities and data submissions of assigned Field Agents.
+            <br><br>
+            ನಿಯೋಜಿತ ಫೀಲ್ಡ್ ಏಜೆಂಟ್‌ಗಳ ಚಟುವಟಿಕೆಗಳು ಮತ್ತು ಡೇಟಾ ಸಲ್ಲಿಕೆಗಳನ್ನು ಮೇಲ್ವಿಚಾರಣೆ ಮಾಡಲು ಸವಲತ್ತುಗಳೊಂದಿಗೆ ಪ್ಲಾಟ್‌ಫಾರ್ಮ್ ಡ್ಯಾಶ್‌ಬೋರ್ಡ್ ಅನ್ನು ಪ್ರವೇಶಿಸುವುದು.
+        </li>
+        <li>
+            View, review, and perform validation checks on data submitted by Field Agents, comparing it against quality criteria, expected ranges, historical data, or other validation metrics defined by Aurigraph or relevant third-party standards (e.g., carbon registry protocols).
+            <br><br>
+            ಫೀಲ್ಡ್ ಏಜೆಂಟ್‌ಗಳು ಸಲ್ಲಿಸಿದ ಡೇಟಾವನ್ನು ವೀಕ್ಷಿಸುವುದು, ಪರಿಶೀಲಿಸುವುದು ಮತ್ತು ಮೌಲ್ಯೀಕರಣ ಪರಿಶೀಲನೆಗಳನ್ನು ನಿರ್ವಹಿಸುವುದು, ಅದನ್ನು ಗುಣಮಟ್ಟದ ಮಾನದಂಡಗಳು, ನಿರೀಕ್ಷಿತ ಶ್ರೇಣಿಗಳು, ಐತಿಹಾಸಿಕ ಡೇಟಾ, ಅಥವಾ ಆರಿಗ್ರಾಫ್ ಅಥವಾ ಸಂಬಂಧಿತ ಮೂರನೇ ವ್ಯಕ್ತಿಯ ಮಾನದಂಡಗಳಿಂದ (ಉದಾ. ಇಂಗಾಲದ ನೋಂದಣಿ ಪ್ರೋಟೋಕಾಲ್‌ಗಳು) ವ್ಯಾಖ್ಯಾನಿಸಲಾದ ಇತರ ಮೌಲ್ಯೀಕರಣ ಮೆಟ್ರಿಕ್‌ಗಳೊಂದಿಗೆ ಹೋಲಿಸುವುದು.
+        </li>
+        <li>
+            Approve, reject, or request corrections for submitted data based on validation outcomes.
+            <br><br>
+            ಮೌಲ್ಯೀಕರಣ ಫಲಿತಾಂಶಗಳ ಆಧಾರದ ಮೇಲೆ ಸಲ್ಲಿಸಿದ ಡೇಟಾವನ್ನು ಅನುಮೋದಿಸುವುದು, ತಿರಸ್ಕರಿಸುವುದು ಅಥವಾ ತಿದ್ದುಪಡಿಗಳನ್ನು ಕೋರುವುದು.
+        </li>
+        <li>
+            Generate aggregated reports, summaries, or analyses based on validated data within their scope of responsibility, as permitted by Platform functionality and Aurigraph policy.
+            <br><br>
+            ಪ್ಲಾಟ್‌ಫಾರ್ಮ್ ಕಾರ್ಯಚಟುವಟಿಕೆ ಮತ್ತು ಆರಿಗ್ರಾಫ್ ನೀತಿಯಿಂದ ಅನುಮತಿಸಲ್ಪಟ್ಟಂತೆ, ತಮ್ಮ ಜವಾಬ್ದಾರಿಯ ವ್ಯಾಪ್ತಿಯಲ್ಲಿ ಮೌಲ್ಯೀಕರಿಸಿದ ಡೇಟಾವನ್ನು ಆಧರಿಸಿ ಒಟ್ಟು ವರದಿಗಳು, ಸಾರಾಂಶಗಳು ಅಥವಾ ವಿಶ್ಲೇಷಣೆಗಳನ್ನು ರಚಿಸುವುದು.
+        </li>
+        <li>
+            Assign, schedule, and manage data collection tasks for their assigned Field Agents through the Platform.
+            <br><br>
+            ಪ್ಲಾಟ್‌ಫಾರ್ಮ್ ಮೂಲಕ ತಮ್ಮ ನಿಯೋಜಿತ ಫೀಲ್ಡ್ ಏಜೆಂಟ್‌ಗಳಿಗೆ ಡೇಟಾ ಸಂಗ್ರಹಣಾ ಕಾರ್ಯಗಳನ್ನು ನಿಯೋಜಿಸುವುದು, ನಿಗದಿಪಡಿಸುವುದು ಮತ್ತು ನಿರ್ವಹಿಸುವುದು.
+        </li>
+        <li>
+            Potentially manage certain user access controls or permissions for Field Agents within their designated region or team, subject to Aurigraph's overall administration.
+            <br><br>
+            ಆರಿಗ್ರಾಫ್‌ನ ಒಟ್ಟಾರೆ ಆಡಳಿತಕ್ಕೆ ಒಳಪಟ್ಟು, ತಮ್ಮ ಗೊತ್ತುಪಡಿಸಿದ ಪ್ರದೇಶ ಅಥವಾ ತಂಡದೊಳಗೆ ಫೀಲ್ಡ್ ಏಜೆಂಟ್‌ಗಳಿಗೆ ಕೆಲವು ಬಳಕೆದಾರ ಪ್ರವೇಶ ನಿಯಂತ್ರಣಗಳು ಅಥವಾ ಅನುಮತಿಗಳನ್ನು ಸಂಭಾವ್ಯವಾಗಿ ನಿರ್ವಹಿಸುವುದು.
+        </li>
+        <li>
+            Communicate with Field Agents, and potentially Local Partners or Farmers, via authorized Platform channels regarding data quality, task management, or operational matters.
+            <br><br>
+            ಡೇಟಾ ಗುಣಮಟ್ಟ, ಕಾರ್ಯ ನಿರ್ವಹಣೆ, ಅಥವಾ ಕಾರ್ಯಾಚರಣೆಯ ವಿಷಯಗಳ ಬಗ್ಗೆ ಅಧಿಕೃತ ಪ್ಲಾಟ್‌ಫಾರ್ಮ್ ಚಾನಲ್‌ಗಳ ಮೂಲಕ ಫೀಲ್ಡ್ ಏಜೆಂಟ್‌ಗಳು, ಮತ್ತು ಸಂಭಾವ್ಯವಾಗಿ ಸ್ಥಳೀಯ ಪಾಲುದಾರರು ಅಥವಾ ರೈತರೊಂದಿಗೆ ಸಂವಹನ ನಡೆಸುವುದು.
+        </li>
+    </ul>
+    <h4>
+        Responsibilities:
+        <br>
+        ಜವಾಬ್ದಾರಿಗಳು:
+    </h4>
+    <ul>
+        <li>
+            Ensure the quality, integrity, and timely validation of data collected by supervised Field Agents, adhering strictly to Aurigraph's validation protocols and any applicable external standards (e.g., GHG Protocol guidelines, carbon registry requirements).
+            <br><br>
+            ಮೇಲ್ವಿಚಾರಣೆ ಮಾಡಿದ ಫೀಲ್ಡ್ ಏಜೆಂಟ್‌ಗಳು ಸಂಗ್ರಹಿಸಿದ ಡೇಟಾದ ಗುಣಮಟ್ಟ, ಸಮಗ್ರತೆ ಮತ್ತು ಸಮಯೋಚಿತ ಮೌಲ್ಯೀಕರಣವನ್ನು ಖಚಿತಪಡಿಸುವುದು, ಆರಿಗ್ರಾಫ್‌ನ ಮೌಲ್ಯೀಕರಣ ಪ್ರೋಟೋಕಾಲ್‌ಗಳು ಮತ್ತು ಯಾವುದೇ ಅನ್ವಯವಾಗುವ ಬಾಹ್ಯ ಮಾನದಂಡಗಳಿಗೆ (ಉದಾ. GHG ಪ್ರೋಟೋಕಾಲ್ ಮಾರ್ಗಸೂಚಿಗಳು, ಇಂಗಾಲದ ನೋಂದಣಿ ಅವಶ್ಯಕತೆಗಳು) ಕಟ್ಟುನಿಟ್ಟಾಗಿ ಬದ್ಧರಾಗಿರುವುದು.
+        </li>
+        <li>
+            Monitor Field Agent performance, adherence to protocols, and compliance with these Terms and Aurigraph policies.
+            <br><br>
+            ಫೀಲ್ಡ್ ಏಜೆಂಟ್ ಕಾರ್ಯಕ್ಷಮತೆ, ಪ್ರೋಟೋಕಾಲ್‌ಗಳಿಗೆ ಬದ್ಧತೆ, ಮತ್ತು ಈ ನಿಯಮಗಳು ಮತ್ತು ಆರಿಗ್ರಾಫ್ ನೀತಿಗಳ ಅನುಸರಣೆಯನ್ನು ಮೇಲ್ವಿಚಾರಣೆ ಮಾಡುವುದು.
+        </li>
+        <li>
+            Maintain the confidentiality and security of all data accessed through the Platform, particularly sensitive Farmer data or unvalidated field data.
+            <br><br>
+            ಪ್ಲಾಟ್‌ಫಾರ್ಮ್ ಮೂಲಕ ಪ್ರವೇಶಿಸಲಾದ ಎಲ್ಲಾ ಡೇಟಾದ ಗೌಪ್ಯತೆ ಮತ್ತು ಭದ್ರತೆಯನ್ನು ಕಾಪಾಡಿಕೊಳ್ಳುವುದು, ವಿಶೇಷವಾಗಿ ಸೂಕ್ಷ್ಮ ರೈತ ಡೇಟಾ ಅಥವಾ ಅಮಾನ್ಯಗೊಳಿಸದ ಕ್ಷೇತ್ರ ಡೇಟಾ.
+        </li>
+        <li>
+            Report any identified systemic data quality issues, significant anomalies, potential fraud, or major operational problems to the designated Aurigraph contact.
+            <br><br>
+            ಯಾವುದೇ ಗುರುತಿಸಲಾದ ವ್ಯವಸ್ಥಿತ ಡೇಟಾ ಗುಣಮಟ್ಟದ ಸಮಸ್ಯೆಗಳು, ಗಮನಾರ್ಹ ವೈಪರೀತ್ಯಗಳು, ಸಂಭಾವ್ಯ ವಂಚನೆ, ಅಥವಾ ಪ್ರಮುಖ ಕಾರ್ಯಾಚರಣೆಯ ಸಮಸ್ಯೆಗಳನ್ನು ಗೊತ್ತುಪಡಿಸಿದ ಆರಿಗ್ರಾಫ್ ಸಂಪರ್ಕಕ್ಕೆ ವರದಿ ಮಾಡುವುದು.
+        </li>
+        <li>
+            Adhere to the general use restrictions outlined in Section 3.2 and all data handling policies.
+            <br><br>
+            ವಿಭಾಗ 3.2 ರಲ್ಲಿ ವಿವರಿಸಿರುವ ಸಾಮಾನ್ಯ ಬಳಕೆಯ ನಿರ್ಬಂಧಗಳು ಮತ್ತು ಎಲ್ಲಾ ಡೇಟಾ ನಿರ್ವಹಣಾ ನೀತಿಗಳಿಗೆ ಬದ್ಧರಾಗಿರುವುದು.
+        </li>
+    </ul>
+    <h4>
+        Permitted Uses:
+        <br>
+        ಅನುಮತಿಸಲಾದ ಬಳಕೆಗಳು:
+    </h4>
+    <ul>
+        <li>
+            Utilize the Platform's tools and functionalities solely for managing data collection workflows, performing data validation, generating authorized reports, overseeing assigned Field Agents, and fulfilling other supervisory duties as defined by Aurigraph.
+            <br><br>
+            ಡೇಟಾ ಸಂಗ್ರಹಣಾ ಕೆಲಸದ ಹರಿವುಗಳನ್ನು ನಿರ್ವಹಿಸಲು, ಡೇಟಾ ಮೌಲ್ಯೀಕರಣವನ್ನು ನಿರ್ವಹಿಸಲು, ಅಧಿಕೃತ ವರದಿಗಳನ್ನು ರಚಿಸಲು, ನಿಯೋಜಿತ ಫೀಲ್ಡ್ ಏಜೆಂಟ್‌ಗಳನ್ನು ಮೇಲ್ವಿಚಾರಣೆ ಮಾಡಲು, ಮತ್ತು ಆರಿಗ್ರಾಫ್‌ನಿಂದ ವ್ಯಾಖ್ಯಾನಿಸಲಾದ ಇತರ ಮೇಲ್ವಿಚಾರಣಾ ಕರ್ತವ್ಯಗಳನ್ನು ಪೂರೈಸಲು ಮಾತ್ರ ಪ್ಲಾಟ್‌ಫಾರ್ಮ್‌ನ ಪರಿಕರಗಳು ಮತ್ತು ಕಾರ್ಯಚಟುವಟಿಕೆಗಳನ್ನು ಬಳಸುವುದು.
+        </li>
+    </ul>
+    <h4>
+        Restrictions:
+        <br>
+        ನಿರ್ಬಂಧಗಳು:
+    </h4>
+    <ul>
+        <li>
+            Prohibited from approving data that clearly fails validation checks or overriding established validation protocols without proper justification, documentation, and potentially higher-level approval as required by Aurigraph.
+            <br><br>
+            ಮೌಲ್ಯೀಕರಣ ಪರಿಶೀಲನೆಗಳಲ್ಲಿ ಸ್ಪಷ್ಟವಾಗಿ ವಿಫಲವಾದ ಡೇಟಾವನ್ನು ಅನುಮೋದಿಸುವುದನ್ನು ಅಥವಾ ಸರಿಯಾದ ಸಮರ್ಥನೆ, ದಾಖಲಾತಿ ಮತ್ತು ಸಂಭಾವ್ಯವಾಗಿ ಆರಿಗ್ರಾಫ್‌ನಿಂದ ಅಗತ್ಯವಿರುವ ಉನ್ನತ ಮಟ್ಟದ ಅನುಮೋದನೆಯಿಲ್ಲದೆ ಸ್ಥಾಪಿತ ಮೌಲ್ಯೀಕರಣ ಪ್ರೋಟೋಕಾಲ್‌ಗಳನ್ನು ಮೀರುವುದನ್ನು ನಿಷೇಧಿಸಲಾಗಿದೆ.
+        </li>
+        <li>
+            Prohibited from accessing or attempting to access data or supervise agents outside their designated scope of responsibility.
+            <br><br>
+            ತಮ್ಮ ಗೊತ್ತುಪಡಿಸಿದ ಜವಾಬ್ದಾರಿಯ ವ್ಯಾಪ್ತಿಯ ಹೊರಗಿನ ಡೇಟಾವನ್ನು ಪ್ರವೇಶಿಸಲು ಅಥವಾ ಪ್ರವೇಶಿಸಲು ಪ್ರಯತ್ನಿಸುವುದನ್ನು ಅಥವಾ ಏಜೆಂಟ್‌ಗಳನ್ನು ಮೇಲ್ವಿಚಾರಣೆ ಮಾಡುವುದನ್ನು ನಿಷೇಧಿಸಲಾಗಿದೆ.
+        </li>
+        <li>
+            Prohibited from sharing raw, unvalidated, or sensitive operational data with unauthorized individuals or entities.
+            <br><br>
+            ಕಚ್ಚಾ, ಅಮಾನ್ಯಗೊಳಿಸದ ಅಥವಾ ಸೂಕ್ಷ್ಮ ಕಾರ್ಯಾಚರಣೆಯ ಡೇಟಾವನ್ನು ಅನಧಿಕೃತ ವ್ಯಕ್ತಿಗಳು ಅಥವಾ ಘಟಕಗಳೊಂದಿಗೆ ಹಂಚಿಕೊಳ್ಳುವುದನ್ನು ನಿಷೇಧಿಸಲಾಗಿದೆ.
+        </li>
+    </ul>
+
+    <h3>
+        4.4 Local Partners
+        <br>
+        4.4 ಸ್ಥಳೀಯ ಪಾಲುದಾರರು
+    </h3>
+    <h4>
+        Rights:
+        <br>
+        ಹಕ್ಕುಗಳು:
+    </h4>
+    <ul>
+        <li>
+            Access designated sections or modules of the AUREX Platform specifically designed to support their authorized functions, which may include user onboarding tools, training materials, support ticket interfaces, or regional performance dashboards (if applicable).
+            <br><br>
+            ತಮ್ಮ ಅಧಿಕೃತ ಕಾರ್ಯಗಳನ್ನು ಬೆಂಬಲಿಸಲು ನಿರ್ದಿಷ್ಟವಾಗಿ ವಿನ್ಯಾಸಗೊಳಿಸಲಾದ AUREX ಪ್ಲಾಟ್‌ಫಾರ್ಮ್‌ನ ಗೊತ್ತುಪಡಿಸಿದ ವಿಭಾಗಗಳು ಅಥವಾ ಮಾಡ್ಯೂಲ್‌ಗಳನ್ನು ಪ್ರವೇಶಿಸುವುದು, ಇದರಲ್ಲಿ ಬಳಕೆದಾರರ ಸೇರ್ಪಡೆ ಪರಿಕರಗಳು, ತರಬೇತಿ ಸಾಮಗ್ರಿಗಳು, ಬೆಂಬಲ ಟಿಕೆಟ್ ಇಂಟರ್ಫೇಸ್‌ಗಳು ಅಥವಾ ಪ್ರಾದೇಶಿಕ ಕಾರ್ಯಕ್ಷಮತೆ ಡ್ಯಾಶ್‌ಬೋರ್ಡ್‌ಗಳು (ಅನ್ವಯಿಸಿದರೆ) ಸೇರಿರಬಹುದು.
+        </li>
+        <li>
+            Potentially manage certain aspects of User accounts (e.g., initial setup, password resets for supported users) within their defined geographical area or user group, subject to the terms of their separate partnership agreement with Aurigraph and appropriate platform permissions.
+            <br><br>
+            ತಮ್ಮ ವ್ಯಾಖ್ಯಾನಿತ ಭೌಗೋಳಿಕ ಪ್ರದೇಶ ಅಥವಾ ಬಳಕೆದಾರರ ಗುಂಪಿನೊಳಗೆ ಬಳಕೆದಾರ ಖಾತೆಗಳ ಕೆಲವು ಅಂಶಗಳನ್ನು (ಉದಾ. ಆರಂಭಿಕ ಸೆಟಪ್, ಬೆಂಬಲಿತ ಬಳಕೆದಾರರಿಗೆ ಪಾಸ್‌ವರ್ಡ್ ಮರುಹೊಂದಿಕೆಗಳು) ಸಂಭಾವ್ಯವಾಗಿ ನಿರ್ವಹಿಸುವುದು, ಆರಿಗ್ರಾಫ್‌ನೊಂದಿಗಿನ ಅವರ ಪ್ರತ್ಯೇಕ ಪಾಲುದಾರಿಕೆ ಒಪ್ಪಂದದ ನಿಯಮಗಳಿಗೆ ಮತ್ತು ಸೂಕ್ತ ಪ್ಲಾಟ್‌ಫಾರ್ಮ್ ಅನುಮತಿಗಳಿಗೆ ಒಳಪಟ್ಟು.
+        </li>
+    </ul>
+    <h4>
+        Responsibilities:
+        <br>
+        ಜವಾಬ್ದಾರಿಗಳು:
+    </h4>
+    <ul>
+        <li>
+            Facilitate the onboarding process for new Farmers and/or Field Agents in their designated area, ensuring users understand the Platform, agree to these Terms and the Privacy Policy, and provide necessary information accurately, all in accordance with Aurigraph's procedures and DPDPA requirements for handling Personal Data during onboarding.
+            <br><br>
+            ತಮ್ಮ ಗೊತ್ತುಪಡಿಸಿದ ಪ್ರದೇಶದಲ್ಲಿ ಹೊಸ ರೈತರು ಮತ್ತು/ಅಥವಾ ಫೀಲ್ಡ್ ಏಜೆಂಟ್‌ಗಳಿಗೆ ಸೇರ್ಪಡೆ ಪ್ರಕ್ರಿಯೆಯನ್ನು ಸುಗಮಗೊಳಿಸುವುದು, ಬಳಕೆದಾರರು ಪ್ಲಾಟ್‌ಫಾರ್ಮ್ ಅನ್ನು ಅರ್ಥಮಾಡಿಕೊಳ್ಳುತ್ತಾರೆ, ಈ ನಿಯಮಗಳು ಮತ್ತು ಗೌಪ್ಯತಾ ನೀತಿಗೆ ಒಪ್ಪುತ್ತಾರೆ, ಮತ್ತು ಆರಿಗ್ರಾಫ್‌ನ ಕಾರ್ಯವಿಧಾನಗಳು ಮತ್ತು ಸೇರ್ಪಡೆಯ ಸಮಯದಲ್ಲಿ ವೈಯಕ್ತಿಕ ಡೇಟಾವನ್ನು ನಿರ್ವಹಿಸಲು DPDPA ಅವಶ್ಯಕತೆಗಳಿಗೆ ಅನುಗುಣವಾಗಿ ಅಗತ್ಯ ಮಾಹಿತಿಯನ್ನು ನಿಖರವಾಗಿ ಒದಗಿಸುತ್ತಾರೆ ಎಂದು ಖಚಿತಪಡಿಸಿಕೊಳ್ಳುವುದು.
+        </li>
+        <li>
+            Provide first-level technical or operational support to local Users as defined in their partnership agreement, directing more complex issues to Aurigraph support channels.
+            <br><br>
+            ತಮ್ಮ ಪಾಲುದಾರಿಕೆ ಒಪ್ಪಂದದಲ್ಲಿ ವ್ಯಾಖ್ಯಾನಿಸಿದಂತೆ ಸ್ಥಳೀಯ ಬಳಕೆದಾರರಿಗೆ ಮೊದಲ ಹಂತದ ತಾಂತ್ರಿಕ ಅಥವಾ ಕಾರ್ಯಾಚರಣೆಯ ಬೆಂಬಲವನ್ನು ಒದಗಿಸುವುದು, ಹೆಚ್ಚು ಸಂಕೀರ್ಣ ಸಮಸ್ಯೆಗಳನ್ನು ಆರಿಗ್ರಾಫ್ ಬೆಂಬಲ ಚಾನಲ್‌ಗಳಿಗೆ ನಿರ್ದೇಶಿಸುವುದು.
+        </li>
+        <li>
+            Promote the AUREX Platform and its associated programs within their community or region in alignment with Aurigraph's brand guidelines and messaging.
+            <br><br>
+            ಆರಿಗ್ರಾಫ್‌ನ ಬ್ರಾಂಡ್ ಮಾರ್ಗಸೂಚಿಗಳು ಮತ್ತು ಸಂದೇಶ ಕಳುಹಿಸುವಿಕೆಗೆ ಅನುಗುಣವಾಗಿ ತಮ್ಮ ಸಮುದಾಯ ಅಥವಾ ಪ್ರದೇಶದಲ್ಲಿ AUREX ಪ್ಲಾಟ್‌ಫಾರ್ಮ್ ಮತ್ತು ಅದರ ಸಂಬಂಧಿತ ಕಾರ್ಯಕ್ರಮಗಳನ್ನು ಪ್ರಚಾರ ಮಾಡುವುದು.
+        </li>
+        <li>
+            Adhere strictly to all operational procedures, data handling protocols (especially concerning Personal Data), and confidentiality requirements set forth by Aurigraph in these Terms and their separate partnership agreement.
+            <br><br>
+            ಈ ನಿಯಮಗಳು ಮತ್ತು ಅವರ ಪ್ರತ್ಯೇಕ ಪಾಲುದಾರಿಕೆ ಒಪ್ಪಂದದಲ್ಲಿ ಆರಿಗ್ರಾಫ್ ನಿಗದಿಪಡಿಸಿದ ಎಲ್ಲಾ ಕಾರ್ಯಾಚರಣಾ ಕಾರ್ಯವಿಧಾನಗಳು, ಡೇಟಾ ನಿರ್ವಹಣಾ ಪ್ರೋಟೋಕಾಲ್‌ಗಳು (ವಿಶೇಷವಾಗಿ ವೈಯಕ್ತಿಕ ಡೇಟಾಗೆ ಸಂಬಂಧಿಸಿದಂತೆ) ಮತ್ತು ಗೌಪ್ಯತೆ ಅವಶ್ಯಕತೆಗಳಿಗೆ ಕಟ್ಟುನಿಟ್ಟಾಗಿ ಬದ್ಧರಾಗಿರುವುದು.
+        </li>
+        <li>
+            Comply with all applicable laws and regulations in their activities related to the AUREX Platform.
+            <br><br>
+            AUREX ಪ್ಲಾಟ್‌ಫಾರ್ಮ್‌ಗೆ ಸಂಬಂಧಿಸಿದ ತಮ್ಮ ಚಟುವಟಿಕೆಗಳಲ್ಲಿ ಎಲ್ಲಾ ಅನ್ವಯವಾಗುವ ಕಾನೂನುಗಳು ಮತ್ತು ನಿಯಮಗಳನ್ನು ಅನುಸರಿಸುವುದು.
+        </li>
+        <li>
+            Maintain the confidentiality of any proprietary Aurigraph information or sensitive User data they may access.
+            <br><br>
+            ಅವರು ಪ್ರವೇಶಿಸಬಹುದಾದ ಯಾವುದೇ ಸ್ವಾಮ್ಯದ ಆರಿಗ್ರಾಫ್ ಮಾಹಿತಿ ಅಥವಾ ಸೂಕ್ಷ್ಮ ಬಳಕೆದಾರರ ಡೇಟಾದ ಗೌಪ್ಯತೆಯನ್ನು ಕಾಪಾಡಿಕೊಳ್ಳುವುದು.
+        </li>
+    </ul>
+    <h4>
+        Permitted Uses:
+        <br>
+        ಅನುಮತಿಸಲಾದ ಬಳಕೆಗಳು:
+    </h4>
+    <ul>
+        <li>
+            Use the authorized Platform tools and resources solely for the purposes of fulfilling their agreed-upon roles in user onboarding, local support, and regional coordination.
+            <br><br>
+            ಬಳಕೆದಾರರ ಸೇರ್ಪಡೆ, ಸ್ಥಳೀಯ ಬೆಂಬಲ ಮತ್ತು ಪ್ರಾದೇಶಿಕ ಸಮನ್ವಯದಲ್ಲಿ ತಮ್ಮ ಒಪ್ಪಿದ ಪಾತ್ರಗಳನ್ನು ಪೂರೈಸುವ ಉದ್ದೇಶಗಳಿಗಾಗಿ ಮಾತ್ರ ಅಧಿಕೃತ ಪ್ಲಾಟ್‌ಫಾರ್ಮ್ ಪರಿಕರಗಳು ಮತ್ತು ಸಂಪನ್ಮೂಲಗಳನ್ನು ಬಳಸುವುದು.
+        </li>
+        <li>
+            Access aggregated and anonymized regional performance data or user statistics only if explicitly provided by Aurigraph for the purpose of evaluating their partnership activities.
+            <br><br>
+            ತಮ್ಮ ಪಾಲುದಾರಿಕೆ ಚಟುವಟಿಕೆಗಳನ್ನು ಮೌಲ್ಯಮಾಪನ ಮಾಡುವ ಉದ್ದೇಶಕ್ಕಾಗಿ ಆರಿಗ್ರಾಫ್‌ನಿಂದ ಸ್ಪಷ್ಟವಾಗಿ ಒದಗಿಸಿದರೆ ಮಾತ್ರ ಒಟ್ಟು ಮತ್ತು ಅನಾಮಧೇಯ ಪ್ರಾದೇಶಿಕ ಕಾರ್ಯಕ್ಷಮತೆ ಡೇಟಾ ಅಥವಾ ಬಳಕೆದಾರರ ಅಂಕಿಅಂಶಗಳನ್ನು ಪ್ರವೇಶಿಸುವುದು.
+        </li>
+    </ul>
+    <h4>
+        Restrictions:
+        <br>
+        ನಿರ್ಬಂಧಗಳು:
+    </h4>
+    <ul>
+        <li>
+            Prohibited from accessing or attempting to access detailed, non-aggregated, or Personal Data of Users beyond what is strictly necessary for their authorized onboarding or support functions, unless explicitly permitted by Aurigraph and compliant with DPDPA.
+            <br><br>
+            ಆರಿಗ್ರಾಫ್‌ನಿಂದ ಸ್ಪಷ್ಟವಾಗಿ ಅನುಮತಿಸದ ಮತ್ತು DPDPA ಗೆ ಅನುಗುಣವಾಗಿರದ ಹೊರತು, ತಮ್ಮ ಅಧಿಕೃತ ಸೇರ್ಪಡೆ ಅಥವಾ ಬೆಂಬಲ ಕಾರ್ಯಗಳಿಗೆ ಕಟ್ಟುನಿಟ್ಟಾಗಿ ಅಗತ್ಯವಿರುವುದನ್ನು ಮೀರಿ ಬಳಕೆದಾರರ ವಿವರವಾದ, ಒಟ್ಟುಗೂಡಿಸದ ಅಥವಾ ವೈಯಕ್ತಿಕ ಡೇಟಾವನ್ನು ಪ್ರವೇಶಿಸಲು ಅಥವಾ ಪ್ರವೇಶಿಸಲು ಪ್ರಯತ್ನಿಸುವುದನ್ನು ನಿಷೇಧಿಸಲಾಗಿದೆ.
+        </li>
+        <li>
+            Prohibited from making any representations, warranties, or guarantees about the AUREX Platform, its data accuracy, or program outcomes that are not explicitly authorized by Aurigraph in writing.
+            <br><br>
+            ಆರಿಗ್ರಾಫ್‌ನಿಂದ ಲಿಖಿತವಾಗಿ ಸ್ಪಷ್ಟವಾಗಿ ಅಧಿಕಾರ ನೀಡದ AUREX ಪ್ಲಾಟ್‌ಫಾರ್ಮ್, ಅದರ ಡೇಟಾ ನಿಖರತೆ ಅಥವಾ ಕಾರ್ಯಕ್ರಮದ ಫಲಿತಾಂಶಗಳ ಬಗ್ಗೆ ಯಾವುದೇ ಪ್ರಾತಿನಿಧ್ಯ, ಖಾತರಿ ಅಥವಾ ಭರವಸೆಗಳನ್ನು ನೀಡುವುದನ್ನು ನಿಷೇಧಿಸಲಾಗಿದೆ.
+        </li>
+        <li>
+            Prohibited from using any Personal Data collected during onboarding or support activities for any purpose other than facilitating the User's registration and use of the AUREX Platform, unless separate, specific consent is obtained from the User in compliance with DPDPA.
+            <br><br>
+            DPDPA ಗೆ ಅನುಗುಣವಾಗಿ ಬಳಕೆದಾರರಿಂದ ಪ್ರತ್ಯೇಕ, ನಿರ್ದಿಷ್ಟ ಒಪ್ಪಿಗೆಯನ್ನು ಪಡೆಯದ ಹೊರತು, ಸೇರ್ಪಡೆ ಅಥವಾ ಬೆಂಬಲ ಚಟುವಟಿಕೆಗಳ ಸಮಯದಲ್ಲಿ ಸಂಗ್ರಹಿಸಲಾದ ಯಾವುದೇ ವೈಯಕ್ತಿಕ ಡೇಟಾವನ್ನು ಬಳಕೆದಾರರ ನೋಂದಣಿ ಮತ್ತು AUREX ಪ್ಲಾಟ್‌ಫಾರ್ಮ್‌ನ ಬಳಕೆಯನ್ನು ಸುಗಮಗೊಳಿಸುವುದನ್ನು ಹೊರತುಪಡಿಸಿ ಬೇರೆ ಯಾವುದೇ ಉದ್ದೇಶಕ್ಕಾಗಿ ಬಳಸುವುದನ್ನು ನಿಷೇಧಿಸಲಾಗಿದೆ.
+        </li>
+        <li>
+            Prohibited from engaging in any activity that could damage Aurigraph's reputation or undermine the integrity of the AUREX Platform.
+            <br><br>
+            ಆರಿಗ್ರಾಫ್‌ನ ಖ್ಯಾತಿಗೆ ಹಾನಿಯಾಗುವ ಅಥವಾ AUREX ಪ್ಲಾಟ್‌ಫಾರ್ಮ್‌ನ ಸಮಗ್ರತೆಯನ್ನು ದುರ್ಬಲಗೊಳಿಸುವ ಯಾವುದೇ ಚಟುವಟಿಕೆಯಲ್ಲಿ ತೊಡಗುವುದನ್ನು ನಿಷೇಧಿಸಲಾಗಿದೆ.
+        </li>
+    </ul>
+    <p>
+        The specific legal nature of the relationship between Aurigraph and Local Partners (e.g., independent contractor, agent) will be defined in a separate agreement. However, all Local Partners, when acting as Users of the Platform or interacting with other Users in relation to the Platform, are bound by these Terms and Aurigraph's data handling policies, particularly concerning their obligations towards Farmers and Field Agents regarding data privacy and platform representations.
+        <br><br>
+        ಆರಿಗ್ರಾಫ್ ಮತ್ತು ಸ್ಥಳೀಯ ಪಾಲುದಾರರ ನಡುವಿನ ಸಂಬಂಧದ ನಿರ್ದಿಷ್ಟ ಕಾನೂನು ಸ್ವರೂಪವನ್ನು (ಉದಾ. ಸ್ವತಂತ್ರ ಗುತ್ತಿಗೆದಾರ, ಏಜೆಂಟ್) ಪ್ರತ್ಯೇಕ ಒಪ್ಪಂದದಲ್ಲಿ ವ್ಯಾಖ್ಯಾನಿಸಲಾಗುತ್ತದೆ. ಆದಾಗ್ಯೂ, ಎಲ್ಲಾ ಸ್ಥಳೀಯ ಪಾಲುದಾರರು, ಪ್ಲಾಟ್‌ಫಾರ್ಮ್‌ನ ಬಳಕೆದಾರರಾಗಿ ಕಾರ್ಯನಿರ್ವಹಿಸುವಾಗ ಅಥವಾ ಪ್ಲಾಟ್‌ಫಾರ್ಮ್‌ಗೆ ಸಂಬಂಧಿಸಿದಂತೆ ಇತರ ಬಳಕೆದಾರರೊಂದಿಗೆ ಸಂವಹನ ನಡೆಸುವಾಗ, ಈ ನಿಯಮಗಳು ಮತ್ತು ಆರಿಗ್ರಾಫ್‌ನ ಡೇಟಾ ನಿರ್ವಹಣಾ ನೀತಿಗಳಿಗೆ ಬದ್ಧರಾಗಿರುತ್ತಾರೆ, ವಿಶೇಷವಾಗಿ ಡೇಟಾ ಗೌಪ್ಯತೆ ಮತ್ತು ಪ್ಲಾಟ್‌ಫಾರ್ಮ್ ಪ್ರಾತಿನಿಧ್ಯಗಳಿಗೆ ಸಂಬಂಧಿಸಿದಂತೆ ರೈತರು ಮತ್ತು ಫೀಲ್ಡ್ ಏಜೆಂಟ್‌ಗಳ ಕಡೆಗೆ ಅವರ ಬಾಧ್ಯತೆಗಳಿಗೆ ಸಂಬಂಧಿಸಿದಂತೆ.
+    </p>
+
+    <h3>
+        Table 1: User Role Summary
+        <br>
+        ಕೋಷ್ಟಕ 1: ಬಳಕೆದಾರರ ಪಾತ್ರದ ಸಾರಾಂಶ
+    </h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Role<br>ಪಾತ್ರ</th>
+                <th>Key Responsibilities<br>ಪ್ರಮುಖ ಜವಾಬ್ದಾರಿಗಳು</th>
+                <th>Permitted Platform Uses<br>ಅನುಮತಿಸಲಾದ ಪ್ಲಾಟ್‌ಫಾರ್ಮ್ ಬಳಕೆಗಳು</th>
+                <th>Key Restrictions<br>ಪ್ರಮುಖ ನಿರ್ಬಂಧಗಳು</th>
+                <th>Primary Data Interactions<br>ಪ್ರಾಥಮಿಕ ಡೇಟಾ ಸಂವಹನಗಳು</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Farmer<br>ರೈತ</strong></td>
+                <td>Provide accurate farm data; Maintain account info; Provide/manage consent (DPDPA); Comply with program rules.<br>ನಿಖರವಾದ ಕೃಷಿ ಡೇಟಾವನ್ನು ಒದಗಿಸಿ; ಖಾತೆ ಮಾಹಿತಿಯನ್ನು ನಿರ್ವಹಿಸಿ; ಒಪ್ಪಿಗೆಯನ್ನು ಒದಗಿಸಿ/ನಿರ್ವಹಿಸಿ (DPDPA); ಕಾರ್ಯಕ್ರಮದ ನಿಯಮಗಳನ್ನು ಅನುಸರಿಸಿ.</td>
+                <td>View own farm data & reports; Manage fields & profile; Manage consent; Participate in programs.<br>ಸ್ವಂತ ಕೃಷಿ ಡೇಟಾ ಮತ್ತು ವರದಿಗಳನ್ನು ವೀಕ್ಷಿಸಿ; ಕ್ಷೇತ್ರಗಳು ಮತ್ತು ಪ್ರೊಫೈಲ್ ಅನ್ನು ನಿರ್ವಹಿಸಿ; ಒಪ್ಪಿಗೆಯನ್ನು ನಿರ್ವಹಿಸಿ; ಕಾರ್ಯಕ್ರಮಗಳಲ್ಲಿ ಭಾಗವಹಿಸಿ.</td>
+                <td>No data manipulation; No unauthorized sharing of detailed reports/raw data; No access to other farms' data.<br>ಡೇಟಾ ಕುಶಲತೆ ಇಲ್ಲ; ವಿವರವಾದ ವರದಿಗಳು/ಕಚ್ಚಾ ಡೇಟಾದ ಅನಧಿಕೃತ ಹಂಚಿಕೆ ಇಲ್ಲ; ಇತರ ಕೃಷಿಗಳ ಡೇಟಾಗೆ ಪ್ರವೇಶವಿಲ್ಲ.</td>
+                <td>Input (Farm Data), View (Reports)<br>ಇನ್‌ಪುಟ್ (ಕೃಷಿ ಡೇಟಾ), ವೀಕ್ಷಿಸಿ (ವರದಿಗಳು)</td>
+            </tr>
+            <tr>
+                <td><strong>Field Agent<br>ಫೀಲ್ಡ್ ಏಜೆಂಟ್</strong></td>
+                <td>Collect data accurately per protocol; Operate drone/sensors safely & legally; Upload data timely; Ensure data security.<br>ಪ್ರೋಟೋಕಾಲ್ ಪ್ರಕಾರ ನಿಖರವಾಗಿ ಡೇಟಾವನ್ನು ಸಂಗ್ರಹಿಸಿ; ಡ್ರೋನ್/ಸಂವೇದಕಗಳನ್ನು ಸುರಕ್ಷಿತವಾಗಿ ಮತ್ತು ಕಾನೂನುಬದ್ಧವಾಗಿ ನಿರ್ವಹಿಸಿ; ಡೇಟಾವನ್ನು ಸಮಯೋಚಿತವಾಗಿ ಅಪ್‌ಲೋಡ್ ಮಾಡಿ; ಡೇಟಾ ಭದ್ರತೆಯನ್ನು ಖಚಿತಪಡಿಸಿಕೊಳ್ಳಿ.</td>
+                <td>Use mobile app for data collection tasks; Access necessary Farmer/field info for tasks; Communicate with Supervisor.<br>ಡೇಟಾ ಸಂಗ್ರಹಣಾ ಕಾರ್ಯಗಳಿಗಾಗಿ ಮೊಬೈಲ್ ಅಪ್ಲಿಕೇಶನ್ ಬಳಸಿ; ಕಾರ್ಯಗಳಿಗಾಗಿ ಅಗತ್ಯವಿರುವ ರೈತ/ಕ್ಷೇತ್ರ ಮಾಹಿತಿಯನ್ನು ಪ್ರವೇಶಿಸಿ; ಮೇಲ್ವಿಚಾರಕರೊಂದಿಗೆ ಸಂವಹನ ನಡೆಸಿ.</td>
+                <td>No external use of collected data; No unauthorized data sharing; No data tampering; No violation of drone/safety regulations.<br>ಸಂಗ್ರಹಿಸಿದ ಡೇಟಾದ ಬಾಹ್ಯ ಬಳಕೆ ಇಲ್ಲ; ಅನಧಿಕೃತ ಡೇಟಾ ಹಂಚಿಕೆ ಇಲ್ಲ; ಡೇಟಾ ಹಾಳುಮಾಡುವಿಕೆ ಇಲ್ಲ; ಡ್ರೋನ್/ಸುರಕ್ಷತಾ ನಿಯಮಗಳ ಉಲ್ಲಂಘನೆ ಇಲ್ಲ.</td>
+                <td>Collect, Input (Field Data)<br>ಸಂಗ್ರಹಿಸಿ, ಇನ್‌ಪುಟ್ (ಕ್ಷೇತ್ರ ಡೇಟಾ)</td>
+            </tr>
+            <tr>
+                <td><strong>Supervisor<br>ಮೇಲ್ವಿಚಾರಕ</strong></td>
+                <td>Ensure data quality & validation (per standards); Oversee Agent performance & compliance; Maintain data confidentiality.<br>ಡೇಟಾ ಗುಣಮಟ್ಟ ಮತ್ತು ಮೌಲ್ಯೀಕರಣವನ್ನು ಖಚಿತಪಡಿಸಿಕೊಳ್ಳಿ (ಮಾನದಂಡಗಳ ಪ್ರಕಾರ); ಏಜೆಂಟ್ ಕಾರ್ಯಕ್ಷಮತೆ ಮತ್ತು ಅನುಸರಣೆಯನ್ನು ಮೇಲ್ವಿಚಾರಣೆ ಮಾಡಿ; ಡೇಟಾ ಗೌಪ್ಯತೆಯನ್ನು ಕಾಪಾಡಿಕೊಳ್ಳಿ.</td>
+                <td>Oversee Agents; View & Validate Agent data; Generate authorized reports; Assign tasks; Manage regional access (if authorized).<br>ಏಜೆಂಟ್‌ಗಳನ್ನು ಮೇಲ್ವಿಚಾರಣೆ ಮಾಡಿ; ಏಜೆಂಟ್ ಡೇಟಾವನ್ನು ವೀಕ್ಷಿಸಿ ಮತ್ತು ಮೌಲ್ಯೀಕರಿಸಿ; ಅಧಿಕೃತ ವರದಿಗಳನ್ನು ರಚಿಸಿ; ಕಾರ್ಯಗಳನ್ನು ನಿಯೋಜಿಸಿ; ಪ್ರಾದೇಶಿಕ ಪ್ರವೇಶವನ್ನು ನಿರ್ವಹಿಸಿ (ಅಧಿಕಾರವಿದ್ದರೆ).</td>
+                <td>No overriding validation without cause; No access outside scope; No sharing unvalidated/sensitive data.<br>ಕಾರಣವಿಲ್ಲದೆ ಮೌಲ್ಯೀಕರಣವನ್ನು ಮೀರಿಸಬೇಡಿ; ವ್ಯಾಪ್ತಿಯ ಹೊರಗೆ ಪ್ರವೇಶವಿಲ್ಲ; ಅಮಾನ್ಯಗೊಳಿಸದ/ಸೂಕ್ಷ್ಮ ಡೇಟಾವನ್ನು ಹಂಚಿಕೊಳ್ಳಬೇಡಿ.</td>
+                <td>View, Validate, Manage (Data)<br>ವೀಕ್ಷಿಸಿ, ಮೌಲ್ಯೀಕರಿಸಿ, ನಿರ್ವಹಿಸಿ (ಡೇಟಾ)</td>
+            </tr>
+            <tr>
+                <td><strong>Local Partner<br>ಸ್ಥಳೀಯ ಪಾಲುದಾರ</strong></td>
+                <td>Onboard users per guidelines; Provide local support; Promote AUREX appropriately; Maintain confidentiality; Comply with laws (inc. DPDPA).<br>ಮಾರ್ಗಸೂಚಿಗಳ ಪ್ರಕಾರ ಬಳಕೆದಾರರನ್ನು ಸೇರಿಸಿ; ಸ್ಥಳೀಯ ಬೆಂಬಲವನ್ನು ಒದಗಿಸಿ; AUREX ಅನ್ನು ಸೂಕ್ತವಾಗಿ ಪ್ರಚಾರ ಮಾಡಿ; ಗೌಪ್ಯತೆಯನ್ನು ಕಾಪಾಡಿಕೊಳ್ಳಿ; ಕಾನೂನುಗಳನ್ನು ಅನುಸರಿಸಿ (DPDPA ಸೇರಿದಂತೆ).</td>
+                <td>Use onboarding/support tools; Access regional dashboards (if provided); Manage local accounts (if authorized).<br>ಸೇರ್ಪಡೆ/ಬೆಂಬಲ ಪರಿಕರಗಳನ್ನು ಬಳಸಿ; ಪ್ರಾದೇಶಿಕ ಡ್ಯಾಶ್‌ಬೋರ್ಡ್‌ಗಳನ್ನು ಪ್ರವೇಶಿಸಿ (ಒದಗಿಸಿದರೆ); ಸ್ಥಳೀಯ ಖಾತೆಗಳನ್ನು ನಿರ್ವಹಿಸಿ (ಅಧಿಕಾರವಿದ್ದರೆ).</td>
+                <td>No access to detailed user data beyond function; No unauthorized platform representations; No misuse of Personal Data collected during onboarding.<br>ಕಾರ್ಯವನ್ನು ಮೀರಿದ ವಿವರವಾದ ಬಳಕೆದಾರರ ಡೇಟಾಗೆ ಪ್ರವೇಶವಿಲ್ಲ; ಅನಧಿಕೃತ ಪ್ಲಾಟ್‌ಫಾರ್ಮ್ ಪ್ರಾತಿನಿಧ್ಯಗಳಿಲ್ಲ; ಸೇರ್ಪಡೆಯ ಸಮಯದಲ್ಲಿ ಸಂಗ್ರಹಿಸಲಾದ ವೈಯಕ್ತಿಕ ಡೇಟಾದ ದುರುಪಯೋಗವಿಲ್ಲ.</td>
+                <td>Manage (Users), Support<br>ನಿರ್ವಹಿಸಿ (ಬಳಕೆದಾರರು), ಬೆಂಬಲ</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>
+        5. Data Handling: Privacy, Security, and Ownership
+        <br>
+        5. ಡೇಟಾ ನಿರ್ವಹಣೆ: ಗೌಪ್ಯತೆ, ಭದ್ರತೆ ಮತ್ತು ಮಾಲೀಕತ್ವ
+    </h2>
+    <p>
+        Aurigraph recognizes the critical importance of data collected and processed through the AUREX Platform. This section outlines the principles and obligations governing data privacy, security, and ownership.
+        <br><br>
+        AUREX ಪ್ಲಾಟ್‌ಫಾರ್ಮ್ ಮೂಲಕ ಸಂಗ್ರಹಿಸಲಾದ ಮತ್ತು ಪ್ರಕ್ರಿಯೆಗೊಳಿಸಲಾದ ಡೇಟಾದ ನಿರ್ಣಾಯಕ ಪ್ರಾಮುಖ್ಯತೆಯನ್ನು ಆರಿಗ್ರಾಫ್ ಗುರುತಿಸುತ್ತದೆ. ಈ ವಿಭಾಗವು ಡೇಟಾ ಗೌಪ್ಯತೆ, ಭದ್ರತೆ ಮತ್ತು ಮಾಲೀಕತ್ವವನ್ನು ನಿಯಂತ್ರಿಸುವ ತತ್ವಗಳು ಮತ್ತು ಬಾಧ್ಯತೆಗಳನ್ನು ವಿವರಿಸುತ್ತದೆ.
+    </p>
+
+    <h3>
+        5.1 Data Privacy
+        <br>
+        5.1 ಡೇಟಾ ಗೌಪ್ಯತೆ
+    </h3>
+    <ul>
+        <li>
+            <strong>Compliance:</strong> Aurigraph is committed to processing Personal Data in compliance with all applicable data protection laws and regulations, with a particular focus on the India Digital Personal Data Protection Act, 2023 (DPDPA) for data pertaining to individuals in India.
+            <br><br>
+            <strong>ಅನುಸರಣೆ:</strong> ಭಾರತದಲ್ಲಿನ ವ್ಯಕ್ತಿಗಳಿಗೆ ಸಂಬಂಧಿಸಿದ ಡೇಟಾಗಾಗಿ ಭಾರತೀಯ ಡಿಜಿಟಲ್ ವೈಯಕ್ತಿಕ ಡೇಟಾ ಸಂರಕ್ಷಣಾ ಕಾಯ್ದೆ, 2023 (DPDPA) ಮೇಲೆ ನಿರ್ದಿಷ್ಟ ಗಮನಹರಿಸಿ, ಎಲ್ಲಾ ಅನ್ವಯವಾಗುವ ಡೇಟಾ ಸಂರಕ್ಷಣಾ ಕಾನೂನುಗಳು ಮತ್ತು ನಿಯಮಗಳಿಗೆ ಅನುಗುಣವಾಗಿ ವೈಯಕ್ತಿಕ ಡೇಟಾವನ್ನು ಪ್ರಕ್ರಿಯೆಗೊಳಿಸಲು ಆರಿಗ್ರಾಫ್ ಬದ್ಧವಾಗಿದೆ.
+        </li>
+        <li>
+            <strong>Privacy Policy:</strong> All collection, use, disclosure, storage, and protection of Personal Data by Aurigraph is governed by the Aurigraph Privacy Policy <a href="#">[Insert Link]</a>, which is hereby incorporated by reference into these Terms. The Privacy Policy provides comprehensive details on Our data practices and Your rights. You are encouraged to review the Privacy Policy carefully.
+            <br><br>
+            <strong>ಗೌಪ್ಯತಾ ನೀತಿ:</strong> ಆರಿಗ್ರಾಫ್‌ನಿಂದ ವೈಯಕ್ತಿಕ ಡೇಟಾದ ಎಲ್ಲಾ ಸಂಗ್ರಹಣೆ, ಬಳಕೆ, ಬಹಿರಂಗಪಡಿಸುವಿಕೆ, ಸಂಗ್ರಹಣೆ ಮತ್ತು ರಕ್ಷಣೆಯು ಆರಿಗ್ರಾಫ್ ಗೌಪ್ಯತಾ ನೀತಿಯಿಂದ <a href="#">[ಲಿಂಕ್ ಸೇರಿಸಿ]</a> ನಿಯಂತ್ರಿಸಲ್ಪಡುತ್ತದೆ, ಇದನ್ನು ಈ ಮೂಲಕ ಈ ನಿಯಮಗಳಲ್ಲಿ ಉಲ್ಲೇಖದಿಂದ ಸಂಯೋಜಿಸಲಾಗಿದೆ. ಗೌಪ್ಯತಾ ನೀತಿಯು ನಮ್ಮ ಡೇಟಾ ಅಭ್ಯಾಸಗಳು ಮತ್ತು ನಿಮ್ಮ ಹಕ್ಕುಗಳ ಬಗ್ಗೆ ಸಮಗ್ರ ವಿವರಗಳನ್ನು ಒದಗಿಸುತ್ತದೆ. ನೀವು ಗೌಪ್ಯತಾ ನೀತಿಯನ್ನು ಎಚ್ಚರಿಕೆಯಿಂದ ಪರಿಶೀಲಿಸಲು ಪ್ರೋತ್ಸಾಹಿಸಲಾಗುತ್ತದೆ.
+        </li>
+        <li>
+            <strong>Consent and Notice (DPDPA Focus):</strong> The processing of Your Personal Data by Aurigraph is primarily based on Your consent, obtained in accordance with the stringent requirements of the DPDPA. This means consent must be free, specific, informed, unconditional, and unambiguous, signified through a clear affirmative action. Before or at the time of seeking Your consent, Aurigraph will provide You with a clear and plain language notice. This notice will include, at a minimum: (i) an itemized description of the Personal Data to be collected and processed; (ii) the specific purpose(s) for which the Personal Data will be processed; (iii) information on how You can exercise Your rights under the DPDPA, including the right to withdraw consent; and (iv) details on how You can make a complaint to the Data Protection Board of India. This notice will be accessible in English and potentially other languages specified in the Eighth Schedule of the Constitution of India. Processing may also occur for certain 'legitimate uses' as defined and permitted under the DPDPA, for which consent may not be required. The specific purposes for processing will be detailed in the Privacy Policy and may include providing the core Platform services, supporting AWD management, facilitating carbon accounting, improving the Platform, ensuring security, and complying with legal obligations. Given the varied uses of data within the platform (e.g., service delivery vs. R&D), consent mechanisms will aim for granularity, allowing You to make specific choices about different processing activities involving Your Personal Data where feasible and required by law. Bundling consent for distinct purposes will be avoided where specific consent is necessary.
+            <br><br>
+            <strong>ಒಪ್ಪಿಗೆ ಮತ್ತು ಸೂಚನೆ (DPDPA ಗಮನ):</strong> DPDPA ಯ ಕಠಿಣ ಅವಶ್ಯಕತೆಗಳಿಗೆ ಅನುಗುಣವಾಗಿ ಪಡೆದ ನಿಮ್ಮ ಒಪ್ಪಿಗೆಯ ಆಧಾರದ ಮೇಲೆ ಆರಿಗ್ರಾಫ್‌ನಿಂದ ನಿಮ್ಮ ವೈಯಕ್ತಿಕ ಡೇಟಾದ ಪ್ರಕ್ರಿಯೆಯು ಪ್ರಾಥಮಿಕವಾಗಿ ಆಧರಿಸಿದೆ. ಇದರರ್ಥ ಒಪ್ಪಿಗೆಯು ಮುಕ್ತ, ನಿರ್ದಿಷ್ಟ, ತಿಳುವಳಿಕೆಯುಳ್ಳ, ಬೇಷರತ್ತಾದ ಮತ್ತು ನಿಸ್ಸಂದಿಗ್ಧವಾಗಿರಬೇಕು, ಸ್ಪಷ್ಟವಾದ ದೃಢೀಕರಣ ಕ್ರಿಯೆಯ ಮೂಲಕ ಸೂಚಿಸಬೇಕು. ನಿಮ್ಮ ಒಪ್ಪಿಗೆಯನ್ನು ಕೋರುವ ಮೊದಲು ಅಥವಾ ಸಮಯದಲ್ಲಿ, ಆರಿಗ್ರಾಫ್ ನಿಮಗೆ ಸ್ಪಷ್ಟ ಮತ್ತು ಸರಳ ಭಾಷೆಯ ಸೂಚನೆಯನ್ನು ಒದಗಿಸುತ್ತದೆ. ಈ ಸೂಚನೆಯು ಕನಿಷ್ಠ ಪಕ್ಷ ಇವುಗಳನ್ನು ಒಳಗೊಂಡಿರುತ್ತದೆ: (i) ಸಂಗ್ರಹಿಸಬೇಕಾದ ಮತ್ತು ಪ್ರಕ್ರಿಯೆಗೊಳಿಸಬೇಕಾದ ವೈಯಕ್ತಿಕ ಡೇಟಾದ ಐಟಂವಾರು ವಿವರಣೆ; (ii) ವೈಯಕ್ತಿಕ ಡೇಟಾವನ್ನು ಪ್ರಕ್ರಿಯೆಗೊಳಿಸಲಾಗುವ ನಿರ್ದಿಷ್ಟ ಉದ್ದೇಶ(ಗಳು); (iii) ಒಪ್ಪಿಗೆಯನ್ನು ಹಿಂತೆಗೆದುಕೊಳ್ಳುವ ಹಕ್ಕು ಸೇರಿದಂತೆ DPDPA ಅಡಿಯಲ್ಲಿ ನಿಮ್ಮ ಹಕ್ಕುಗಳನ್ನು ನೀವು ಹೇಗೆ ಚಲಾಯಿಸಬಹುದು ಎಂಬುದರ ಕುರಿತು ಮಾಹಿತಿ; ಮತ್ತು (iv) ಭಾರತದ ಡೇಟಾ ಸಂರಕ್ಷಣಾ ಮಂಡಳಿಗೆ ನೀವು ಹೇಗೆ ದೂರು ನೀಡಬಹುದು ಎಂಬುದರ ವಿವರಗಳು. ಈ ಸೂಚನೆಯು ಇಂಗ್ಲಿಷ್‌ನಲ್ಲಿ ಮತ್ತು ಸಂಭಾವ್ಯವಾಗಿ ಭಾರತದ ಸಂವಿಧಾನದ ಎಂಟನೇ ಅನುಸೂಚಿಯಲ್ಲಿ ನಿರ್ದಿಷ್ಟಪಡಿಸಿದ ಇತರ ಭಾಷೆಗಳಲ್ಲಿ ಲಭ್ಯವಿರುತ್ತದೆ. DPDPA ಅಡಿಯಲ್ಲಿ ವ್ಯಾಖ್ಯಾನಿಸಲಾದ ಮತ್ತು ಅನುಮತಿಸಲಾದ ಕೆಲವು 'ಕಾನೂನುಬದ್ಧ ಬಳಕೆಗಳಿಗೆ' ಪ್ರಕ್ರಿಯೆಯು ಸಂಭವಿಸಬಹುದು, ಇದಕ್ಕಾಗಿ ಒಪ್ಪಿಗೆ ಅಗತ್ಯವಿಲ್ಲದಿರಬಹುದು. ಪ್ರಕ್ರಿಯೆಯ ನಿರ್ದಿಷ್ಟ ಉದ್ದೇಶಗಳನ್ನು ಗೌಪ್ಯತಾ ನೀತಿಯಲ್ಲಿ ವಿವರಿಸಲಾಗುವುದು ಮತ್ತು ಪ್ರಮುಖ ಪ್ಲಾಟ್‌ಫಾರ್ಮ್ ಸೇವೆಗಳನ್ನು ಒದಗಿಸುವುದು, AWD ನಿರ್ವಹಣೆಯನ್ನು ಬೆಂಬಲಿಸುವುದು, ಇಂಗಾಲದ ಲೆಕ್ಕಪತ್ರವನ್ನು ಸುಗಮಗೊಳಿಸುವುದು, ಪ್ಲಾಟ್‌ಫಾರ್ಮ್ ಅನ್ನು ಸುಧಾರಿಸುವುದು, ಭದ್ರತೆಯನ್ನು ಖಚಿತಪಡಿಸುವುದು ಮತ್ತು ಕಾನೂನು ಬಾಧ್ಯತೆಗಳನ್ನು ಅನುಸರಿಸುವುದನ್ನು ಒಳಗೊಂಡಿರಬಹುದು. ಪ್ಲಾಟ್‌ಫಾರ್ಮ್‌ನಲ್ಲಿ ಡೇಟಾದ ವಿವಿಧ ಉಪಯೋಗಗಳನ್ನು (ಉದಾ. ಸೇವಾ ವಿತರಣೆ ಮತ್ತು ಸಂಶೋಧನೆ ಮತ್ತು ಅಭಿವೃದ್ಧಿ) ಗಮನದಲ್ಲಿಟ್ಟುಕೊಂಡು, ಕಾನೂನಿನ ಪ್ರಕಾರ ಸಾಧ್ಯವಾದಾಗ ಮತ್ತು ಅಗತ್ಯವಿದ್ದಾಗ ನಿಮ್ಮ ವೈಯಕ್ತಿಕ ಡೇಟಾವನ್ನು ಒಳಗೊಂಡಿರುವ ವಿಭಿನ್ನ ಸಂಸ್ಕರಣಾ ಚಟುವಟಿಕೆಗಳ ಬಗ್ಗೆ ನಿರ್ದಿಷ್ಟ ಆಯ್ಕೆಗಳನ್ನು ಮಾಡಲು ನಿಮಗೆ ಅನುಮತಿಸುವ ಮೂಲಕ ಒಪ್ಪಿಗೆ ಕಾರ್ಯವಿಧಾನಗಳು ವಿವರವಾಗಿರುತ್ತವೆ. ನಿರ್ದಿಷ್ಟ ಒಪ್ಪಿಗೆ ಅಗತ್ಯವಿರುವಲ್ಲಿ ವಿಭಿನ್ನ ಉದ್ದೇಶಗಳಿಗಾಗಿ ಒಪ್ಪಿಗೆಯನ್ನು ಒಟ್ಟಿಗೆ ಸೇರಿಸುವುದನ್ನು ತಪ್ಪಿಸಲಾಗುತ್ತದೆ.
+        </li>
+        <li>
+            <strong>Consent Withdrawal:</strong> You have the right to withdraw Your consent for the processing of Your Personal Data at any time. Aurigraph will provide an easily accessible mechanism (e.g., through Your Account settings or by contacting Our Data Protection Officer) for You to withdraw consent. Upon receiving a withdrawal request, Aurigraph will cease processing Your Personal Data for the purpose(s) for which consent was withdrawn within a reasonable timeframe, unless continued processing is required or authorized under the DPDPA or other applicable laws. Withdrawal of consent may affect Your ability to use certain features or functionalities of the Platform, and You will be informed of such consequences.
+            <br><br>
+            <strong>ಒಪ್ಪಿಗೆ ಹಿಂತೆಗೆದುಕೊಳ್ಳುವಿಕೆ:</strong> ಯಾವುದೇ ಸಮಯದಲ್ಲಿ ನಿಮ್ಮ ವೈಯಕ್ತಿಕ ಡೇಟಾದ ಪ್ರಕ್ರಿಯೆಗೆ ನಿಮ್ಮ ಒಪ್ಪಿಗೆಯನ್ನು ಹಿಂತೆಗೆದುಕೊಳ್ಳುವ ಹಕ್ಕನ್ನು ನೀವು ಹೊಂದಿರುತ್ತೀರಿ. ಒಪ್ಪಿಗೆಯನ್ನು ಹಿಂತೆಗೆದುಕೊಳ್ಳಲು ಆರಿಗ್ರಾಫ್ ನಿಮಗೆ ಸುಲಭವಾಗಿ ಪ್ರವೇಶಿಸಬಹುದಾದ ಕಾರ್ಯವಿಧಾನವನ್ನು (ಉದಾ. ನಿಮ್ಮ ಖಾತೆ ಸೆಟ್ಟಿಂಗ್‌ಗಳ ಮೂಲಕ ಅಥವಾ ನಮ್ಮ ಡೇಟಾ ಸಂರಕ್ಷಣಾ ಅಧಿಕಾರಿಯನ್ನು ಸಂಪರ್ಕಿಸುವ ಮೂಲಕ) ಒದಗಿಸುತ್ತದೆ. ಹಿಂತೆಗೆದುಕೊಳ್ಳುವ ವಿನಂತಿಯನ್ನು ಸ್ವೀಕರಿಸಿದ ನಂತರ, DPDPA ಅಥವಾ ಇತರ ಅನ್ವಯವಾಗುವ ಕಾನೂನುಗಳ ಅಡಿಯಲ್ಲಿ ನಿರಂತರ ಪ್ರಕ್ರಿಯೆಯ ಅಗತ್ಯವಿದ್ದಲ್ಲಿ ಅಥವಾ ಅಧಿಕಾರ ನೀಡದ ಹೊರತು, ಒಪ್ಪಿಗೆ ಹಿಂತೆಗೆದುಕೊಳ್ಳಲಾದ ಉದ್ದೇಶ(ಗಳಿ)ಗಾಗಿ ನಿಮ್ಮ ವೈಯಕ್ತಿಕ ಡೇಟಾವನ್ನು ಸಮಂಜಸವಾದ ಕಾಲಮಿತಿಯೊಳಗೆ ಪ್ರಕ್ರಿಯೆಗೊಳಿಸುವುದನ್ನು ಆರಿಗ್ರಾಫ್ ನಿಲ್ಲಿಸುತ್ತದೆ. ಒಪ್ಪಿಗೆಯನ್ನು ಹಿಂತೆಗೆದುಕೊಳ್ಳುವುದು ಪ್ಲಾಟ್‌ಫಾರ್ಮ್‌ನ ಕೆಲವು ವೈಶಿಷ್ಟ್ಯಗಳು ಅಥವಾ ಕಾರ್ಯಚಟುವಟಿಕೆಗಳನ್ನು ಬಳಸುವ ನಿಮ್ಮ ಸಾಮರ್ಥ್ಯದ ಮೇಲೆ ಪರಿಣಾಮ ಬೀರಬಹುದು, ಮತ್ತು ಅಂತಹ ಪರಿಣಾಮಗಳ ಬಗ್ಗೆ ನಿಮಗೆ ತಿಳಿಸಲಾಗುವುದು.
+        </li>
+        <li>
+            <strong>Data Principal Rights:</strong> As a Data Principal under the DPDPA, You have certain rights concerning Your Personal Data. These include the right to access information about the processing of Your data, obtain a summary of Your processed data, request correction of inaccurate or incomplete data, request erasure of Your data under certain conditions, the right to grievance redressal, and the right to nominate another person to exercise Your rights in case of death or incapacity. The process for exercising these rights is detailed in the Aurigraph Privacy Policy and typically involves contacting Aurigraph's designated Data Protection Officer or contact person.
+            <br><br>
+            <strong>ಡೇಟಾ ಪ್ರಿನ್ಸಿಪಾಲ್ ಹಕ್ಕುಗಳು:</strong> DPDPA ಅಡಿಯಲ್ಲಿ ಡೇಟಾ ಪ್ರಿನ್ಸಿಪಾಲ್ ಆಗಿ, ನಿಮ್ಮ ವೈಯಕ್ತಿಕ ಡೇಟಾಗೆ ಸಂಬಂಧಿಸಿದಂತೆ ನಿಮಗೆ ಕೆಲವು ಹಕ್ಕುಗಳಿವೆ. ಇವುಗಳಲ್ಲಿ ನಿಮ್ಮ ಡೇಟಾದ ಪ್ರಕ್ರಿಯೆಯ ಬಗ್ಗೆ ಮಾಹಿತಿಯನ್ನು ಪ್ರವೇಶಿಸುವ ಹಕ್ಕು, ನಿಮ್ಮ ಪ್ರಕ್ರಿಯೆಗೊಳಿಸಿದ ಡೇಟಾದ ಸಾರಾಂಶವನ್ನು ಪಡೆಯುವ ಹಕ್ಕು, ನಿಖರವಲ್ಲದ ಅಥವಾ ಅಪೂರ್ಣ ಡೇಟಾದ ತಿದ್ದುಪಡಿಯನ್ನು ಕೋರುವ ಹಕ್ಕು, ಕೆಲವು ಪರಿಸ್ಥಿತಿಗಳಲ್ಲಿ ನಿಮ್ಮ ಡೇಟಾವನ್ನು ಅಳಿಸಲು ಕೋರುವ ಹಕ್ಕು, ಕುಂದುಕೊರತೆ ನಿವಾರಣೆಯ ಹಕ್ಕು, ಮತ್ತು ಸಾವು ಅಥವಾ ಅಸಮರ್ಥತೆಯ ಸಂದರ್ಭದಲ್ಲಿ ನಿಮ್ಮ ಹಕ್ಕುಗಳನ್ನು ಚಲಾಯಿಸಲು ಇನ್ನೊಬ್ಬ ವ್ಯಕ್ತಿಯನ್ನು ನಾಮನಿರ್ದೇಶನ ಮಾಡುವ ಹಕ್ಕು ಸೇರಿವೆ. ಈ ಹಕ್ಕುಗಳನ್ನು ಚಲಾಯಿಸುವ ಪ್ರಕ್ರಿಯೆಯನ್ನು ಆರಿಗ್ರಾಫ್ ಗೌಪ್ಯತಾ ನೀತಿಯಲ್ಲಿ ವಿವರಿಸಲಾಗಿದೆ ಮತ್ತು ಸಾಮಾನ್ಯವಾಗಿ ಆರಿಗ್ರಾಫ್‌ನ ಗೊತ್ತುಪಡಿಸಿದ ಡೇಟಾ ಸಂರಕ್ಷಣಾ ಅಧಿಕಾರಿ ಅಥವಾ ಸಂಪರ್ಕ ವ್ಯಕ್ತಿಯನ್ನು ಸಂಪರ್ಕಿಸುವುದನ್ನು ಒಳಗೊಂಡಿರುತ್ತದೆ.
+        </li>
+        <li>
+            <strong>Purpose Limitation:</strong> Aurigraph will process Your Personal Data only for the lawful purposes specified in the notice provided at the time of consent collection and detailed in the Privacy Policy. Data will not be processed for purposes incompatible with those originally specified without obtaining further consent, where required.
+            <br><br>
+            <strong>ಉದ್ದೇಶದ ಮಿತಿ:</strong> ಒಪ್ಪಿಗೆ ಸಂಗ್ರಹಣೆಯ ಸಮಯದಲ್ಲಿ ಮತ್ತು ಗೌಪ್ಯತಾ ನೀತಿಯಲ್ಲಿ ವಿವರಿಸಿದಂತೆ ಒದಗಿಸಲಾದ ಸೂಚನೆಯಲ್ಲಿ ನಿರ್ದಿಷ್ಟಪಡಿಸಿದ ಕಾನೂನುಬದ್ಧ ಉದ್ದೇಶಗಳಿಗಾಗಿ ಮಾತ್ರ ಆರಿಗ್ರಾಫ್ ನಿಮ್ಮ ವೈಯಕ್ತಿಕ ಡೇಟಾವನ್ನು ಪ್ರಕ್ರಿಯೆಗೊಳಿಸುತ್ತದೆ. ಅಗತ್ಯವಿದ್ದಾಗ ಹೆಚ್ಚಿನ ಒಪ್ಪಿಗೆಯನ್ನು ಪಡೆಯದೆ ಮೂಲತಃ ನಿರ್ದಿಷ್ಟಪಡಿಸಿದ ಉದ್ದೇಶಗಳಿಗೆ ಹೊಂದಿಕೆಯಾಗದ ಉದ್ದೇಶಗಳಿಗಾಗಿ ಡೇಟಾವನ್ನು ಪ್ರಕ್ರಿಯೆಗೊಳಿಸಲಾಗುವುದಿಲ್ಲ.
+        </li>
+        <li>
+            <strong>Data Minimization:</strong> Aurigraph will limit the collection and processing of Personal Data to what is adequate, relevant, and necessary for the specified purposes.
+            <br><br>
+            <strong>ಡೇಟಾ ಕನಿಷ್ಠೀಕರಣ:</strong> ಆರಿಗ್ರಾಫ್ ನಿರ್ದಿಷ್ಟಪಡಿಸಿದ ಉದ್ದೇಶಗಳಿಗೆ ಸಮರ್ಪಕ, ಸಂಬಂಧಿತ ಮತ್ತು ಅಗತ್ಯವಿರುವ ವೈಯಕ್ತಿಕ ಡೇಟಾದ ಸಂಗ್ರಹಣೆ ಮತ್ತು ಪ್ರಕ್ರಿಯೆಯನ್ನು ಸೀಮಿತಗೊಳಿಸುತ್ತದೆ.
+        </li>
+        <li>
+            <strong>Accuracy:</strong> Aurigraph will make reasonable efforts to ensure that Personal Data processed is accurate and kept up to date, particularly if it is likely to be used for decisions affecting the Data Principal or shared with other entities. You also have a duty under DPDPA to provide verifiably authentic information when requesting corrections.
+            <br><br>
+            <strong>ನಿಖರತೆ:</strong> ಆರಿಗ್ರಾಫ್ ಪ್ರಕ್ರಿಯೆಗೊಳಿಸಿದ ವೈಯಕ್ತಿಕ ಡೇಟಾವು ನಿಖರವಾಗಿದೆ ಮತ್ತು ನವೀಕೃತವಾಗಿದೆ ಎಂದು ಖಚಿತಪಡಿಸಿಕೊಳ್ಳಲು ಸಮಂಜಸವಾದ ಪ್ರಯತ್ನಗಳನ್ನು ಮಾಡುತ್ತದೆ, ವಿಶೇಷವಾಗಿ ಡೇಟಾ ಪ್ರಿನ್ಸಿಪಾಲ್ ಮೇಲೆ ಪರಿಣಾಮ ಬೀರುವ ನಿರ್ಧಾರಗಳಿಗೆ ಅಥವಾ ಇತರ ಘಟಕಗಳೊಂದಿಗೆ ಹಂಚಿಕೊಳ್ಳಲಾಗುವ ಸಾಧ್ಯತೆಯಿದ್ದರೆ. ತಿದ್ದುಪಡಿಗಳನ್ನು ಕೋರುವಾಗ ಪರಿಶೀಲಿಸಬಹುದಾದ ಅಧಿಕೃತ ಮಾಹಿತಿಯನ್ನು ಒದಗಿಸುವ ಕರ್ತವ್ಯವನ್ನು ನೀವು DPDPA ಅಡಿಯಲ್ಲಿ ಹೊಂದಿರುತ್ತೀರಿ.
+        </li>
+        <li>
+            <strong>Children's Data:</strong> Aurigraph does not knowingly collect Personal Data from individuals under the age of 18 without obtaining verifiable consent from their parent or legal guardian, as required by the DPDPA. If the Platform involves processing children's data, Aurigraph will refrain from any processing likely to cause harm to the child and will not engage in tracking, behavioral monitoring, or targeted advertising directed at children unless specifically permitted by law and appropriate safeguards are in place.
+            <br><br>
+            <strong>ಮಕ್ಕಳ ಡೇಟಾ:</strong> DPDPA ಯಿಂದ ಅಗತ್ಯವಿರುವಂತೆ, ಅವರ ಪೋಷಕರು ಅಥವಾ ಕಾನೂನು ಪಾಲಕರಿಂದ ಪರಿಶೀಲಿಸಬಹುದಾದ ಒಪ್ಪಿಗೆಯನ್ನು ಪಡೆಯದೆ 18 ವರ್ಷಕ್ಕಿಂತ ಕಡಿಮೆ ವಯಸ್ಸಿನ ವ್ಯಕ್ತಿಗಳಿಂದ ಆರಿಗ್ರಾಫ್ ಉದ್ದೇಶಪೂರ್ವಕವಾಗಿ ವೈಯಕ್ತಿಕ ಡೇಟಾವನ್ನು ಸಂಗ್ರಹಿಸುವುದಿಲ್ಲ. ಪ್ಲಾಟ್‌ಫಾರ್ಮ್ ಮಕ್ಕಳ ಡೇಟಾವನ್ನು ಪ್ರಕ್ರಿಯೆಗೊಳಿಸುವುದನ್ನು ಒಳಗೊಂಡಿದ್ದರೆ, ಮಗುವಿಗೆ ಹಾನಿ ಉಂಟುಮಾಡುವ ಯಾವುದೇ ಪ್ರಕ್ರಿಯೆಯಿಂದ ಆರಿಗ್ರಾಫ್ ದೂರವಿರುತ್ತದೆ ಮತ್ತು ಕಾನೂನಿನಿಂದ ನಿರ್ದಿಷ್ಟವಾಗಿ ಅನುಮತಿಸದ ಮತ್ತು ಸೂಕ್ತವಾದ ಸುರಕ್ಷತೆಗಳು ಜಾರಿಯಲ್ಲಿರದ ಹೊರತು ಮಕ್ಕಳನ್ನು ಗುರಿಯಾಗಿಸಿಕೊಂಡು ಟ್ರ್ಯಾಕಿಂಗ್, ನಡವಳಿಕೆಯ ಮೇಲ್ವಿಚಾರಣೆ ಅಥವಾ ಉದ್ದೇಶಿತ ಜಾಹೀರಾತಿನಲ್ಲಿ ತೊಡಗುವುದಿಲ್ಲ.
+        </li>
+        <li>
+            <strong>Data Retention and Erasure:</strong> Personal Data will not be retained for longer than is necessary for the purposes for which it was processed. Data will be erased upon withdrawal of consent (unless retention is legally required), when the purpose is fulfilled, or upon a valid erasure request from the Data Principal. Specific retention periods may be defined in the Privacy Policy or dictated by program requirements (e.g., carbon project monitoring periods).
+            <br><br>
+            <strong>ಡೇಟಾ ಉಳಿಸಿಕೊಳ್ಳುವಿಕೆ ಮತ್ತು ಅಳಿಸುವಿಕೆ:</strong> ವೈಯಕ್ತಿಕ ಡೇಟಾವನ್ನು ಪ್ರಕ್ರಿಯೆಗೊಳಿಸಲಾದ ಉದ್ದೇಶಗಳಿಗಾಗಿ ಅಗತ್ಯಕ್ಕಿಂತ ಹೆಚ್ಚು ಕಾಲ ಉಳಿಸಿಕೊಳ್ಳಲಾಗುವುದಿಲ್ಲ. ಒಪ್ಪಿಗೆಯನ್ನು ಹಿಂತೆಗೆದುಕೊಂಡಾಗ (ಕಾನೂನುಬದ್ಧವಾಗಿ ಉಳಿಸಿಕೊಳ್ಳುವ ಅಗತ್ಯವಿಲ್ಲದಿದ್ದರೆ), ಉದ್ದೇಶವು ಈಡೇರಿದಾಗ, ಅಥವಾ ಡೇಟಾ ಪ್ರಿನ್ಸಿಪಾಲ್‌ನಿಂದ ಮಾನ್ಯವಾದ ಅಳಿಸುವಿಕೆ ವಿನಂತಿಯ ಮೇರೆಗೆ ಡೇಟಾವನ್ನು ಅಳಿಸಲಾಗುತ್ತದೆ. ನಿರ್ದಿಷ್ಟ ಉಳಿಸಿಕೊಳ್ಳುವ ಅವಧಿಗಳನ್ನು ಗೌಪ್ಯತಾ ನೀತಿಯಲ್ಲಿ ವ್ಯಾಖ್ಯಾನಿಸಬಹುದು ಅಥವಾ ಕಾರ್ಯಕ್ರಮದ ಅವಶ್ಯಕತೆಗಳಿಂದ (ಉದಾ. ಇಂಗಾಲದ ಯೋಜನೆಯ ಮೇಲ್ವಿಚಾರಣಾ ಅವಧಿಗಳು) ನಿರ್ದೇಶಿಸಬಹುದು.
+        </li>
+        <li>
+            <strong>Breach Notification:</strong> In the event of a Personal Data breach that is likely to affect Data Principals, Aurigraph will notify the Data Protection Board of India and the affected Data Principals as required by the DPDPA, providing details about the breach and mitigation measures taken.
+            <br><br>
+            <strong>ಉಲ್ಲಂಘನೆ ಅಧಿಸೂಚನೆ:</strong> ಡೇಟಾ ಪ್ರಿನ್ಸಿಪಾಲ್‌ಗಳ ಮೇಲೆ ಪರಿಣಾಮ ಬೀರುವ ಸಾಧ್ಯತೆಯಿರುವ ವೈಯಕ್ತಿಕ ಡೇಟಾ ಉಲ್ಲಂಘನೆಯ ಸಂದರ್ಭದಲ್ಲಿ, ಆರಿಗ್ರಾಫ್ ಭಾರತದ ಡೇಟಾ ಸಂರಕ್ಷಣಾ ಮಂಡಳಿಗೆ ಮತ್ತು DPDPA ಯಿಂದ ಅಗತ್ಯವಿರುವಂತೆ ಪೀಡಿತ ಡೇಟಾ ಪ್ರಿನ್ಸಿಪಾಲ್‌ಗಳಿಗೆ, ಉಲ್ಲಂಘನೆಯ ವಿವರಗಳು ಮತ್ತು ತೆಗೆದುಕೊಂಡ ತಗ್ಗಿಸುವ ಕ್ರಮಗಳ ಬಗ್ಗೆ ತಿಳಿಸುತ್ತದೆ.
+        </li>
+    </ul>
+
+    <h3>
+        5.2 Data Security
+        <br>
+        5.2 ಡೇಟಾ ಭದ್ರತೆ
+    </h3>
+    <ul>
+        <li>
+            <strong>Aurigraph Measures:</strong> Aurigraph implements and maintains reasonable administrative, physical, and technical security safeguards designed to protect the confidentiality, integrity, and availability of all data stored and processed on the AUREX Platform, including Personal Data and User Content. These measures may include access controls, encryption of data during transfer and potentially at rest, regular security assessments, data backup procedures, and employee training. We strive to protect data from unauthorized access, use, disclosure, alteration, loss, or destruction.
+            <br><br>
+            <strong>ಆರಿಗ್ರಾಫ್ ಕ್ರಮಗಳು:</strong> ಆರಿಗ್ರಾಫ್ ವೈಯಕ್ತಿಕ ಡೇಟಾ ಮತ್ತು ಬಳಕೆದಾರರ ವಿಷಯ ಸೇರಿದಂತೆ AUREX ಪ್ಲಾಟ್‌ಫಾರ್ಮ್‌ನಲ್ಲಿ ಸಂಗ್ರಹಿಸಲಾದ ಮತ್ತು ಪ್ರಕ್ರಿಯೆಗೊಳಿಸಲಾದ ಎಲ್ಲಾ ಡೇಟಾದ ಗೌಪ್ಯತೆ, ಸಮಗ್ರತೆ ಮತ್ತು ಲಭ್ಯತೆಯನ್ನು ರಕ್ಷಿಸಲು ವಿನ್ಯಾಸಗೊಳಿಸಲಾದ ಸಮಂಜಸವಾದ ಆಡಳಿತಾತ್ಮಕ, ಭೌತಿಕ ಮತ್ತು ತಾಂತ್ರಿಕ ಭದ್ರತಾ ರಕ್ಷಣೆಗಳನ್ನು ಜಾರಿಗೆ ತರುತ್ತದೆ ಮತ್ತು ನಿರ್ವಹಿಸುತ್ತದೆ. ಈ ಕ್ರಮಗಳು ಪ್ರವೇಶ ನಿಯಂತ್ರಣಗಳು, ವರ್ಗಾವಣೆಯ ಸಮಯದಲ್ಲಿ ಮತ್ತು ಸಂಭಾವ್ಯವಾಗಿ ವಿಶ್ರಾಂತಿಯಲ್ಲಿರುವ ಡೇಟಾದ ಎನ್‌ಕ್ರಿಪ್ಶನ್, ನಿಯಮಿತ ಭದ್ರತಾ ಮೌಲ್ಯಮಾಪನಗಳು, ಡೇಟಾ ಬ್ಯಾಕಪ್ ಕಾರ್ಯವಿಧಾನಗಳು ಮತ್ತು ಉದ್ಯೋಗಿ ತರಬೇತಿಯನ್ನು ಒಳಗೊಂಡಿರಬಹುದು. ನಾವು ಅನಧಿಕೃತ ಪ್ರವೇಶ, ಬಳಕೆ, ಬಹಿರಂಗಪಡಿಸುವಿಕೆ, ಬದಲಾವಣೆ, ನಷ್ಟ ಅಥವಾ ನಾಶದಿಂದ ಡೇಟಾವನ್ನು ರಕ್ಷಿಸಲು ಪ್ರಯತ್ನಿಸುತ್ತೇವೆ.
+        </li>
+        <li>
+            <strong>User Responsibilities:</strong> You acknowledge that You play a crucial role in data security. You are responsible for maintaining the confidentiality of Your Account credentials (as per Section 2.3) and for securing the devices (computers, mobile phones, tablets, drone equipment) You use to access the Platform. Field Agents, in particular, must ensure the physical and digital security of data collection devices and promptly upload data to minimize local storage risks.
+            <br><br>
+            <strong>ಬಳಕೆದಾರರ ಜವಾಬ್ದಾರಿಗಳು:</strong> ಡೇಟಾ ಭದ್ರತೆಯಲ್ಲಿ ನೀವು ನಿರ್ಣಾಯಕ ಪಾತ್ರವನ್ನು ವಹಿಸುತ್ತೀರಿ ಎಂದು ನೀವು ಅಂಗೀಕರಿಸುತ್ತೀರಿ. ನಿಮ್ಮ ಖಾತೆ ರುಜುವಾತುಗಳ ಗೌಪ್ಯತೆಯನ್ನು ಕಾಪಾಡಿಕೊಳ್ಳುವುದು (ವಿಭಾಗ 2.3 ರ ಪ್ರಕಾರ) ಮತ್ತು ಪ್ಲಾಟ್‌ಫಾರ್ಮ್ ಅನ್ನು ಪ್ರವೇಶಿಸಲು ನೀವು ಬಳಸುವ ಸಾಧನಗಳನ್ನು (ಕಂಪ್ಯೂಟರ್‌ಗಳು, ಮೊಬೈಲ್ ಫೋನ್‌ಗಳು, ಟ್ಯಾಬ್ಲೆಟ್‌ಗಳು, ಡ್ರೋನ್ ಉಪಕರಣಗಳು) ಸುರಕ್ಷಿತವಾಗಿರಿಸುವುದು ನಿಮ್ಮ ಜವಾಬ್ದಾರಿಯಾಗಿದೆ. ಫೀಲ್ಡ್ ಏಜೆಂಟ್‌ಗಳು, ನಿರ್ದಿಷ್ಟವಾಗಿ, ಡೇಟಾ ಸಂಗ್ರಹಣಾ ಸಾಧನಗಳ ಭೌತಿಕ ಮತ್ತು ಡಿಜಿಟಲ್ ಭದ್ರತೆಯನ್ನು ಖಚಿತಪಡಿಸಿಕೊಳ್ಳಬೇಕು ಮತ್ತು ಸ್ಥಳೀಯ ಸಂಗ್ರಹಣಾ ಅಪಾಯಗಳನ್ನು ಕಡಿಮೆ ಮಾಡಲು ಡೇಟಾವನ್ನು ತ್ವರಿತವಾಗಿ ಅಪ್‌ಲೋಡ್ ಮಾಡಬೇಕು.
+        </li>
+        <li>
+            <strong>Disclaimer:</strong> While Aurigraph takes reasonable security measures, You acknowledge that no method of transmission over the Internet or method of electronic storage is 100% secure. Therefore, Aurigraph cannot guarantee absolute security of Your data. You use the Platform and transmit data at Your own risk.
+            <br><br>
+            <strong>ಹಕ್ಕುತ್ಯಾಗ:</strong> ಆರಿಗ್ರಾಫ್ ಸಮಂಜಸವಾದ ಭದ್ರತಾ ಕ್ರಮಗಳನ್ನು ತೆಗೆದುಕೊಳ್ಳುತ್ತದೆಯಾದರೂ, ಇಂಟರ್ನೆಟ್ ಮೂಲಕ ಪ್ರಸರಣದ ಯಾವುದೇ ವಿಧಾನ ಅಥವಾ ಎಲೆಕ್ಟ್ರಾನಿಕ್ ಸಂಗ್ರಹಣೆಯ ಯಾವುದೇ ವಿಧಾನವು 100% ಸುರಕ್ಷಿತವಲ್ಲ ಎಂದು ನೀವು ಅಂಗೀಕರಿಸುತ್ತೀರಿ. ಆದ್ದರಿಂದ, ಆರಿಗ್ರಾಫ್ ನಿಮ್ಮ ಡೇಟಾದ ಸಂಪೂರ್ಣ ಭದ್ರತೆಯನ್ನು ಖಾತರಿಪಡಿಸುವುದಿಲ್ಲ. ನೀವು ನಿಮ್ಮ ಸ್ವಂತ ಅಪಾಯದಲ್ಲಿ ಪ್ಲಾಟ್‌ಫಾರ್ಮ್ ಅನ್ನು ಬಳಸುತ್ತೀರಿ ಮತ್ತು ಡೇಟಾವನ್ನು ರವಾನಿಸುತ್ತೀರಿ.
+        </li>
+    </ul>
+
+    <h3>
+        5.3 Data Ownership
+        <br>
+        5.3 ಡೇಟಾ ಮಾಲೀಕತ್ವ
+    </h3>
+    <ul>
+        <li>
+            <strong>User Content / Client Data:</strong> As between You and Aurigraph, You retain all ownership rights, title, and interest, including all Intellectual Property Rights, in and to the raw data and content that You submit, upload, or input into the AUREX Platform ("User Content" or "Client Data"). This includes, for example, farm boundary KML/shapefiles, information about historical or current farming practices entered manually, soil test results uploaded, photographs taken and uploaded by You (excluding those taken by Field Agents as part of the Service), and specific consent preferences You set.
+            <br><br>
+            <strong>ಬಳಕೆದಾರರ ವಿಷಯ / ಕ್ಲೈಂಟ್ ಡೇಟಾ:</strong> ನೀವು ಮತ್ತು ಆರಿಗ್ರಾಫ್ ನಡುವೆ, ನೀವು AUREX ಪ್ಲಾಟ್‌ಫಾರ್ಮ್‌ಗೆ ಸಲ್ಲಿಸುವ, ಅಪ್‌ಲೋಡ್ ಮಾಡುವ ಅಥವಾ ಇನ್‌ಪುಟ್ ಮಾಡುವ ಕಚ್ಚಾ ಡೇಟಾ ಮತ್ತು ವಿಷಯದಲ್ಲಿ ("ಬಳಕೆದಾರರ ವಿಷಯ" ಅಥವಾ "ಕ್ಲೈಂಟ್ ಡೇಟಾ") ಎಲ್ಲಾ ಮಾಲೀಕತ್ವದ ಹಕ್ಕುಗಳು, ಶೀರ್ಷಿಕೆ ಮತ್ತು ಆಸಕ್ತಿ, ಎಲ್ಲಾ ಬೌದ್ಧಿಕ ಆಸ್ತಿ ಹಕ್ಕುಗಳನ್ನು ಒಳಗೊಂಡಂತೆ, ಉಳಿಸಿಕೊಳ್ಳುತ್ತೀರಿ. ಇದು, ಉದಾಹರಣೆಗೆ, ಕೃಷಿ ಗಡಿ KML/ಶೇಪ್‌ಫೈಲ್‌ಗಳು, ಹಸ್ತಚಾಲಿತವಾಗಿ ನಮೂದಿಸಲಾದ ಐತಿಹಾಸಿಕ ಅಥವಾ ಪ್ರಸ್ತುತ ಕೃಷಿ ಪದ್ಧತಿಗಳ ಬಗ್ಗೆ ಮಾಹಿತಿ, ಅಪ್‌ಲೋಡ್ ಮಾಡಿದ ಮಣ್ಣಿನ ಪರೀಕ್ಷಾ ಫಲಿತಾಂಶಗಳು, ನೀವು ತೆಗೆದ ಮತ್ತು ಅಪ್‌ಲೋಡ್ ಮಾಡಿದ ಛಾಯಾಚಿತ್ರಗಳು (ಸೇವೆಯ ಭಾಗವಾಗಿ ಫೀಲ್ಡ್ ಏಜೆಂಟ್‌ಗಳು ತೆಗೆದವುಗಳನ್ನು ಹೊರತುಪಡಿಸಿ), ಮತ್ತು ನೀವು ಹೊಂದಿಸುವ ನಿರ್ದಿಷ್ಟ ಒಪ್ಪಿಗೆ ಆದ್ಯತೆಗಳನ್ನು ಒಳಗೊಂಡಿದೆ.
+        </li>
+        <li>
+            <strong>Platform Data / Derived Data:</strong> Aurigraph owns and retains all rights, title, and interest, including all Intellectual Property Rights, in and to the AUREX Platform itself, its underlying software, technology, algorithms, models, databases, documentation, and any data generated by the Platform through the processing of User Content, sensor inputs (e.g., drone imagery, IoT readings collected as part of the Service), or other data sources ("Platform Data"). This includes, but is not limited to, processed or calibrated sensor data, derived vegetation indices, soil moisture maps, AWD phase predictions, biomass estimations, carbon sequestration calculations, aggregated industry benchmarks, anonymized usage statistics, and any reports, insights, or recommendations generated by the Platform's analytical engines. The distinction between raw User Content and processed Platform Data is crucial; while the inputs may belong to the User, the processed outputs and the methods of processing belong to Aurigraph.
+            <br><br>
+            <strong>ಪ್ಲಾಟ್‌ಫಾರ್ಮ್ ಡೇಟಾ / ವ್ಯುತ್ಪನ್ನ ಡೇಟಾ:</strong> ಆರಿಗ್ರಾಫ್ AUREX ಪ್ಲಾಟ್‌ಫಾರ್ಮ್, ಅದರ ಆಧಾರವಾಗಿರುವ ಸಾಫ್ಟ್‌ವೇರ್, ತಂತ್ರಜ್ಞಾನ, ಅಲ್ಗಾರಿದಮ್‌ಗಳು, ಮಾದರಿಗಳು, ಡೇಟಾಬೇಸ್‌ಗಳು, ದಸ್ತಾವೇಜನ್ನು, ಮತ್ತು ಬಳಕೆದಾರರ ವಿಷಯ, ಸಂವೇದಕ ಇನ್‌ಪುಟ್‌ಗಳು (ಉದಾ. ಡ್ರೋನ್ ಇಮೇಜರಿ, ಸೇವೆಯ ಭಾಗವಾಗಿ ಸಂಗ್ರಹಿಸಲಾದ IoT ವಾಚನಗೋಷ್ಠಿಗಳು), ಅಥವಾ ಇತರ ಡೇಟಾ ಮೂಲಗಳ ("ಪ್ಲಾಟ್‌ಫಾರ್ಮ್ ಡೇಟಾ") ಪ್ರಕ್ರಿಯೆಯ ಮೂಲಕ ಪ್ಲಾಟ್‌ಫಾರ್ಮ್‌ನಿಂದ ರಚಿಸಲಾದ ಯಾವುದೇ ಡೇಟಾದಲ್ಲಿ ಎಲ್ಲಾ ಹಕ್ಕುಗಳು, ಶೀರ್ಷಿಕೆ ಮತ್ತು ಆಸಕ್ತಿ, ಎಲ್ಲಾ ಬೌದ್ಧಿಕ ಆಸ್ತಿ ಹಕ್ಕುಗಳನ್ನು ಒಳಗೊಂಡಂತೆ, ಹೊಂದಿದೆ ಮತ್ತು ಉಳಿಸಿಕೊಳ್ಳುತ್ತದೆ. ಇದು ಸಂಸ್ಕರಿಸಿದ ಅಥವಾ ಮಾಪನಾಂಕ ನಿರ್ಣಯಿಸಿದ ಸಂವೇದಕ ಡೇಟಾ, ವ್ಯುತ್ಪನ್ನ ಸಸ್ಯ ಸೂಚ್ಯಂಕಗಳು, ಮಣ್ಣಿನ ತೇವಾಂಶ ನಕ್ಷೆಗಳು, AWD ಹಂತದ ಮುನ್ಸೂಚನೆಗಳು, ಜೀವರಾಶಿ ಅಂದಾಜುಗಳು, ಇಂಗಾಲದ ಪ್ರತ್ಯೇಕತೆಯ ಲೆಕ್ಕಾಚಾರಗಳು, ಒಟ್ಟು ಉದ್ಯಮದ ಮಾನದಂಡಗಳು, ಅನಾಮಧೇಯ ಬಳಕೆಯ ಅಂಕಿಅಂಶಗಳು, ಮತ್ತು ಪ್ಲಾಟ್‌ಫಾರ್ಮ್‌ನ ವಿಶ್ಲೇಷಣಾತ್ಮಕ ಎಂಜಿನ್‌ಗಳಿಂದ ರಚಿಸಲಾದ ಯಾವುದೇ ವರದಿಗಳು, ಒಳನೋಟಗಳು ಅಥವಾ ಶಿಫಾರಸುಗಳನ್ನು ಒಳಗೊಂಡಿದೆ, ಆದರೆ ಇವುಗಳಿಗೆ ಸೀಮಿತವಾಗಿಲ್ಲ. ಕಚ್ಚಾ ಬಳಕೆದಾರರ ವಿಷಯ ಮತ್ತು ಸಂಸ್ಕರಿಸಿದ ಪ್ಲಾಟ್‌ಫಾರ್ಮ್ ಡೇಟಾದ ನಡುವಿನ ವ್ಯತ್ಯಾಸವು ನಿರ್ಣಾಯಕವಾಗಿದೆ; ಇನ್‌ಪುಟ್‌ಗಳು ಬಳಕೆದಾರರಿಗೆ ಸೇರಿರಬಹುದು, ಆದರೆ ಸಂಸ್ಕರಿಸಿದ ಔಟ್‌ಪುಟ್‌ಗಳು ಮತ್ತು ಸಂಸ್ಕರಣೆಯ ವಿಧಾನಗಳು ಆರಿಗ್ರಾಫ್‌ಗೆ ಸೇರಿವೆ.
+        </li>
+        <li>
+            <strong>License to Aurigraph for User Content:</strong> You hereby grant Aurigraph a limited, worldwide, non-exclusive, royalty-free, sublicensable (to service providers acting on Our behalf), and transferable license to access, use, host, store, reproduce, process, modify, adapt, publish, transmit, distribute, and display Your User Content solely for the following limited purposes: (a) to provide, operate, maintain, and improve the AUREX Platform and Services for You and other users; (b) to generate Platform Data (ensuring that any publicly shared or commercially used Platform Data derived from Your User Content is aggregated and anonymized such that You or Your specific farm cannot be identified, unless otherwise agreed or required for specific program participation); (c) to fulfill Our contractual obligations to You, including generating reports and insights specific to Your Account; (d) to perform research and development activities to enhance the Platform; (e) to enforce these Terms and prevent misuse; and (f) to comply with applicable laws, regulations, or legal processes. This license continues even if You stop using the Services, solely for the purposes of maintaining aggregated/anonymized Platform Data, residual backups, and legal compliance, subject always to Your rights under the DPDPA regarding erasure of Personal Data.
+            <br><br>
+            <strong>ಬಳಕೆದಾರರ ವಿಷಯಕ್ಕಾಗಿ ಆರಿಗ್ರಾಫ್‌ಗೆ ಪರವಾನಗಿ:</strong> ಈ ಮೂಲಕ ನೀವು ಆರಿಗ್ರಾಫ್‌ಗೆ ನಿಮ್ಮ ಬಳಕೆದಾರರ ವಿಷಯವನ್ನು ಈ ಕೆಳಗಿನ ಸೀಮಿತ ಉದ್ದೇಶಗಳಿಗಾಗಿ ಪ್ರವೇಶಿಸಲು, ಬಳಸಲು, ಹೋಸ್ಟ್ ಮಾಡಲು, ಸಂಗ್ರಹಿಸಲು, ಪುನರುತ್ಪಾದಿಸಲು, ಪ್ರಕ್ರಿಯೆಗೊಳಿಸಲು, ಮಾರ್ಪಡಿಸಲು, ಅಳವಡಿಸಿಕೊಳ್ಳಲು, ಪ್ರಕಟಿಸಲು, ರವಾನಿಸಲು, ವಿತರಿಸಲು ಮತ್ತು ಪ್ರದರ್ಶಿಸಲು ಸೀಮಿತ, ವಿಶ್ವಾದ್ಯಂತ, ವಿಶೇಷವಲ್ಲದ, ರಾಯಧನ-ಮುಕ್ತ, ಉಪ-ಪರವಾನಗಿ ನೀಡಬಹುದಾದ (ನಮ್ಮ ಪರವಾಗಿ ಕಾರ್ಯನಿರ್ವಹಿಸುವ ಸೇವಾ ಪೂರೈಕೆದಾರರಿಗೆ), ಮತ್ತು ವರ್ಗಾಯಿಸಬಹುದಾದ ಪರವಾನಗಿಯನ್ನು ನೀಡುತ್ತೀರಿ: (a) ನಿಮಗೆ ಮತ್ತು ಇತರ ಬಳಕೆದಾರರಿಗೆ AUREX ಪ್ಲಾಟ್‌ಫಾರ್ಮ್ ಮತ್ತು ಸೇವೆಗಳನ್ನು ಒದಗಿಸಲು, ನಿರ್ವಹಿಸಲು, ನಿರ್ವಹಿಸಲು ಮತ್ತು ಸುಧಾರಿಸಲು; (b) ಪ್ಲಾಟ್‌ಫಾರ್ಮ್ ಡೇಟಾವನ್ನು ರಚಿಸಲು (ನಿಮ್ಮ ಬಳಕೆದಾರರ ವಿಷಯದಿಂದ ಪಡೆದ ಯಾವುದೇ ಸಾರ್ವಜನಿಕವಾಗಿ ಹಂಚಿಕೊಳ್ಳಲಾದ ಅಥವಾ ವಾಣಿಜ್ಯಿಕವಾಗಿ ಬಳಸಿದ ಪ್ಲಾಟ್‌ಫಾರ್ಮ್ ಡೇಟಾವನ್ನು ಒಟ್ಟುಗೂಡಿಸಲಾಗಿದೆ ಮತ್ತು ಅನಾಮಧೇಯಗೊಳಿಸಲಾಗಿದೆ ಎಂದು ಖಚಿತಪಡಿಸಿಕೊಳ್ಳುವುದು, ಇದರಿಂದಾಗಿ ನೀವು ಅಥವಾ ನಿಮ್ಮ ನಿರ್ದಿಷ್ಟ ಕೃಷಿಯನ್ನು ಗುರುತಿಸಲಾಗುವುದಿಲ್ಲ, ಇಲ್ಲದಿದ್ದರೆ ಒಪ್ಪಿಗೆ ನೀಡದ ಹೊರತು ಅಥವಾ ನಿರ್ದಿಷ್ಟ ಕಾರ್ಯಕ್ರಮದ ಭಾಗವಹಿಸುವಿಕೆಗೆ ಅಗತ್ಯವಿಲ್ಲದ ಹೊರತು); (c) ನಿಮ್ಮ ಖಾತೆಗೆ ನಿರ್ದಿಷ್ಟವಾದ ವರದಿಗಳು ಮತ್ತು ಒಳನೋಟಗಳನ್ನು ರಚಿಸುವುದು ಸೇರಿದಂತೆ ನಿಮಗೆ ನಮ್ಮ ಒಪ್ಪಂದದ ಬಾಧ್ಯತೆಗಳನ್ನು ಪೂರೈಸಲು; (d) ಪ್ಲಾಟ್‌ಫಾರ್ಮ್ ಅನ್ನು ಹೆಚ್ಚಿಸಲು ಸಂಶೋಧನೆ ಮತ್ತು ಅಭಿವೃದ್ಧಿ ಚಟುವಟಿಕೆಗಳನ್ನು ನಿರ್ವಹಿಸಲು; (e) ಈ ನಿಯಮಗಳನ್ನು ಜಾರಿಗೊಳಿಸಲು ಮತ್ತು ದುರುಪಯೋಗವನ್ನು ತಡೆಯಲು; ಮತ್ತು (f) ಅನ್ವಯವಾಗುವ ಕಾನೂನುಗಳು, ನಿಯಮಗಳು ಅಥವಾ ಕಾನೂನು ಪ್ರಕ್ರಿಯೆಗಳನ್ನು ಅನುಸರಿಸಲು. ಈ ಪರವಾನಗಿಯು ನೀವು ಸೇವೆಗಳನ್ನು ಬಳಸುವುದನ್ನು ನಿಲ್ಲಿಸಿದರೂ, ಒಟ್ಟುಗೂಡಿಸಿದ/ಅನಾಮಧೇಯ ಪ್ಲಾಟ್‌ಫಾರ್ಮ್ ಡೇಟಾ, ಉಳಿಕೆ ಬ್ಯಾಕಪ್‌ಗಳು ಮತ್ತು ಕಾನೂನು ಅನುಸರಣೆಯನ್ನು ನಿರ್ವಹಿಸುವ ಉದ್ದೇಶಗಳಿಗಾಗಿ ಮಾತ್ರ ಮುಂದುವರಿಯುತ್ತದೆ, ವೈಯಕ್ತಿಕ ಡೇಟಾದ ಅಳಿಸುವಿಕೆಗೆ ಸಂಬಂಧಿಸಿದಂತೆ DPDPA ಅಡಿಯಲ್ಲಿ ನಿಮ್ಮ ಹಕ್ಕುಗಳಿಗೆ ಯಾವಾಗಲೂ ಒಳಪಟ್ಟಿರುತ್ತದೆ.
+        </li>
+    </ul>
+
+    <h2>
+        6. Intellectual Property Rights
+        <br>
+        6. ಬೌದ್ಧಿಕ ಆಸ್ತಿ ಹಕ್ಕುಗಳು
+    </h2>
+    <h3>
+        6.1 Aurigraph IP
+        <br>
+        6.1 ಆರಿಗ್ರಾಫ್ ಐಪಿ
+    </h3>
+    <p>
+        You acknowledge and agree that the AUREX Platform, the Mobile Application, including all underlying software, source code, object code, algorithms, machine learning models, Platform Data, user interface designs, graphics, documentation, content (excluding User Content), features, functionalities, the Aurigraph name, logos, trademarks, service marks, and all related Intellectual Property Rights, are and shall remain the sole and exclusive property of Aurigraph and/or its licensors. These Terms do not grant You any rights, title, or interest in or to the Aurigraph IP, except for the limited license expressly granted in Section 3.1.
+        <br><br>
+        AUREX ಪ್ಲಾಟ್‌ಫಾರ್ಮ್, ಮೊಬೈಲ್ ಅಪ್ಲಿಕೇಶನ್, ಎಲ್ಲಾ ಆಧಾರವಾಗಿರುವ ಸಾಫ್ಟ್‌ವೇರ್, ಮೂಲ ಕೋಡ್, ಆಬ್ಜೆಕ್ಟ್ ಕೋಡ್, ಅಲ್ಗಾರಿದಮ್‌ಗಳು, ಯಂತ್ರ ಕಲಿಕೆ ಮಾದರಿಗಳು, ಪ್ಲಾಟ್‌ಫಾರ್ಮ್ ಡೇಟಾ, ಬಳಕೆದಾರ ಇಂಟರ್ಫೇಸ್ ವಿನ್ಯಾಸಗಳು, ಗ್ರಾಫಿಕ್ಸ್, ದಸ್ತಾವೇಜನ್ನು, ವಿಷಯ (ಬಳಕೆದಾರರ ವಿಷಯವನ್ನು ಹೊರತುಪಡಿಸಿ), ವೈಶಿಷ್ಟ್ಯಗಳು, ಕಾರ್ಯಚಟುವಟಿಕೆಗಳು, ಆರಿಗ್ರಾಫ್ ಹೆಸರು, ಲೋಗೋಗಳು, ಟ್ರೇಡ್‌ಮಾರ್ಕ್‌ಗಳು, ಸೇವಾ ಗುರುತುಗಳು, ಮತ್ತು ಎಲ್ಲಾ ಸಂಬಂಧಿತ ಬೌದ್ಧಿಕ ಆಸ್ತಿ ಹಕ್ಕುಗಳು ಆರಿಗ್ರಾಫ್ ಮತ್ತು/ಅಥವಾ ಅದರ ಪರವಾನಗಿದಾರರ ಏಕೈಕ ಮತ್ತು ವಿಶೇಷ ಆಸ್ತಿಯಾಗಿದೆ ಮತ್ತು ಹಾಗೆಯೇ ಉಳಿಯುತ್ತದೆ ಎಂದು ನೀವು ಅಂಗೀಕರಿಸುತ್ತೀರಿ ಮತ್ತು ಒಪ್ಪುತ್ತೀರಿ. ಈ ನಿಯಮಗಳು ವಿಭಾಗ 3.1 ರಲ್ಲಿ ಸ್ಪಷ್ಟವಾಗಿ ನೀಡಲಾದ ಸೀಮಿತ ಪರವಾನಗಿಯನ್ನು ಹೊರತುಪಡಿಸಿ, ಆರಿಗ್ರಾಫ್ ಐಪಿಯಲ್ಲಿ ನಿಮಗೆ ಯಾವುದೇ ಹಕ್ಕುಗಳು, ಶೀರ್ಷಿಕೆ ಅಥವಾ ಆಸಕ್ತಿಯನ್ನು ನೀಡುವುದಿಲ್ಲ.
+    </p>
+    <h3>
+        6.2 User Content IP
+        <br>
+        6.2 ಬಳಕೆದಾರರ ವಿಷಯ ಐಪಿ
+    </h3>
+    <p>
+        Subject to the limited license granted to Aurigraph in Section 5.3, You retain ownership of and all Intellectual Property Rights in Your User Content. You are solely responsible for the legality, accuracy, and appropriateness of Your User Content and for securing any necessary rights or permissions to use and submit it to the Platform.
+        <br><br>
+        ವಿಭಾಗ 5.3 ರಲ್ಲಿ ಆರಿಗ್ರಾಫ್‌ಗೆ ನೀಡಲಾದ ಸೀಮಿತ ಪರವಾನಗಿಗೆ ಒಳಪಟ್ಟು, ನಿಮ್ಮ ಬಳಕೆದಾರರ ವಿಷಯದಲ್ಲಿ ನೀವು ಮಾಲೀಕತ್ವವನ್ನು ಮತ್ತು ಎಲ್ಲಾ ಬೌದ್ಧಿಕ ಆಸ್ತಿ ಹಕ್ಕುಗಳನ್ನು ಉಳಿಸಿಕೊಳ್ಳುತ್ತೀರಿ. ನಿಮ್ಮ ಬಳಕೆದಾರರ ವಿಷಯದ ಕಾನೂನುಬದ್ಧತೆ, ನಿಖರತೆ ಮತ್ತು ಸೂಕ್ತತೆಗೆ ಮತ್ತು ಅದನ್ನು ಪ್ಲಾಟ್‌ಫಾರ್ಮ್‌ಗೆ ಬಳಸಲು ಮತ್ತು ಸಲ್ಲಿಸಲು ಯಾವುದೇ ಅಗತ್ಯ ಹಕ್ಕುಗಳು ಅಥವಾ ಅನುಮತಿಗಳನ್ನು ಪಡೆದುಕೊಳ್ಳಲು ನೀವು ಸಂಪೂರ್ಣವಾಗಿ ಜವಾಬ್ದಾರರಾಗಿರುತ್ತೀರಿ.
+    </p>
+    <h3>
+        6.3 Feedback
+        <br>
+        6.3 ಪ್ರತಿಕ್ರಿಯೆ
+    </h3>
+    <p>
+        If You choose to provide Aurigraph with any feedback, comments, suggestions, ideas, or improvements regarding the Platform or Services ("Feedback"), You hereby grant Aurigraph a perpetual, irrevocable, worldwide, royalty-free, fully paid-up, non-exclusive, sublicensable, and transferable license to use, reproduce, modify, adapt, distribute, display, perform, and otherwise exploit such Feedback for any purpose, without any obligation, restriction, or compensation to You. You agree that any Feedback provided is non-confidential and that Aurigraph is free to use it without restriction.
+        <br><br>
+        ನೀವು ಪ್ಲಾಟ್‌ಫಾರ್ಮ್ ಅಥವಾ ಸೇವೆಗಳ ಬಗ್ಗೆ ಯಾವುದೇ ಪ್ರತಿಕ್ರಿಯೆ, ಕಾಮೆಂಟ್‌ಗಳು, ಸಲಹೆಗಳು, ಕಲ್ಪನೆಗಳು ಅಥವಾ ಸುಧಾರಣೆಗಳನ್ನು ("ಪ್ರತಿಕ್ರಿಯೆ") ಆರಿಗ್ರಾಫ್‌ಗೆ ಒದಗಿಸಲು ಆಯ್ಕೆ ಮಾಡಿದರೆ, ನೀವು ಈ ಮೂಲಕ ಆರಿಗ್ರಾಫ್‌ಗೆ ಅಂತಹ ಪ್ರತಿಕ್ರಿಯೆಯನ್ನು ಯಾವುದೇ ಉದ್ದೇಶಕ್ಕಾಗಿ ಬಳಸಲು, ಪುನರುತ್ಪಾದಿಸಲು, ಮಾರ್ಪಡಿಸಲು, ಅಳವಡಿಸಿಕೊಳ್ಳಲು, ವಿತರಿಸಲು, ಪ್ರದರ್ಶಿಸಲು, ನಿರ್ವಹಿಸಲು ಮತ್ತು ಬೇರೆ ರೀತಿಯಲ್ಲಿ ಶೋಷಣೆ ಮಾಡಲು ಶಾಶ್ವತ, ಹಿಂತೆಗೆದುಕೊಳ್ಳಲಾಗದ, ವಿಶ್ವಾದ್ಯಂತ, ರಾಯಧನ-ಮುಕ್ತ, ಸಂಪೂರ್ಣವಾಗಿ ಪಾವತಿಸಿದ, ವಿಶೇಷವಲ್ಲದ, ಉಪ-ಪರವಾನಗಿ ನೀಡಬಹುದಾದ ಮತ್ತು ವರ್ಗಾಯಿಸಬಹುದಾದ ಪರವಾನಗಿಯನ್ನು ನೀಡುತ್ತೀರಿ, ನಿಮಗೆ ಯಾವುದೇ ಬಾಧ್ಯತೆ, ನಿರ್ಬಂಧ ಅಥವಾ ಪರಿಹಾರವಿಲ್ಲದೆ. ಒದಗಿಸಿದ ಯಾವುದೇ ಪ್ರತಿಕ್ರಿಯೆಯು ಗೌಪ್ಯವಲ್ಲ ಮತ್ತು ಆರಿಗ್ರಾಫ್ ಅದನ್ನು ನಿರ್ಬಂಧವಿಲ್ಲದೆ ಬಳಸಲು ಮುಕ್ತವಾಗಿದೆ ಎಂದು ನೀವು ಒಪ್ಪುತ್ತೀರಿ.
+    </p>
+    <h3>
+        6.4 Restrictions
+        <br>
+        6.4 ನಿರ್ಬಂಧಗಳು
+    </h3>
+    <p>
+        You agree not to copy, imitate, modify, distribute, sell, or lease any part of Aurigraph's IP. You shall not use the Platform or Platform Data for any purpose not expressly permitted by these Terms, including developing competing products or services, or for unauthorized commercial gain derived from Aurigraph's proprietary analyses or reports.
+        <br><br>
+        ಆರಿಗ್ರಾಫ್‌ನ ಐಪಿಯ ಯಾವುದೇ ಭಾಗವನ್ನು ನಕಲಿಸದಿರಲು, ಅನುಕರಿಸದಿರಲು, ಮಾರ್ಪಡಿಸದಿರಲು, ವಿತರಿಸದಿರಲು, ಮಾರಾಟ ಮಾಡದಿರಲು ಅಥವಾ ಗುತ್ತಿಗೆ ನೀಡದಿರಲು ನೀವು ಒಪ್ಪುತ್ತೀರಿ. ಸ್ಪರ್ಧಾತ್ಮಕ ಉತ್ಪನ್ನಗಳು ಅಥವಾ ಸೇವೆಗಳನ್ನು ಅಭಿವೃದ್ಧಿಪಡಿಸುವುದು ಸೇರಿದಂತೆ, ಅಥವಾ ಆರಿಗ್ರಾಫ್‌ನ ಸ್ವಾಮ್ಯದ ವಿಶ್ಲೇಷಣೆಗಳು ಅಥವಾ ವರದಿಗಳಿಂದ ಪಡೆದ ಅನಧಿಕೃತ ವಾಣಿಜ್ಯ ಲಾಭಕ್ಕಾಗಿ ಈ ನಿಯಮಗಳಿಂದ ಸ್ಪಷ್ಟವಾಗಿ ಅನುಮತಿಸದ ಯಾವುದೇ ಉದ್ದೇಶಕ್ಕಾಗಿ ನೀವು ಪ್ಲಾಟ್‌ಫಾರ್ಮ್ ಅಥವಾ ಪ್ಲಾಟ್‌ಫಾರ್ಮ್ ಡೇಟಾವನ್ನು ಬಳಸಬಾರದು.
+    </p>
+
+    <h2>
+        7. Fees and Payment (If Applicable)
+        <br>
+        7. ಶುಲ್ಕಗಳು ಮತ್ತು ಪಾವತಿ (ಅನ್ವಯಿಸಿದರೆ)
+    </h2>
+    <p>
+        <em>(Note: This section should be customized based on Aurigraph's specific business model. If the service is entirely free, this section might state that clearly or be omitted. The following are standard clauses if fees apply.)</em>
+        <br><br>
+        <em>(ಗಮನಿಸಿ: ಈ ವಿಭಾಗವನ್ನು ಆರಿಗ್ರಾಫ್‌ನ ನಿರ್ದಿಷ್ಟ ವ್ಯವಹಾರ ಮಾದರಿಯ ಆಧಾರದ ಮೇಲೆ ಕಸ್ಟಮೈಸ್ ಮಾಡಬೇಕು. ಸೇವೆಯು ಸಂಪೂರ್ಣವಾಗಿ ಉಚಿತವಾಗಿದ್ದರೆ, ಈ ವಿಭಾಗವು ಅದನ್ನು ಸ್ಪಷ್ಟವಾಗಿ ಹೇಳಬಹುದು ಅಥವಾ ಬಿಟ್ಟುಬಿಡಬಹುದು. ಶುಲ್ಕಗಳು ಅನ್ವಯಿಸಿದರೆ ಈ ಕೆಳಗಿನವು ಪ್ರಮಾಣಿತ ಷರತ್ತುಗಳಾಗಿವೆ.)</em>
+    </p>
+    <h3>
+        7.1 Subscription Fees and Charges
+        <br>
+        7.1 ಚಂದಾದಾರಿಕೆ ಶುಲ್ಕಗಳು ಮತ್ತು ಶುಲ್ಕಗಳು
+    </h3>
+    <p>
+        Certain features, functionalities, user roles, or participation in specific programs (e.g., premium analytics, carbon program enrollment) on the AUREX Platform may require the payment of fees, either on a recurring subscription basis (e.g., monthly, annually) or per-use basis, as detailed on the Aurigraph website, within the Platform, or in a separate service order or agreement. Available subscription plans, their associated features, and pricing tiers will be clearly presented.
+        <br><br>
+        AUREX ಪ್ಲಾಟ್‌ಫಾರ್ಮ್‌ನಲ್ಲಿನ ಕೆಲವು ವೈಶಿಷ್ಟ್ಯಗಳು, ಕಾರ್ಯಚಟುವಟಿಕೆಗಳು, ಬಳಕೆದಾರರ ಪಾತ್ರಗಳು ಅಥವಾ ನಿರ್ದಿಷ್ಟ ಕಾರ್ಯಕ್ರಮಗಳಲ್ಲಿ ಭಾಗವಹಿಸುವಿಕೆಗೆ (ಉದಾ. ಪ್ರೀಮಿಯಂ ವಿಶ್ಲೇಷಣೆ, ಕಾರ್ಬನ್ ಪ್ರೋಗ್ರಾಂ ದಾಖಲಾತಿ) ಶುಲ್ಕಗಳ ಪಾವತಿಯ ಅಗತ್ಯವಿರಬಹುದು, ಆವರ್ತಕ ಚಂದಾದಾರಿಕೆ ಆಧಾರದ ಮೇಲೆ (ಉದಾ. ಮಾಸಿಕ, ವಾರ್ಷಿಕ) ಅಥವಾ ಪ್ರತಿ-ಬಳಕೆಯ ಆಧಾರದ ಮೇಲೆ, ಆರಿಗ್ರಾಫ್ ವೆಬ್‌ಸೈಟ್‌ನಲ್ಲಿ, ಪ್ಲಾಟ್‌ಫಾರ್ಮ್‌ನಲ್ಲಿ ಅಥವಾ ಪ್ರತ್ಯೇಕ ಸೇವಾ ಆದೇಶ ಅಥವಾ ಒಪ್ಪಂದದಲ್ಲಿ ವಿವರಿಸಿದಂತೆ. ಲಭ್ಯವಿರುವ ಚಂದಾದಾರಿಕೆ ಯೋಜನೆಗಳು, ಅವುಗಳ ಸಂಬಂಧಿತ ವೈಶಿಷ್ಟ್ಯಗಳು ಮತ್ತು ಬೆಲೆ ಶ್ರೇಣಿಗಳನ್ನು ಸ್ಪಷ್ಟವಾಗಿ ಪ್ರಸ್ತುತಪಡಿಸಲಾಗುತ್ತದೆ.
+    </p>
+    <h3>
+        7.2 Payment Terms
+        <br>
+        7.2 ಪಾವತಿ ನಿಯಮಗಳು
+    </h3>
+    <p>
+        You agree to pay all applicable fees and charges associated with Your selected plan or service in a timely manner. Fees are typically billed in advance for subscription periods. Payment methods accepted will be specified (e.g., credit card, bank transfer). If You provide credit card information, You authorize Aurigraph (or its third-party payment processor) to charge such credit card for all fees due under Your Account. Failure to make timely payments may result in suspension or termination of Your access to paid features or the entire Platform. Late payments may accrue interest at a specified rate or be subject to collection costs.
+        <br><br>
+        ನಿಮ್ಮ ಆಯ್ಕೆಮಾಡಿದ ಯೋಜನೆ ಅಥವಾ ಸೇವೆಗೆ ಸಂಬಂಧಿಸಿದ ಎಲ್ಲಾ ಅನ್ವಯವಾಗುವ ಶುಲ್ಕಗಳು ಮತ್ತು ಶುಲ್ಕಗಳನ್ನು ಸಮಯೋಚಿತವಾಗಿ ಪಾವತಿಸಲು ನೀವು ಒಪ್ಪುತ್ತೀರಿ. ಶುಲ್ಕಗಳನ್ನು ಸಾಮಾನ್ಯವಾಗಿ ಚಂದಾದಾರಿಕೆ ಅವಧಿಗಳಿಗಾಗಿ ಮುಂಚಿತವಾಗಿ ಬಿಲ್ ಮಾಡಲಾಗುತ್ತದೆ. ಸ್ವೀಕರಿಸಿದ ಪಾವತಿ ವಿಧಾನಗಳನ್ನು ನಿರ್ದಿಷ್ಟಪಡಿಸಲಾಗುತ್ತದೆ (ಉದಾ. ಕ್ರೆಡಿಟ್ ಕಾರ್ಡ್, ಬ್ಯಾಂಕ್ ವರ್ಗಾವಣೆ). ನೀವು ಕ್ರೆಡಿಟ್ ಕಾರ್ಡ್ ಮಾಹಿತಿಯನ್ನು ಒದಗಿಸಿದರೆ, ನಿಮ್ಮ ಖಾತೆಯ ಅಡಿಯಲ್ಲಿ ಬಾಕಿ ಇರುವ ಎಲ್ಲಾ ಶುಲ್ಕಗಳಿಗಾಗಿ ಅಂತಹ ಕ್ರೆಡಿಟ್ ಕಾರ್ಡ್ ಅನ್ನು ಚಾರ್ಜ್ ಮಾಡಲು ನೀವು ಆರಿಗ್ರಾಫ್ (ಅಥವಾ ಅದರ ಮೂರನೇ ವ್ಯಕ್ತಿಯ ಪಾವತಿ ಪ್ರೊಸೆಸರ್) ಗೆ ಅಧಿಕಾರ ನೀಡುತ್ತೀರಿ. ಸಮಯೋಚಿತ ಪಾವತಿಗಳನ್ನು ಮಾಡಲು ವಿಫಲವಾದರೆ ಪಾವತಿಸಿದ ವೈಶಿಷ್ಟ್ಯಗಳಿಗೆ ಅಥವಾ ಸಂಪೂರ್ಣ ಪ್ಲಾಟ್‌ಫಾರ್ಮ್‌ಗೆ ನಿಮ್ಮ ಪ್ರವೇಶವನ್ನು ಅಮಾನತುಗೊಳಿಸಬಹುದು ಅಥವಾ ಮುಕ್ತಾಯಗೊಳಿಸಬಹುದು. ತಡವಾದ ಪಾವತಿಗಳು ನಿರ್ದಿಷ್ಟ ದರದಲ್ಲಿ ಬಡ್ಡಿಯನ್ನು ಸಂಗ್ರಹಿಸಬಹುದು ಅಥವಾ ಸಂಗ್ರಹಣಾ ವೆಚ್ಚಗಳಿಗೆ ಒಳಪಟ್ಟಿರಬಹುದು.
+    </p>
+    <h3>
+        7.3 Taxes
+        <br>
+        7.3 ತೆರಿಗೆಗಳು
+    </h3>
+    <p>
+        All fees are exclusive of applicable taxes, levies, duties, or similar governmental assessments, including value-added tax (VAT), Goods and Services Tax (GST), sales tax, use tax, or withholding taxes, assessable by any jurisdiction (collectively, "Taxes"). You are responsible for paying all Taxes associated with Your purchases hereunder. If Aurigraph has the legal obligation to pay or collect Taxes for which You are responsible, the appropriate amount shall be invoiced to and paid by You, unless You provide Aurigraph with a valid tax exemption certificate authorized by the appropriate taxing authority.
+        <br><br>
+        ಎಲ್ಲಾ ಶುಲ್ಕಗಳು ಯಾವುದೇ ಅಧಿಕಾರ ವ್ಯಾಪ್ತಿಯಿಂದ ಮೌಲ್ಯಮಾಪನ ಮಾಡಬಹುದಾದ ಮೌಲ್ಯವರ್ಧಿತ ತೆರಿಗೆ (VAT), ಸರಕು ಮತ್ತು ಸೇವಾ ತೆರಿಗೆ (GST), ಮಾರಾಟ ತೆರಿಗೆ, ಬಳಕೆ ತೆರಿಗೆ, ಅಥವಾ ತಡೆಹಿಡಿಯುವ ತೆರಿಗೆಗಳನ್ನು ಒಳಗೊಂಡಂತೆ ಅನ್ವಯವಾಗುವ ತೆರಿಗೆಗಳು, ಸುಂಕಗಳು, ಕರ್ತವ್ಯಗಳು ಅಥವಾ ಅಂತಹುದೇ ಸರ್ಕಾರಿ ಮೌಲ್ಯಮಾಪನಗಳನ್ನು ಹೊರತುಪಡಿಸಿವೆ (ಒಟ್ಟಾರೆಯಾಗಿ, "ತೆರಿಗೆಗಳು"). ಇಲ್ಲಿ ನಿಮ್ಮ ಖರೀದಿಗಳಿಗೆ ಸಂಬಂಧಿಸಿದ ಎಲ್ಲಾ ತೆರಿಗೆಗಳನ್ನು ಪಾವತಿಸಲು ನೀವು ಜವಾಬ್ದಾರರಾಗಿರುತ್ತೀರಿ. ನೀವು ಜವಾಬ್ದಾರರಾಗಿರುವ ತೆರಿಗೆಗಳನ್ನು ಪಾವತಿಸಲು ಅಥವಾ ಸಂಗ್ರಹಿಸಲು ಆರಿಗ್ರಾಫ್‌ಗೆ ಕಾನೂನುಬದ್ಧ ಬಾಧ್ಯತೆ ಇದ್ದರೆ, ಸೂಕ್ತವಾದ ಮೊತ್ತವನ್ನು ನಿಮಗೆ ಇನ್‌ವಾಯ್ಸ್ ಮಾಡಲಾಗುತ್ತದೆ ಮತ್ತು ಪಾವತಿಸಲಾಗುತ್ತದೆ, ನೀವು ಸೂಕ್ತ ತೆರಿಗೆ ಪ್ರಾಧಿಕಾರದಿಂದ ಅಧಿಕೃತಗೊಳಿಸಲಾದ ಮಾನ್ಯವಾದ ತೆರಿಗೆ ವಿನಾಯಿತಿ ಪ್ರಮಾಣಪತ್ರವನ್ನು ಆರಿಗ್ರಾಫ್‌ಗೆ ಒದಗಿಸದ ಹೊರತು.
+    </p>
+    <h3>
+        7.4 Price Changes
+        <br>
+        7.4 ಬೆಲೆ ಬದಲಾವಣೆಗಳು
+    </h3>
+    <p>
+        Aurigraph reserves the right to change the fees or applicable charges and to institute new charges for the Services or any part thereof upon reasonable prior notice to You, which may be sent by email or posted on the Platform. Such changes will typically take effect at the start of the next renewal term for subscription services. Your continued use of the paid Services after the price change constitutes Your agreement to pay the modified amount.
+        <br><br>
+        ಸೇವೆಗಳಿಗೆ ಅಥವಾ ಅದರ ಯಾವುದೇ ಭಾಗಕ್ಕೆ ಶುಲ್ಕಗಳು ಅಥವಾ ಅನ್ವಯವಾಗುವ ಶುಲ್ಕಗಳನ್ನು ಬದಲಾಯಿಸಲು ಮತ್ತು ಹೊಸ ಶುಲ್ಕಗಳನ್ನು ಸ್ಥಾಪಿಸಲು ಆರಿಗ್ರಾಫ್ ನಿಮಗೆ ಸಮಂಜಸವಾದ ಪೂರ್ವ ಸೂಚನೆಯ ಮೇಲೆ ಹಕ್ಕನ್ನು ಕಾಯ್ದಿರಿಸಿಕೊಂಡಿದೆ, ಅದನ್ನು ಇಮೇಲ್ ಮೂಲಕ ಕಳುಹಿಸಬಹುದು ಅಥವಾ ಪ್ಲಾಟ್‌ಫಾರ್ಮ್‌ನಲ್ಲಿ ಪೋಸ್ಟ್ ಮಾಡಬಹುದು. ಅಂತಹ ಬದಲಾವಣೆಗಳು ಸಾಮಾನ್ಯವಾಗಿ ಚಂದಾದಾರಿಕೆ ಸೇವೆಗಳಿಗಾಗಿ ಮುಂದಿನ ನವೀಕರಣ ಅವಧಿಯ ಆರಂಭದಲ್ಲಿ ಜಾರಿಗೆ ಬರುತ್ತವೆ. ಬೆಲೆ ಬದಲಾವಣೆಯ ನಂತರ ಪಾವತಿಸಿದ ಸೇವೆಗಳ ನಿಮ್ಮ ನಿರಂತರ ಬಳಕೆಯು ಮಾರ್ಪಡಿಸಿದ ಮೊತ್ತವನ್ನು ಪಾವತಿಸಲು ನಿಮ್ಮ ಒಪ್ಪಿಗೆಯನ್ನು ರೂಪಿಸುತ್ತದೆ.
+    </p>
+    <h3>
+        7.5 Refunds
+        <br>
+        7.5 ಮರುಪಾವತಿಗಳು
+    </h3>
+    <p>
+        All fees paid are non-refundable, except as expressly stated otherwise in these Terms, in a separate agreement, or as required by applicable law. There will be no refunds or credits for partial months/years of service, upgrade/downgrade refunds, or refunds for unused periods with an open Account.
+        <br><br>
+        ಪಾವತಿಸಿದ ಎಲ್ಲಾ ಶುಲ್ಕಗಳು ಮರುಪಾವತಿಸಲಾಗುವುದಿಲ್ಲ, ಈ ನಿಯಮಗಳಲ್ಲಿ, ಪ್ರತ್ಯೇಕ ಒಪ್ಪಂದದಲ್ಲಿ, ಅಥವಾ ಅನ್ವಯವಾಗುವ ಕಾನೂನಿನಿಂದ ಅಗತ್ಯವಿರುವಂತೆ ಸ್ಪಷ್ಟವಾಗಿ ಹೇಳದ ಹೊರತು. ಭಾಗಶಃ ತಿಂಗಳುಗಳು/ವರ್ಷಗಳ ಸೇವೆ, ಅಪ್‌ಗ್ರೇಡ್/ಡೌನ್‌ಗ್ರೇಡ್ ಮರುಪಾವತಿಗಳು, ಅಥವಾ ತೆರೆದ ಖಾತೆಯೊಂದಿಗೆ ಬಳಕೆಯಾಗದ ಅವಧಿಗಳಿಗೆ ಯಾವುದೇ ಮರುಪಾವತಿಗಳು ಅಥವಾ ಕ್ರೆಡಿಟ್‌ಗಳು ಇರುವುದಿಲ್ಲ.
+    </p>
+
+    <h2>
+        8. Disclaimers and Warranties
+        <br>
+        8. ಹಕ್ಕುತ್ಯಾಗಗಳು ಮತ್ತು ಖಾತರಿಗಳು
+    </h2>
+    <h3>
+        8.1 General Disclaimer
+        <br>
+        8.1 ಸಾಮಾನ್ಯ ಹಕ್ಕುತ್ಯಾಗ
+    </h3>
+    <p>
+        THE AUREX PLATFORM, MOBILE APPLICATION, AND ALL ASSOCIATED SERVICES, DATA, CONTENT, AND MATERIALS ARE PROVIDED ON AN "AS IS" AND "AS AVAILABLE" BASIS, WITHOUT ANY WARRANTIES OF ANY KIND, EITHER EXPRESS OR IMPLIED. TO THE FULLEST EXTENT PERMITTED BY APPLICABLE LAW, AURIGRAPH EXPRESSLY DISCLAIMS ALL WARRANTIES, INCLUDING, BUT NOT LIMITED TO, IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, TITLE, QUIET ENJOYMENT, ACCURACY, AND NON-INFRINGEMENT. AURIGRAPH DOES NOT WARRANT THAT THE PLATFORM WILL MEET YOUR REQUIREMENTS, BE ACCURATE, COMPLETE, RELIABLE, SECURE, UNINTERRUPTED, TIMELY, OR ERROR-FREE, OR THAT DEFECTS WILL BE CORRECTED.
+        <br><br>
+        AUREX ಪ್ಲಾಟ್‌ಫಾರ್ಮ್, ಮೊಬೈಲ್ ಅಪ್ಲಿಕೇಶನ್, ಮತ್ತು ಎಲ್ಲಾ ಸಂಬಂಧಿತ ಸೇವೆಗಳು, ಡೇಟಾ, ವಿಷಯ, ಮತ್ತು ವಸ್ತುಗಳನ್ನು "ಇರುವಂತೆಯೇ" ಮತ್ತು "ಲಭ್ಯವಿರುವಂತೆ" ಆಧಾರದ ಮೇಲೆ ಒದಗಿಸಲಾಗುತ್ತದೆ, ಯಾವುದೇ ರೀತಿಯ ಖಾತರಿಗಳಿಲ್ಲದೆ, ವ್ಯಕ್ತಪಡಿಸಿದ ಅಥವಾ ಸೂಚ್ಯ. ಅನ್ವಯವಾಗುವ ಕಾನೂನಿನಿಂದ ಅನುಮತಿಸಲಾದ ಪೂರ್ಣ ಪ್ರಮಾಣದಲ್ಲಿ, ಆರಿಗ್ರಾಫ್ ವ್ಯಾಪಾರ, ನಿರ್ದಿಷ್ಟ ಉದ್ದೇಶಕ್ಕಾಗಿ ಫಿಟ್‌ನೆಸ್, ಶೀರ್ಷಿಕೆ, ಶಾಂತ ಆನಂದ, ನಿಖರತೆ ಮತ್ತು ಉಲ್ಲಂಘನೆಯಾಗದಿರುವ ಸೂಚ್ಯ ಖಾತರಿಗಳನ್ನು ಒಳಗೊಂಡಂತೆ, ಆದರೆ ಇವುಗಳಿಗೆ ಸೀಮಿತವಾಗಿಲ್ಲ, ಎಲ್ಲಾ ಖಾತರಿಗಳನ್ನು ಸ್ಪಷ್ಟವಾಗಿ ನಿರಾಕರಿಸುತ್ತದೆ. ಪ್ಲಾಟ್‌ಫಾರ್ಮ್ ನಿಮ್ಮ ಅವಶ್ಯಕತೆಗಳನ್ನು ಪೂರೈಸುತ್ತದೆ, ನಿಖರ, ಸಂಪೂರ್ಣ, ವಿಶ್ವಾಸಾರ್ಹ, ಸುರಕ್ಷಿತ, ಅಡೆತಡೆಯಿಲ್ಲದ, ಸಮಯೋಚಿತ, ಅಥವಾ ದೋಷ-ಮುಕ್ತವಾಗಿರುತ್ತದೆ, ಅಥವಾ ದೋಷಗಳನ್ನು ಸರಿಪಡಿಸಲಾಗುವುದು ಎಂದು ಆರಿಗ್ರಾಫ್ ಖಾತರಿಪಡಿಸುವುದಿಲ್ಲ.
+    </p>
+    <h3>
+        8.2 Data Accuracy Disclaimer
+        <br>
+        8.2 ಡೇಟಾ ನಿಖರತೆಯ ಹಕ್ಕುತ್ಯಾಗ
+    </h3>
+    <p>
+        YOU ACKNOWLEDGE THAT AGRICULTURAL AND ENVIRONMENTAL DATA COLLECTION, MODELING, AND ANALYSIS ARE INHERENTLY COMPLEX AND SUBJECT TO UNCERTAINTIES. AURIGRAPH MAKES NO REPRESENTATIONS OR WARRANTIES REGARDING THE ACCURACY, COMPLETENESS, RELIABILITY, SUITABILITY, OR TIMELINESS OF ANY DATA, CALCULATIONS, ESTIMATES, PREDICTIONS, OR REPORTS PROVIDED THROUGH THE PLATFORM. THIS INCLUDES, BUT IS NOT LIMITED TO:
+        <br><br>
+        ಕೃಷಿ ಮತ್ತು ಪರಿಸರ ಡೇಟಾ ಸಂಗ್ರಹಣೆ, ಮಾದರಿ, ಮತ್ತು ವಿಶ್ಲೇಷಣೆಯು ಅಂತರ್ಗತವಾಗಿ ಸಂಕೀರ್ಣವಾಗಿದೆ ಮತ್ತು ಅನಿಶ್ಚಿತತೆಗಳಿಗೆ ಒಳಪಟ್ಟಿರುತ್ತದೆ ಎಂದು ನೀವು ಅಂಗೀಕರಿಸುತ್ತೀರಿ. ಆರಿಗ್ರಾಫ್ ಪ್ಲಾಟ್‌ಫಾರ್ಮ್ ಮೂಲಕ ಒದಗಿಸಲಾದ ಯಾವುದೇ ಡೇಟಾ, ಲೆಕ್ಕಾಚಾರಗಳು, ಅಂದಾಜುಗಳು, ಮುನ್ಸೂಚನೆಗಳು, ಅಥವಾ ವರದಿಗಳ ನಿಖರತೆ, ಸಂಪೂರ್ಣತೆ, ವಿಶ್ವಾಸಾರ್ಹತೆ, ಸೂಕ್ತತೆ ಅಥವಾ ಸಮಯೋಚಿತತೆಯ ಬಗ್ಗೆ ಯಾವುದೇ ಪ್ರಾತಿನಿಧ್ಯ ಅಥವಾ ಖಾತರಿ ನೀಡುವುದಿಲ್ಲ. ಇದು ಇವುಗಳನ್ನು ಒಳಗೊಂಡಿದೆ, ಆದರೆ ಇವುಗಳಿಗೆ ಸೀಮಿತವಾಗಿಲ್ಲ:
+    </p>
+    <ul>
+        <li>
+            Data obtained from sensors, whether ground-based, airborne (drone LiDAR, multispectral), or satellite-based. Sensor readings can be affected by calibration, environmental conditions, and operational factors.
+            <br><br>
+            ಭೂ-ಆಧಾರಿತ, ವಾಯುಗಾಮಿ (ಡ್ರೋನ್ LiDAR, ಮಲ್ಟಿಸ್ಪೆಕ್ಟ್ರಲ್), ಅಥವಾ ಉಪಗ್ರಹ-ಆಧಾರಿತ ಸಂವೇದಕಗಳಿಂದ ಪಡೆದ ಡೇಟಾ. ಸಂವೇದಕ ವಾಚನಗೋಷ್ಠಿಗಳು ಮಾಪನಾಂಕ ನಿರ್ಣಯ, ಪರಿಸರ ಪರಿಸ್ಥಿತಿಗಳು ಮತ್ತು ಕಾರ್ಯಾಚರಣೆಯ ಅಂಶಗಳಿಂದ ಪ್ರಭಾವಿತವಾಗಬಹುದು.
+        </li>
+        <li>
+            Estimates of Soil Organic Carbon (SOC), carbon sequestration rates, or carbon credits. These are based on models, sampling protocols, and data inputs that have inherent variability and limitations.
+            <br><br>
+            ಮಣ್ಣಿನ ಸಾವಯವ ಇಂಗಾಲದ (SOC), ಇಂಗಾಲದ ಪ್ರತ್ಯೇಕತೆಯ ದರಗಳು, ಅಥವಾ ಇಂಗಾಲದ ಕ್ರೆಡಿಟ್‌ಗಳ ಅಂದಾಜುಗಳು. ಇವು ಅಂತರ್ಗತ ವ್ಯತ್ಯಾಸ ಮತ್ತು ಮಿತಿಗಳನ್ನು ಹೊಂದಿರುವ ಮಾದರಿಗಳು, ಮಾದರಿ ಪ್ರೋಟೋಕಾಲ್‌ಗಳು ಮತ್ತು ಡೇಟಾ ಇನ್‌ಪುಟ್‌ಗಳನ್ನು ಆಧರಿಸಿವೆ.
+        </li>
+        <li>
+            Estimates of methane (CH4) emissions or reductions associated with agricultural practices like AWD. Quantification methodologies involve assumptions and potential inaccuracies.
+            <br><br>
+            AWD ಯಂತಹ ಕೃಷಿ ಪದ್ಧತಿಗಳಿಗೆ ಸಂಬಂಧಿಸಿದ ಮೀಥೇನ್ (CH4) ಹೊರಸೂಸುವಿಕೆ ಅಥವಾ ಕಡಿತದ ಅಂದಾಜುಗಳು. ಪರಿಮಾಣೀಕರಣ ವಿಧಾನಗಳು ಊಹೆಗಳು ಮತ್ತು ಸಂಭಾವ್ಯ ತಪ್ಪುಗಳನ್ನು ಒಳಗೊಂಡಿರುತ್ತವೆ.
+        </li>
+        <li>
+            Detection or monitoring of AWD phases, water levels, or soil moisture. Remote sensing and sensor-based monitoring provide estimates and may be affected by factors like cloud cover (for optical sensors) or sensor placement.
+            <br><br>
+            AWD ಹಂತಗಳು, ನೀರಿನ ಮಟ್ಟಗಳು, ಅಥವಾ ಮಣ್ಣಿನ ತೇವಾಂಶದ ಪತ್ತೆ ಅಥವಾ ಮೇಲ್ವಿಚಾರಣೆ. ದೂರ ಸಂವೇದನೆ ಮತ್ತು ಸಂವೇದಕ-ಆಧಾರಿತ ಮೇಲ್ವಿಚಾರಣೆಯು ಅಂದಾಜುಗಳನ್ನು ಒದಗಿಸುತ್ತದೆ ಮತ್ತು ಮೇಘ ಕವರ್ (ಆಪ್ಟಿಕಲ್ ಸಂವೇದಕಗಳಿಗಾಗಿ) ಅಥವಾ ಸಂವೇದಕ ನಿಯೋಜನೆಯಂತಹ ಅಂಶಗಳಿಂದ ಪ್ರಭಾವಿತವಾಗಬಹುದು.
+        </li>
+        <li>
+            Estimations of crop biomass, health status, or yield predictions.
+            <br><br>
+            ಬೆಳೆ ಜೀವರಾಶಿ, ಆರೋಗ್ಯ ಸ್ಥಿತಿ, ಅಥವಾ ಇಳುವರಿ ಮುನ್ಸೂಚನೆಗಳ ಅಂದಾಜುಗಳು.
+        </li>
+        <li>
+            Any data, guidelines, or information sourced from third parties ("Third Party Information") made available through the Platform.
+            <br><br>
+            ಪ್ಲಾಟ್‌ಫಾರ್ಮ್ ಮೂಲಕ ಲಭ್ಯವಾಗುವಂತೆ ಮಾಡಲಾದ ಮೂರನೇ ವ್ಯಕ್ತಿಗಳಿಂದ ("ಮೂರನೇ ವ್ಯಕ್ತಿಯ ಮಾಹಿತಿ") ಪಡೆದ ಯಾವುದೇ ಡೇಟಾ, ಮಾರ್ಗಸೂಚಿಗಳು ಅಥವಾ ಮಾಹಿತಿ.
+        </li>
+    </ul>
+    <p>
+        YOU RELY ON ANY SUCH DATA OR ESTIMATES AT YOUR OWN RISK. AURIGRAPH IS NOT RESPONSIBLE FOR DECISIONS MADE BASED ON PLATFORM DATA. The specificity of these disclaimers reflects the nature of the AUREX platform and the potential for users to rely on its specialized outputs for significant operational or financial decisions, necessitating clear communication about inherent data limitations.
+        <br><br>
+        ನೀವು ಅಂತಹ ಯಾವುದೇ ಡೇಟಾ ಅಥವಾ ಅಂದಾಜುಗಳ ಮೇಲೆ ನಿಮ್ಮ ಸ್ವಂತ ಅಪಾಯದಲ್ಲಿ ಅವಲಂಬಿತರಾಗಿರುತ್ತೀರಿ. ಪ್ಲಾಟ್‌ಫಾರ್ಮ್ ಡೇಟಾವನ್ನು ಆಧರಿಸಿ ಮಾಡಿದ ನಿರ್ಧಾರಗಳಿಗೆ ಆರಿಗ್ರಾಫ್ ಜವಾಬ್ದಾರನಾಗಿರುವುದಿಲ್ಲ. ಈ ಹಕ್ಕುತ್ಯಾಗಗಳ ನಿರ್ದಿಷ್ಟತೆಯು AUREX ಪ್ಲಾಟ್‌ಫಾರ್ಮ್‌ನ ಸ್ವರೂಪವನ್ನು ಮತ್ತು ಬಳಕೆದಾರರು ಮಹತ್ವದ ಕಾರ್ಯಾಚರಣೆಯ ಅಥವಾ ಆರ್ಥಿಕ ನಿರ್ಧಾರಗಳಿಗಾಗಿ ಅದರ ವಿಶೇಷ ಔಟ್‌ಪುಟ್‌ಗಳ ಮೇಲೆ ಅವಲಂಬಿತರಾಗುವ ಸಂಭಾವ್ಯತೆಯನ್ನು ಪ್ರತಿಬಿಂಬಿಸುತ್ತದೆ, ಅಂತರ್ಗತ ಡೇಟಾ ಮಿತಿಗಳ ಬಗ್ಗೆ ಸ್ಪಷ್ಟ ಸಂವಹನದ ಅಗತ್ಯವಿದೆ.
+    </p>
+    <h3>
+        8.3 Platform Availability
+        <br>
+        8.3 ಪ್ಲಾಟ್‌ಫಾರ್ಮ್ ಲಭ್ಯತೆ
+    </h3>
+    <p>
+        Aurigraph does not warrant that the Platform will be available at all times or that access will be uninterrupted or error-free. The Platform may be subject to downtime for maintenance, upgrades, repairs, or due to network or equipment failures, or other events beyond Aurigraph's reasonable control. Aurigraph may offer specific Service Level Agreements (SLAs) regarding uptime to certain enterprise clients under separate agreements.
+        <br><br>
+        ಪ್ಲಾಟ್‌ಫಾರ್ಮ್ ಎಲ್ಲಾ ಸಮಯದಲ್ಲೂ ಲಭ್ಯವಿರುತ್ತದೆ ಅಥವಾ ಪ್ರವೇಶವು ಅಡೆತಡೆಯಿಲ್ಲದ ಅಥವಾ ದೋಷ-ಮುಕ್ತವಾಗಿರುತ್ತದೆ ಎಂದು ಆರಿಗ್ರಾಫ್ ಖಾತರಿಪಡಿಸುವುದಿಲ್ಲ. ಪ್ಲಾಟ್‌ಫಾರ್ಮ್ ನಿರ್ವಹಣೆ, ನವೀಕರಣಗಳು, ದುರಸ್ತಿಗಳಿಗಾಗಿ, ಅಥವಾ ನೆಟ್‌ವರ್ಕ್ ಅಥವಾ ಉಪಕರಣಗಳ ವೈಫಲ್ಯಗಳಿಂದ, ಅಥವಾ ಆರಿಗ್ರಾಫ್‌ನ ಸಮಂಜಸವಾದ ನಿಯಂತ್ರಣವನ್ನು ಮೀರಿದ ಇತರ ಘಟನೆಗಳಿಂದಾಗಿ ಡೌನ್‌ಟೈಮ್‌ಗೆ ಒಳಪಟ್ಟಿರಬಹುದು. ಆರಿಗ್ರಾಫ್ ಪ್ರತ್ಯೇಕ ಒಪ್ಪಂದಗಳ ಅಡಿಯಲ್ಲಿ ಕೆಲವು ಉದ್ಯಮ ಕ್ಲೈಂಟ್‌ಗಳಿಗೆ ಅಪ್‌ಟೈಮ್‌ಗೆ ಸಂಬಂಧಿಸಿದಂತೆ ನಿರ್ದಿಷ್ಟ ಸೇವಾ ಮಟ್ಟದ ಒಪ್ಪಂದಗಳನ್ನು (SLA ಗಳು) ನೀಡಬಹುದು.
+    </p>
+    <h3>
+        8.4 No Guarantee of Outcomes
+        <br>
+        8.4 ಫಲಿತಾಂಶಗಳ ಯಾವುದೇ ಖಾತರಿಯಿಲ್ಲ
+    </h3>
+    <p>
+        Aurigraph makes no guarantees regarding any specific results or outcomes from Your use of the Platform. This includes, without limitation, any guarantee of increased crop yields, specific levels of water savings from AWD, achievement of particular carbon sequestration targets, successful generation or sale of carbon credits, improved soil health, or increased profitability. The Platform provides tools and data to support decision-making, but the ultimate responsibility for farm management practices and outcomes rests with the Farmer or User.
+        <br><br>
+        ಪ್ಲಾಟ್‌ಫಾರ್ಮ್‌ನ ನಿಮ್ಮ ಬಳಕೆಯಿಂದ ಯಾವುದೇ ನಿರ್ದಿಷ್ಟ ಫಲಿತಾಂಶಗಳು ಅಥವಾ ಪರಿಣಾಮಗಳಿಗೆ ಸಂಬಂಧಿಸಿದಂತೆ ಆರಿಗ್ರಾಫ್ ಯಾವುದೇ ಖಾತರಿ ನೀಡುವುದಿಲ್ಲ. ಇದು, ಮಿತಿಯಿಲ್ಲದೆ, ಹೆಚ್ಚಿದ ಬೆಳೆ ಇಳುವರಿ, AWD ಯಿಂದ ನಿರ್ದಿಷ್ಟ ಮಟ್ಟದ ನೀರಿನ ಉಳಿತಾಯ, ನಿರ್ದಿಷ್ಟ ಇಂಗಾಲದ ಪ್ರತ್ಯೇಕತೆಯ ಗುರಿಗಳನ್ನು ಸಾಧಿಸುವುದು, ಇಂಗಾಲದ ಕ್ರೆಡಿಟ್‌ಗಳ ಯಶಸ್ವಿ ಉತ್ಪಾದನೆ ಅಥವಾ ಮಾರಾಟ, ಸುಧಾರಿತ ಮಣ್ಣಿನ ಆರೋಗ್ಯ, ಅಥವಾ ಹೆಚ್ಚಿದ ಲಾಭದಾಯಕತೆಯ ಯಾವುದೇ ಖಾತರಿಯನ್ನು ಒಳಗೊಂಡಿರುತ್ತದೆ. ಪ್ಲಾಟ್‌ಫಾರ್ಮ್ ನಿರ್ಧಾರ ತೆಗೆದುಕೊಳ್ಳುವಿಕೆಯನ್ನು ಬೆಂಬಲಿಸಲು ಪರಿಕರಗಳು ಮತ್ತು ಡೇಟಾವನ್ನು ಒದಗಿಸುತ್ತದೆ, ಆದರೆ ಕೃಷಿ ನಿರ್ವಹಣಾ ಪದ್ಧತಿಗಳು ಮತ್ತು ಫಲಿತಾಂಶಗಳಿಗೆ ಅಂತಿಮ ಜವಾಬ್ದಾರಿಯು ರೈತ ಅಥವಾ ಬಳಕೆದಾರರ ಮೇಲೆ ಇರುತ್ತದೆ.
+    </p>
+    <h3>
+        8.5 Third-Party Services/Data
+        <br>
+        8.5 ಮೂರನೇ-ವ್ಯಕ್ತಿಯ ಸೇವೆಗಳು/ಡೇಟಾ
+    </h3>
+    <p>
+        The Platform may integrate with or rely on third-party services, data sources (e.g., weather feeds, satellite base imagery, carbon registries), or software. Aurigraph disclaims all responsibility and liability for the accuracy, availability, legality, performance, or security of any such third-party services, data, or integrations. Your use of third-party services may be subject to their respective terms and conditions and privacy policies.
+        <br><br>
+        ಪ್ಲಾಟ್‌ಫಾರ್ಮ್ ಮೂರನೇ-ವ್ಯಕ್ತಿಯ ಸೇವೆಗಳು, ಡೇಟಾ ಮೂಲಗಳು (ಉದಾ. ಹವಾಮಾನ ಫೀಡ್‌ಗಳು, ಉಪಗ್ರಹ ಮೂಲ ಚಿತ್ರಣ, ಕಾರ್ಬನ್ ನೋಂದಣಿಗಳು), ಅಥವಾ ಸಾಫ್ಟ್‌ವೇರ್‌ನೊಂದಿಗೆ ಸಂಯೋಜಿಸಬಹುದು ಅಥವಾ ಅವಲಂಬಿಸಬಹುದು. ಅಂತಹ ಯಾವುದೇ ಮೂರನೇ-ವ್ಯಕ್ತಿಯ ಸೇವೆಗಳು, ಡೇಟಾ ಅಥವಾ ಸಂಯೋಜನೆಗಳ ನಿಖರತೆ, ಲಭ್ಯತೆ, ಕಾನೂನುಬದ್ಧತೆ, ಕಾರ್ಯಕ್ಷಮತೆ ಅಥವಾ ಭದ್ರತೆಗಾಗಿ ಆರಿಗ್ರಾಫ್ ಎಲ್ಲಾ ಜವಾಬ್ದಾರಿ ಮತ್ತು ಹೊಣೆಗಾರಿಕೆಯನ್ನು ನಿರಾಕರಿಸುತ್ತದೆ. ಮೂರನೇ-ವ್ಯಕ್ತಿಯ ಸೇವೆಗಳ ನಿಮ್ಮ ಬಳಕೆಯು ಅವರ ಆಯಾ ನಿಯಮಗಳು ಮತ್ತು ನಿಬಂಧನೆಗಳು ಮತ್ತು ಗೌಪ್ಯತೆ ನೀತಿಗಳಿಗೆ ಒಳಪಟ್ಟಿರಬಹುದು.
+    </p>
+
+    <h2>
+        9. Limitation of Liability
+        <br>
+        9. ಹೊಣೆಗಾರಿಕೆಯ ಮಿತಿ
+    </h2>
+    <h3>
+        9.1 Exclusion of Indirect Damages
+        <br>
+        9.1 ಪರೋಕ್ಷ ಹಾನಿಗಳ ಹೊರಗಿಡುವಿಕೆ
+    </h3>
+    <p>
+        TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, IN NO EVENT SHALL AURIGRAPH, ITS AFFILIATES, DIRECTORS, OFFICERS, EMPLOYEES, AGENTS, SUPPLIERS, OR LICENSORS BE LIABLE FOR ANY INDIRECT, PUNITIVE, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR EXEMPLARY DAMAGES, INCLUDING WITHOUT LIMITATION DAMAGES FOR LOSS OF PROFITS, REVENUE, GOODWILL, USE, DATA, OR OTHER INTANGIBLE LOSSES, ARISING OUT OF OR RELATING TO THIS AGREEMENT OR YOUR ACCESS TO OR USE OF, OR INABILITY TO ACCESS OR USE, THE PLATFORM OR SERVICES, WHETHER BASED ON WARRANTY, CONTRACT, TORT (INCLUDING NEGLIGENCE), STATUTE, OR ANY OTHER LEGAL THEORY, AND WHETHER OR NOT AURIGRAPH HAS BEEN INFORMED OF THE POSSIBILITY OF SUCH DAMAGE. THIS INCLUDES, BUT IS NOT LIMITED TO, DAMAGES RESULTING FROM: (A) THE USE OR INABILITY TO USE THE SERVICE; (B) THE COST OF PROCUREMENT OF SUBSTITUTE GOODS AND SERVICES; (C) UNAUTHORIZED ACCESS TO OR ALTERATION OF YOUR TRANSMISSIONS OR DATA; (D) STATEMENTS OR CONDUCT OF ANY THIRD PARTY ON THE SERVICE; OR (E) ANY OTHER MATTER RELATING TO THE SERVICE.
+        <br><br>
+        ಅನ್ವಯವಾಗುವ ಕಾನೂನಿನಿಂದ ಅನುಮತಿಸಲಾದ ಗರಿಷ್ಠ ಮಟ್ಟಿಗೆ, ಯಾವುದೇ ಸಂದರ್ಭದಲ್ಲಿ ಆರಿಗ್ರಾಫ್, ಅದರ ಅಂಗಸಂಸ್ಥೆಗಳು, ನಿರ್ದೇಶಕರು, ಅಧಿಕಾರಿಗಳು, ಉದ್ಯೋಗಿಗಳು, ಏಜೆಂಟರು, ಪೂರೈಕೆದಾರರು ಅಥವಾ ಪರವಾನಗಿದಾರರು ಯಾವುದೇ ಪರೋಕ್ಷ, ದಂಡನಾತ್ಮಕ, ಪ್ರಾಸಂಗಿಕ, ವಿಶೇಷ, ಪರಿಣಾಮಕಾರಿ ಅಥವಾ ಮಾದರಿಯ ಹಾನಿಗಳಿಗೆ, ಲಾಭ, ಆದಾಯ, ಸದ್ಭಾವನೆ, ಬಳಕೆ, ಡೇಟಾ ಅಥವಾ ಇತರ ಅಮೂರ್ತ ನಷ್ಟಗಳಿಗಾಗಿ ಮಿತಿಯಿಲ್ಲದೆ, ಈ ಒಪ್ಪಂದ ಅಥವಾ ನಿಮ್ಮ ಪ್ರವೇಶ ಅಥವಾ ಬಳಕೆ, ಅಥವಾ ಪ್ರವೇಶಿಸಲು ಅಥವಾ ಬಳಸಲು ಅಸಮರ್ಥತೆ, ಪ್ಲಾಟ್‌ಫಾರ್ಮ್ ಅಥವಾ ಸೇವೆಗಳಿಗೆ ಸಂಬಂಧಿಸಿದಂತೆ, ಖಾತರಿ, ಒಪ್ಪಂದ, ಹಿಂಸೆ (ನಿರ್ಲಕ್ಷ್ಯ ಸೇರಿದಂತೆ), ಶಾಸನ ಅಥವಾ ಯಾವುದೇ ಇತರ ಕಾನೂನು ಸಿದ್ಧಾಂತದ ಆಧಾರದ ಮೇಲೆ, ಮತ್ತು ಅಂತಹ ಹಾನಿಯ ಸಾಧ್ಯತೆಯ ಬಗ್ಗೆ ಆರಿಗ್ರಾಫ್‌ಗೆ ತಿಳಿಸಲಾಗಿದೆಯೇ ಅಥವಾ ಇಲ್ಲವೇ ಎಂಬುದನ್ನು ಲೆಕ್ಕಿಸದೆ ಹೊಣೆಗಾರರಾಗಿರುವುದಿಲ್ಲ. ಇದು ಇವುಗಳನ್ನು ಒಳಗೊಂಡಿದೆ, ಆದರೆ ಇವುಗಳಿಗೆ ಸೀಮಿತವಾಗಿಲ್ಲ: (A) ಸೇವೆಯನ್ನು ಬಳಸಲು ಅಥವಾ ಬಳಸಲು ಅಸಮರ್ಥತೆ; (B) ಬದಲಿ ಸರಕುಗಳು ಮತ್ತು ಸೇವೆಗಳ ಸಂಗ್ರಹಣೆಯ ವೆಚ್ಚ; (C) ನಿಮ್ಮ ಪ್ರಸರಣಗಳು ಅಥವಾ ಡೇಟಾಗೆ ಅನಧಿಕೃತ ಪ್ರವೇಶ ಅಥವಾ ಬದಲಾವಣೆ; (D) ಸೇವೆಯಲ್ಲಿ ಯಾವುದೇ ಮೂರನೇ ವ್ಯಕ್ತಿಯ ಹೇಳಿಕೆಗಳು ಅಥವಾ ನಡವಳಿಕೆ; ಅಥವಾ (E) ಸೇವೆಗೆ ಸಂಬಂಧಿಸಿದ ಯಾವುದೇ ಇತರ ವಿಷಯ.
+    </p>
+    <h3>
+        9.2 Cap on Direct Damages
+        <br>
+        9.2 ನೇರ ಹಾನಿಗಳ ಮೇಲೆ ಮಿತಿ
+    </h3>
+    <p>
+        TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, AURIGRAPH'S TOTAL AGGREGATE LIABILITY TO YOU FOR ANY AND ALL CLAIMS ARISING OUT OF OR RELATING TO THIS AGREEMENT OR YOUR USE OF THE PLATFORM, WHETHER IN CONTRACT, TORT (INCLUDING NEGLIGENCE), STATUTE, OR OTHERWISE, SHALL NOT EXCEED THE GREATER OF: (A) THE TOTAL AMOUNT OF FEES, IF ANY, PAID BY YOU TO AURIGRAPH FOR ACCESS TO AND USE OF THE SPECIFIC SERVICE GIVING RISE TO THE CLAIM DURING THE TWELVE (12) MONTH PERIOD IMMEDIATELY PRECEDING THE EVENT GIVING RISE TO THE LIABILITY; OR (B) ONE HUNDRED U.S. DOLLARS (USD $100.00) OR ITS EQUIVALENT IN LOCAL CURRENCY. This cap is set considering both the potential value derived from the service and the inherent risks and uncertainties associated with agricultural data and technology, aiming for a balance between protecting Aurigraph and providing a reasonable recourse for users, particularly where services might influence significant farming or financial decisions.
+        <br><br>
+        ಅನ್ವಯವಾಗುವ ಕಾನೂನಿನಿಂದ ಅನುಮತಿಸಲಾದ ಗರಿಷ್ಠ ಮಟ್ಟಿಗೆ, ಈ ಒಪ್ಪಂದ ಅಥವಾ ಪ್ಲಾಟ್‌ಫಾರ್ಮ್‌ನ ನಿಮ್ಮ ಬಳಕೆಗೆ ಸಂಬಂಧಿಸಿದಂತೆ ಅಥವಾ ಅದಕ್ಕೆ ಸಂಬಂಧಿಸಿದಂತೆ ಯಾವುದೇ ಮತ್ತು ಎಲ್ಲಾ ಕ್ಲೈಮ್‌ಗಳಿಗಾಗಿ ನಿಮಗೆ ಆರಿಗ್ರಾಫ್‌ನ ಒಟ್ಟು ಒಟ್ಟು ಹೊಣೆಗಾರಿಕೆಯು, ಒಪ್ಪಂದ, ಹಿಂಸೆ (ನಿರ್ಲಕ್ಷ್ಯ ಸೇರಿದಂತೆ), ಶಾಸನ ಅಥವಾ ಇನ್ಯಾವುದೇ ರೀತಿಯಲ್ಲಿ, ಇವುಗಳಲ್ಲಿ ಹೆಚ್ಚಿನದನ್ನು ಮೀರುವುದಿಲ್ಲ: (A) ಹೊಣೆಗಾರಿಕೆಗೆ ಕಾರಣವಾದ ಘಟನೆಗೆ ತಕ್ಷಣವೇ предшествуವ ಹನ್ನೆರಡು (12) ತಿಂಗಳ ಅವಧಿಯಲ್ಲಿ ಕ್ಲೈಮ್‌ಗೆ ಕಾರಣವಾದ ನಿರ್ದಿಷ್ಟ ಸೇವೆಗೆ ಪ್ರವೇಶ ಮತ್ತು ಬಳಕೆಗಾಗಿ ನೀವು ಆರಿಗ್ರಾಫ್‌ಗೆ ಪಾವತಿಸಿದ ಒಟ್ಟು ಶುಲ್ಕಗಳು, ಯಾವುದಾದರೂ ಇದ್ದರೆ; ಅಥವಾ (B) ನೂರು ಯು.ಎಸ್. ಡಾಲರ್‌ಗಳು (USD $100.00) ಅಥವಾ ಸ್ಥಳೀಯ ಕರೆನ್ಸಿಯಲ್ಲಿ ಅದರ ಸಮಾನ. ಈ ಮಿತಿಯನ್ನು ಸೇವೆಯಿಂದ ಪಡೆದ ಸಂಭಾವ್ಯ ಮೌಲ್ಯ ಮತ್ತು ಕೃಷಿ ಡೇಟಾ ಮತ್ತು ತಂತ್ರಜ್ಞಾನಕ್ಕೆ ಸಂಬಂಧಿಸಿದ ಅಂತರ್ಗತ ಅಪಾಯಗಳು ಮತ್ತು ಅನಿಶ್ಚಿತತೆಗಳನ್ನು ಪರಿಗಣಿಸಿ ಹೊಂದಿಸಲಾಗಿದೆ, ಆರಿಗ್ರಾಫ್ ಅನ್ನು ರಕ್ಷಿಸುವುದು ಮತ್ತು ಬಳಕೆದಾರರಿಗೆ, ವಿಶೇಷವಾಗಿ ಸೇವೆಗಳು ಮಹತ್ವದ ಕೃಷಿ ಅಥವಾ ಆರ್ಥಿಕ ನಿರ್ಧಾರಗಳ ಮೇಲೆ ಪ್ರಭಾವ ಬೀರಬಹುದಾದಲ್ಲಿ, ಸಮಂಜಸವಾದ ಪರಿಹಾರವನ್ನು ಒದಗಿಸುವ ನಡುವೆ ಸಮತೋಲನವನ್ನು ಗುರಿಯಾಗಿರಿಸಿಕೊಳ್ಳಲಾಗಿದೆ.
+    </p>
+    <h3>
+        9.3 Exceptions
+        <br>
+        9.3 ವಿನಾಯಿತಿಗಳು
+    </h3>
+    <p>
+        The limitations of liability set forth in this Section 9 shall not apply to the extent prohibited by applicable law, such as liability arising from Aurigraph's gross negligence, willful misconduct, or fraud, or for death or personal injury caused by Aurigraph's negligence. Some jurisdictions do not allow the exclusion or limitation of certain types of damages, so some of the above limitations may not apply to You.
+        <br><br>
+        ಈ ವಿಭಾಗ 9 ರಲ್ಲಿ ನಿಗದಿಪಡಿಸಲಾದ ಹೊಣೆಗಾರಿಕೆಯ ಮಿತಿಗಳು ಅನ್ವಯವಾಗುವ ಕಾನೂನಿನಿಂದ ನಿಷೇಧಿಸಲಾದ ಮಟ್ಟಿಗೆ ಅನ್ವಯಿಸುವುದಿಲ್ಲ, ಉದಾಹರಣೆಗೆ ಆರಿಗ್ರಾಫ್‌ನ ಸಂಪೂರ್ಣ ನಿರ್ಲಕ್ಷ್ಯ, ಉದ್ದೇಶಪೂರ್ವಕ ದುರ್ನಡತೆ ಅಥವಾ ವಂಚನೆಯಿಂದ ಉಂಟಾಗುವ ಹೊಣೆಗಾರಿಕೆ, ಅಥವಾ ಆರಿಗ್ರಾಫ್‌ನ ನಿರ್ಲಕ್ಷ್ಯದಿಂದ ಉಂಟಾದ ಸಾವು ಅಥವಾ ವೈಯಕ್ತಿಕ ಗಾಯಕ್ಕಾಗಿ. ಕೆಲವು ಅಧಿಕಾರ ವ್ಯಾಪ್ತಿಗಳು ಕೆಲವು ರೀತಿಯ ಹಾನಿಗಳ ಹೊರಗಿಡುವಿಕೆ ಅಥವಾ ಮಿತಿಯನ್ನು ಅನುಮತಿಸುವುದಿಲ್ಲ, ಆದ್ದರಿಂದ ಮೇಲಿನ ಕೆಲವು ಮಿತಿಗಳು ನಿಮಗೆ ಅನ್ವಯಿಸದಿರಬಹುದು.
+    </p>
+    <h3>
+        9.4 Basis of Bargain
+        <br>
+        9.4 ಚೌಕಾಶಿಯ ಆಧಾರ
+    </h3>
+    <p>
+        You acknowledge and agree that the warranty disclaimers in Section 8 and the limitations of liability in this Section 9 are reasonable and form an essential basis of the bargain between You and Aurigraph. Aurigraph would not be able to provide the Platform on an economically feasible basis without these limitations.
+        <br><br>
+        ವಿಭಾಗ 8 ರಲ್ಲಿನ ಖಾತರಿ ಹಕ್ಕುತ್ಯಾಗಗಳು ಮತ್ತು ಈ ವಿಭಾಗ 9 ರಲ್ಲಿನ ಹೊಣೆಗಾರಿಕೆಯ ಮಿತಿಗಳು ಸಮಂಜಸವಾಗಿದೆ ಮತ್ತು ನೀವು ಮತ್ತು ಆರಿಗ್ರಾಫ್ ನಡುವಿನ ಚೌಕಾಶಿಯ ಅತ್ಯಗತ್ಯ ಆಧಾರವಾಗಿದೆ ಎಂದು ನೀವು ಅಂಗೀಕರಿಸುತ್ತೀರಿ ಮತ್ತು ಒಪ್ಪುತ್ತೀರಿ. ಈ ಮಿತಿಗಳಿಲ್ಲದೆ ಆರಿಗ್ರಾಫ್ ಆರ್ಥಿಕವಾಗಿ ಕಾರ್ಯಸಾಧ್ಯವಾದ ಆಧಾರದ ಮೇಲೆ ಪ್ಲಾಟ್‌ಫಾರ್ಮ್ ಅನ್ನು ಒದಗಿಸಲು ಸಾಧ್ಯವಾಗುವುದಿಲ್ಲ.
+    </p>
+
+    <h2>
+        10. Indemnification
+        <br>
+        10. ನಷ್ಟಭರ್ತಿ
+    </h2>
+    <h3>
+        10.1 User Indemnity
+        <br>
+        10.1 ಬಳಕೆದಾರರ ನಷ್ಟಭರ್ತಿ
+    </h3>
+    <p>
+        You agree to defend, indemnify, and hold harmless Aurigraph, its affiliates, licensors, and service providers, and its and their respective officers, directors, employees, contractors, agents, licensors, suppliers, successors, and assigns from and against any and all claims, liabilities, damages, judgments, awards, losses, costs, expenses, or fees (including reasonable attorneys' fees) arising out of or relating to: (a) Your violation of these Terms or Your use of the Platform, including, but not limited to, Your User Content; (b) any use of the Platform's content, services, and products other than as expressly authorized in these Terms; (c) Your violation of any applicable law or regulation; (d) Your violation of any third-party right, including without limitation any Intellectual Property Right, publicity, confidentiality, property, or privacy right; or (e) any dispute or issue between You and any third party, including other Users of the Platform. Aurigraph reserves the right, at its own expense, to assume the exclusive defense and control of any matter otherwise subject to indemnification by You, in which event You will cooperate with Aurigraph in asserting any available defenses.
+        <br><br>
+        ನೀವು ಆರಿಗ್ರಾಫ್, ಅದರ ಅಂಗಸಂಸ್ಥೆಗಳು, ಪರವಾನಗಿದಾರರು ಮತ್ತು ಸೇವಾ ಪೂರೈಕೆದಾರರು, ಮತ್ತು ಅದರ ಮತ್ತು ಅವರ ಆಯಾ ಅಧಿಕಾರಿಗಳು, ನಿರ್ದೇಶಕರು, ಉದ್ಯೋಗಿಗಳು, ಗುತ್ತಿಗೆದಾರರು, ಏಜೆಂಟರು, ಪರವಾನಗಿದಾರರು, ಪೂರೈಕೆದಾರರು, ಉತ್ತರಾಧಿಕಾರಿಗಳು ಮತ್ತು ನಿಯೋಜಿತರನ್ನು ಯಾವುದೇ ಮತ್ತು ಎಲ್ಲಾ ಕ್ಲೈಮ್‌ಗಳು, ಹೊಣೆಗಾರಿಕೆಗಳು, ಹಾನಿಗಳು, ತೀರ್ಪುಗಳು, ಪ್ರಶಸ್ತಿಗಳು, ನಷ್ಟಗಳು, ವೆಚ್ಚಗಳು, ಖರ್ಚುಗಳು ಅಥವಾ ಶುಲ್ಕಗಳಿಂದ (ಸಮಂಜಸವಾದ ವಕೀಲರ ಶುಲ್ಕಗಳು ಸೇರಿದಂತೆ) ರಕ್ಷಿಸಲು, ನಷ್ಟಭರ್ತಿ ಮಾಡಲು ಮತ್ತು ನಿರಪರಾಧಿಯಾಗಿ ಹಿಡಿದಿಡಲು ಒಪ್ಪುತ್ತೀರಿ: (a) ಈ ನಿಯಮಗಳ ನಿಮ್ಮ ಉಲ್ಲಂಘನೆ ಅಥವಾ ಪ್ಲಾಟ್‌ಫಾರ್ಮ್‌ನ ನಿಮ್ಮ ಬಳಕೆ, ನಿಮ್ಮ ಬಳಕೆದಾರರ ವಿಷಯವನ್ನು ಒಳಗೊಂಡಂತೆ, ಆದರೆ ಸೀಮಿತವಾಗಿಲ್ಲ; (b) ಈ ನಿಯಮಗಳಲ್ಲಿ ಸ್ಪಷ್ಟವಾಗಿ ಅಧಿಕಾರ ನೀಡಲಾದಂತೆ ಹೊರತುಪಡಿಸಿ, ಪ್ಲಾಟ್‌ಫಾರ್ಮ್‌ನ ವಿಷಯ, ಸೇವೆಗಳು ಮತ್ತು ಉತ್ಪನ್ನಗಳ ಯಾವುದೇ ಬಳಕೆ; (c) ಯಾವುದೇ ಅನ್ವಯವಾಗುವ ಕಾನೂನು ಅಥವಾ ನಿಯಂತ್ರಣದ ನಿಮ್ಮ ಉಲ್ಲಂಘನೆ; (d) ಯಾವುದೇ ಬೌದ್ಧಿಕ ಆಸ್ತಿ ಹಕ್ಕು, ಪ್ರಚಾರ, ಗೌಪ್ಯತೆ, ಆಸ್ತಿ ಅಥವಾ ಗೌಪ್ಯತೆ ಹಕ್ಕು ಸೇರಿದಂತೆ, ಮಿತಿಯಿಲ್ಲದೆ, ಯಾವುದೇ ಮೂರನೇ-ವ್ಯಕ್ತಿಯ ಹಕ್ಕಿನ ನಿಮ್ಮ ಉಲ್ಲಂಘನೆ; ಅಥವಾ (e) ನೀವು ಮತ್ತು ಪ್ಲಾಟ್‌ಫಾರ್ಮ್‌ನ ಇತರ ಬಳಕೆದಾರರು ಸೇರಿದಂತೆ ಯಾವುದೇ ಮೂರನೇ ವ್ಯಕ್ತಿಯ ನಡುವಿನ ಯಾವುದೇ ವಿವಾದ ಅಥವಾ ಸಮಸ್ಯೆ. ಆರಿಗ್ರಾಫ್, ತನ್ನ ಸ್ವಂತ ವೆಚ್ಚದಲ್ಲಿ, ನಿಮ್ಮಿಂದ ನಷ್ಟಭರ್ತಿಗೆ ಒಳಪಟ್ಟಿರುವ ಯಾವುದೇ ವಿಷಯದ ವಿಶೇಷ ರಕ್ಷಣೆ ಮತ್ತು ನಿಯಂತ್ರಣವನ್ನು ವಹಿಸಿಕೊಳ್ಳುವ ಹಕ್ಕನ್ನು ಕಾಯ್ದಿರಿಸಿಕೊಂಡಿದೆ, ಈ ಸಂದರ್ಭದಲ್ಲಿ ನೀವು ಲಭ್ಯವಿರುವ ಯಾವುದೇ ರಕ್ಷಣೆಗಳನ್ನು ಪ್ರತಿಪಾದಿಸುವಲ್ಲಿ ಆರಿಗ್ರಾಫ್‌ನೊಂದಿಗೆ ಸಹಕರಿಸುತ್ತೀರಿ.
+    </p>
+
+    <h2>
+        11. Term, Termination, and Suspension
+        <br>
+        11. ಅವಧಿ, ಮುಕ್ತಾಯ ಮತ್ತು ಅಮಾನತು
+    </h2>
+    <h3>
+        11.1 Term
+        <br>
+        11.1 ಅವಧಿ
+    </h3>
+    <p>
+        This Agreement shall commence on the date You first accept these Terms (as described in the Preamble and Section 1.3) and shall continue in effect until terminated by either You or Aurigraph as set forth in this Section 11. If You subscribe to specific Services for a defined term (e.g., monthly, annually), that subscription term will automatically renew for successive periods of the same duration unless either party gives the other notice of non-renewal before the end of the current term, or unless terminated earlier pursuant to this Agreement. The specific notice period required for non-renewal will be communicated at the time of subscription.
+        <br><br>
+        ಈ ಒಪ್ಪಂದವು ನೀವು ಈ ನಿಯಮಗಳನ್ನು ಮೊದಲು ಸ್ವೀಕರಿಸಿದ ದಿನಾಂಕದಂದು (ಪೀಠಿಕೆ ಮತ್ತು ವಿಭಾಗ 1.3 ರಲ್ಲಿ ವಿವರಿಸಿದಂತೆ) ಪ್ರಾರಂಭವಾಗುತ್ತದೆ ಮತ್ತು ಈ ವಿಭಾಗ 11 ರಲ್ಲಿ ನಿಗದಿಪಡಿಸಿದಂತೆ ನೀವು ಅಥವಾ ಆರಿಗ್ರಾಫ್‌ನಿಂದ ಮುಕ್ತಾಯಗೊಳ್ಳುವವರೆಗೆ ಜಾರಿಯಲ್ಲಿರುತ್ತದೆ. ನೀವು ನಿರ್ದಿಷ್ಟ ಸೇವೆಗಳಿಗೆ ವ್ಯಾಖ್ಯಾನಿತ ಅವಧಿಗೆ (ಉದಾ. ಮಾಸಿಕ, ವಾರ್ಷಿಕ) ಚಂದಾದಾರರಾಗಿದ್ದರೆ, ಪ್ರಸ್ತುತ ಅವಧಿಯ ಅಂತ್ಯದ ಮೊದಲು ಯಾವುದೇ ಪಕ್ಷವು ಇನ್ನೊಬ್ಬರಿಗೆ ನವೀಕರಿಸದಿರುವ ಸೂಚನೆಯನ್ನು ನೀಡದ ಹೊರತು, ಅಥವಾ ಈ ಒಪ್ಪಂದದ ಪ್ರಕಾರ ಮೊದಲೇ ಮುಕ್ತಾಯಗೊಳ್ಳದ ಹೊರತು ಆ ಚಂದಾದಾರಿಕೆ ಅವಧಿಯು ಸತತ ಒಂದೇ ಅವಧಿಯ ಅವಧಿಗಳಿಗೆ ಸ್ವಯಂಚಾಲಿತವಾಗಿ ನವೀಕರಿಸಲ್ಪಡುತ್ತದೆ. ನವೀಕರಿಸದಿರುವಿಕೆಗೆ ಅಗತ್ಯವಿರುವ ನಿರ್ದಿಷ್ಟ ಸೂಚನಾ ಅವಧಿಯನ್ನು ಚಂದಾದಾರಿಕೆಯ ಸಮಯದಲ್ಲಿ ತಿಳಿಸಲಾಗುವುದು.
+    </p>
+    <h3>
+        11.2 Termination by User
+        <br>
+        11.2 ಬಳಕೆದಾರರಿಂದ ಮುಕ್ತಾಯ
+    </h3>
+    <p>
+        You may terminate this Agreement and close Your Account at any time for any reason by following the account cancellation procedures provided within the Platform interface or by contacting Aurigraph customer support at <a href="#">[Insert Contact Email/Link]</a>. Termination will be effective upon confirmation by Aurigraph or at the end of the current billing cycle if applicable. Termination does not relieve You of any obligation to pay outstanding fees, if any. No refunds will be provided for termination prior to the end of a subscription term, except as may be required by law.
+        <br><br>
+        ಪ್ಲಾಟ್‌ಫಾರ್ಮ್ ಇಂಟರ್ಫೇಸ್‌ನಲ್ಲಿ ಒದಗಿಸಲಾದ ಖಾತೆ ರದ್ದತಿ ಕಾರ್ಯವಿಧಾನಗಳನ್ನು ಅನುಸರಿಸುವ ಮೂಲಕ ಅಥವಾ <a href="#">[ಸಂಪರ್ಕ ಇಮೇಲ್/ಲಿಂಕ್ ಸೇರಿಸಿ]</a> ನಲ್ಲಿ ಆರಿಗ್ರಾಫ್ ಗ್ರಾಹಕ ಬೆಂಬಲವನ್ನು ಸಂಪರ್ಕಿಸುವ ಮೂಲಕ ಯಾವುದೇ ಕಾರಣಕ್ಕಾಗಿ ಯಾವುದೇ ಸಮಯದಲ್ಲಿ ನೀವು ಈ ಒಪ್ಪಂದವನ್ನು ಮುಕ್ತಾಯಗೊಳಿಸಬಹುದು ಮತ್ತು ನಿಮ್ಮ ಖಾತೆಯನ್ನು ಮುಚ್ಚಬಹುದು. ಮುಕ್ತಾಯವು ಆರಿಗ್ರಾಫ್‌ನಿಂದ ದೃಢೀಕರಣದ ಮೇಲೆ ಅಥವಾ ಅನ್ವಯಿಸಿದರೆ ಪ್ರಸ್ತುತ ಬಿಲ್ಲಿಂಗ್ ಚಕ್ರದ ಕೊನೆಯಲ್ಲಿ ಜಾರಿಗೆ ಬರುತ್ತದೆ. ಮುಕ್ತಾಯವು ಯಾವುದೇ ಬಾಕಿ ಶುಲ್ಕಗಳನ್ನು ಪಾವತಿಸುವ ಯಾವುದೇ ಬಾಧ್ಯತೆಯಿಂದ ನಿಮ್ಮನ್ನು ಬಿಡುಗಡೆ ಮಾಡುವುದಿಲ್ಲ, ಯಾವುದಾದರೂ ಇದ್ದರೆ. ಚಂದಾದಾರಿಕೆ ಅವಧಿಯ ಅಂತ್ಯದ ಮೊದಲು ಮುಕ್ತಾಯಕ್ಕಾಗಿ ಯಾವುದೇ ಮರುಪಾವತಿಗಳನ್ನು ಒದಗಿಸಲಾಗುವುದಿಲ್ಲ, ಕಾನೂನಿನಿಂದ ಅಗತ್ಯವಿರುವಂತೆ ಹೊರತುಪಡಿಸಿ.
+    </p>
+    <h3>
+        11.3 Termination or Suspension by Aurigraph
+        <br>
+        11.3 ಆರಿಗ್ರಾಫ್‌ನಿಂದ ಮುಕ್ತಾಯ ಅಥವಾ ಅಮಾನತು
+    </h3>
+    <p>
+        Aurigraph reserves the right, in its sole discretion, to suspend or terminate Your access to all or part of the Platform, with or without prior notice, for any reason, including, but not limited to:
+        <br><br>
+        ಆರಿಗ್ರಾಫ್ ತನ್ನ ಸ್ವಂತ ವಿವೇಚನೆಯಿಂದ, ಯಾವುದೇ ಕಾರಣಕ್ಕಾಗಿ, ಪೂರ್ವ ಸೂಚನೆಯೊಂದಿಗೆ ಅಥವಾ ಇಲ್ಲದೆ, ಪ್ಲಾಟ್‌ಫಾರ್ಮ್‌ನ ಎಲ್ಲಾ ಅಥವಾ ಭಾಗಕ್ಕೆ ನಿಮ್ಮ ಪ್ರವೇಶವನ್ನು ಅಮಾನತುಗೊಳಿಸುವ ಅಥವಾ ಮುಕ್ತಾಯಗೊಳಿಸುವ ಹಕ್ಕನ್ನು ಕಾಯ್ದಿರಿಸಿಕೊಂಡಿದೆ, ಇದರಲ್ಲಿ ಇವು ಸೇರಿವೆ, ಆದರೆ ಇವುಗಳಿಗೆ ಸೀಮಿತವಾಗಿಲ್ಲ:
+    </p>
+    <ul>
+        <li>(a) Any breach or violation of these Terms, including the Privacy Policy or any applicable law.<br>(a) ಗೌಪ್ಯತಾ ನೀತಿ ಅಥವಾ ಯಾವುದೇ ಅನ್ವಯವಾಗುವ ಕಾನೂನು ಸೇರಿದಂತೆ ಈ ನಿಯಮಗಳ ಯಾವುದೇ ಉಲ್ಲಂಘನೆ ಅಥವಾ ಉಲ್ಲಂಘನೆ.</li>
+        <li>(b) Failure to pay applicable fees when due (if fees apply).<br>(b) ಅನ್ವಯವಾಗುವ ಶುಲ್ಕಗಳನ್ನು ಬಾಕಿ ಇರುವಾಗ ಪಾವತಿಸಲು ವಿಫಲವಾದರೆ (ಶುಲ್ಕಗಳು ಅನ್ವಯಿಸಿದರೆ).</li>
+        <li>(c) Extended periods of inactivity associated with Your Account.<br>(c) ನಿಮ್ಮ ಖಾತೆಗೆ ಸಂಬಂಧಿಸಿದ ದೀರ್ಘಾವಧಿಯ ನಿಷ್ಕ್ರಿಯತೆ.</li>
+        <li>(d) Requests by law enforcement, government agencies, or court order.<br>(d) ಕಾನೂನು ಜಾರಿ, ಸರ್ಕಾರಿ ಸಂಸ್ಥೆಗಳು ಅಥವಾ ನ್ಯಾಯಾಲಯದ ಆದೇಶದಿಂದ ವಿನಂತಿಗಳು.</li>
+        <li>(e) A decision to discontinue or materially modify the Platform or any part thereof.<br>(e) ಪ್ಲಾಟ್‌ಫಾರ್ಮ್ ಅಥವಾ ಅದರ ಯಾವುದೇ ಭಾಗವನ್ನು ನಿಲ್ಲಿಸುವ ಅಥವಾ ಗಣನೀಯವಾಗಿ ಮಾರ್ಪಡಿಸುವ ನಿರ್ಧಾರ.</li>
+        <li>(f) The occurrence of unforeseen technical or security issues or problems.<br>(f) ಅನಿರೀಕ್ಷಿತ ತಾಂತ್ರಿಕ ಅಥವಾ ಭದ್ರತಾ ಸಮಸ್ಯೆಗಳು ಅಥವಾ ಸಮಸ್ಯೆಗಳ ಸಂಭವ.</li>
+        <li>(g) Your engagement in fraudulent, illegal, or abusive activities.<br>(g) ನಿಮ್ಮ ವಂಚನೆ, ಕಾನೂನುಬಾಹಿರ ಅಥವಾ ನಿಂದನೀಯ ಚಟುವಟಿಕೆಗಳಲ್ಲಿ ತೊಡಗಿಸಿಕೊಳ್ಳುವಿಕೆ.</li>
+        <li>(h) Actions that cause harm or liability to Aurigraph, its other users, or third parties.<br>(h) ಆರಿಗ್ರಾಫ್, ಅದರ ಇತರ ಬಳಕೆದಾರರು ಅಥವಾ ಮೂರನೇ ವ್ಯಕ್ತಿಗಳಿಗೆ ಹಾನಿ ಅಥವಾ ಹೊಣೆಗಾರಿಕೆಯನ್ನು ಉಂಟುಮಾಡುವ ಕ್ರಮಗಳು.</li>
+    </ul>
+    <p>
+        Aurigraph will generally attempt to provide notice of suspension or termination, but is not obligated to do so, especially in cases of severe violations or security risks.
+        <br><br>
+        ಆರಿಗ್ರಾಫ್ ಸಾಮಾನ್ಯವಾಗಿ ಅಮಾನತು ಅಥವಾ ಮುಕ್ತಾಯದ ಸೂಚನೆಯನ್ನು ಒದಗಿಸಲು ಪ್ರಯತ್ನಿಸುತ್ತದೆ, ಆದರೆ ಹಾಗೆ ಮಾಡಲು ಬಾಧ್ಯನಾಗಿಲ್ಲ, ವಿಶೇಷವಾಗಿ ತೀವ್ರ ಉಲ್ಲಂಘನೆಗಳು ಅಥವಾ ಭದ್ರತಾ ಅಪಾಯಗಳ ಸಂದರ್ಭಗಳಲ್ಲಿ.
+    </p>
+
+    <h3>
+        11.4 Effects of Termination
+        <br>
+        11.4 ಮುಕ್ತಾಯದ ಪರಿಣಾಮಗಳು
+    </h3>
+    <p>
+        Upon termination of this Agreement for any reason:
+        <br><br>
+        ಯಾವುದೇ ಕಾರಣಕ್ಕಾಗಿ ಈ ಒಪ್ಪಂದದ ಮುಕ್ತಾಯದ ಮೇಲೆ:
+    </p>
+    <ul>
+        <li>(a) The license granted to You under Section 3.1 will immediately cease.<br>(a) ವಿಭಾಗ 3.1 ರ ಅಡಿಯಲ್ಲಿ ನಿಮಗೆ ನೀಡಲಾದ ಪರವಾನಗಿಯು ತಕ್ಷಣವೇ ನಿಲ್ಲುತ್ತದೆ.</li>
+        <li>(b) You must immediately cease all access to and use of the Platform and uninstall the Mobile Application from Your devices.<br>(b) ನೀವು ಪ್ಲಾಟ್‌ಫಾರ್ಮ್‌ಗೆ ಎಲ್ಲಾ ಪ್ರವೇಶ ಮತ್ತು ಬಳಕೆಯನ್ನು ತಕ್ಷಣವೇ ನಿಲ್ಲಿಸಬೇಕು ಮತ್ತು ನಿಮ್ಮ ಸಾಧನಗಳಿಂದ ಮೊಬೈಲ್ ಅಪ್ಲಿಕೇಶನ್ ಅನ್ನು ಅನ್‌ಇನ್‌ಸ್ಟಾಲ್ ಮಾಡಬೇಕು.</li>
+        <li>(c) Aurigraph may, in its sole discretion, deactivate or delete Your Account and all related information and files in Your Account, including Your User Content, subject to the data retention requirements and Your rights under the DPDPA regarding Personal Data erasure. Aurigraph is not liable for any loss or damage resulting from such deletion.<br>(c) ಆರಿಗ್ರಾಫ್, ತನ್ನ ಸ್ವಂತ ವಿವೇಚನೆಯಿಂದ, ನಿಮ್ಮ ಖಾತೆ ಮತ್ತು ನಿಮ್ಮ ಖಾತೆಯಲ್ಲಿರುವ ಎಲ್ಲಾ ಸಂಬಂಧಿತ ಮಾಹಿತಿ ಮತ್ತು ಫೈಲ್‌ಗಳನ್ನು, ನಿಮ್ಮ ಬಳಕೆದಾರರ ವಿಷಯವನ್ನು ಒಳಗೊಂಡಂತೆ, ಡೇಟಾ ಉಳಿಸಿಕೊಳ್ಳುವ ಅವಶ್ಯಕತೆಗಳು ಮತ್ತು DPDPA ಅಡಿಯಲ್ಲಿ ವೈಯಕ್ತಿಕ ಡೇಟಾದ ಅಳಿಸುವಿಕೆಗೆ ಸಂಬಂಧಿಸಿದಂತೆ ನಿಮ್ಮ ಹಕ್ಕುಗಳಿಗೆ ಒಳಪಟ್ಟು, ನಿಷ್ಕ್ರಿಯಗೊಳಿಸಬಹುದು ಅಥವಾ ಅಳಿಸಬಹುದು. ಅಂತಹ ಅಳಿಸುವಿಕೆಯಿಂದ ಉಂಟಾಗುವ ಯಾವುದೇ ನಷ್ಟ ಅಥವಾ ಹಾನಿಗೆ ಆರಿಗ್ರಾಫ್ ಜವಾಬ್ದಾರನಾಗಿರುವುದಿಲ್ಲ.</li>
+        <li>(d) Any fees owed to Aurigraph prior to termination will become immediately due and payable.<br>(d) ಮುಕ್ತಾಯದ ಮೊದಲು ಆರಿಗ್ರಾಫ್‌ಗೆ ಬಾಕಿ ಇರುವ ಯಾವುದೇ ಶುಲ್ಕಗಳು ತಕ್ಷಣವೇ ಬಾಕಿ ಮತ್ತು ಪಾವತಿಸಬೇಕಾಗುತ್ತದೆ.</li>
+        <li>(e) The following sections shall survive termination: Preamble, 1.2 (Definitions), 5 (Data Handling, particularly ownership and licenses for residual use), 6 (Intellectual Property Rights), 8 (Disclaimers), 9 (Limitation of Liability), 10 (Indemnification), 11.4 (Effects of Termination), 12 (Governing Law and Dispute Resolution), and 13 (Miscellaneous).<br>(e) ಈ ಕೆಳಗಿನ ವಿಭಾಗಗಳು ಮುಕ್ತಾಯವನ್ನು ಉಳಿದುಕೊಳ್ಳುತ್ತವೆ: ಪೀಠಿಕೆ, 1.2 (ವ್ಯಾಖ್ಯಾನಗಳು), 5 (ಡೇಟಾ ನಿರ್ವಹಣೆ, ವಿಶೇಷವಾಗಿ ಉಳಿಕೆ ಬಳಕೆಗಾಗಿ ಮಾಲೀಕತ್ವ ಮತ್ತು ಪರವಾನಗಿಗಳು), 6 (ಬೌದ್ಧಿಕ ಆಸ್ತಿ ಹಕ್ಕುಗಳು), 8 (ಹಕ್ಕುತ್ಯಾಗಗಳು), 9 (ಹೊಣೆಗಾರಿಕೆಯ ಮಿತಿ), 10 (ನಷ್ಟಭರ್ತಿ), 11.4 (ಮುಕ್ತಾಯದ ಪರಿಣಾಮಗಳು), 12 (ಆಡಳಿತ ಕಾನೂನು ಮತ್ತು ವಿವಾದ ಪರಿಹಾರ), ಮತ್ತು 13 (ವಿವಿಧ).</li>
+    </ul>
+
+    <h3>
+        11.5 Data Retrieval
+        <br>
+        11.5 ಡೇಟಾ ಹಿಂಪಡೆಯುವಿಕೆ
+    </h3>
+    <p>
+        Upon Your written request made within a specified period following the effective date of termination, Aurigraph will use commercially reasonable efforts to provide You with an opportunity to export or retrieve Your User Content stored in Your Account, in a standard format determined by Aurigraph. After this period, Aurigraph may permanently delete Your User Content from its systems, subject to legal and regulatory retention requirements, particularly for Personal Data under DPDPA. Aurigraph reserves the right to charge a fee for data retrieval assistance.
+        <br><br>
+        ಮುಕ್ತಾಯದ ಜಾರಿಯಾಗುವ ದಿನಾಂಕದ ನಂತರ ನಿರ್ದಿಷ್ಟಪಡಿಸಿದ ಅವಧಿಯೊಳಗೆ ಮಾಡಿದ ನಿಮ್ಮ ಲಿಖಿತ ವಿನಂತಿಯ ಮೇರೆಗೆ, ಆರಿಗ್ರಾಫ್ ನಿಮ್ಮ ಖಾತೆಯಲ್ಲಿ ಸಂಗ್ರಹಿಸಲಾದ ನಿಮ್ಮ ಬಳಕೆದಾರರ ವಿಷಯವನ್ನು ರಫ್ತು ಮಾಡಲು ಅಥವಾ ಹಿಂಪಡೆಯಲು ನಿಮಗೆ ಅವಕಾಶವನ್ನು ಒದಗಿಸಲು ವಾಣಿಜ್ಯಿಕವಾಗಿ ಸಮಂಜಸವಾದ ಪ್ರಯತ್ನಗಳನ್ನು ಬಳಸುತ್ತದೆ, ಆರಿಗ್ರಾಫ್ ನಿರ್ಧರಿಸಿದ ಪ್ರಮಾಣಿತ ಸ್ವರೂಪದಲ್ಲಿ. ಈ ಅವಧಿಯ ನಂತರ, ಆರಿಗ್ರಾಫ್ ತನ್ನ ಸಿಸ್ಟಮ್‌ಗಳಿಂದ ನಿಮ್ಮ ಬಳಕೆದಾರರ ವಿಷಯವನ್ನು ಶಾಶ್ವತವಾಗಿ ಅಳಿಸಬಹುದು, ಕಾನೂನು ಮತ್ತು ನಿಯಂತ್ರಕ ಉಳಿಸಿಕೊಳ್ಳುವ ಅವಶ್ಯಕತೆಗಳಿಗೆ ಒಳಪಟ್ಟು, ವಿಶೇಷವಾಗಿ DPDPA ಅಡಿಯಲ್ಲಿ ವೈಯಕ್ತಿಕ ಡೇಟಾಗಾಗಿ. ಡೇಟಾ ಹಿಂಪಡೆಯುವಿಕೆ ಸಹಾಯಕ್ಕಾಗಿ ಶುಲ್ಕವನ್ನು ವಿಧಿಸುವ ಹಕ್ಕನ್ನು ಆರಿಗ್ರಾಫ್ ಕಾಯ್ದಿರಿಸಿಕೊಂಡಿದೆ.
+    </p>
+
+    <h2>
+        12. Governing Law and Dispute Resolution
+        <br>
+        12. ಆಡಳಿತ ಕಾನೂನು ಮತ್ತು ವಿವಾದ ಪರಿಹಾರ
+    </h2>
+    <h3>
+        12.1 Governing Law
+        <br>
+        12.1 ಆಡಳಿತ ಕಾನೂನು
+    </h3>
+    <p>
+        This Agreement and any dispute or claim arising out of or in connection with it or its subject matter or formation (including non-contractual disputes or claims) shall be governed by and construed in accordance with the laws of the Republic of India, without giving effect to any choice or conflict of law provision or rule. This choice of law is made considering the applicability of the DPDPA and the likely location of a significant portion of the User base (Farmers, Field Agents, etc.) within India, ensuring relevance and facilitating compliance and enforcement.
+        <br><br>
+        ಈ ಒಪ್ಪಂದ ಮತ್ತು ಅದರಿಂದ ಅಥವಾ ಅದಕ್ಕೆ ಸಂಬಂಧಿಸಿದಂತೆ ಅಥವಾ ಅದರ ವಿಷಯ ಅಥವಾ ರಚನೆಗೆ ಸಂಬಂಧಿಸಿದಂತೆ ಉದ್ಭವಿಸುವ ಯಾವುದೇ ವಿವಾದ ಅಥವಾ ಕ್ಲೈಮ್ (ಒಪ್ಪಂದವಲ್ಲದ ವಿವಾದಗಳು ಅಥವಾ ಕ್ಲೈಮ್‌ಗಳನ್ನು ಒಳಗೊಂಡಂತೆ) ಯಾವುದೇ ಆಯ್ಕೆ ಅಥವಾ ಕಾನೂನಿನ ಸಂಘರ್ಷದ ನಿಬಂಧನೆ ಅಥವಾ ನಿಯಮಕ್ಕೆ ಪರಿಣಾಮ ಬೀರದೆ, ಭಾರತ ಗಣರಾಜ್ಯದ ಕಾನೂನುಗಳಿಂದ ನಿಯಂತ್ರಿಸಲ್ಪಡುತ್ತದೆ ಮತ್ತು ಅರ್ಥೈಸಲ್ಪಡುತ್ತದೆ. ಈ ಕಾನೂನಿನ ಆಯ್ಕೆಯನ್ನು DPDPA ಯ ಅನ್ವಯಿಸುವಿಕೆ ಮತ್ತು ಭಾರತದೊಳಗೆ ಬಳಕೆದಾರರ ನೆಲೆಯ (ರೈತರು, ಫೀಲ್ಡ್ ಏಜೆಂಟ್‌ಗಳು, ಇತ್ಯಾದಿ) ಗಮನಾರ್ಹ ಭಾಗದ ಸಂಭಾವ್ಯ ಸ್ಥಳವನ್ನು ಪರಿಗಣಿಸಿ ಮಾಡಲಾಗಿದೆ, ಪ್ರಸ್ತುತತೆಯನ್ನು ಖಾತ್ರಿಪಡಿಸುತ್ತದೆ ಮತ್ತು ಅನುಸರಣೆ ಮತ್ತು ಜಾರಿಯನ್ನು ಸುಗಮಗೊಳಿಸುತ್ತದೆ.
+    </p>
+    <h3>
+        12.2 Dispute Resolution Mechanism
+        <br>
+        12.2 ವಿವಾದ ಪರಿಹಾರ ಕಾರ್ಯವಿಧಾನ
+    </h3>
+    <p>
+        The parties agree to attempt to resolve any dispute, claim, or controversy arising out of or relating to this Agreement or the breach, termination, enforcement, interpretation, or validity thereof (collectively, "Disputes") through good faith negotiation first.
+        <br><br>
+        ಪಕ್ಷಗಳು ಈ ಒಪ್ಪಂದ ಅಥವಾ ಅದರ ಉಲ್ಲಂಘನೆ, ಮುಕ್ತಾಯ, ಜಾರಿ, ವ್ಯಾಖ್ಯಾನ ಅಥವಾ ಸಿಂಧುತ್ವಕ್ಕೆ ಸಂಬಂಧಿಸಿದಂತೆ ಅಥವಾ ಅದಕ್ಕೆ ಸಂಬಂಧಿಸಿದಂತೆ ಉದ್ಭವಿಸುವ ಯಾವುದೇ ವಿವಾದ, ಕ್ಲೈಮ್ ಅಥವಾ ವಿವಾದವನ್ನು (ಒಟ್ಟಾರೆಯಾಗಿ, "ವಿವಾದಗಳು") ಮೊದಲು ಉತ್ತಮ ನಂಬಿಕೆಯ ಮಾತುಕತೆಯ ಮೂಲಕ ಪರಿಹರಿಸಲು ಪ್ರಯತ್ನಿಸಲು ಒಪ್ಪುತ್ತಾರೆ.
+    </p>
+    <ul>
+        <li>
+            <strong>(a) Negotiation:</strong> Either party may initiate negotiations by providing written notice to the other party, describing the subject of the Dispute and the relief requested. The parties shall attempt to resolve the Dispute through informal negotiation within a specified timeframe from the date the notice is received.
+            <br><br>
+            <strong>(a) ಮಾತುಕತೆ:</strong> ಯಾವುದೇ ಪಕ್ಷವು ಇನ್ನೊಂದು ಪಕ್ಷಕ್ಕೆ ಲಿಖಿತ ಸೂಚನೆಯನ್ನು ನೀಡುವ ಮೂಲಕ, ವಿವಾದದ ವಿಷಯ ಮತ್ತು ಕೋರಿದ ಪರಿಹಾರವನ್ನು ವಿವರಿಸುವ ಮೂಲಕ ಮಾತುಕತೆಗಳನ್ನು ಪ್ರಾರಂಭಿಸಬಹುದು. ಸೂಚನೆಯನ್ನು ಸ್ವೀಕರಿಸಿದ ದಿನಾಂಕದಿಂದ ನಿರ್ದಿಷ್ಟಪಡಿಸಿದ ಕಾಲಮಿತಿಯೊಳಗೆ ಅನೌಪಚಾರಿಕ ಮಾತುಕತೆಯ ಮೂಲಕ ವಿವಾದವನ್ನು ಪರಿಹರಿಸಲು ಪಕ್ಷಗಳು ಪ್ರಯತ್ನಿಸಬೇಕು.
+        </li>
+        <li>
+            <strong>(b) Arbitration:</strong> If the Dispute cannot be resolved through negotiation within the specified period, the Dispute shall be finally settled by binding arbitration administered in accordance with the Arbitration and Conciliation Act, 1996 of India.
+            <ul>
+                <li>The number of arbitrators shall be one (1), mutually appointed by the parties. If the parties cannot agree on an arbitrator within a specified period of the demand for arbitration, the arbitrator shall be appointed in accordance with the said Act.</li>
+                <li>The seat, or legal place, of arbitration shall be specified.</li>
+                <li>The language to be used in the arbitral proceedings shall be English.</li>
+                <li>The award rendered by the arbitrator shall be final and binding on the parties, and judgment thereon may be entered in any court having jurisdiction thereof.</li>
+            </ul>
+            <br>
+            <strong>(b) ಮಧ್ಯಸ್ಥಿಕೆ:</strong> ನಿರ್ದಿಷ್ಟಪಡಿಸಿದ ಅವಧಿಯೊಳಗೆ ಮಾತುಕತೆಯ ಮೂಲಕ ವಿವಾದವನ್ನು ಪರಿಹರಿಸಲು ಸಾಧ್ಯವಾಗದಿದ್ದರೆ, ವಿವಾದವನ್ನು ಅಂತಿಮವಾಗಿ ಭಾರತದ ಮಧ್ಯಸ್ಥಿಕೆ ಮತ್ತು ರಾಜಿ ಕಾಯ್ದೆ, 1996 ರ ಅನುಸಾರವಾಗಿ ಆಡಳಿತ ನಡೆಸಲಾಗುವ ಬದ್ಧ ಮಧ್ಯಸ್ಥಿಕೆಯಿಂದ ಇತ್ಯರ್ಥಪಡಿಸಲಾಗುತ್ತದೆ.
+            <ul>
+                <li>ಮಧ್ಯಸ್ಥಗಾರರ ಸಂಖ್ಯೆ ಒಂದು (1) ಆಗಿರುತ್ತದೆ, ಪಕ್ಷಗಳಿಂದ ಪರಸ್ಪರ ನೇಮಕಗೊಂಡಿರುತ್ತದೆ. ಮಧ್ಯಸ್ಥಿಕೆಗಾಗಿ ಬೇಡಿಕೆಯ ನಿರ್ದಿಷ್ಟಪಡಿಸಿದ ಅವಧಿಯೊಳಗೆ ಪಕ್ಷಗಳು ಮಧ್ಯಸ್ಥಗಾರರ ಮೇಲೆ ಒಪ್ಪಿಕೊಳ್ಳಲು ಸಾಧ್ಯವಾಗದಿದ್ದರೆ, ಮಧ್ಯಸ್ಥಗಾರರನ್ನು ಸದರಿ ಕಾಯ್ದೆಯ ಅನುಸಾರವಾಗಿ ನೇಮಿಸಲಾಗುತ್ತದೆ.</li>
+                <li>ಮಧ್ಯಸ್ಥಿಕೆಯ ಸ್ಥಾನ ಅಥವಾ ಕಾನೂನುಬದ್ಧ ಸ್ಥಳವನ್ನು ನಿರ್ದಿಷ್ಟಪಡಿಸಲಾಗುತ್ತದೆ.</li>
+                <li>ಮಧ್ಯಸ್ಥಿಕೆ ಪ್ರಕ್ರಿಯೆಗಳಲ್ಲಿ ಬಳಸಬೇಕಾದ ಭಾಷೆ ಇಂಗ್ಲಿಷ್ ಆಗಿರುತ್ತದೆ.</li>
+                <li>ಮಧ್ಯಸ್ಥಗಾರರು ನೀಡಿದ ತೀರ್ಪು ಅಂತಿಮವಾಗಿರುತ್ತದೆ ಮತ್ತು ಪಕ್ಷಗಳ ಮೇಲೆ ಬದ್ಧವಾಗಿರುತ್ತದೆ, ಮತ್ತು ಅದರ ಮೇಲೆ ತೀರ್ಪನ್ನು ಯಾವುದೇ ಅಧಿಕಾರ ವ್ಯಾಪ್ತಿಯನ್ನು ಹೊಂದಿರುವ ನ್ಯಾಯಾಲಯದಲ್ಲಿ ನಮೂದಿಸಬಹುದು.</li>
+            </ul>
+        </li>
+        <li>
+            <strong>(c) Exception for Injunctive Relief:</strong> Notwithstanding the foregoing, either party shall have the right to seek injunctive or other equitable relief in a court of competent jurisdiction to prevent the actual or threatened infringement, misappropriation, or violation of a party's copyrights, trademarks, trade secrets, patents, or other intellectual property rights.
+            <br><br>
+            <strong>(c) ತಡೆಯಾಜ್ಞೆ ಪರಿಹಾರಕ್ಕಾಗಿ ವಿನಾಯಿತಿ:</strong> ಮೇಲೆ ಹೇಳಿದ್ದನ್ನು ಲೆಕ್ಕಿಸದೆ, ಯಾವುದೇ ಪಕ್ಷವು ಪಕ್ಷದ ಹಕ್ಕುಸ್ವಾಮ್ಯಗಳು, ಟ್ರೇಡ್‌ಮಾರ್ಕ್‌ಗಳು, ವ್ಯಾಪಾರ ರಹಸ್ಯಗಳು, ಪೇಟೆಂಟ್‌ಗಳು ಅಥವಾ ಇತರ ಬೌದ್ಧಿಕ ಆಸ್ತಿ ಹಕ್ಕುಗಳ ನಿಜವಾದ ಅಥವಾ ಬೆದರಿಕೆಯುಳ್ಳ ಉಲ್ಲಂಘನೆ, ದುರುಪಯೋಗ ಅಥವಾ ಉಲ್ಲಂಘನೆಯನ್ನು ತಡೆಯಲು ಸಮರ್ಥ ಅಧಿಕಾರ ವ್ಯಾಪ್ತಿಯ ನ್ಯಾಯಾಲಯದಲ್ಲಿ ತಡೆಯಾಜ್ಞೆ ಅಥವಾ ಇತರ ಸಮಾನ ಪರಿಹಾರವನ್ನು ಪಡೆಯುವ ಹಕ್ಕನ್ನು ಹೊಂದಿರುತ್ತದೆ.
+        </li>
+        <li>
+            <strong>(d) Jurisdiction:</strong> Subject to the arbitration clause above, the parties irrevocably agree that the courts located in a specified city shall have exclusive jurisdiction to settle any dispute or claim arising out of or in connection with this Agreement. This approach aims to provide a structured and potentially more efficient resolution process while ensuring relevance to the primary operational and legal context in India.
+            <br><br>
+            <strong>(d) ಅಧಿಕಾರ ವ್ಯಾಪ್ತಿ:</strong> ಮೇಲಿನ ಮಧ್ಯಸ್ಥಿಕೆ ಷರತ್ತಿಗೆ ಒಳಪಟ್ಟು, ಪಕ್ಷಗಳು ಈ ಒಪ್ಪಂದದಿಂದ ಅಥವಾ ಅದಕ್ಕೆ ಸಂಬಂಧಿಸಿದಂತೆ ಉದ್ಭವಿಸುವ ಯಾವುದೇ ವಿವಾದ ಅಥವಾ ಕ್ಲೈಮ್ ಅನ್ನು ಇತ್ಯರ್ಥಪಡಿಸಲು ನಿರ್ದಿಷ್ಟಪಡಿಸಿದ ನಗರದಲ್ಲಿರುವ ನ್ಯಾಯಾಲಯಗಳು ವಿಶೇಷ ಅಧಿಕಾರ ವ್ಯಾಪ್ತಿಯನ್ನು ಹೊಂದಿರುತ್ತವೆ ಎಂದು ಹಿಂತೆಗೆದುಕೊಳ್ಳಲಾಗದಂತೆ ಒಪ್ಪುತ್ತಾರೆ. ಈ ವಿಧಾನವು ಭಾರತದಲ್ಲಿನ ಪ್ರಾಥಮಿಕ ಕಾರ್ಯಾಚರಣೆಯ ಮತ್ತು ಕಾನೂನು ಸಂದರ್ಭಕ್ಕೆ ಪ್ರಸ್ತುತತೆಯನ್ನು ಖಚಿತಪಡಿಸಿಕೊಳ್ಳುವಾಗ ರಚನಾತ್ಮಕ ಮತ್ತು ಸಂಭಾವ್ಯವಾಗಿ ಹೆಚ್ಚು ಪರಿಣಾಮಕಾರಿ ಪರಿಹಾರ ಪ್ರಕ್ರಿಯೆಯನ್ನು ಒದಗಿಸುವ ಗುರಿಯನ್ನು ಹೊಂದಿದೆ.
+        </li>
+    </ul>
+
+    <h2>
+        13. Miscellaneous
+        <br>
+        13. ವಿವಿಧ
+    </h2>
+    <h3>
+        13.1 Entire Agreement
+        <br>
+        13.1 ಸಂಪೂರ್ಣ ಒಪ್ಪಂದ
+    </h3>
+    <p>
+        These Terms, together with the Aurigraph Privacy Policy and any other legal notices or terms published by Aurigraph on the Platform or expressly incorporated by reference (such as specific program rules or separate service orders, if applicable), constitute the sole and entire agreement between You and Aurigraph regarding Your use of the Platform and supersede all prior and contemporaneous understandings, agreements, representations, and warranties, both written and oral, regarding the Platform.
+        <br><br>
+        ಈ ನಿಯಮಗಳು, ಆರಿಗ್ರಾಫ್ ಗೌಪ್ಯತಾ ನೀತಿ ಮತ್ತು ಪ್ಲಾಟ್‌ಫಾರ್ಮ್‌ನಲ್ಲಿ ಆರಿಗ್ರಾಫ್ ಪ್ರಕಟಿಸಿದ ಅಥವಾ ಉಲ್ಲೇಖದಿಂದ ಸ್ಪಷ್ಟವಾಗಿ ಸಂಯೋಜಿಸಲಾದ ಯಾವುದೇ ಇತರ ಕಾನೂನು ಸೂಚನೆಗಳು ಅಥವಾ ನಿಯಮಗಳೊಂದಿಗೆ (ಉದಾಹರಣೆಗೆ ನಿರ್ದಿಷ್ಟ ಕಾರ್ಯಕ್ರಮದ ನಿಯಮಗಳು ಅಥವಾ ಪ್ರತ್ಯೇಕ ಸೇವಾ ಆದೇಶಗಳು, ಅನ್ವಯಿಸಿದರೆ), ಪ್ಲಾಟ್‌ಫಾರ್ಮ್‌ನ ನಿಮ್ಮ ಬಳಕೆಗೆ ಸಂಬಂಧಿಸಿದಂತೆ ನೀವು ಮತ್ತು ಆರಿಗ್ರಾಫ್ ನಡುವಿನ ಏಕೈಕ ಮತ್ತು ಸಂಪೂರ್ಣ ಒಪ್ಪಂದವನ್ನು ರೂಪಿಸುತ್ತವೆ ಮತ್ತು ಪ್ಲಾಟ್‌ಫಾರ್ಮ್‌ಗೆ ಸಂಬಂಧಿಸಿದಂತೆ ಲಿಖಿತ ಮತ್ತು ಮೌಖಿಕ ಎರಡೂ, ಎಲ್ಲಾ ಪೂರ್ವ ಮತ್ತು ಸಮಕಾಲೀನ ತಿಳುವಳಿಕೆಗಳು, ಒಪ್ಪಂದಗಳು, ಪ್ರಾತಿನಿಧ್ಯಗಳು ಮತ್ತು ಖಾತರಿಗಳನ್ನು ರದ್ದುಗೊಳಿಸುತ್ತವೆ.
+    </p>
+    <h3>
+        13.2 Severability
+        <br>
+        13.2 ಪ್ರತ್ಯೇಕತೆ
+    </h3>
+    <p>
+        If any provision of these Terms is held by a court or other tribunal of competent jurisdiction to be invalid, illegal, or unenforceable for any reason, such provision shall be eliminated or limited to the minimum extent such that the remaining provisions of the Terms will continue in full force and effect.
+        <br><br>
+        ಈ ನಿಯಮಗಳ ಯಾವುದೇ ನಿಬಂಧನೆಯು ಸಮರ್ಥ ಅಧಿಕಾರ ವ್ಯಾಪ್ತಿಯ ನ್ಯಾಯಾಲಯ ಅಥವಾ ಇತರ ನ್ಯಾಯಮಂಡಳಿಯಿಂದ ಯಾವುದೇ ಕಾರಣಕ್ಕಾಗಿ ಅಮಾನ್ಯ, ಕಾನೂನುಬಾಹಿರ ಅಥವಾ ಜಾರಿಗೊಳಿಸಲಾಗದ ಎಂದು ಪರಿಗಣಿಸಲ್ಪಟ್ಟರೆ, ಅಂತಹ ನಿಬಂಧನೆಯನ್ನು ತೆಗೆದುಹಾಕಲಾಗುತ್ತದೆ ಅಥವಾ ನಿಯಮಗಳ ಉಳಿದ ನಿಬಂಧನೆಗಳು ಪೂರ್ಣ ಬಲ ಮತ್ತು ಪರಿಣಾಮದಲ್ಲಿ ಮುಂದುವರಿಯುವಂತೆ ಕನಿಷ್ಠ ಮಟ್ಟಿಗೆ ಸೀಮಿತಗೊಳಿಸಲಾಗುತ್ತದೆ.
+    </p>
+    <h3>
+        13.3 Waiver
+        <br>
+        13.3 ಮನ್ನಾ
+    </h3>
+    <p>
+        No waiver by Aurigraph of any term or condition set out in these Terms shall be deemed a further or continuing waiver of such term or condition or a waiver of any other term or condition, and any failure of Aurigraph to assert a right or provision under these Terms shall not constitute a waiver of such right or provision.
+        <br><br>
+        ಈ ನಿಯಮಗಳಲ್ಲಿ ನಿಗದಿಪಡಿಸಲಾದ ಯಾವುದೇ ನಿಯಮ ಅಥವಾ ಷರತ್ತಿನ ಆರಿಗ್ರಾಫ್‌ನಿಂದ ಯಾವುದೇ ಮನ್ನಾವು ಅಂತಹ ನಿಯಮ ಅಥವಾ ಷರತ್ತಿನ ಮತ್ತಷ್ಟು ಅಥವಾ ನಿರಂತರ ಮನ್ನಾ ಅಥವಾ ಯಾವುದೇ ಇತರ ನಿಯಮ ಅಥವಾ ಷರತ್ತಿನ ಮನ್ನಾ ಎಂದು ಪರಿಗಣಿಸಲಾಗುವುದಿಲ್ಲ, ಮತ್ತು ಈ ನಿಯಮಗಳ ಅಡಿಯಲ್ಲಿ ಹಕ್ಕು ಅಥವಾ ನಿಬಂಧನೆಯನ್ನು ಪ್ರತಿಪಾದಿಸಲು ಆರಿಗ್ರಾಫ್‌ನ ಯಾವುದೇ ವೈಫಲ್ಯವು ಅಂತಹ ಹಕ್ಕು ಅಥವಾ ನಿಬಂಧನೆಯ ಮನ್ನಾ ಎಂದು ರೂಪಿಸುವುದಿಲ್ಲ.
+    </p>
+    <h3>
+        13.4 Assignment
+        <br>
+        13.4 ನಿಯೋಜನೆ
+    </h3>
+    <p>
+        You may not assign or transfer this Agreement or any of Your rights or obligations hereunder, whether by operation of law or otherwise, without Aurigraph's prior written consent. Any attempt by You to assign or transfer this Agreement without such consent will be null and void. Aurigraph may freely assign or transfer this Agreement without restriction. Subject to the foregoing, this Agreement will bind and inure to the benefit of the parties, their successors, and permitted assigns.
+        <br><br>
+        ಆರಿಗ್ರಾಫ್‌ನ ಪೂರ್ವ ಲಿಖಿತ ಒಪ್ಪಿಗೆಯಿಲ್ಲದೆ, ಕಾನೂನಿನ ಕಾರ್ಯಾಚರಣೆಯಿಂದ ಅಥವಾ ಇನ್ಯಾವುದೇ ರೀತಿಯಲ್ಲಿ, ನೀವು ಈ ಒಪ್ಪಂದ ಅಥವಾ ಇಲ್ಲಿನ ನಿಮ್ಮ ಯಾವುದೇ ಹಕ್ಕುಗಳು ಅಥವಾ ಬಾಧ್ಯತೆಗಳನ್ನು ನಿಯೋಜಿಸಲು ಅಥವಾ ವರ್ಗಾಯಿಸಲು ಸಾಧ್ಯವಿಲ್ಲ. ಅಂತಹ ಒಪ್ಪಿಗೆಯಿಲ್ಲದೆ ಈ ಒಪ್ಪಂದವನ್ನು ನಿಯೋಜಿಸಲು ಅಥವಾ ವರ್ಗಾಯಿಸಲು ನಿಮ್ಮ ಯಾವುದೇ ಪ್ರಯತ್ನವು ಶೂನ್ಯ ಮತ್ತು ಅನೂರ್ಜಿತವಾಗಿರುತ್ತದೆ. ಆರಿಗ್ರಾಫ್ ನಿರ್ಬಂಧವಿಲ್ಲದೆ ಈ ಒಪ್ಪಂದವನ್ನು ಮುಕ್ತವಾಗಿ ನಿಯೋಜಿಸಬಹುದು ಅಥವಾ ವರ್ಗಾಯಿಸಬಹುದು. ಮೇಲೆ ಹೇಳಿದ್ದಕ್ಕೆ ಒಳಪಟ್ಟು, ಈ ಒಪ್ಪಂದವು ಪಕ್ಷಗಳು, ಅವರ ಉತ್ತರಾಧಿಕಾರಿಗಳು ಮತ್ತು ಅನುಮತಿಸಲಾದ ನಿಯೋಜಿತರಿಗೆ ಬದ್ಧವಾಗಿರುತ್ತದೆ ಮತ್ತು ಲಾಭದಾಯಕವಾಗಿರುತ್ತದೆ.
+    </p>
+    <h3>
+        13.5 Notices
+        <br>
+        13.5 ಸೂಚನೆಗಳು
+    </h3>
+    <p>
+        Any notices or other communications required or permitted hereunder, including those regarding modifications to these Terms, shall be in writing and given by Aurigraph: (i) via email (to the address associated with Your Account); (ii) by posting to the Platform; or (iii) via postal mail to the address associated with Your Account. Notices You send to Aurigraph must be sent to the contact address provided below, Attention: Legal Department. Notices are deemed given 24 hours after email is sent, unless the sending party is notified that the email address is invalid, or 3 business days after the date of mailing if sent by certified mail.
+        <br><br>
+        ಈ ನಿಯಮಗಳಿಗೆ ಮಾರ್ಪಾಡುಗಳಿಗೆ ಸಂಬಂಧಿಸಿದಂತೆ ಸೇರಿದಂತೆ, ಇಲ್ಲಿ ಅಗತ್ಯವಿರುವ ಅಥವಾ ಅನುಮತಿಸಲಾದ ಯಾವುದೇ ಸೂಚನೆಗಳು ಅಥವಾ ಇತರ ಸಂವಹನಗಳು ಲಿಖಿತ ರೂಪದಲ್ಲಿರಬೇಕು ಮತ್ತು ಆರಿಗ್ರಾಫ್‌ನಿಂದ ನೀಡಲ್ಪಡಬೇಕು: (i) ಇಮೇಲ್ ಮೂಲಕ (ನಿಮ್ಮ ಖಾತೆಗೆ ಸಂಬಂಧಿಸಿದ ವಿಳಾಸಕ್ಕೆ); (ii) ಪ್ಲಾಟ್‌ಫಾರ್ಮ್‌ಗೆ ಪೋಸ್ಟ್ ಮಾಡುವ ಮೂಲಕ; ಅಥವಾ (iii) ನಿಮ್ಮ ಖಾತೆಗೆ ಸಂಬಂಧಿಸಿದ ವಿಳಾಸಕ್ಕೆ ಅಂಚೆ ಮೇಲ್ ಮೂಲಕ. ನೀವು ಆರಿಗ್ರಾಫ್‌ಗೆ ಕಳುಹಿಸುವ ಸೂಚನೆಗಳನ್ನು ಕೆಳಗೆ ಒದಗಿಸಲಾದ ಸಂಪರ್ಕ ವಿಳಾಸಕ್ಕೆ, ಗಮನಕ್ಕೆ: ಕಾನೂನು ಇಲಾಖೆಗೆ ಕಳುಹಿಸಬೇಕು. ಇಮೇಲ್ ಕಳುಹಿಸಿದ 24 ಗಂಟೆಗಳ ನಂತರ ಸೂಚನೆಗಳನ್ನು ನೀಡಲಾಗಿದೆ ಎಂದು ಪರಿಗಣಿಸಲಾಗುತ್ತದೆ, ಕಳುಹಿಸುವ ಪಕ್ಷಕ್ಕೆ ಇಮೇಲ್ ವಿಳಾಸವು ಅಮಾನ್ಯವಾಗಿದೆ ಎಂದು ತಿಳಿಸದ ಹೊರತು, ಅಥವಾ ಪ್ರಮಾಣೀಕೃತ ಮೇಲ್ ಮೂಲಕ ಕಳುಹಿಸಿದರೆ ಮೇಲಿಂಗ್ ದಿನಾಂಕದ 3 ವ್ಯವಹಾರ ದಿನಗಳ ನಂತರ.
+    </p>
+    <h3>
+        13.6 Force Majeure
+        <br>
+        13.6 ಫೋರ್ಸ್ ಮೇಜರ್
+    </h3>
+    <p>
+        Neither party shall be liable to the other for any failure or delay in performing its obligations under this Agreement (except for payment obligations) if such failure or delay is caused by a Force Majeure Event. A "Force Majeure Event" means any event beyond a party's reasonable control, including but not limited to acts of God, flood, fire, earthquake, explosion, governmental actions, war, invasion or hostilities, terrorist threats or acts, riot or other civil unrest, national emergency, revolution, insurrection, epidemic, pandemic, lockouts, strikes or other labor disputes, restraints or delays affecting carriers, inability or delay in obtaining supplies of adequate or suitable materials, or telecommunication breakdown or power outage. The affected party shall give prompt written notice to the other party, stating the period of time the occurrence is expected to continue, and shall use diligent efforts to end the failure or delay and minimize its effects.
+        <br><br>
+        ಯಾವುದೇ ಪಕ್ಷವು ಈ ಒಪ್ಪಂದದ ಅಡಿಯಲ್ಲಿ ತನ್ನ ಬಾಧ್ಯತೆಗಳನ್ನು ನಿರ್ವಹಿಸುವಲ್ಲಿ ಯಾವುದೇ ವೈಫಲ್ಯ ಅಥವಾ ವಿಳಂಬಕ್ಕಾಗಿ ಇನ್ನೊಬ್ಬರಿಗೆ ಹೊಣೆಗಾರನಾಗಿರುವುದಿಲ್ಲ (ಪಾವತಿ ಬಾಧ್ಯತೆಗಳನ್ನು ಹೊರತುಪಡಿಸಿ), ಅಂತಹ ವೈಫಲ್ಯ ಅಥವಾ ವಿಳಂಬವು ಫೋರ್ಸ್ ಮೇಜರ್ ಘಟನೆಯಿಂದ ಉಂಟಾದರೆ. "ಫೋರ್ಸ್ ಮೇಜರ್ ಘಟನೆ" ಎಂದರೆ ಪಕ್ಷದ ಸಮಂಜಸವಾದ ನಿಯಂತ್ರಣವನ್ನು ಮೀರಿದ ಯಾವುದೇ ಘಟನೆ, ದೇವರ ಕೃತ್ಯಗಳು, ಪ್ರವಾಹ, ಬೆಂಕಿ, ಭೂಕಂಪ, ಸ್ಫೋಟ, ಸರ್ಕಾರಿ ಕ್ರಮಗಳು, ಯುದ್ಧ, ಆಕ್ರಮಣ ಅಥವಾ ಹಗೆತನ, ಭಯೋತ್ಪಾದಕ ಬೆದರಿಕೆಗಳು ಅಥವಾ ಕೃತ್ಯಗಳು, ದಂಗೆ ಅಥವಾ ಇತರ ನಾಗರಿಕ ಅಶಾಂತಿ, ರಾಷ್ಟ್ರೀಯ ತುರ್ತುಸ್ಥಿತಿ, ಕ್ರಾಂತಿ, ಬಂಡಾಯ, ಸಾಂಕ್ರಾಮಿಕ, ಮಹಾಮಾರಿ, ಲಾಕ್‌ಔಟ್‌ಗಳು, ಮುಷ್ಕರಗಳು ಅಥವಾ ಇತರ ಕಾರ್ಮಿಕ ವಿವಾದಗಳು, ವಾಹಕಗಳ ಮೇಲೆ ಪರಿಣಾಮ ಬೀರುವ ನಿರ್ಬಂಧಗಳು ಅಥವಾ ವಿಳಂಬಗಳು, ಸಮರ್ಪಕ ಅಥವಾ ಸೂಕ್ತ ವಸ್ತುಗಳ ಪೂರೈಕೆಯನ್ನು ಪಡೆಯಲು ಅಸಮರ್ಥತೆ ಅಥವಾ ವಿಳಂಬ, ಅಥವಾ ದೂರಸಂಪರ್ಕ ಸ್ಥಗಿತ ಅಥವಾ ವಿದ್ಯುತ್ ನಿಲುಗಡೆ ಸೇರಿದಂತೆ, ಆದರೆ ಸೀಮಿತವಾಗಿಲ್ಲ. ಪೀಡಿತ ಪಕ್ಷವು ಇನ್ನೊಂದು ಪಕ್ಷಕ್ಕೆ ತ್ವರಿತ ಲಿಖಿತ ಸೂಚನೆಯನ್ನು ನೀಡಬೇಕು, ಘಟನೆಯು ಮುಂದುವರಿಯುವ ನಿರೀಕ್ಷೆಯಿರುವ ಅವಧಿಯನ್ನು ತಿಳಿಸಬೇಕು, ಮತ್ತು ವೈಫಲ್ಯ ಅಥವಾ ವಿಳಂಬವನ್ನು ಕೊನೆಗೊಳಿಸಲು ಮತ್ತು ಅದರ ಪರಿಣಾಮಗಳನ್ನು ಕಡಿಮೆ ಮಾಡಲು ಶ್ರದ್ಧಾಪೂರ್ವಕ ಪ್ರಯತ್ನಗಳನ್ನು ಬಳಸಬೇಕು.
+    </p>
+
+    <h3>
+        13.7 Contact Information
+        <br>
+        13.7 ಸಂಪರ್ಕ ಮಾಹಿತಿ
+    </h3>
+    <div class="contact-info">
+        <p>
+            If You have any questions about these Terms and Conditions, please contact Aurigraph at:
+            <br><br>
+            ಈ ನಿಯಮಗಳು ಮತ್ತು ನಿಬಂಧನೆಗಳ ಬಗ್ಗೆ ನಿಮಗೆ ಯಾವುದೇ ಪ್ರಶ್ನೆಗಳಿದ್ದರೆ, ದಯವಿಟ್ಟು ಆರಿಗ್ರಾಫ್ ಅನ್ನು ಇಲ್ಲಿ ಸಂಪರ್ಕಿಸಿ:
+        </p>
+        <address>
+            <strong>Aurigraph D:LT Corp</strong><br>
+            Attn: Legal Department / Data Protection Officer<br>
+            ಗಮನಕ್ಕೆ: ಕಾನೂನು ಇಲಾಖೆ / ಡೇಟಾ ಸಂರಕ್ಷಣಾ ಅಧಿಕಾರಿ<br>
+            4005 36th St., Mount Rainier, MD 20712 USA<br>
+            Email / ಇಮೇಲ್: <a href="mailto:info@aurigraph.io">info@aurigraph.io</a><br>
+            Phone / ಫೋನ್: +91 9945103337
+        </address>
+        <p>
+            Contact details for the Data Protection Officer are also available in the Aurigraph Privacy Policy.
+            <br><br>
+            ಡೇಟಾ ಸಂರಕ್ಷಣಾ ಅಧಿಕಾರಿಯ ಸಂಪರ್ಕ ವಿವರಗಳು ಆರಿಗ್ರಾಫ್ ಗೌಪ್ಯತಾ ನೀತಿಯಲ್ಲಿಯೂ ಲಭ್ಯವಿದೆ.
+        </p>
+    </div>
+
+    <div class="signature-section">
+        <h2 class="section-title">
+            Signatures
+            <br>
+            ಸಹಿಗಳು
+        </h2>
+        <div class="signature-row">
+            <div class="signature-column">
+                <p class="signature-label">Signed on behalf of Aurigraph:<br>ಔರಿಗ್ರಾಫ್ ಪರವಾಗಿ ಸಹಿ:</p>
+                <div class="signature-line">
+                    <img src="{{aurigraphSignatureUrl}}" alt="Aurigraph Signature" class="signature-img" onerror="this.onerror=null;this.src='https://placehold.co/150x50/e0e0e0/000000?text=Signature';">
+                </div>
+                <p class="signature-caption">Signature<br>ಸಹಿ</p>
+                <span class="prefilled-data signature-data">{{aurigraphNameDesignation}}</span>
+                <p class="signature-caption">Name & Designation<br>ಹೆಸರು ಮತ್ತು ಹುದ್ದೆ</p>
+                <span class="prefilled-data signature-data">Date: {{aurigraphSignDate}}<br>ದಿನಾಂಕ: {{aurigraphSignDate}}</span>
+            </div>
+            <div class="signature-column">
+                <p class="signature-label">Signed by Landowner/Farmer (Party A):<br>ಜಮೀನು ಮಾಲೀಕರು/ರೈತರಿಂದ ಸಹಿ (ಪಕ್ಷ 'ಎ'):</p>
+                <div class="signature-line">
+                    <img src="{{farmerSignatureUrl}}" alt="Farmer Signature" class="signature-img" onerror="this.onerror=null;this.src='https://placehold.co/150x50/e0e0e0/000000?text=Signature';">
+                </div>
+                <p class="signature-caption">Signature<br>ಸಹಿ</p>
+                <span class="prefilled-data signature-data">{{farmerSignName}}</span>
+                <p class="signature-caption">Name<br>ಹೆಸರು</p>
+                <span class="prefilled-data signature-data">Date: {{farmerSignDate}}<br>ದಿನಾಂಕ: {{farmerSignDate}}</span>
+            </div>
+        </div>
+
+        <div class="signature-row">
+            <div class="signature-column">
+                <p class="signature-label">Witness 1:<br>ಸಾಕ್ಷಿ 1:</p>
+                <div class="signature-line">
+                    <img src="{{witness1SignatureUrl}}" alt="Witness 1 Signature" class="signature-img" onerror="this.onerror=null;this.src='https://placehold.co/150x50/e0e0e0/000000?text=Signature';">
+                </div>
+                <p class="signature-caption">Signature<br>ಸಹಿ</p>
+                <span class="prefilled-data signature-data">{{witness1NameAddress}}</span>
+                <p class="signature-caption">Name & Address<br>ಹೆಸರು ಮತ್ತು ವಿಳಾಸ</p>
+            </div>
+            <div class="signature-column">
+                <p class="signature-label">Witness 2:<br>ಸಾಕ್ಷಿ 2:</p>
+                <div class="signature-line">
+                    <img src="{{witness2SignatureUrl}}" alt="Witness 2 Signature" class="signature-img" onerror="this.onerror=null;this.src='https://placehold.co/150x50/e0e0e0/000000?text=Signature';">
+                </div>
+                <p class="signature-caption">Signature<br>ಸಹಿ</p>
+                <span class="prefilled-data signature-data">{{witness2NameAddress}}</span>
+                <p class="signature-caption">Name & Address<br>ಹೆಸರು ಮತ್ತು ವಿಳಾಸ</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

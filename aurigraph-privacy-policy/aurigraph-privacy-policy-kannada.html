@@ -62,6 +62,221 @@
             color: #555;
             margin-bottom: 2em;
         }
+
+        /* Party A details section styles */
+        .mb-6 {
+            margin-bottom: 1.5rem;
+        }
+
+        .grid {
+            display: grid;
+        }
+
+        .grid-cols-1 {
+            grid-template-columns: repeat(1, minmax(0, 1fr));
+        }
+
+        .sm\:grid-cols-2 {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .gap-x-8 {
+            column-gap: 2rem;
+        }
+
+        .gap-y-3 {
+            row-gap: 0.75rem;
+        }
+
+        .flex {
+            display: flex;
+        }
+
+        .flex-col {
+            flex-direction: column;
+        }
+
+        .sm\:flex-row {
+            flex-direction: row;
+        }
+
+        .sm\:items-center {
+            align-items: center;
+        }
+
+        .text-md {
+            font-size: 1rem;
+        }
+
+        .w-full {
+            width: 100%;
+        }
+
+        .sm\:w-1\/2 {
+            width: 50%;
+        }
+
+        .font-medium {
+            font-weight: 500;
+        }
+
+        .text-gray-700 {
+            color: #374151;
+        }
+
+        .prefilled-data {
+            border-bottom: 1px solid #d1d5db;
+            padding: 0.25rem 0;
+            display: block;
+            min-height: 1.5rem;
+            color: #1f2937;
+        }
+
+        .flex-grow {
+            flex-grow: 1;
+        }
+
+        /* Signature section styles */
+        .mt-8 {
+            margin-top: 2rem;
+        }
+
+        .pt-4 {
+            padding-top: 1rem;
+        }
+
+        .border-t {
+            border-top-width: 1px;
+        }
+
+        .border-gray-200 {
+            border-color: #e5e7eb;
+        }
+
+        .text-sm {
+            font-size: 0.875rem;
+        }
+
+        .flex-col {
+            flex-direction: column;
+        }
+
+        .sm\:flex-row {
+            flex-direction: row;
+        }
+
+        .justify-between {
+            justify-content: space-between;
+        }
+
+        .items-start {
+            align-items: flex-start;
+        }
+
+        .sm\:items-end {
+            align-items: flex-end;
+        }
+
+        .mb-4 {
+            margin-bottom: 1rem;
+        }
+
+        .sm\:mb-0 {
+            margin-bottom: 0;
+        }
+
+        .w-full {
+            width: 100%;
+        }
+
+        .sm\:w-1\/2 {
+            width: 50%;
+        }
+
+        .pr-4 {
+            padding-right: 1rem;
+        }
+
+        .pl-4 {
+            padding-left: 1rem;
+        }
+
+        .font-semibold {
+            font-weight: 600;
+        }
+
+        .signature-line {
+            border-bottom: 1px solid #d1d5db;
+            min-height: 2rem;
+            display: flex;
+            align-items: flex-end;
+            padding-bottom: 0.25rem;
+        }
+
+        .signature-img {
+            max-height: 50px;
+            width: auto;
+            display: block;
+        }
+
+        .text-xs {
+            font-size: 0.75rem;
+        }
+
+        .text-gray-600 {
+            color: #4b5563;
+        }
+
+        .mt-1 {
+            margin-top: 0.25rem;
+        }
+
+        .mt-6 {
+            margin-top: 1.5rem;
+        }
+
+        .text-lg {
+            font-size: 1.125rem;
+        }
+
+        .sm\:text-xl {
+            font-size: 1.25rem;
+        }
+
+        .text-gray-900 {
+            color: #111827;
+        }
+
+        .mb-3 {
+            margin-bottom: 0.75rem;
+        }
+
+        /* Responsive design */
+        @media (min-width: 640px) {
+            .sm\:grid-cols-2 {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+
+            .sm\:flex-row {
+                flex-direction: row;
+            }
+
+            .sm\:items-center {
+                align-items: center;
+            }
+
+            .sm\:w-1\/2 {
+                width: 50%;
+            }
+
+            .sm\:mb-0 {
+                margin-bottom: 0;
+            }
+
+            .sm\:items-end {
+                align-items: flex-end;
+            }
+        }
     </style>
 </head>
 <body>
@@ -69,16 +284,66 @@
     <h1>ಆರಿಗ್ರಾಫ್ ಆರ್ರೆಕ್ಸ್‌ಗಾಗಿ ಗೌಪ್ಯತೆ ನೀತಿ</h1>
     <p class="last-updated">ಕೊನೆಯದಾಗಿ ನವೀಕರಿಸಲಾಗಿದೆ: [ದಿನಾಂಕ]</p>
 
+    <h2>ಪಕ್ಷ - ಎ ಯ ವಿವರಗಳು</h2>
+    <div class="mb-6">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-3">
+            <div class="flex flex-col sm:flex-row sm:items-center text-md">
+                <label class="w-full sm:w-1/2 font-medium text-gray-700">ಶ್ರೀ/ಶ್ರೀಮತಿ/ಕುಮಾರಿ (ಭತ್ತದ ರೈತರ ಹೆಸರು):</label>
+                <span class="prefilled-data flex-grow">{{farmerName}}</span>
+            </div>
+            <div class="flex flex-col sm:flex-row sm:items-center text-md">
+                <label class="w-full sm:w-1/2 font-medium text-gray-700">ಸಮೀಕ್ಷೆ ಸಂಖ್ಯೆ:</label>
+                <span class="prefilled-data flex-grow">{{surveyNumber}}</span>
+            </div>
+            <div class="flex flex-col sm:flex-row sm:items-center text-md">
+                <label class="w-full sm:w-1/2 font-medium text-gray-700">ಪಟ್ಟಾ / ಪಹಣಿ ಸಂಖ್ಯೆ:</label>
+                <span class="prefilled-data flex-grow">{{pattaPhaniNumber}}</span>
+            </div>
+            <div class="flex flex-col sm:flex-row sm:items-center text-md">
+                <label class="w-full sm:w-1/2 font-medium text-gray-700">ಖಾತಾ ಸಂಖ್ಯೆ:</label>
+                <span class="prefilled-data flex-grow">{{khathaNumber}}</span>
+            </div>
+            <div class="flex flex-col sm:flex-row sm:items-center text-md">
+                <label class="w-full sm:w-1/2 font-medium text-gray-700">ಎಕರೆಗಳಲ್ಲಿ ಭೂಮಿ ವಿಸ್ತೀರ್ಣ:</label>
+                <span class="prefilled-data flex-grow">{{landArea}}</span>
+            </div>
+            <div class="flex flex-col sm:flex-row sm:items-center text-md">
+                <label class="w-full sm:w-1/2 font-medium text-gray-700">ಮೊಬೈಲ್ ಸಂಖ್ಯೆ:</label>
+                <span class="prefilled-data flex-grow">{{mobileNo}}</span>
+            </div>
+            <div class="flex flex-col sm:flex-row sm:items-center text-md">
+                <label class="w-full sm:w-1/2 font-medium text-gray-700">ಗುರುತಿನ ಚೀಟಿ (ಆಧಾರ್ ಸಂಖ್ಯೆ / ಮತದಾರರ ಗುರುತಿನ ಚೀಟಿ / ಯಾವುದಾದರೂ ಇದ್ದರೆ):</label>
+                <span class="prefilled-data flex-grow">{{idNumber}}</span>
+            </div>
+            <div class="flex flex-col sm:flex-row sm:items-center text-md">
+                <label class="w-full sm:w-1/2 font-medium text-gray-700">ಗ್ರಾಮ:</label>
+                <span class="prefilled-data flex-grow">{{village}}</span>
+            </div>
+            <div class="flex flex-col sm:flex-row sm:items-center text-md">
+                <label class="w-full sm:w-1/2 font-medium text-gray-700">ತಾಲ್ಲೂಕು:</label>
+                <span class="prefilled-data flex-grow">{{taluk}}</span>
+            </div>
+            <div class="flex flex-col sm:flex-row sm:items-center text-md">
+                <label class="w-full sm:w-1/2 font-medium text-gray-700">ಜಿಲ್ಲೆ:</label>
+                <span class="prefilled-data flex-grow">{{district}}</span>
+            </div>
+            <div class="flex flex-col sm:flex-row sm:items-center text-md">
+                <label class="w-full sm:w-1/2 font-medium text-gray-700">ರಾಜ್ಯ:</label>
+                <span class="prefilled-data flex-grow">{{state}}</span>
+            </div>
+        </div>
+    </div>
+
     <h2>1. ಪರಿಚಯ</h2>
-    
+
     <h3>ಉದ್ದೇಶ ಮತ್ತು ವ್ಯಾಪ್ತಿ</h3>
     <p>ಈ ಗೌಪ್ಯತೆ ನೀತಿಯು, ನೀವು ("ನೀವು," "ನಿಮ್ಮ") ನಮ್ಮ ಸಾಫ್ಟ್‌ವೇರ್ ಪ್ಲಾಟ್‌ಫಾರ್ಮ್, ವೆಬ್‌ಸೈಟ್(ಗಳು), ಮೊಬೈಲ್ ಅಪ್ಲಿಕೇಶನ್(ಗಳು), ಪರಿಸರ ಸಂವೇದಕಗಳು, ಡ್ರೋನ್-ಆಧಾರಿತ ಸೇವೆಗಳು ಮತ್ತು ಇತರ ಸಂಬಂಧಿತ ಉತ್ಪನ್ನಗಳು ಮತ್ತು ಕೊಡುಗೆಗಳೊಂದಿಗೆ (ಒಟ್ಟಾರೆಯಾಗಿ, "ಸೇವೆಗಳು") ಸಂವಹನ ನಡೆಸುವಾಗ, ಆರಿಗ್ರಾಫ್ ಆರ್ರೆಕ್ಸ್ ("ಆರಿಗ್ರಾಫ್ ಆರ್ರೆಕ್ಸ್," "ನಾವು," "ನಮಗೆ," "ನಮ್ಮ") ವೈಯಕ್ತಿಕ ಡೇಟಾವನ್ನು ಹೇಗೆ ಸಂಗ್ರಹಿಸುತ್ತದೆ, ಬಳಸುತ್ತದೆ, ಹಂಚಿಕೊಳ್ಳುತ್ತದೆ, ರಕ್ಷಿಸುತ್ತದೆ ಮತ್ತು ಉಳಿಸಿಕೊಳ್ಳುತ್ತದೆ ಎಂಬುದನ್ನು ವಿವರಿಸುತ್ತದೆ.</p>
     <p>ನಿಮ್ಮ ಗೌಪ್ಯತೆಯನ್ನು ರಕ್ಷಿಸಲು ಮತ್ತು ಅನ್ವಯವಾಗುವ ಡೇಟಾ ಸಂರಕ್ಷಣಾ ಕಾನೂನುಗಳೊಂದಿಗೆ ಅನುಸರಣೆಯನ್ನು ಖಚಿತಪಡಿಸಿಕೊಳ್ಳಲು ನಾವು ಬದ್ಧರಾಗಿದ್ದೇವೆ. ಈ ನೀತಿಯು ಭಾರತದ ಡಿಜಿಟಲ್ ವೈಯಕ್ತಿಕ ಡೇಟಾ ಸಂರಕ್ಷಣಾ ಕಾಯ್ದೆ, 2023 (DPDPA) ಗೆ ಅನುಸರಣೆಗೆ ವಿಶೇಷ ಒತ್ತು ನೀಡುತ್ತದೆ.<sup>1</sup> ಈ ನೀತಿಯು, ಡೇಟಾವನ್ನು ಆನ್‌ಲೈನ್‌ನಲ್ಲಿ ಸಂಗ್ರಹಿಸಲಾಗಿದೆಯೇ ಅಥವಾ ಆಫ್‌ಲೈನ್‌ನಲ್ಲಿ ಸಂಗ್ರಹಿಸಿ ನಂತರ ಡಿಜಿಟಲೀಕರಣಗೊಳಿಸಲಾಗಿದೆಯೇ ಎಂಬುದನ್ನು ಲೆಕ್ಕಿಸದೆ, ಭಾರತದ ಭೂಪ್ರದೇಶದೊಳಗೆ ಡಿಜಿಟಲ್ ವೈಯಕ್ತಿಕ ಡೇಟಾದ ಸಂಸ್ಕರಣೆಗೆ ಅನ್ವಯಿಸುತ್ತದೆ. ಭಾರತದೊಳಗಿನ ವ್ಯಕ್ತಿಗಳಿಗೆ ಸರಕುಗಳು ಅಥವಾ ಸೇವೆಗಳನ್ನು ನೀಡುವುದಕ್ಕೆ ಸಂಬಂಧಿಸಿದಂತೆ ಅಂತಹ ಸಂಸ್ಕರಣೆ ಇದ್ದರೆ, ಭಾರತದ ಹೊರಗೆ ಡಿಜಿಟಲ್ ವೈಯಕ್ತಿಕ ಡೇಟಾದ ಸಂಸ್ಕರಣೆಗೂ ಇದು ಅನ್ವಯಿಸುತ್ತದೆ.<sup>2</sup> DPDPA ಪ್ರಕಾರ, ಯಾವುದೇ ವೈಯಕ್ತಿಕ ಅಥವಾ ದೇಶೀಯ ಉದ್ದೇಶಕ್ಕಾಗಿ ಒಬ್ಬ ವ್ಯಕ್ತಿಯಿಂದ ಸಂಸ್ಕರಿಸಿದ ವೈಯಕ್ತಿಕ ಡೇಟಾಗೆ ಈ ನೀತಿ ಅನ್ವಯಿಸುವುದಿಲ್ಲ, ಅಥವಾ ಡೇಟಾ ಪ್ರಿನ್ಸಿಪಾಲ್‌ನಿಂದ ಸಾರ್ವಜನಿಕವಾಗಿ ಲಭ್ಯವಾಗುವಂತೆ ಮಾಡಿದ ಅಥವಾ ಸಾರ್ವಜನಿಕಗೊಳಿಸಲು ಕಾನೂನುಬದ್ಧ ಬಾಧ್ಯತೆಯಡಿಯಲ್ಲಿ ಲಭ್ಯವಾಗುವಂತೆ ಮಾಡಿದ ವೈಯಕ್ತಿಕ ಡೇಟಾಗೆ ಇದು ಅನ್ವಯಿಸುವುದಿಲ್ಲ.<sup>5</sup></p>
     <p>ಸೇವೆಗಳಿಗೆ ನಿಮ್ಮ ಪ್ರವೇಶ ಮತ್ತು ಬಳಕೆ ಈ ಗೌಪ್ಯತೆ ನೀತಿಯಲ್ಲಿ ವಿವರಿಸಿರುವ ನಿಯಮಗಳಿಗೆ ನಿಮ್ಮ ಒಪ್ಪಿಗೆಯನ್ನು ಸೂಚಿಸುತ್ತದೆ.<sup>8</sup> ದಯವಿಟ್ಟು ಈ ನೀತಿಯನ್ನು ಎಚ್ಚರಿಕೆಯಿಂದ ಓದಿ.</p>
-    
+
     <h3>ನಾವು ಯಾರು</h3>
     <p>ಆರಿಗ್ರಾಫ್ ಆರ್ರೆಕ್ಸ್ ಕೃಷಿ ತಂತ್ರಜ್ಞಾನ (ಅಗ್ರಿಟೆಕ್) ಮತ್ತು ಪರಿಸರ ಡೇಟಾ ವಿಜ್ಞಾನದ ಸಂсеಧನೆಯಲ್ಲಿ ಕಾರ್ಯನಿರ್ವಹಿಸುತ್ತದೆ. ಸುಸ್ಥಿರ ಕೃಷಿ, ಪರಿಸರ ಮೇಲ್ವಿಚಾರಣೆ, ಮತ್ತು ಕಾರ್ಬನ್ ಸೀಕ್ವೆಸ್ಟ್ರೇಶನ್ ಉಪಕ್ರಮಗಳಿಗಾಗಿ ಸಂಭಾವ್ಯವಾಗಿ ಅಳತೆ, ವರದಿ ಮತ್ತು ಪರಿಶೀಲನೆ (MRV) ಗಾಗಿ ಪರಿಹಾರಗಳನ್ನು ಒದಗಿಸಲು, ಸಂವೇದಕ ಜಾಲಗಳು, ಡ್ರೋನ್ ಚಿತ್ರಣ, ಮತ್ತು ಡೇಟಾ ವಿಶ್ಲೇಷಣೆ ಸೇರಿದಂತೆ ಸುಧಾರಿತ ತಂತ್ರಜ್ಞಾನಗಳನ್ನು ಬಳಸಿಕೊಳ್ಳುವುದು ನಮ್ಮ ಧ್ಯೇಯವಾಗಿದೆ.<sup>11</sup> ನಮ್ಮ ಸೇವೆಗಳ ವೈವಿಧ್ಯಮಯ ಸ್ವರೂಪ, ಪ್ಲಾಟ್‌ಫಾರ್ಮ್ ಪ್ರವೇಶ, ಮೊಬೈಲ್ ಅಪ್ಲಿಕೇಶನ್‌ಗಳು, ಸಂವೇದಕಗಳಂತಹ ಹಾರ್ಡ್‌ವೇರ್, ಮತ್ತು ಡ್ರೋನ್ ಕಾರ್ಯಾಚರಣೆಗಳನ್ನು ಒಳಗೊಂಡಿರುವುದರಿಂದ, ಡೇಟಾ ಸಂಗ್ರಹಣೆಯು ಅನೇಕ ಟಚ್‌ಪಾಯಿಂಟ್‌ಗಳಲ್ಲಿ ಸಂಭವಿಸುತ್ತದೆ, ಇವೆಲ್ಲವೂ ಈ ನೀತಿಯಿಂದ ನಿಯಂತ್ರಿಸಲ್ಪಡುತ್ತವೆ.<sup>27</sup></p>
-    
+
     <h3>DPDPA 2023 ರೊಂದಿಗೆ ಅನುಸರಣೆ</h3>
     <p>ಭಾರತದೊಳಗೆ ಕಾರ್ಯಾಚರಣೆಗಳ ಸಂಭವನೀಯತೆ ಅಥವಾ ಭಾರತದಲ್ಲಿನ ವ್ಯಕ್ತಿಗಳಿಗೆ ಸಂಬಂಧಿಸಿದ ಡೇಟಾವನ್ನು ಸಂಸ್ಕರಿಸುವುದರಿಂದ, ಈ ನೀತಿಯನ್ನು DPDPA 2023 ರ ಅವಶ್ಯಕತೆಗಳೊಂದಿಗೆ ನಿಕಟವಾಗಿ ಹೊಂದಿಕೊಳ್ಳುವಂತೆ ರಚಿಸಲಾಗಿದೆ.<sup>1</sup> ಇದು ವ್ಯಾಖ್ಯಾನಗಳು, ಸಮ್ಮತಿ ಕಾರ್ಯವಿಧಾನಗಳು, ಸೂಚನೆ ಅವಶ್ಯಕತೆಗಳು, ಡೇಟಾ ಪ್ರಿನ್ಸಿಪಾಲ್ ಹಕ್ಕುಗಳು, ಸಂಸ್ಕರಣೆಗಾಗಿ ಕಾನೂನುಬದ್ಧ ಬಳಕೆಗಳು, ಡೇಟಾ ಭದ್ರತಾ ಮಾನದಂಡಗಳು, ಡೇಟಾ ಉಳಿಸಿಕೊಳ್ಳುವಿಕೆ ಮತ್ತು ಅಳಿಸುವಿಕೆ ಪ್ರೋಟೋಕಾಲ್‌ಗಳು, ಮಕ್ಕಳ ಡೇಟಾವನ್ನು ನಿರ್ವಹಿಸುವುದು, ಗಡಿಯಾಚೆಗಿನ ಡೇಟಾ ವರ್ಗಾವಣೆ ನಿಯಮಗಳು, ಮತ್ತು ಡೇಟಾ ಸಂರಕ್ಷಣಾ ಮಂಡಳಿ ಮತ್ತು ಸಮ್ಮತಿ ವ್ಯವಸ್ಥಾಪಕರ ಪಾತ್ರಗಳಿಗೆ ನಿರ್ದಿಷ್ಟ ಗಮನವನ್ನು ಒಳಗೊಂಡಿದೆ. ನಮ್ಮ ಸೇವೆಗಳನ್ನು ಭಾರತದಲ್ಲಿನ ವ್ಯಕ್ತಿಗಳಿಗೆ ನೀಡಿದರೆ, ನಮ್ಮ ಭೌತಿಕ ಸ್ಥಳವನ್ನು ಲೆಕ್ಕಿಸದೆ, DPDPA ಯ ಬಾಹ್ಯ-ಪ್ರಾದೇಶಿಕ ವ್ಯಾಪ್ತಿಯು ಈ ಗಮನವನ್ನು ಅವಶ್ಯಕವಾಗಿಸುತ್ತದೆ.<sup>2</sup></p>
 
@@ -134,7 +399,7 @@
 
     <h2>5. ಸಂಸ್ಕರಣೆಗೆ ಕಾನೂನುಬದ್ಧ ಆಧಾರ</h2>
     <p>ನಿಮ್ಮ ವೈಯಕ್ತಿಕ ಡೇಟಾದ ನಮ್ಮ ಸಂಸ್ಕರಣೆಯು DPDPA ಅಡಿಯಲ್ಲಿ ಒದಗಿಸಲಾದ ಕಾನೂನುಬದ್ಧ ಆಧಾರಗಳನ್ನು ಆಧರಿಸಿದೆ.<sup>4</sup> DPDPA ಪ್ರಾಥಮಿಕವಾಗಿ ಸಂಸ್ಕರಣೆಯನ್ನು ಆಧರಿಸಿ ಅನುಮತಿಸುತ್ತದೆ: (a) ಡೇಟಾ ಪ್ರಿನ್ಸಿಪಾಲ್‌ನ ಸ್ಪಷ್ಟ ಸಮ್ಮತಿ, ಅಥವಾ (b) ಕೆಲವು ನಿರ್ದಿಷ್ಟ ಕಾನೂನುಬದ್ಧ ಬಳಕೆಗಳು. ಗಮನಾರ್ಹವಾಗಿ, GDPR ನಂತಹ ನಿಯಮಗಳಿಗಿಂತ ಭಿನ್ನವಾಗಿ, DPDPA 'ಒಪ್ಪಂದದ ಕಾರ್ಯಕ್ಷಮತೆ' ಅಥವಾ 'ಕಾನೂನುಬದ್ಧ ಹಿತಾಸಕ್ತಿಗಳನ್ನು' (ಡೇಟಾ ಫಿಡ್ಯೂಷಿಯರಿಯ) ಸಂಸ್ಕರಣೆಗಾಗಿ ವಿಶಾಲ, ಸ್ವತಂತ್ರ ಕಾನೂನು ಆಧಾರಗಳಾಗಿ ಗುರುತಿಸುವುದಿಲ್ಲ.<sup>4</sup> ಇದು ಪ್ರತಿಯೊಂದು ಸಂಸ್ಕರಣಾ ಚಟುವಟಿಕೆಯನ್ನು ಸ್ಪಷ್ಟ ಸಮ್ಮತಿ ಅಥವಾ ಕಾಯಿದೆಯಲ್ಲಿ ವ್ಯಾಖ್ಯಾನಿಸಲಾದ ನಿರ್ದಿಷ್ಟ ಕಾನೂನುಬದ್ಧ ಬಳಕೆಗೆ ನಾವು ನಿಖರವಾಗಿ ಮ್ಯಾಪ್ ಮಾಡಬೇಕಾಗುತ್ತದೆ.</p>
-    
+
     <h3>ಸಮ್ಮತಿ:</h3>
     <p>ನಾವು ಸಮ್ಮತಿಯನ್ನು ಅವಲಂಬಿಸಿರುವಲ್ಲಿ, ಅದು DPDPA ಯ ಕಠಿಣ ಮಾನದಂಡಗಳನ್ನು ಪೂರೈಸುತ್ತದೆ ಎಂದು ನಾವು ಖಚಿತಪಡಿಸಿಕೊಳ್ಳುತ್ತೇವೆ. ಸಮ್ಮತಿ ಹೀಗಿರಬೇಕು:</p>
     <ul>
@@ -146,7 +411,7 @@
         <li><strong>ಸೀಮಿತ:</strong> ನಿರ್ದಿಷ್ಟಪಡಿಸಿದ ಉದ್ದೇಶಕ್ಕಾಗಿ ಅಗತ್ಯವಾದ ವೈಯಕ್ತಿಕ ಡೇಟಾಗೆ ಮಾತ್ರ ಸಮ್ಮತಿಯನ್ನು ಪಡೆಯಲಾಗುತ್ತದೆ.<sup>6</sup></li>
     </ul>
     <p>ನಿಮ್ಮ ಸಮ್ಮತಿಯನ್ನು ಯಾವುದೇ ಸಮಯದಲ್ಲಿ ಹಿಂತೆಗೆದುಕೊಳ್ಳುವ ಹಕ್ಕು ನಿಮಗಿದೆ. ಹಿಂತೆಗೆದುಕೊಳ್ಳುವ ಪ್ರಕ್ರಿಯೆಯು ಸಮ್ಮತಿ ನೀಡುವ ಪ್ರಕ್ರಿಯೆಯಂತೆಯೇ ಸುಲಭವಾಗಿರುತ್ತದೆ. ಹಿಂತೆಗೆದುಕೊಂಡ ನಂತರ, ಸಮ್ಮತಿಯನ್ನು ಹಿಂತೆಗೆದುಕೊಂಡ ಉದ್ದೇಶ(ಗಳ)ಕ್ಕಾಗಿ ನಿಮ್ಮ ವೈಯಕ್ತಿಕ ಡೇಟಾವನ್ನು ಸಂಸ್ಕರಿಸುವುದನ್ನು ನಾವು ನಿಲ್ಲಿಸುತ್ತೇವೆ, ಮತ್ತೊಂದು ಕಾನೂನು ಆಧಾರವು ಅನ್ವಯಿಸದಿದ್ದರೆ (ಉದಾ., ಕಾನೂನುಬದ್ಧ ಬಾಧ್ಯತೆ) ಅಥವಾ ಕಾನೂನಿನ ಪ್ರಕಾರ ಉಳಿಸಿಕೊಳ್ಳುವಿಕೆ ಅಗತ್ಯವಿದ್ದರೆ. ಹಿಂತೆಗೆದುಕೊಳ್ಳುವಿಕೆಯು ಕೆಲವು ವೈಶಿಷ್ಟ್ಯಗಳು ಅಥವಾ ಸೇವೆಗಳನ್ನು ಬಳಸುವ ನಿಮ್ಮ ಸಾಮರ್ಥ್ಯದ ಮೇಲೆ ಪರಿಣಾಮ ಬೀರಬಹುದು.<sup>30</sup> ನಿಮ್ಮ ಸಮ್ಮತಿ ಆದ್ಯತೆಗಳನ್ನು ನಿರ್ವಹಿಸಲು ನಿಮಗೆ ಸಹಾಯ ಮಾಡಲು ನಾವು ನೋಂದಾಯಿತ ಸಮ್ಮತಿ ವ್ಯವಸ್ಥಾಪಕರೊಂದಿಗೆ ಸಂಯೋಜಿಸಬಹುದು ಅಥವಾ ಬಳಸಲು ಆಯ್ಕೆಗಳನ್ನು ಒದಗಿಸಬಹುದು.<sup>6</sup></p>
-    
+
     <h3>ಕಾನೂನುಬದ್ಧ ಬಳಕೆಗಳು (ಸ್ಪಷ್ಟ ಸಮ್ಮತಿಯಿಲ್ಲದೆ ಸಂಸ್ಕರಣೆ):</h3>
     <p>DPDPA ವಿಭಾಗ 7 ರ ಅಡಿಯಲ್ಲಿ ವ್ಯಾಖ್ಯಾನಿಸಲಾದ ನಿರ್ದಿಷ್ಟ ಸಂದರ್ಭಗಳಲ್ಲಿ, ನಿಮ್ಮ ಸ್ಪಷ್ಟ ಸಮ್ಮತಿಯಿಲ್ಲದೆ ನಾವು ನಿಮ್ಮ ವೈಯಕ್ತಿಕ ಡೇಟಾವನ್ನು ಸಂಸ್ಕರಿಸಬಹುದು. ನಮ್ಮ ಕಾರ್ಯಾಚರಣೆಗಳಿಗೆ ಸಂಬಂಧಿಸಿದ ಈ "ಕಾನೂನುಬದ್ಧ ಬಳಕೆಗಳು" ಇವುಗಳನ್ನು ಒಳಗೊಂಡಿರಬಹುದು <sup>4</sup>:</p>
     <ul>
@@ -156,7 +421,7 @@
         <li><strong>ವೈದ್ಯಕೀಯ ತುರ್ತುಸ್ಥಿತಿಗಳು/ವಿಪತ್ತುಗಳು:</strong> ವೈದ್ಯಕೀಯ ತುರ್ತುಸ್ಥಿತಿಗಳು, ಸಾಂಕ್ರಾಮಿಕ ರೋಗಗಳಿಗೆ ಪ್ರತಿಕ್ರಿಯಿಸಲು ಅಥವಾ ವಿಪತ್ತುಗಳ ಸಮಯದಲ್ಲಿ ಸುರಕ್ಷತೆಯನ್ನು ಖಚಿತಪಡಿಸಿಕೊಳ್ಳಲು ಅಗತ್ಯವಾದ ಸಂಸ್ಕರಣೆ (ನಮ್ಮ ಪ್ರಮುಖ ಸೇವೆಗಳಿಗೆ ಕಡಿಮೆ ಅನ್ವಯವಾಗುವ ಸಾಧ್ಯತೆ, ಆದರೆ ಕಾಯಿದೆಯಲ್ಲಿ ಸೇರಿಸಲಾಗಿದೆ).<sup>4</sup></li>
     </ul>
     <p>ಈ ಕಾನೂನುಬದ್ಧ ಬಳಕೆಗಳ ಆಧಾರದ ಮೇಲೆ ಸಂಸ್ಕರಣೆ ಇರುವಲ್ಲಿ, DPDPA ಅಡಿಯಲ್ಲಿ ಸಾಮಾನ್ಯವಾಗಿ ಪೂರ್ವ ಸೂಚನೆ ಮತ್ತು ಸಮ್ಮತಿ ಅಗತ್ಯವಿಲ್ಲ.<sup>78</sup></p>
-    
+
     <h2>6. ನಿಮ್ಮ ಮಾಹಿತಿಯನ್ನು ನಾವು ಹೇಗೆ ಹಂಚಿಕೊಳ್ಳುತ್ತೇವೆ</h2>
     <p>ನಾವು ನಿಮ್ಮ ವೈಯಕ್ತಿಕ ಡೇಟಾವನ್ನು ಮಾರಾಟ ಮಾಡುವುದಿಲ್ಲ. ನಾವು ನಿಮ್ಮ ವೈಯಕ್ತಿಕ ಡೇಟಾವನ್ನು ಕೆಳಗೆ ವಿವರಿಸಿದ ಸಂದರ್ಭಗಳಲ್ಲಿ ಮಾತ್ರ, ಸೂಕ್ತವಾದ ರಕ್ಷಣೆಗಳೊಂದಿಗೆ, ಮತ್ತು ಅಗತ್ಯವಿದ್ದಲ್ಲಿ, ನಿಮ್ಮ ಸ್ಪಷ್ಟ ಸಮ್ಮತಿಯೊಂದಿಗೆ ಹಂಚಿಕೊಳ್ಳುತ್ತೇವೆ.<sup>98</sup></p>
     <p>ನಾವು ನಿಮ್ಮ ವೈಯಕ್ತಿಕ ಡೇಟಾವನ್ನು ಈ ಕೆಳಗಿನ ವರ್ಗಗಳ ಸ್ವೀಕರಿಸುವವರೊಂದಿಗೆ ಹಂಚಿಕೊಳ್ಳಬಹುದು <sup>98</sup>:</p>
@@ -173,7 +438,7 @@
     <h2>7. ಡೇಟಾ ಭದ್ರತೆ</h2>
     <p>ನಿಮ್ಮ ವೈಯಕ್ತಿಕ ಡೇಟಾದ ಭದ್ರತೆಯನ್ನು ರಕ್ಷಿಸಲು ನಾವು ಬದ್ಧರಾಗಿದ್ದೇವೆ. ವೈಯಕ್ತಿಕ ಡೇಟಾ ಉಲ್ಲಂಘನೆಗಳನ್ನು, ಅನಧಿಕೃತ ಪ್ರವೇಶ, ಬಳಕೆ, ಬಹಿರಂಗಪಡಿಸುವಿಕೆ, ಬದಲಾವಣೆ, ಅಥವಾ ನಾಶ ಸೇರಿದಂತೆ ತಡೆಯಲು ನಾವು DPDPA ವಿಭಾಗ 8(5) <sup>30</sup> ರ ಪ್ರಕಾರ ಕಡ್ಡಾಯಗೊಳಿಸಲಾದ "ಸಮಂಜಸವಾದ ಭದ್ರತಾ ಸಂರಕ್ಷಣೆಗಳನ್ನು" ಕಾರ್ಯಗತಗೊಳಿಸುತ್ತೇವೆ ಮತ್ತು ನಿರ್ವಹಿಸುತ್ತೇವೆ.</p>
     <p>ಈ ಸಂರಕ್ಷಣೆಗಳು, ಸಂಸ್ಕರಣೆಯ ಸ್ವರೂಪ, ವ್ಯಾಪ್ತಿ, ಸಂದರ್ಭ, ಮತ್ತು ಉದ್ದೇಶಗಳು, ಹಾಗೂ ನಿಮ್ಮ ಹಕ್ಕುಗಳು ಮತ್ತು ಸ್ವಾತಂತ್ರ್ಯಗಳಿಗೆ ಇರುವ ಅಪಾಯಗಳನ್ನು ಗಣನೆಗೆ ತೆಗೆದುಕೊಂಡು, ಸೂಕ್ತವಾದ ತಾಂತ್ರಿಕ ಮತ್ತು ಸಾಂಸ್ಥಿಕ ಕ್ರಮಗಳನ್ನು ಒಳಗೊಂಡಿವೆ. ನಮ್ಮ ಕ್ರಮಗಳು ಕರಡು DPDPA ನಿಯಮಗಳು <sup>5</sup> ಮತ್ತು ಉದ್ಯಮದ ಅತ್ಯುತ್ತಮ ಅಭ್ಯಾಸಗಳು <sup>36</sup> ರಲ್ಲಿ ಒದಗಿಸಲಾದ ಉದಾಹರಣೆಗಳೊಂದಿಗೆ ಹೊಂದಿಕೆಯಾಗುತ್ತವೆ:</p>
-    
+
     <h4>ತಾಂತ್ರಿಕ ಕ್ರಮಗಳು:</h4>
     <ul>
         <li><strong>ಎನ್‌ಕ್ರಿಪ್ಶನ್:</strong> ವೈಯಕ್ತಿಕ ಡೇಟಾವನ್ನು ಉಳಿದಿರುವಾಗ (ಸಂಗ್ರಹಿಸಿದಾಗ) ಮತ್ತು ಸಾಗಣೆಯಲ್ಲಿರುವಾಗ (ನೆಟ್‌ವರ್ಕ್‌ಗಳ ಮೂಲಕ ರವಾನೆಯಾದಾಗ) ಎನ್‌ಕ್ರಿಪ್ಟ್ ಮಾಡುವುದು.<sup>41</sup></li>
@@ -217,7 +482,7 @@
     <h2>9. ನಿಮ್ಮ ಹಕ್ಕುಗಳು (DPDPA ಅಡಿಯಲ್ಲಿ ಡೇಟಾ ಪ್ರಿನ್ಸಿಪಾಲ್ ಹಕ್ಕುಗಳು)</h2>
     <p>DPDPA ಅಡಿಯಲ್ಲಿ, ನೀವು, ಡೇಟಾ ಪ್ರಿನ್ಸಿಪಾಲ್ ಆಗಿ, ನಿಮ್ಮ ವೈಯಕ್ತಿಕ ಡೇಟಾಗೆ ಸಂಬಂಧಿಸಿದಂತೆ ನಿರ್ದಿಷ್ಟ ಹಕ್ಕುಗಳನ್ನು ಹೊಂದಿದ್ದೀರಿ. ಈ ಹಕ್ಕುಗಳ ಚಲಾವಣೆಯನ್ನು ಸುಗಮಗೊಳಿಸಲು ನಾವು ಬದ್ಧರಾಗಿದ್ದೇವೆ.</p>
     <p>ನಿಮ್ಮ ಹಕ್ಕುಗಳು ಮತ್ತು ಅವುಗಳನ್ನು ಹೇಗೆ ಚಲಾಯಿಸುವುದು ಎಂಬುದರ ಸಾರಾಂಶಕ್ಕಾಗಿ ದಯವಿಟ್ಟು ಕೆಳಗಿನ ಕೋಷ್ಟಕವನ್ನು ನೋಡಿ:</p>
-    
+
     <table>
         <thead>
             <tr>
@@ -252,7 +517,7 @@
 
     <h3>ನಿಮ್ಮ ಹಕ್ಕುಗಳನ್ನು ಚಲಾಯಿಸುವುದು:</h3>
     <p>ಈ ಹಕ್ಕುಗಳಲ್ಲಿ ಯಾವುದನ್ನಾದರೂ ಚಲಾಯಿಸಲು, ದಯವಿಟ್ಟು ವಿಭಾಗ 14 (ಕುಂದುಕೊರತೆ ನಿವಾರಣೆ ಮತ್ತು ಸಂಪರ್ಕ ಮಾಹಿತಿ) ರಲ್ಲಿ ಒದಗಿಸಲಾದ ಮಾಹಿತಿಯನ್ನು ಬಳಸಿ ನಮ್ಮನ್ನು ಸಂಪರ್ಕಿಸಿ. ನಿಮ್ಮ ವೈಯಕ್ತಿಕ ಡೇಟಾದ ಭದ್ರತೆಯನ್ನು ಖಚಿತಪಡಿಸಿಕೊಳ್ಳಲು ನಿಮ್ಮ ವಿನಂತಿಯನ್ನು ಪ್ರಕ್ರಿಯೆಗೊಳಿಸುವ ಮೊದಲು ನಾವು ನಿಮ್ಮ ಗುರುತನ್ನು ಪರಿಶೀಲಿಸಬೇಕಾಗಬಹುದು.<sup>104</sup> ನಾವು ನಿಮ್ಮ ವಿನಂತಿಗೆ ಸಮಂಜಸವಾದ ಕಾಲಮಿತಿಯೊಳಗೆ, ಅಥವಾ ಕಾನೂನಿನ ಪ್ರಕಾರ ನಿಗದಿತ ಸಮಯದಲ್ಲಿ ಪ್ರತಿಕ್ರಿಯಿಸುತ್ತೇವೆ.<sup>2</sup></p>
-    
+
     <h3>ಡೇಟಾ ಪ್ರಿನ್ಸಿಪಾಲ್ ಕರ್ತವ್ಯಗಳು:</h3>
     <p>DPDPA ಡೇಟಾ ಪ್ರಿನ್ಸಿಪಾಲ್‌ಗಳಿಗೆ ಕೆಲವು ಕರ್ತವ್ಯಗಳನ್ನು ಸಹ ವಿವರಿಸುತ್ತದೆ ಎಂಬುದನ್ನು ದಯವಿಟ್ಟು ಗಮನಿಸಿ. ನೀವು ಸುಳ್ಳು ಅಥವಾ ಕ್ಷುಲ್ಲಕ ಕುಂದುಕೊರತೆಗಳು ಅಥವಾ ದೂರುಗಳನ್ನು ನೋಂದಾಯಿಸಬಾರದು, ಸುಳ್ಳು ವಿವರಗಳನ್ನು ಒದಗಿಸಬಾರದು, ವಸ್ತುನಿಷ್ಠ ಮಾಹಿತಿಯನ್ನು ದಮನಿಸಬಾರದು, ಅಥವಾ ಮಾಹಿತಿ ಒದಗಿಸುವಾಗ ಅಥವಾ ನಿಮ್ಮ ಹಕ್ಕುಗಳನ್ನು ಚಲಾಯಿಸುವಾಗ ಮತ್ತೊಬ್ಬ ವ್ಯಕ್ತಿಯಂತೆ ನಟಿಸಬಾರದು.<sup>35</sup> ಈ ಕರ್ತವ್ಯಗಳ ಉಲ್ಲಂಘನೆಯು ಕಾಯಿದೆಯಡಿಯಲ್ಲಿ ಶಿಕ್ಷಾರ್ಹವಾಗಬಹುದು.<sup>3</sup></p>
 
@@ -317,6 +582,55 @@
     <h2>15. ಸಮ್ಮತಿ ವ್ಯವಸ್ಥಾಪಕ ಮಾಹಿತಿ</h2>
     <p>DPDPA ಸಮ್ಮತಿ ವ್ಯವಸ್ಥಾಪಕರು ಎಂಬ ಪರಿಕಲ್ಪನೆಯನ್ನು ಪರಿಚಯಿಸುತ್ತದೆ – ನೋಂದಾಯಿತ ಘಟಕಗಳು, ಡೇಟಾ ಪ್ರಿನ್ಸಿಪಾಲ್‌ಗಳಿಗೆ ವಿವಿಧ ಡೇಟಾ ಫಿಡ್ಯೂಷಿಯರಿಗಳಾದ್ಯಂತ ಡೇಟಾ ಸಂಸ್ಕರಣೆಗಾಗಿ ತಮ್ಮ ಸಮ್ಮತಿಯನ್ನು ನೀಡಲು, ನಿರ್ವಹಿಸಲು, ಪರಿಶೀಲಿಸಲು ಮತ್ತು ಹಿಂತೆಗೆದುಕೊಳ್ಳಲು ಒಂದು ವೇದಿಕೆಯನ್ನು ಒದಗಿಸುತ್ತವೆ.<sup>6</sup></p>
     <p>ಈ ಚೌಕಟ್ಟು ಅಭಿವೃದ್ಧಿಗೊಂಡಂತೆ, ನಾವು ನೋಂದಾಯಿತ ಸಮ್ಮತಿ ವ್ಯವಸ್ಥಾಪಕರೊಂದಿಗೆ ಸಂಯೋಜನೆಗಳನ್ನು ಮೌಲ್ಯಮಾಪನ ಮಾಡುತ್ತೇವೆ. ನಾವು ಅಂತಹ ವೇದಿಕೆಗಳೊಂದಿಗೆ ಸಂಯೋಜಿಸಿದರೆ, ಅಥವಾ ನೋಂದಾಯಿತ ಸಮ್ಮತಿ ವ್ಯವಸ್ಥಾಪಕರ ಮೂಲಕ ನಮ್ಮ ಸೇವೆಗಳಿಗಾಗಿ ನಿಮ್ಮ ಸಮ್ಮತಿಯನ್ನು ನಿರ್ವಹಿಸಲು ನೀವು ಆಯ್ಕೆ ಮಾಡಿದರೆ, ನಿಮ್ಮ ಆಯ್ಕೆಗಳನ್ನು ಸುಗಮಗೊಳಿಸಲು DPDPA ಯಿಂದ ಅಗತ್ಯವಿರುವಂತೆ ನಾವು ಸಮ್ಮತಿ ವ್ಯವಸ್ಥಾಪಕರೊಂದಿಗೆ ಸಹಕರಿಸುತ್ತೇವೆ. ಸಮ್ಮತಿ ವ್ಯವಸ್ಥಾಪಕರಿಗೆ ಸಂಬಂಧಿಸಿದ ಯಾವುದೇ ಸಂಯೋಜನೆಗಳು ಅಥವಾ ಆಯ್ಕೆಗಳ ಬಗ್ಗೆ ಅವು ಲಭ್ಯವಾದಾಗ ನಾವು ನವೀಕರಣಗಳನ್ನು ಒದಗಿಸುತ್ತೇವೆ. ಈ ಕಾರ್ಯವಿಧಾನವನ್ನು ಈಗ ವಿವರಿಸುವುದು ಈ ಪ್ರಮುಖ DPDPA ವೈಶಿಷ್ಟ್ಯಕ್ಕಾಗಿ ಬಳಕೆದಾರರ ನಿರೀಕ್ಷೆಗಳನ್ನು ಹೊಂದಿಸಲು ಸಹಾಯ ಮಾಡುತ್ತದೆ.</p>
+
+    <div class="mt-8 pt-4 border-t border-gray-200 text-sm">
+        <h2 class="text-lg sm:text-xl font-semibold mb-3 text-gray-900">ಸಹಿಗಳು</h2>
+        <div class="flex flex-col sm:flex-row justify-between items-start sm:items-end mb-6">
+            <div class="mb-4 sm:mb-0 w-full sm:w-1/2 pr-4">
+                <p class="font-semibold text-gray-700">ಔರಿಗ್ರಾಫ್ ಪರವಾಗಿ ಸಹಿ:</p>
+                <div class="signature-line">
+                    <img src="{{aurigraphSignatureUrl}}" alt="Aurigraph Signature" class="signature-img" onerror="this.onerror=null;this.src='https://placehold.co/150x50/e0e0e0/000000?text=ಸಹಿ';">
+                </div>
+                <p class="text-xs text-gray-600 mt-1">ಸಹಿ</p>
+                <span class="prefilled-data mt-6">{{aurigraphNameDesignation}}</span>
+                <p class="text-xs text-gray-600 mt-1">ಹೆಸರು ಮತ್ತು ಹುದ್ದೆ</p>
+                <span class="prefilled-data mt-6">ದಿನಾಂಕ: {{aurigraphSignDate}}</span>
+                <p class="text-xs text-gray-600 mt-1"></p>
+            </div>
+            <div class="w-full sm:w-1/2 pl-4">
+                <p class="font-semibold text-gray-700">ಜಮೀನು ಮಾಲೀಕರು/ರೈತರಿಂದ ಸಹಿ (ಪಕ್ಷ 'ಎ'):</p>
+                <div class="signature-line">
+                    <img src="{{farmerSignatureUrl}}" alt="Farmer Signature" class="signature-img" onerror="this.onerror=null;this.src='https://placehold.co/150x50/e0e0e0/000000?text=ಸಹಿ';">
+                </div>
+                <p class="text-xs text-gray-600 mt-1">ಸಹಿ</p>
+                <span class="prefilled-data mt-6">{{farmerSignName}}</span>
+                <p class="text-xs text-gray-600 mt-1">ಹೆಸರು</p>
+                <span class="prefilled-data mt-6">ದಿನಾಂಕ: {{farmerSignDate}}</span>
+                <p class="text-xs text-gray-600 mt-1"></p>
+            </div>
+        </div>
+
+        <div class="flex flex-col sm:flex-row justify-between items-start sm:items-end">
+            <div class="mb-4 sm:mb-0 w-full sm:w-1/2 pr-4">
+                <p class="font-semibold text-gray-700">ಸಾಕ್ಷಿ 1:</p>
+                <div class="signature-line">
+                    <img src="{{witness1SignatureUrl}}" alt="Witness 1 Signature" class="signature-img" onerror="this.onerror=null;this.src='https://placehold.co/150x50/e0e0e0/000000?text=ಸಹಿ';">
+                </div>
+                <p class="text-xs text-gray-600 mt-1">ಸಹಿ</p>
+                <span class="prefilled-data mt-6">{{witness1NameAddress}}</span>
+                <p class="text-xs text-gray-600 mt-1">ಹೆಸರು ಮತ್ತು ವಿಳಾಸ</p>
+            </div>
+            <div class="w-full sm:w-1/2 pl-4">
+                <p class="font-semibold text-gray-700">ಸಾಕ್ಷಿ 2:</p>
+                <div class="signature-line">
+                    <img src="{{witness2SignatureUrl}}" alt="Witness 2 Signature" class="signature-img" onerror="this.onerror=null;this.src='https://placehold.co/150x50/e0e0e0/000000?text=ಸಹಿ';">
+                </div>
+                <p class="text-xs text-gray-600 mt-1">ಸಹಿ</p>
+                <span class="prefilled-data mt-6">{{witness2NameAddress}}</span>
+                <p class="text-xs text-gray-600 mt-1">ಹೆಸರು ಮತ್ತು ವಿಳಾಸ</p>
+            </div>
+        </div>
+    </div>
 
 </body>
 </html>
